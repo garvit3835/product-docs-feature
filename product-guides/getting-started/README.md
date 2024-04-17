@@ -20,7 +20,7 @@ Head to d[evzero.io/dashboard](https://devzero.io/dashboard) and create your acc
 
 <summary>Step 4: Launch &#x26; connect to your first Workspace</summary>
 
-[launch-and-connect-to-your-first-workspace.md](launch-and-connect-to-your-first-workspace.md "mention")
+[launch-your-first-workspace.md](launch-your-first-workspace.md "mention")
 
 </details>
 
