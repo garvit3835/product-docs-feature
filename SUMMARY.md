@@ -12,7 +12,7 @@
 * [Getting Started](product-guides/getting-started/README.md)
   * [Install the DevZero CLI](product-guides/getting-started/install-the-devzero-cli.md)
   * [Create Your First Recipe](product-guides/getting-started/create-your-first-recipe.md)
-  * [Launch Your First Workspace](product-guides/getting-started/launch-your-first-workspace.md)
+  * [Launch and Connect to Your First Workspace](product-guides/getting-started/launch-and-connect-to-your-first-workspace.md)
   * [Inviting Teammates](product-guides/getting-started/inviting-teammates.md)
 * [Writing Recipes](product-guides/writing-recipes.md)
 * [Managing Recipes](product-guides/managing-recipes.md)

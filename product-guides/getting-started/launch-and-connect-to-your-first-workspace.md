@@ -1,0 +1,15 @@
+# Launch and Connect to Your First Workspace
+
+Now you've got a Recipe written and built, you can use that Recipe to launch a Workspace using that specification. Simply navigate to the [Recipe Library](https://www.devzero.io/dashboard/recipes) and find the Recipe you need. Then select the `Launch` button to create an environment from that recipe. During the Workspace Launch phase, any of your user preferences, config (shell config, dotfiles, etc), and env variables will all be applied.&#x20;
+
+Once the Workspace has been deployed, you'll see it running on the [dashboard homepage](https://www.devzero.io/dashboard). From there, select the `Connect` button and connect to the workspace using your preferred method.&#x20;
+
+Current options for connecting to your workspace include:&#x20;
+
+1. Via the terminal - `dz ws connect best-gull-psxv`
+2. Directing from VS Code - `dz ws code best-gull-psxv`
+3. Via Code Server in browser - follow the onscreen instructions
+
+{% hint style="info" %}
+**Need to install our CLI?** Follow the instructions here: [install-the-devzero-cli.md](install-the-devzero-cli.md "mention")
+{% endhint %}
