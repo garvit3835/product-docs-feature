@@ -17,7 +17,7 @@ Run the following command from within your terminal:&#x20;
 
 <summary>Windows Installations</summary>
 
-Our Windows CLI requires [WSL 2](https://learn.microsoft.com/en-us/windows/wsl/install). We do not support WSL 1. To verify your WSL version you can run the following command:&#x20;
+Our Windows CLI requires [WSL 2](https://learn.microsoft.com/en-us/windows/wsl/install). We do not support WSL 1. To verify your WSL version you can run the following from your Command shell or PowerShell:&#x20;
 
 ```sh
 wsl -l -v

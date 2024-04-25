@@ -6,7 +6,7 @@ Prior to launching a workspace, there are a few things you can control to ensure
 
 While a workspace is building, you'll see realtime logs of the build process, including the installations of all host and application packages, any build commands or scripts provided in the recipe, as well as any runtime commands and scripts as provided in the recipe. These logs can be used to troubleshoot any issues with the workspace-building process. Often, the errors seen here require updates to the underlying recipe template.&#x20;
 
-Once your workspace has finished building, a 'Connect' button will be enabled. We currently have two different ways for you to connect to the workspace, both requiring installing the DevZero CLI ([install-the-devzero-cli.md](getting-started/install-the-devzero-cli.md "mention")).
+Once your workspace has finished building, a 'Connect' button will be enabled. We currently have two different ways for you to connect to the workspace, both requiring installing the DevZero CLI ([Broken link](broken-reference "mention")).
 
 Current options for connecting to your workspace include:&#x20;
 

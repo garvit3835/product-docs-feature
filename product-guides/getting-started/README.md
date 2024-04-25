@@ -20,7 +20,7 @@ Head to [devzero.io/dashboard](https://devzero.io/dashboard) and create your acc
 
 <summary><strong>Step 3:</strong> Install the DevZero CLI</summary>
 
-
+[cli-installation.md](../../references/cli-installation.md "mention")
 
 </details>
 
