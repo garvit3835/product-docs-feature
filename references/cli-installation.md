@@ -13,23 +13,3 @@ Run the following command from within your terminal:&#x20;
 
 </details>
 
-<details>
-
-<summary>Windows Installations</summary>
-
-Our Windows CLI requires [WSL 2](https://learn.microsoft.com/en-us/windows/wsl/install). We do not support WSL 1. To verify your WSL version you can run the following from your Command shell or PowerShell:&#x20;
-
-```sh
-wsl -l -v
-```
-
-If you need to install or upgrade your WSL version please [follow these instructions](https://learn.microsoft.com/en-us/windows/wsl/install#upgrade-version-from-wsl-1-to-wsl-2). \
-\
-Once you have confirmed your WSL version, please open the Linux shell and run the following command:&#x20;
-
-```bash
-curl -fsSL https://api.devzero.io/backend/v0/cli/install-script | sh
-```
-
-</details>
-
