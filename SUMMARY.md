@@ -10,8 +10,8 @@
 ## 🚀 Product Guides
 
 * [Getting Started](product-guides/getting-started/README.md)
-  * [Install the DevZero CLI](product-guides/getting-started/install-the-devzero-cli.md)
   * [Create Your First Recipe](product-guides/getting-started/create-your-first-recipe.md)
+  * [Install the DevZero CLI](product-guides/getting-started/install-the-devzero-cli.md)
   * [Launch and Connect to Your First Workspace](product-guides/getting-started/launch-your-first-workspace.md)
   * [Inviting Teammates](product-guides/getting-started/inviting-teammates.md)
 * [Writing Recipes](product-guides/writing-recipes.md)
@@ -26,8 +26,8 @@
 
 ## 🔎 References
 
-* [CLI Reference](references/cli-reference.md)
-* [Recipe Syntax Reference](references/recipe-syntax-reference.md)
+* [CLI Installation](references/cli-installation.md)
+* [Recipe Syntax](references/recipe-syntax.md)
 
 ## 🆘 Troubleshooting
 

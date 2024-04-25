@@ -2,15 +2,31 @@
 
 <details>
 
-<summary>Step 1: Create an account</summary>
+<summary><strong>Step 1:</strong> Create an account</summary>
 
-Head to d[evzero.io/dashboard](https://devzero.io/dashboard) and create your account using the authentication provider of your choice.&#x20;
+Head to [devzero.io/dashboard](https://devzero.io/dashboard) and create your account using the authentication provider of your choice.&#x20;
 
 </details>
 
 <details>
 
-<summary>Step 3: Write your first Recipe</summary>
+<summary><strong>Step 2:</strong> Connect your Git Provider</summary>
+
+
+
+</details>
+
+<details>
+
+<summary><strong>Step 3:</strong> Install the DevZero CLI</summary>
+
+
+
+</details>
+
+<details>
+
+<summary><strong>Step 4:</strong> Write your first Recipe</summary>
 
 [create-your-first-recipe.md](create-your-first-recipe.md "mention")
 
@@ -18,7 +34,7 @@ Head to d[evzero.io/dashboard](https://devzero.io/dashboard) and create your acc
 
 <details>
 
-<summary>Step 4: Launch &#x26; connect to your first Workspace</summary>
+<summary><strong>Step 5:</strong> Launch &#x26; connect to your first Workspace</summary>
 
 [launch-your-first-workspace.md](launch-your-first-workspace.md "mention")
 
@@ -26,7 +42,7 @@ Head to d[evzero.io/dashboard](https://devzero.io/dashboard) and create your acc
 
 <details>
 
-<summary>Setup 5: Invite your team</summary>
+<summary><strong>Setup 6:</strong> Invite your team</summary>
 
 [inviting-teammates.md](inviting-teammates.md "mention")
 
