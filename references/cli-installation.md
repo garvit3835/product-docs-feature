@@ -8,7 +8,7 @@ These instructions will guide you through the DevZero CLI installation process b
 
 Run the following command from within your terminal:&#x20;
 
-<pre class="language-bash" data-full-width="false"><code class="lang-bash"><strong>curl -fsSL https://api.devzero.io/backend/v0/cli/install-script | sh
+<pre class="language-bash" data-full-width="false"><code class="lang-bash"><strong>curl -fsSL https://get.devzero.io | sh
 </strong></code></pre>
 
 </details>
@@ -28,7 +28,7 @@ If you need to install or upgrade your WSL version please [follow these instruct
 Once you have confirmed your WSL version, please open the Linux shell and run the following command:&#x20;
 
 ```bash
-curl -fsSL https://api.devzero.io/backend/v0/cli/install-script | sh
+curl -fsSL https://get.devzero.io | sh
 ```
 
 </details>
