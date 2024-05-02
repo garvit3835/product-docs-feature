@@ -17,4 +17,8 @@ The recipe creation process begins by denoting the required code bases for a giv
 
 All other recipe customizations are guided by the web UI.&#x20;
 
+To create a new Recipe, select "Create New" from the top-right navbar at devzero.io/dashboard and select "Create New Recipe"
+
+<figure><img src="../../.gitbook/assets/CleanShot 2024-05-02 at 13.54.26@2x.png" alt=""><figcaption><p>Create New Recipe</p></figcaption></figure>
+
 **Tip:** be sure to provide a helpful recipe name to make it easy for your teammates to understand how and when to use workspaces based on that recipe.&#x20;
