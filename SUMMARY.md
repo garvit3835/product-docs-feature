@@ -12,7 +12,7 @@
 * [Getting Started](product-guides/getting-started/README.md)
   * [Create Your First Recipe](product-guides/getting-started/create-your-first-recipe.md)
   * [Launch and Connect to Your First Workspace](product-guides/getting-started/launch-your-first-workspace.md)
-  * [Inviting Users & Managing Permissions](product-guides/getting-started/inviting-users-and-managing-permissions.md)
+  * [Inviting Users & Managing Permissions](product-guides/getting-started/inviting-teammates.md)
 * [Writing Recipes](product-guides/writing-recipes.md)
 * [Managing Recipes](product-guides/managing-recipes.md)
 * [Launch & Connect to a Workspace](product-guides/launch-and-connect-to-a-workspace.md)
