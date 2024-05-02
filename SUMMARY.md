@@ -32,5 +32,5 @@
 
 * [Web Console](troubleshooting/web-console.md)
 * [Command Line](troubleshooting/command-line.md)
-* [Recipes](troubleshooting/recipes.md)
 * [Workspaces](troubleshooting/workspaces.md)
+* [Recipes](troubleshooting/recipes.md)
