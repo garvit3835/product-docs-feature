@@ -35,3 +35,4 @@
 * [Command Line](troubleshooting/command-line.md)
 * [Recipes](troubleshooting/recipes.md)
 * [Workspaces](troubleshooting/workspaces.md)
+* [Visual Studio Code](troubleshooting/vs-code.md)
