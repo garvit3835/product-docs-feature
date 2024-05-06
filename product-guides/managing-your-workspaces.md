@@ -8,4 +8,4 @@ Your workspace lifecycle should look something like this:&#x20;
 2. I connect to that workspace and write some code.&#x20;
 3. Once that work has been complete, I delete the workspace.
 
-Generally speaking, workspaces are meant to be ephemeral and not long lived, as you can always spin up a fresh workspace in <1 minute.&#x20;
+Generally speaking, workspaces are meant to be ephemeral and not long lived, as you can always spin up a fresh workspace in <1 minute. However, you can rest assured that until you choose to manually delete your workspace(s), any changes and state will always be preserved.&#x20;
