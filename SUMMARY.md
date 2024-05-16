@@ -13,11 +13,16 @@
 
 ## Use-cases
 
-* [Standardized dev env](use-cases/use-cases.md)
-* [Cloud development environment (CDE)](use-cases/use-cases.md)
-* [Testing environments](use-cases/use-cases.md)
-* [Preview environments](use-cases/use-cases.md)
-* [Faster Onboarding](use-cases/use-cases.md)
+* [Standardized Dev Environment](use-cases/standardized-dev-env.md)
+* [Cloud Development Environment (CDE)](use-cases/cde.md)
+* [Testing Environment](use-cases/testing-env.md)
+* [Preview Environments](use-cases/preview-env.md)
+* [Internal Developer Platform](use-cases/idp.md)
+* [Faster Onboarding](use-cases/faster-onboarding.md)
+* [Ephemeral Kubernetes Cluster](use-cases/ephemeral-kubernetes-cluster.md)
+* [Namespaced Cloud Services](use-cases/namespaced-cloud-services.md)
+* [Connecting to on-prem/cloud resources](use-cases/connectivity.md)
+* [Sharing build caches](use-cases/sharing-build-caches.md)
 * [Developer Experience Infrastructure](use-cases/use-cases.md)
 
 ## Recipes
@@ -109,3 +114,4 @@
 
 * [CLI Installation](references/cli-installation.md)
 * [Recipe Syntax](references/recipe-syntax.md)
+* [Leaving DevZero](references/leaving-devzero.md)
