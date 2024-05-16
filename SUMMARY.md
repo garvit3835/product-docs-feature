@@ -36,7 +36,7 @@
 * [Secrets](recipes/secrets/README.md)
   * [User](recipes/secrets/user.md)
   * [Team](recipes/secrets/team.md)
-* [Execution stages (build vs launch vs runtime)](recipes/exec-stages.md)
+* [Execution stages (build- vs startup-time)](recipes/exec-stages.md)
 * [Custom base images](recipes/custom-base.md)
 * [Where to save recipe specs?](recipes/saving-recipes.md)
 
