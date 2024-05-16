@@ -49,7 +49,3 @@ If you only plan to work with Public Repositories, you do not need to enable our
 [inviting-teammates.md](inviting-teammates.md "mention")
 
 </details>
-
-
-
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td>Header</td><td>Contents go here and help describe things.</td><td><a href="../../troubleshooting/vs-code.md">vs-code.md</a></td><td><a href="../../.gitbook/assets/CleanShot 2024-05-01 at 20.53.52@2x (1).png">CleanShot 2024-05-01 at 20.53.52@2x (1).png</a></td></tr><tr><td></td><td></td><td></td><td></td></tr></tbody></table>
