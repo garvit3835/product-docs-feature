@@ -6,6 +6,9 @@ Recipes have 2 execution stages:
 
 Irrespective of the stage, command blocks will be executed in the order in which they are specified in the recipe.
 
+<figure><img src="../.gitbook/assets/exec-stages.png" alt=""><figcaption><p>Execution stages (difference between built- and startup-time)</p></figcaption></figure>
+
+
 <details>
 <summary>What won't work</summary>
 Anything that requires user-input to proceed. Build- and startup-time steps are executed by processes in a completely headless mode. As such, if your setup command requires user-input or needs to be attached to a TTY, it will unfortunately not work. You will see it get stuck in the logs, and the best you will be able to do is cancel that build.

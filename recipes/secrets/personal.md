@@ -2,13 +2,13 @@
 
 ## Saving a secret
 
-Visit the Environment Variables section at https://www.devzero.io/dashboard/settings/environment-variables#team to add, remove or update your secrets.
+Visit the Environment Variables section at https://www.devzero.io/dashboard/settings/environment-variables#personal to add, remove or update your secrets.
 
 {% hint style="warning" %}
 Make sure the `Sensitive` field **is checked**.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/team-secret.png" alt=""><figcaption><p>Team Secrets</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/personal-secret.png" alt=""><figcaption><p>Personal Secrets</p></figcaption></figure>
 
 ## Using a secret
 

@@ -1,16 +1,16 @@
-# Team Environment Variables
+# Personal Environment Variables
 
-## Saving a team environment variable 
+## Saving an environment variable 
 
-Visit the Environment Variables section at https://www.devzero.io/dashboard/settings/environment-variables#team to add, remove or update your environment variables for your team.
+Visit the Environment Variables section at https://www.devzero.io/dashboard/settings/environment-variables#personal to add, remove or update your environment variables.
 
 {% hint style="warning" %}
 Make sure the `Sensitive` field is **not** checked.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/team-env-var.png" alt=""><figcaption><p>Team Environment Variables</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/personal-env-var.png" alt=""><figcaption><p>Personal Environment Variables</p></figcaption></figure>
 
-## Using a team environment variable
+## Using an environment variable
 
 Using an environment variable within your workspace is how you would normally use any environment variable (eg: `echo $NOT_SO_SECRET_KEY`).
 

@@ -1,5 +1,23 @@
 # Environment Variables
 
+Environment variables are materially public in nature. If you want to store something sensitive, see [Secrets](../secrets/README.md).
+
+These are usually used by when:
+- a build is getting created,
+- a process needs it at runtime
+
+Once an environment variable is saved, it will be visible in the UI or CLI. It will be available at build- or startup-time. 
+It will also be available in the running workspaces.
+
+{% hint style="warning" %}
+**Reserved prefix** `DEVZERO_` is a reserved prefix used by the platform. They may change at any time so relying on them is not advisable.
+{% endhint %}
+
+You can access environment variables within builds or at startup-time. If your variable is called `MY_KEY`, to access its value anywhere, use `$MY_KEY`.
+At runtime, you can use the `env` binary to verify that the secrets are present within that context.  
+
+<figure><img src="../.gitbook/assets/env-var-in-build.png" alt=""><figcaption><p>Environment Variables in Builds</p></figcaption></figure>
+
 <table data-card-size="large" data-view="cards">
   <thead>
     <tr>
@@ -17,9 +35,9 @@
       <td><a href="../../.gitbook/assets/multiple-users-silhouette.png">multiple-users-silhouette.png</a></td>
     </tr>
     <tr>
-      <td>User</td>
+      <td>Personal</td>
       <td>Environment variables that can only be accessed by the current user.</td>
-      <td><a href="user.md">user.md</a></td>
+      <td><a href="personal.md">personal.md</a></td>
       <td><a href="../../.gitbook/assets/single-user-silhouette.png">single-user-silhouette.png</a></td>
     </tr>
   </tbody>
