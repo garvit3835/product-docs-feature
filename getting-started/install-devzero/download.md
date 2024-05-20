@@ -4,6 +4,16 @@ A single CLI is used to interact with the DevZero control plane.
 
 These instructions will guide you through the DevZero CLI installation process based on your local operating system. The CLI enables building, launching, and connecting to workspaces.&#x20;
 
+{% hint style="warning" %}
+**Make sure** to run the following steps after the installer completes successfully. 
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo dz auth login && sudo dz net connect
+```
+{% endcode %}
+{% endhint %}
+
 {% tabs %}
 {% tab title="MacOS / Linux" %}
 {% code overflow="wrap" lineNumbers="true" %}
@@ -28,3 +38,5 @@ curl -fsSL https://get.devzero.io | sh
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+Run `sudo dz auth login && sudo dz net connect` once the CLI installer has completed. If you face issues, please send a note to [support@devzero.io](mailto:support@devzero.io).

@@ -2,7 +2,7 @@
 
 Recipes are workspace specifications meant to serve as a golden path for workspaces. To enable your teammates to use recipes that you have built, add them to the team's recipe library. 
 
-To maintain a library of unstaged recipe specifications, use the 'User Recipes' section.
+To maintain a library of unstaged recipe specifications, use the ['User Recipes' section](types.md#user-or-draft-recipes).
 
 1. Create a recipe by clicking `Create New` (top-right) >> `Create New Recipe`
 <figure><img src="../.gitbook/assets/create-new-recipe.png" alt=""><figcaption><p>Create New Recipe</p></figcaption></figure>
