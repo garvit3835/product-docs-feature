@@ -68,7 +68,7 @@
 ## Volumes
 
 * [Regions](volumes/regions.md)
-* [Sharing volumes acreoss workspaces](volumes/sharing.md)
+* [Sharing volumes across workspaces](volumes/sharing.md)
 * [Persistent volumes](volumes/persistent.md)
 
 ## Admin
