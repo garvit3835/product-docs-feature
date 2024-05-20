@@ -146,9 +146,9 @@ dev:
 {% endcode %}
 </details>
 
-{% code overflow="wrap" lineNumbers="true" %}
 <details>
 <summary>Python</summary>
+{% code overflow="wrap" lineNumbers="true" %}
 ```yaml
 dev:
   commands:
