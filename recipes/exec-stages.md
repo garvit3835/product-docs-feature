@@ -1,17 +1,17 @@
 # Recipe Execution Stages
 
-Recipes have 2 execution stages:
+Recipes have 2 execution stages that are controlled by the user:
 1. Build-time: when recipe is getting saved, after validation.
-2. Startup-time: when a workspace is being launched from a recipe.
+2. Launch-time: when a workspace is being launched from a recipe.
 
 Irrespective of the stage, command blocks will be executed in the order in which they are specified in the recipe.
 
-<figure><img src="../.gitbook/assets/exec-stages.png" alt=""><figcaption><p>Execution stages (difference between built- and startup-time)</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/exec-stages.png" alt=""><figcaption><p>Execution stages (difference between built- and launch-time)</p></figcaption></figure>
 
 
 <details>
 <summary>What won't work</summary>
-Anything that requires user-input to proceed. Build- and startup-time steps are executed by processes in a completely headless mode. As such, if your setup command requires user-input or needs to be attached to a TTY, it will unfortunately not work. You will see it get stuck in the logs, and the best you will be able to do is cancel that build.
+Anything that requires user-input to proceed. Build- and launch-time steps are executed by processes in a completely headless mode. As such, if your setup command requires user-input or needs to be attached to a TTY, it will unfortunately not work. You will see it get stuck in the logs, and the best you will be able to do is cancel that build.
 
 Common cases where this is true:
 - Adding `-y` for apt-get operations: `sudo apt-get install -y curl`
@@ -82,21 +82,21 @@ Use-cases:
 - Starting any sort of daemonized process (eg: `sudo systemctl start ...`)
     - docker daemon
     - mysqld, postgres, etc
-- While calling operations to kick-off indexing in IDEs is technically feasible in the build-time stage, it's best left to the startup-time stage.
+- While calling operations to kick-off indexing in IDEs is technically feasible in the build-time stage, it's best left to the launch-time stage.
 </details>
 
-## Startup-time
+## launch-time
 
-These steps are run using a systemctl unit at startup time. Command blocks will be executed in the order in which they are specified in the recipe.
+These steps are run using a systemctl unit at launch-time. Command blocks will be executed in the order in which they are specified in the recipe.
 
 
 {% hint style="warning" %}
-**run_at_startup_** needs to be prepended to the command name in order for it to get executed as a startup-time step.
+**run_at_startup_** needs to be prepended to the command name in order for it to get executed as a launch-time step.
 {% endhint %}
 
 Other than that, the same rules from the [Build-time](#build-time) stage apply.
 
-Here's an example of some startup-time steps:
+Here's an example of some launch-time steps:
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```yaml
