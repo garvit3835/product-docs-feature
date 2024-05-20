@@ -11,7 +11,7 @@
   * [Update dz](getting-started/install-devzero/update.md)
   * [Uninstall dz](getting-started/install-devzero/uninstall.md)
 
-## Use-cases
+## [Use-cases](use-cases/README.md)
 
 * [Standardized Dev Environment](use-cases/standardized-dev-env.md)
 * [Cloud Development Environment (CDE)](use-cases/cde.md)
@@ -23,7 +23,7 @@
 * [Namespaced Cloud Services](use-cases/namespaced-cloud-services.md)
 * [Connecting to on-prem/cloud resources](use-cases/connectivity.md)
 * [Sharing build caches](use-cases/sharing-build-caches.md)
-* [Developer Experience Infrastructure](use-cases/use-cases.md)
+* [Developer Experience Infrastructure](use-cases/dxi.md)
 
 ## Recipes
 
@@ -49,15 +49,15 @@
 
 ## Builds
 
-* [Environment variables](builds/..)
-  * Users
-  * Team
-* [Secrets](builds/..)
-  * User
-  * Team
-* [Automatic updates (GitOps)](builds/..)
-* [Executing builds from CI](builds/..)
-* [Where to store images? (Private registry)](builds/..)
+* [Environment variables](builds/README.md)
+  * [User](builds/env-vars/user.md)
+  * [Team](builds/env-vars/team.md)
+* [Secrets](builds/README.md)
+  * [User](builds/secrets/user.md)
+  * [Team](builds/secrets/team.md)
+* [Automatic updates (GitOps)](builds/gitops.md)
+* [Executing builds from CI](builds/ci.md)
+* [Where to store images? (Private registry)](builds/storing-builds.md)
 
 ## Network
 
@@ -100,8 +100,8 @@
 
 ## 📚 How-to Guides
 
-* [Connect to an RDS Instance](product-guides/how-tos/connect-to-an-rds-instance.md) # rename
-* [Connect to an S3 Bucket](how-to/connect-to-an-s3-bucket.md) 
+* [Connect to an RDS Instance](product-guides/how-tos/connect-to-an-rds-instance.md)
+* [Connect to an S3 Bucket](product-guides/how-tos/connect-to-an-s3-bucket.md) 
 
 ## 🆘 FAQ + Troubleshooting
 
@@ -110,9 +110,10 @@
 * [Recipes](troubleshooting/recipes.md)
 * [Workspaces](troubleshooting/workspaces.md)
 * [Visual Studio Code](troubleshooting/vs-code.md)
+* [JetBrains](troubleshooting/jetbrains.md)
 
 ## 🔎 References
 
-* [CLI Installation](references/cli-installation.md)
+* [CLI Man Page](references/cli-man-page.md)
 * [Recipe Syntax](references/recipe-syntax.md)
 * [Leaving DevZero](references/leaving-devzero.md)
