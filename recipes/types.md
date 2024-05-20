@@ -4,6 +4,8 @@ Recipes are workspace specifications meant to serve as a golden path for workspa
 
 This is when you should be using 'User Recipes' (will be called "unstaged recipes" soon). User recipes are only accessible to you.
 
+## User (or draft) Recipes
+
 You can see your draft recipes on the [My Recipes](https://www.devzero.io/dashboard/recipes#user) page.
 
 The flow for this is exactly the same as teh flow for [Saving Recipes](saving-recipes.md). The only difference is that the toggle for team recipe needs to be **turned off**.
