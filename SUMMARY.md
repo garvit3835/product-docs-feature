@@ -25,21 +25,20 @@
 * [Sharing build caches](use-cases/sharing-build-caches.md)
 * [Developer Experience Infrastructure](use-cases/dxi.md)
 
-## Recipes
+## [Recipes](recipes/README.md)
 
-* [Building new recipes](recipes/)
-* [Recipe types](recipes/)
-   * [Team](recipes/)
-* [Source code](recipes/)
-* [Environment variables](recipes/)
-  * [User](recipes/)
-  * [Team](recipes/)
-* [Secrets](recipes/)
-  * [User](recipes/)
-  * [Team](recipes/)
-* [Execution stages (build vs launch vs runtime)](recipes/)
-* [Custom base images](recipes/)
-* [Where to save recipe specs?](recipes/)
+* [Building new recipes](recipes/new-recipe.md)
+* [Recipe types](recipes/types.md)
+* [Source code](recipes/code.md)
+* [Environment variables](recipes/env-vars/README.md)
+  * [Personal](recipes/env-vars/personal.md)
+  * [Team](recipes/env-vars/team.md)
+* [Secrets](recipes/secrets/README.md)
+  * [Personal](recipes/secrets/personal.md)
+  * [Team](recipes/secrets/team.md)
+* [Execution stages (build- vs launch-time)](recipes/exec-stages.md)
+* [Custom base images](recipes/custom-base.md)
+* [Where to save recipe specs?](recipes/saving-recipes.md)
 
 ## Workspaces (CPU, GPU)
 
@@ -69,7 +68,7 @@
 ## Volumes
 
 * [Regions](volumes/regions.md)
-* [Sharing volumes acreoss workspaces](volumes/sharing.md)
+* [Sharing volumes across workspaces](volumes/sharing.md)
 * [Persistent volumes](volumes/persistent.md)
 
 ## Admin
@@ -77,9 +76,9 @@
 * User Management
 * ACLs
 * Hosting
-* Permissions
-  * Connecting GitHub Account 
-  * Connecting GitHub Org
+* [Permissions](admin/permissions/README.md)
+  * [Connecting GitHub Account](admin/permissions/user-github.md)
+  * [Connecting GitHub Org](admin/permissions/org-github.md)
 
 ## [[MOVE CONTENTS TO OTHER SECTIONS]] 🚀 Product Guides
 

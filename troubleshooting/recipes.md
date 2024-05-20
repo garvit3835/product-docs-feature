@@ -6,7 +6,7 @@
 
 You are probably reading this because you encountered the following error when trying to execute a docker related error:
 
-```
+```yaml
 $ docker run hello-world
 docker: permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Head "http://%2Fvar%2Frun%2Fdocker.sock/_ping": dial unix /var/run/docker.sock: connect: permission denied.
 See 'docker run --help'.
@@ -17,7 +17,7 @@ permission denied while trying to connect to the Docker daemon socket at unix://
 
 To get Docker working in your workspace, add the following command to your recipe:
 
-```
+```yaml
 - command: |-
       sudo groupadd docker || true
       sudo usermod -aG docker $USER
