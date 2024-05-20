@@ -14,13 +14,13 @@ curl -fsSL https://get.devzero.io | sh
 {% endtab %}
 
 {% tab title="Windows" %}
-To run on Windows, the CLI requires [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install). We **do not** support WSL1. To verify your WSL version you can run the following from your Command shell or PowerShell:&#x20;
+To run on Windows, the CLI requires [WSL 2](https://learn.microsoft.com/en-us/windows/wsl/install). We **do not** support WSL 1. To verify your WSL version you can run the following from your Command shell or PowerShell:&#x20;
 ```sh
 wsl -l -v
 ```
 To update your WSL version, please [follow these instructions](https://learn.microsoft.com/en-us/windows/wsl/install#upgrade-version-from-wsl-1-to-wsl-2).
 
-If you have WSL2, open a terminal using WSL2 and run the following command:&#x20;
+If you have WSL 2, open a terminal using WSL 2 and run the following command:&#x20;
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 curl -fsSL https://get.devzero.io | sh
