@@ -25,7 +25,7 @@ _If you want to use the CLI tool instead, please visit [this section](#using-the
 
 ## Using the `dz` CLI tool
 
-{% hint style="warning" %}
+{% hint style="info" %}
 _This section is undergoing active development and will change in the near future._
 {% endhint %}
 
@@ -57,7 +57,7 @@ dz workspace build --recipe-file=recipe.yml
 {% endcode %}
 
 5. Once the build completes, there will be output that looks like this
-{% code overflow="wrap" lineNumbers="true" %}
+{% code overflow="wrap" %}
 ```bash
 🚀	Build was successful!
 👉	To launch a workspace from this build:
