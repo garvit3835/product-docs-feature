@@ -42,7 +42,7 @@ dz workspace suggest
 ```
 {% endcode %}
 
-3. Inspect the contents and this time, write the contents to a file called recipe.yml
+3. Inspect the contents and this time, write the contents to a file called `recipe.yml`
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 dz workspace suggest > recipe.yml
