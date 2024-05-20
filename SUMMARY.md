@@ -45,6 +45,7 @@
 
 * [Regions](workspaces/regions.md)
 * [Stop/Pause/Resume](workspaces/hibernation.md)
+* [Kubernetes cluster](workspaces/kubernetes-cluster.md)
 
 ## Builds
 
