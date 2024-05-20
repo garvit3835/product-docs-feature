@@ -1,6 +1,8 @@
-# CLI Installation
+# Install DevZero CLI
 
-These instructions will guide you through the DevZero CLI installation process based on your local operating system. Our CLI enables you to build, launch, and connect to your team's workspaces.&#x20;
+A single CLI is used to interact with the DevZero control plane.
+
+These instructions will guide you through the DevZero CLI installation process based on your local operating system. The CLI enables building, launching, and connecting to workspaces.&#x20;
 
 <details>
 
