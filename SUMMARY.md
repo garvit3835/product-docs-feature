@@ -25,7 +25,7 @@
 * [Sharing build caches](use-cases/sharing-build-caches.md)
 * [Developer Experience Infrastructure](use-cases/dxi.md)
 
-## [Recipes](recipes/README.md)
+## Recipes
 
 * [Building new recipes](recipes/new-recipe.md)
 * [Recipe types](recipes/types.md)
