@@ -143,8 +143,8 @@ dev:
         sudo -u postgres createdb testdb -O pguser
       name: run_at_startup_for_postgres
 ```
-</details>
 {% endcode %}
+</details>
 
 {% code overflow="wrap" lineNumbers="true" %}
 <details>
