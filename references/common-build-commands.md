@@ -175,6 +175,8 @@ dev:
 
 <details>
 <summary>Ruby</summary>
+{% code overflow="wrap" lineNumbers="true" %}
+```yaml
 dev:
   commands:
     - command: |-
@@ -187,12 +189,26 @@ dev:
         echo 'eval "$(~/.rbenv/bin/rbenv init - bash)"' | sudo tee /etc/profile.d/103-ruby-installation.sh # Encountered multiple *.rb files (eg: railties/lib/rails/commands/help/help_command.rb)
         echo 'export PATH="$HOME/.rbenv/bin:$PATH"' | sudo tee -a /etc/profile.d/103-ruby-installation.sh # Encountered multiple *.rb files (eg: railties/lib/rails/commands/help/help_command.rb)
         sudo chmod +x /etc/profile.d/103-ruby-installation.sh
-      directory: rails # `rails` is relative to `codeCloneRoot`, which defaults to /home/devzero if not specified
       name: buildtime_install_cmd_for_Ruby
+```
+{% endcode %}
 </details>
 
 <details>
 <summary>Rust</summary>
+{% code overflow="wrap" lineNumbers="true" %}
+```yaml
+dev:
+  commands:
+    - command: |-
+        sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install -y curl
+        curl -sSf https://sh.rustup.rs | sh -s -- -y
+        \. $HOME/.cargo/env
+        rustup install 1.63.0
+        rustup default 1.63.0
+      name: buildtime_install_cmd_for_Rust
+```
+{% endcode %}
 </details>
 
 <details>
