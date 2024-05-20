@@ -11,7 +11,11 @@ _If you want to use the CLI tool instead, please visit [this section](#using-the
 2. Create a recipe by clicking `Create New` (top-right) >> `Create New Recipe`. This will take you to the [new repo](https://www.devzero.io/dashboard/new/repo) page.
 <figure><img src="../.gitbook/assets/create-new-recipe.png" alt=""><figcaption><p>Create New Recipe</p></figcaption></figure>
 
-3. Either start typing or enter the URL of any repo hosted on GitHub (eg: `https://github.com/vercel/vercel`).
+3. Either start typing or enter the URL of any repo hosted on GitHub (eg: `https://github.com/vercel/vercel`). 
+
+{% hint style="warning" %}
+If you're not using GitHub, check out this section on [custom cloning source code](code.md#advanced-custom-ways-of-clone-code).
+{% endhint %}
 
 4. Modify your recipe, then click `Save` (top-right).
 <figure><img src="../.gitbook/assets/save-new-recipe.png" alt=""><figcaption><p>Save New Recipe</p></figcaption></figure>
