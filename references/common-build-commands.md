@@ -22,6 +22,7 @@
 
 <details>
 <summary>Docker and Docker Compose</summary>
+{% code overflow="wrap" lineNumbers="true" %}
 ```yaml
 dev:
   commands:
@@ -49,10 +50,21 @@ dev:
         sudo systemctl enable containerd.service
       name: run_at_startup_docker
 ```
+{% endcode %}
 </details>
 
 <details>
 <summary>Helm</summary>
+{% code overflow="wrap" lineNumbers="true" %}
+```yaml
+dev:
+  commands:
+    - command: |-
+        curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+        chmod 700 get_helm.sh && ./get_helm.sh && rm get_helm.sh
+      name: buildtime_install_cmd_for_Helm
+```
+{% endcode %}
 </details>
 
 <details>
@@ -61,6 +73,7 @@ dev:
 
 <details>
 <summary>JavaScript (incl. Yarn, NVM)</summary>
+{% code overflow="wrap" lineNumbers="true" %}
 ```yaml
 dev:
   commands:
@@ -70,7 +83,6 @@ dev:
     - command: |-
         # increasing the number of file watchers for react applications
         echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
-      directory: .
       name: increase_file_watchers
 
     - command: |-
@@ -80,13 +92,23 @@ dev:
         echo '. $HOME/.nvm/nvm.sh' >> $HOME/.bashrc
         echo '. $HOME/.nvm/nvm.sh' >> $HOME/.zshrc
         npm install --global yarn
-      directory: . # `.` is relative to `codeCloneRoot`, which defaults to /home/devzero if not specified
       name: buildtime_install_cmd_for_JavaScript
 ```
+{% endcode %}
 </details>
 
 <details>
 <summary>Kubectl</summary>
+{% code overflow="wrap" lineNumbers="true" %}
+```yaml
+dev:
+  commands:
+    - command: |-
+        curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+        sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl && rm kubectl
+      name: buildtime_install_cmd_for_Helm
+```
+{% endcode %}
 </details>
 
 <details>
@@ -99,6 +121,7 @@ dev:
 
 <details>
 <summary>Postgres</summary>
+{% code overflow="wrap" lineNumbers="true" %}
 ```yaml
 dev:
   commands:
@@ -110,7 +133,6 @@ dev:
         sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
         sudo apt update
         sudo DEBIAN_FRONTEND=noninteractive apt install -y postgresql-14
-      directory: .
       name: buildtime_install_for_postgres
     
     # These steps are run using a systemctl unit at startup
@@ -122,7 +144,9 @@ dev:
       name: run_at_startup_for_postgres
 ```
 </details>
+{% endcode %}
 
+{% code overflow="wrap" lineNumbers="true" %}
 <details>
 <summary>Python</summary>
 ```yaml
@@ -146,6 +170,7 @@ dev:
         rm get-pip.py
       name: buildtime_venv_setup_cmd_for_python
 ```
+{% endcode %}
 </details>
 
 <details>
@@ -158,4 +183,16 @@ dev:
 
 <details>
 <summary>Terraform</summary>
+{% code overflow="wrap" lineNumbers="true" %}
+```yaml
+dev:
+  commands:
+    - command: |-
+        sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl
+        curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+        sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+        sudo apt-get update && sudo apt-get install terraform
+      name: buildtime_install_cmd_for_Terraform
+```
+{% endcode %}
 </details>
