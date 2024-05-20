@@ -24,7 +24,7 @@ If you're not using GitHub, check out this section on [custom cloning source cod
 <figure><img src="../.gitbook/assets/save-new-recipe-with-metadata.png" alt=""><figcaption><p>Save New Recipe with Metadata</p></figcaption></figure>
 
 6. Visit the [shared recipes](https://www.devzero.io/dashboard/recipes#shared) page, to verift that the recipe has been saved!
-<figure><img src="../.gitbook/assets/saved-recipes-list.png" alt=""><figcaption><p>Save New Recipe with Metadata</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/saved-recipes-list.png" alt=""><figcaption><p>Team Recipe View/p></figcaption></figure>
 
 
 ## Using the `dz` CLI tool

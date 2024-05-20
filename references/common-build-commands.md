@@ -1,23 +1,51 @@
 # Common Build Commands
 
 <details>
+<summary>AWS CLI</summary>
+{% code overflow="wrap" lineNumbers="true" %}
+```yaml
+```
+{% endcode %}
+</details>
+
+<details>
 <summary>Bazel</summary>
+{% code overflow="wrap" lineNumbers="true" %}
+```yaml
+```
+{% endcode %}
 </details>
 
 <details>
 <summary>C</summary>
+{% code overflow="wrap" lineNumbers="true" %}
+```yaml
+```
+{% endcode %}
 </details>
 
 <details>
 <summary>C++</summary>
+{% code overflow="wrap" lineNumbers="true" %}
+```yaml
+```
+{% endcode %}
 </details>
 
 <details>
 <summary>C#</summary>
+{% code overflow="wrap" lineNumbers="true" %}
+```yaml
+```
+{% endcode %}
 </details>
 
 <details>
 <summary>Dart</summary>
+{% code overflow="wrap" lineNumbers="true" %}
+```yaml
+```
+{% endcode %}
 </details>
 
 <details>
@@ -69,6 +97,10 @@ dev:
 
 <details>
 <summary>Java</summary>
+{% code overflow="wrap" lineNumbers="true" %}
+```yaml
+```
+{% endcode %}
 </details>
 
 <details>
@@ -113,10 +145,18 @@ dev:
 
 <details>
 <summary>Nix</summary>
+{% code overflow="wrap" lineNumbers="true" %}
+```yaml
+```
+{% endcode %}
 </details>
 
 <details>
 <summary>PHP</summary>
+{% code overflow="wrap" lineNumbers="true" %}
+```yaml
+```
+{% endcode %}
 </details>
 
 <details>
