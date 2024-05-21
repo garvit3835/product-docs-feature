@@ -10,7 +10,7 @@ Estimated time to complete: 5 mins
 
 You'll need to sign up for a DevZero account before you're able to do anything. We require you to have an existing account with an external SSO (Single-Sign On) provider, such as GitHub, Microsoft, or Google. To sign up for a DevZero account & create your DevZero team, please visit this link: [https://devzero.io/dashboard](https://devzero.io/dashboard)
 
-### Step 2. Download the DevZero CLI
+### Step 2 (a). Download the DevZero CLI
 
 The DevZero CLI, or `dz` (we pronounce it 'dee-zee', but you can pronounce it however you want) for short, is the primary way that you'll be connecting to your workspaces. We've built a simple "one-click" installer script that installs the CLI & prepares you to connect to a workspace. To use the installer, in a terminal window, run the following command:
 
@@ -48,6 +48,14 @@ sudo dz auth login && sudo dz net connect
 ```
 {% endcode %}
 {% endhint %}
+
+### Step 2 (b). Connecting your source code provider
+
+<figure><img src="../../.gitbook/assets/Connect Github.gif" alt=""><figcaption><p>Connecting GitHub</p></figcaption></figure>
+
+We currently only support GitHub as a first-class code provider for DevZero's workspaces. BitBucket and GitLab support are coming soon!\
+\
+If you only plan to work with public repositories, you do not need to enable our GitHub integration. However, if you'd like to work with private repositories from within a DevZero workspace you'll need to head to [https://www.devzero.io/dashboard/settings/personal#git-providers](https://www.devzero.io/dashboard/settings/personal#git-providers) and complete the installation steps. For more information (including a hack to get BitBucket and GitLab repos to work till we finish our integration), see [Source Code in Recipes](../recipes/code.md).
 
 ### Step 3. My First Recipe
 
