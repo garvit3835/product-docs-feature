@@ -115,5 +115,5 @@
 
 * [CLI Man Page](references/cli-man-page.md)
 * [Recipe Syntax](references/recipe-syntax.md)
-* [Build steps for common tools](references/common-build-commands.md)
+* [Common tools](references/common-tools/README.md)
 * [Leaving DevZero](references/leaving-devzero.md)
