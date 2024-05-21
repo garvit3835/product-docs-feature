@@ -6,12 +6,12 @@
 
 * [Quickstart](getting-started/quickstart.md)
 * [Terminology](getting-started/terminology.md)
-* [Install the CLI](getting-started/install-devzero/README.md)
+* [Install the CLI](getting-started/install-the-cli/README.md)
   * [Download dz](getting-started/install-devzero/download.md)
   * [Update dz](getting-started/install-devzero/update.md)
   * [Uninstall dz](getting-started/install-devzero/uninstall.md)
 
-## [Use-cases](use-cases/README.md)
+## Use-cases
 
 * [Standardized Dev Environment](use-cases/standardized-dev-env.md)
 * [Cloud Development Environment (CDE)](use-cases/cde.md)
@@ -43,17 +43,15 @@
 ## Workspaces (CPU, GPU)
 
 * [Regions](workspaces/regions.md)
-* [Stop/Pause/Resume](workspaces/hibernation.md)
-* [Kubernetes cluster](workspaces/kubernetes-cluster.md)
+* [Stop/Pause/Resume](workspaces-cpu-gpu/stop-pause-resume.md)
+* [Kubernetes cluster](workspaces-cpu-gpu/kubernetes-cluster.md)
 
 ## Builds
 
 * [Environment variables](builds/README.md)
   * [User](builds/env-vars/user.md)
-  * [Team](builds/env-vars/team.md)
+  * [Team](builds/builds/team.md)
 * [Secrets](builds/README.md)
-  * [User](builds/secrets/user.md)
-  * [Team](builds/secrets/team.md)
 * [Automatic updates (GitOps)](builds/gitops.md)
 * [Executing builds from CI](builds/ci.md)
 * [Where to store images? (Private registry)](builds/storing-builds.md)
@@ -73,14 +71,14 @@
 
 ## Admin
 
-* User Management
-* ACLs
-* Hosting
+* [User Management](admin/user-management.md)
+* [ACLs](admin/acls.md)
+* [Hosting](admin/hosting.md)
 * [Permissions](admin/permissions/README.md)
-  * [Connecting GitHub Account](admin/permissions/user-github.md)
-  * [Connecting GitHub Org](admin/permissions/org-github.md)
+  * [Connecting GitHub Account](admin/permissions/connecting-github-account.md)
+  * [Connecting GitHub Org](admin/permissions/connecting-github-org.md)
 
-## [[MOVE CONTENTS TO OTHER SECTIONS]] 🚀 Product Guides
+## \[\[MOVE CONTENTS TO OTHER SECTIONS]] 🚀 Product Guides
 
 * [Getting Started](product-guides/getting-started/README.md)
   * [Create Your First Recipe](product-guides/getting-started/create-your-first-recipe.md)
@@ -91,7 +89,7 @@
 * [Launch & Connect to a Workspace](product-guides/launch-and-connect-to-a-workspace.md)
 * [Using a Workspace](product-guides/using-a-workspace.md)
 * [Managing Your Workspaces](product-guides/managing-your-workspaces.md)
-* [How To's](product-guides/how-tos/README.md) [[ move out]]
+* [How To's](product-guides/how-tos/README.md)
   * [Connect to an RDS Instance](product-guides/how-tos/connect-to-an-rds-instance.md)
 * [Settings](product-guides/settings/README.md)
   * [User Settings](product-guides/settings/user-settings.md)
@@ -100,7 +98,7 @@
 ## 📚 How-to Guides
 
 * [Connect to an RDS Instance](product-guides/how-tos/connect-to-an-rds-instance.md)
-* [Connect to an S3 Bucket](product-guides/how-tos/connect-to-an-s3-bucket.md) 
+* [Connect to an S3 Bucket](product-guides/how-tos/connect-to-an-s3-bucket.md)
 
 ## 🆘 FAQ + Troubleshooting
 
