@@ -16,7 +16,7 @@
       </tr>
       <tr>
          <td><strong>Build Tools</strong></td>
-         <td><a href="build-tools/README.md">README.md</a></td>
+         <td><a href="build-tools/build-tools.md">build-tools.md</a></td>
          <td><a href="../../.gitbook/assets/build-tools.png">build-tools.png</a></td>
       </tr>
       <tr>
