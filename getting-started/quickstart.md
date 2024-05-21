@@ -67,7 +67,7 @@ Once you click that button, you should be taken to a new screen. This is where t
 
 In that text box, you can put _any_ public Git repository, and, using some clever heuristics & magic, we'll try to guess what programming languages / tools are used in that repository, and generate a 'recipe' tailored to those languages. Cool, right?&#x20;
 
-For the sake of this tutorial, let's use my personal website's repository ([https://github.com/hatf0/hat.fo-next](https://github.com/hatf0/hat.fo-next)). This is a Next.js / Tailwind CSS app built on top of Node.js, which we happily support.
+For the sake of this tutorial, let's use a personal website's repository ([https://github.com/hatf0/hat.fo-next](https://github.com/hatf0/hat.fo-next)). This is a Next.js / Tailwind CSS app built on top of Node.js, which we happily support.
 
 <figure><img src="../.gitbook/assets/CleanShot 2024-05-21 at 16.27.59@2x.png" alt=""><figcaption><p>Yes, we know the 'Import' button is comically large. We plan on fixing it Soon<span data-gb-custom-inline data-tag="emoji" data-code="2122">™️</span>.</p></figcaption></figure>
 
