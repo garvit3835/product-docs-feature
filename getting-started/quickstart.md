@@ -1,6 +1,6 @@
 # DevZero quickstart
 
-Welcome! Follow the steps below to create your first environment on DevZero (known as a workspace), or watch the video to learn how to get started with DevZero and quickly get acquinted with some useful features. 
+Welcome! Follow the steps below to create your first environment on DevZero (known as a workspace), or watch the video to learn how to get started with DevZero and quickly get acquainted with some useful features. 
 
 Estimated time to complete: x mins
 
