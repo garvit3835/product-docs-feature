@@ -8,7 +8,7 @@ Estimated time to complete: 5 mins
 
 ### Step 1. Sign up for an account
 
-You'll need to sign up for a DevZero account before you're able to do anything. We require you to have an existing account with an external SSO (Single-Sign On) provider, such as GitHub, Microsoft, or Google. To sign up for a DevZero account & create your DevZero team, please visit this link: [https://devzero.io/dashboard](https://devzero.io/dashboard)
+You'll need to sign up for a DevZero account before you're able to do anything. We require you to have an existing account with an external SSO (Single-Sign On) provider, such as GitHub, Microsoft, or Google. To sign up for a DevZero account & create your DevZero team, please visit this link: [https://devzero.io/dashboard](https://devzero.io/dashboard){:target="_blank"}
 
 ### Step 2. Download the DevZero CLI
 
