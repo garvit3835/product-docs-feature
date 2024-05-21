@@ -12,7 +12,7 @@ Head to [devzero.io/dashboard](https://devzero.io/dashboard) and create your acc
 
 <summary><strong>Step 2:</strong> Connect your Remote Code Provider</summary>
 
-<figure><img src="../../.gitbook/assets/Connect Github.gif" alt=""><figcaption><p>Connecting GitHub</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Connect Github.gif" alt="" width="80%" height="80%"><figcaption><p>Connecting GitHub</p></figcaption></figure>
 
 We currently only support GitHub as a code provider for DevZero workspaces. BitBucket and GitLab support are coming soon!\
 \
