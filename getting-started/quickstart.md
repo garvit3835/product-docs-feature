@@ -55,7 +55,11 @@ sudo dz auth login && sudo dz net connect
 
 We currently only support GitHub as a first-class code provider for DevZero's workspaces. BitBucket and GitLab support are coming soon!\
 \
-If you only plan to work with public repositories, you do not need to enable our GitHub integration. However, if you'd like to work with private repositories from within a DevZero workspace you'll need to head to [https://www.devzero.io/dashboard/settings/personal#git-providers](https://www.devzero.io/dashboard/settings/personal#git-providers) and complete the installation steps. For more information (including a hack to get BitBucket and GitLab repos to work till we finish our integration), see [Source Code in Recipes](../recipes/code.md).
+If you only plan to work with public repositories, you do not need to enable our GitHub integration. However, if you'd like to work with private repositories from within a DevZero workspace you'll need to head to [https://www.devzero.io/dashboard/settings/personal#git-providers](https://www.devzero.io/dashboard/settings/personal#git-providers) and complete the installation steps.
+
+{% hint style="info" %}
+For more information (including a hack to get BitBucket and GitLab repos to work till we finish our integration), see [Source Code in Recipes](../recipes/code.md).
+{% endhint %}
 
 ### Step 3. My First Recipe
 
