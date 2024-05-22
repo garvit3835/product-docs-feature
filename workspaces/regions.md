@@ -6,7 +6,7 @@ description: Edge compute regions supported by the hosted DevZero platform
 
 <figure><img src="../.gitbook/assets/edge-regions.png" alt=""><figcaption></figcaption></figure>
 
-| Region Code | City Codes | Geographic Location        | Status               |
+| Region Code | City Code  | Geographic Location        | Status               |
 | ----------- | ---------- | -------------------------- | -------------------- |
 | usw2        | PDX        | Portland, Oregon, USA      | :white\_check\_mark: |
 | use1        | IAD        | Washington, D.C., USA      | :white\_check\_mark: |
