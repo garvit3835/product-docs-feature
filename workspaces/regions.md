@@ -1,5 +1,5 @@
 ---
-description: Compute Regions supported by the hosted DevZero platform
+description: Edge compute regions supported by the hosted DevZero platform
 ---
 
 # Regions
