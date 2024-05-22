@@ -51,7 +51,7 @@ sudo dz auth login && sudo dz net connect
 
 ### Step 2 (b). Connecting your source code provider
 
-<figure><img src="../../.gitbook/assets/Connect Github.gif" alt=""><figcaption><p>Connecting GitHub</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Connect Github.gif" alt=""><figcaption><p>Connecting GitHub</p></figcaption></figure>
 
 We currently only support GitHub as a first-class code provider for DevZero's workspaces. BitBucket and GitLab support are coming soon!\
 \
@@ -73,17 +73,17 @@ When you click that button, a menu should pop up with two options. We want to cr
 
 <figure><img src="../.gitbook/assets/CleanShot 2024-05-21 at 16.16.53@2x.png" alt="A picture of the DevZero dashboard, with the &#x22;Create New Recipe&#x22; button highlighted in red."><figcaption><p>The button you should click. Don't click the one above it. Not yet.</p></figcaption></figure>
 
-Once you click that button, you should be taken to a new screen. This is where the magic happens.&#x20;
+Once you click that button, you should be taken to a new screen. This is where the magic happens.
 
 <figure><img src="../.gitbook/assets/CleanShot 2024-05-21 at 16.20.12@2x.png" alt=""><figcaption><p>Recipe generation! We do it!</p></figcaption></figure>
 
-In that text box, you can put _any_ public Git repository, and, using some clever heuristics & magic, we'll try to guess what programming languages / tools are used in that repository, and generate a 'recipe' tailored to those languages. Cool, right?&#x20;
+In that text box, you can put _any_ Git repository (that your account can access), and, using some clever heuristics & magic, we'll try to guess what programming languages / tools are used in that repository, and generate a 'recipe' tailored to those languages. Cool, right?
 
 For the sake of this tutorial, let's use a personal website's repository ([https://github.com/hatf0/hat.fo-next](https://github.com/hatf0/hat.fo-next)). This is a Next.js / Tailwind CSS app built on top of Node.js, which we happily support.
 
 <figure><img src="../.gitbook/assets/CleanShot 2024-05-21 at 16.27.59@2x.png" alt=""><figcaption><p>Yes, we know the 'Import' button is comically large. We plan on fixing it Soon<span data-gb-custom-inline data-tag="emoji" data-code="2122">™️</span>.</p></figcaption></figure>
 
-Click the 'Import' button, and sit tight! In the background, our code-analyzing hamsters will spin their wheels as fast as they can, trying their best to figure out what the darn repo is using.&#x20;
+Click the 'Import' button, and sit tight! In the background, our code-analyzing hamsters will spin their wheels as fast as they can, trying their best to figure out what the darn repo is using.
 
 After a little bit, you should be redirected to a second page. We've finished doing our checks on your repo, and now you're ready to rock. We support two ways of building recipes - the visual editor, or the text editor. To see the raw recipe, click the "View YAML" switch at the rop right.
 
@@ -93,7 +93,7 @@ Review the recipe we generated, and if it all checks out to you, click the "Save
 
 <figure><img src="../.gitbook/assets/CleanShot 2024-05-21 at 16.37.50@2x.png" alt=""><figcaption><p>The description is not required, just FYI. The recipe will build without it... or will it?</p></figcaption></figure>
 
-Once you're done naming it (we know, naming things is the hardest part of any software engineer's job), click the "Save" button at the bottom-right of the modal. You'll be redirected to a new page, where we've started building your recipe and turning it into a launchable recipe.
+Once you're done naming the recipe (we know, naming things is the hardest part of any software engineer's job), click the "Save" button at the bottom-right of the modal. You'll be redirected to a new page, where we've started building your recipe.
 
 <figure><img src="../.gitbook/assets/CleanShot 2024-05-21 at 16.40.20@2x.png" alt=""><figcaption><p>These logs are real-time, so if you're like me &#x26; you like to watch paint dry, this is very exciting.</p></figcaption></figure>
 
@@ -109,12 +109,11 @@ Click the "Launch Workspace Now" button, and you'll be whisked off to your works
 
 ### Step 5. Connect to your Workspace
 
-After some time, a button should appear at the top-right, labeled "Connect". Click that drop-down, and you should be presented with three tabs:\
+After some time, a button should appear at the top-right, labeled "Connect". Click that drop-down, and you should be presented with three tabs:
 
+<figure><img src="../.gitbook/assets/CleanShot 2024-05-21 at 16.48.14@2x.png" alt=""><figcaption><p>We also support opening workspaces in VS Code, or in the browser. Just in case you don't have an SSH client nearby.</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/CleanShot 2024-05-21 at 16.48.14@2x.png" alt=""><figcaption></figcaption></figure>
-
-Click the "Terminal" tab, and then copy the command at the bottom of the drop-down. Open a new terminal window, paste that command, and you're in! Congratulations!
+Click the "Terminal" tab, and then copy the command at the bottom of the drop-down. Open a new terminal window, paste that command, and you're in! Congratulations, and welcome to the DevZero platform!
 
 <figure><img src="../.gitbook/assets/CleanShot 2024-05-21 at 16.50.11@2x.png" alt=""><figcaption><p>The font is Berkeley Mono, just in case you're interested.</p></figcaption></figure>
 
