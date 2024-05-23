@@ -15,6 +15,7 @@
 
 * [Standardized Dev Environment](use-cases/standardized-dev-env.md)
 * [Cloud Development Environment (CDE)](use-cases/cde.md)
+* [Improving Build Times](use-cases/build-times.md)
 * [Testing Environment](use-cases/testing-env.md)
 * [Preview Environments](use-cases/preview-env.md)
 * [Internal Developer Platform](use-cases/idp.md)
