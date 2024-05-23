@@ -10,46 +10,7 @@ Estimated time to complete: 5 mins
 
 You'll need to sign up for a DevZero account before you're able to do anything. We require you to have an existing account with an external SSO (Single-Sign On) provider, such as GitHub, Microsoft, or Google. To sign up for a DevZero account & create your DevZero team, please visit this link: [https://devzero.io/dashboard](https://devzero.io/dashboard)
 
-### Step 2 (a). Download the DevZero CLI
-
-The DevZero CLI, or `dz` (we pronounce it 'dee-zee', but you can pronounce it however you want) for short, is the primary way that you'll be connecting to your workspaces. We've built a simple "one-click" installer script that installs the CLI & prepares you to connect to a workspace. To use the installer, in a terminal window, run the following command:
-
-{% tabs %}
-{% tab title="MacOS / Linux" %}
-<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>curl -fsSL https://get.devzero.io | sh
-</strong></code></pre>
-{% endtab %}
-
-{% tab title="Windows" %}
-To run on Windows, the CLI requires [WSL 2](https://learn.microsoft.com/en-us/windows/wsl/install). We **do not** support WSL 1. To verify your WSL version you can run the following from your Command shell or PowerShell:
-
-```sh
-wsl -l -v
-```
-
-To update your WSL version, please [follow these instructions](https://learn.microsoft.com/en-us/windows/wsl/install#upgrade-version-from-wsl-1-to-wsl-2).
-
-If you have WSL 2, open a terminal using WSL 2 and run the following command:
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-curl -fsSL https://get.devzero.io | sh
-```
-{% endcode %}
-{% endtab %}
-{% endtabs %}
-
-{% hint style="warning" %}
-**Please run these two commands after the installer finishes:**
-
-{% code overflow="wrap" %}
-```bash
-sudo dz auth login && sudo dz net connect
-```
-{% endcode %}
-{% endhint %}
-
-### Step 2 (b). Connecting your source code provider
+### Step 2. Connecting your source code provider
 
 <figure><img src="../.gitbook/assets/Connect Github.gif" alt=""><figcaption><p>Connecting GitHub</p></figcaption></figure>
 
@@ -107,7 +68,46 @@ Click the "Launch Workspace Now" button, and you'll be whisked off to your works
 
 <figure><img src="../.gitbook/assets/CleanShot 2024-05-21 at 16.44.11@2x.png" alt=""><figcaption></figcaption></figure>
 
-### Step 5. Connect to your Workspace
+### Step 5. Download the DevZero CLI
+
+The DevZero CLI, or `dz` (we pronounce it 'dee-zee', but you can pronounce it however you want) for short, is the primary way that you'll be connecting to your workspaces. We've built a simple "one-click" installer script that installs the CLI & prepares you to connect to a workspace. To use the installer, in a terminal window, run the following command:
+
+{% tabs %}
+{% tab title="MacOS / Linux" %}
+<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>curl -fsSL https://get.devzero.io | sh
+</strong></code></pre>
+{% endtab %}
+
+{% tab title="Windows" %}
+To run on Windows, the CLI requires [WSL 2](https://learn.microsoft.com/en-us/windows/wsl/install). We **do not** support WSL 1. To verify your WSL version you can run the following from your Command shell or PowerShell:
+
+```sh
+wsl -l -v
+```
+
+To update your WSL version, please [follow these instructions](https://learn.microsoft.com/en-us/windows/wsl/install#upgrade-version-from-wsl-1-to-wsl-2).
+
+If you have WSL 2, open a terminal using WSL 2 and run the following command:
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+curl -fsSL https://get.devzero.io | sh
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+{% hint style="warning" %}
+**Please run these two commands after the installer finishes:**
+
+{% code overflow="wrap" %}
+```bash
+sudo dz auth login && sudo dz net connect
+```
+{% endcode %}
+{% endhint %}
+
+### Step 6. Connect to your Workspace
 
 After some time, a button should appear at the top-right, labeled "Connect". Click that drop-down, and you should be presented with three tabs:
 
