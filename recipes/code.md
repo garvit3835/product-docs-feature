@@ -120,7 +120,8 @@ dev:
   commands:
     - command: |-
         mkdir -p .ssh
-        echo "$BITBUCKET_PVT_KEY" >> .ssh/devzero_id25519
+        printf "%s" "$BITBUCKET_PVT_KEY" >> .ssh/devzero_id25519
+        sed -i 's/^"//; s/"$//' .ssh/devzero_id25519
         chmod 400 .ssh/devzero_id25519
         GIT_SSH_COMMAND='ssh -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new -i /home/devzero/.ssh/devzero_id25519' git clone git@bitbucket.org:devzero-inc/demo-repo-pvt.git
       dir: .
