@@ -14,12 +14,12 @@ You'll need to sign up for a DevZero account before you're able to do anything. 
 
 <figure><img src="../.gitbook/assets/Connect Github.gif" alt=""><figcaption><p>Connecting GitHub</p></figcaption></figure>
 
-We currently only support GitHub as a first-class code provider for DevZero's workspaces. BitBucket and GitLab support are coming soon!\
+We currently only support GitHub as a first-class code provider for DevZero's workspaces. Bitbucket and GitLab support are coming soon!\
 \
 If you only plan to work with public repositories, you do not need to enable our GitHub integration. However, if you'd like to work with private repositories from within a DevZero workspace you'll need to head to [https://www.devzero.io/dashboard/settings/personal#git-providers](https://www.devzero.io/dashboard/settings/personal#git-providers) and complete the installation steps.
 
 {% hint style="info" %}
-For more information (including a hack to get BitBucket and GitLab repos to work till we finish our integration), see [Source Code in Recipes](../recipes/code.md).
+For more information (including a hack to get Bitbucket and GitLab repos to work till we finish our integration), see [Source Code in Recipes](../recipes/code.md).
 {% endhint %}
 
 ### Step 3. My First Recipe

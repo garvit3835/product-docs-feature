@@ -63,3 +63,73 @@ Some of the use-cases where this is applicable:
 - If there's something else, please drop us a note at [support@devzero.io](mailto:support@devzero.io)
 
 </details>
+
+<details>
+<summary>Accessing code from Bitbucket</summary>
+
+## Step 1. Go to your repo page on the Bitbucket website
+<figure><img src="../.gitbook/assets/bitbucket-repo.png" alt=""><figcaption><p>Bitbucket Repo</p></figcaption></figure>
+
+## Step 2. Go to the `Access Keys` section
+<figure><img src="../.gitbook/assets/bitbucket-access-keys.png" alt=""><figcaption><p>Bitbucket Access Keys</p></figcaption></figure>
+
+## Step 3(a). Generate keys
+
+{% code overflow="wrap" %}
+```bash
+ssh-keygen -t ed25519 -C "devzero-user@my-website.com" -f devzero_id25519 -P '' -q
+```
+{% endcode %}
+
+## Step 3(b). Add the public key to your Bitbucket repo's access keys 
+
+First, copy the public key
+{% code overflow="wrap" %}
+```bash
+cat ~/.ssh/devzero_id25519.pub | pbcopy
+```
+{% endcode %}
+
+Then, paste it in the `Key` section in the pop-up box.
+<figure><img src="../.gitbook/assets/bitbucket-add-access-key.png" alt=""><figcaption><p>Bitbucket Add Access Keys</p></figcaption></figure>
+
+## Step 3(c). Add the private key to DevZero
+
+Check the private key
+<figure><img src="../.gitbook/assets/private-key-full.png" alt=""><figcaption><p>New private key</p></figcaption></figure>
+
+Copy it
+{% code overflow="wrap" %}
+```bash
+cat ~/.ssh/devzero_id25519 | pbcopy
+```
+{% endcode %}
+
+Then paste it into your team's secrets section at https://www.devzero.io/dashboard/settings/environment-variables#team
+
+Call it `BITBUCKET_PVT_KEY` (or whatever you please, but this is referenced in `Step 4`)
+
+<figure><img src="../.gitbook/assets/bitbucket-pvt-key-dz.png" alt=""><figcaption><p>Add private key to DevZero</p></figcaption></figure>
+
+## Step 4. Build a recipe
+
+Create a recipe and add a block that looks like the one below (check `line 5` to ensure naming).
+{% code overflow="wrap" %}
+```yaml
+dev:
+  commands:
+    - command: |-
+        mkdir -p .ssh
+        echo $BITBUCKET_PVT_KEY >> .ssh/devzero_id25519
+        chmod 400 .ssh/devzero_id25519
+        GIT_SSH_COMMAND='ssh -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new -i /home/devzero/.ssh/devzero_id25519' git clone git@bitbucket.org:devzero-inc/demo-repo-pvt.git
+      dir: .
+      name: clone_from_bitbucket
+```
+{% endcode %}
+
+## Step 5. Launch a workspace from that recipe 
+
+Visit your recipes pages here https://www.devzero.io/dashboard/recipes, and launch a workspace from that new recipe!
+
+</details>
