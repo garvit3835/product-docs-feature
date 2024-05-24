@@ -107,7 +107,7 @@ cat ~/.ssh/devzero_id25519 | pbcopy
 
 Then paste it into your team's secrets section at [https://www.devzero.io/dashboard/settings/environment-variables#team](https://www.devzero.io/dashboard/settings/environment-variables#team)
 
-Call it `BITBUCKET_PVT_KEY` (or whatever you please, but this is referenced in `Step 4`)
+Call it `BITBUCKET_PVT_KEY` (or whatever you please, but this is referenced in [`Step 4`](#step-4.-build-a-recipe))
 
 <figure><img src="../.gitbook/assets/bitbucket-pvt-key-dz.png" alt=""><figcaption><p>Add private key to DevZero</p></figcaption></figure>
 
