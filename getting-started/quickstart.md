@@ -24,7 +24,7 @@ For more information (including a hack to get Bitbucket and GitLab repos to work
 
 ### Step 3. My First Recipe
 
-Great! Now, you'll need a 'recipe' to build your first workspace. A receipe is a blueprint of your environment. DevZero uses these 'recipes' to customize your workspace -- for example, cloning from a Git repository, installing dependencies, or installing your personal dotfiles.
+Great! Now, you'll need a 'recipe' to build your first workspace. A recipe is a blueprint for your environment. DevZero uses these 'recipes' to customize your workspace -- for example, cloning from a Git repository, installing dependencies, or installing your personal dotfiles.
 
 We currently only support creating recipes in the Web UI ([https://devzero.io/dashboard](https://devzero.io/dashboard)), so you'll need to go there to get started. Once you're there, you should see a button on the top-right corner, labeled "Create New".
 
