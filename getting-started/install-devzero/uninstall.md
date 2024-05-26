@@ -1,3 +1,9 @@
-# Install DevZero
+# Uninstall dz
 
-A single CLI is used to interact with 
+Use&#x20;
+
+```
+dz uninstall
+```
+
+&#x20;to remove DevZero's CLI.

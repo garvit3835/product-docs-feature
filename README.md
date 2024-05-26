@@ -6,7 +6,7 @@
 
 ## What is DevZero?
 
-DevZero is a cloud development platform designed to help software engineers spend more time writing code and less time waiting on builds, troubleshooting dev environments, and fighting over shared resources.
+DevZero is a [cloud development platform](https://www.devzero.io/cloud-development-environment) designed to help software engineers spend more time writing code and less time waiting on builds, troubleshooting dev environments, and fighting over shared resources.
 
 With the DevZero platform, you can centrally define and manage cloud environment specifications for development, testing, CI, and more. This ensures that environments are always consistent, up-to-date, and secure.
 

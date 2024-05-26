@@ -24,7 +24,7 @@ For more information (including a hack to get Bitbucket and GitLab repos to work
 
 ### Step 3. My First Recipe
 
-Great! Now, you'll need a 'recipe' to build your first workspace. DevZero uses these 'recipes' to customize your workspace -- for example, cloning from a Git repository, installing dependencies, or installing your personal dotfiles.
+Great! Now, you'll need a 'recipe' to build your first workspace. A receipe is a blueprint of your environment. DevZero uses these 'recipes' to customize your workspace -- for example, cloning from a Git repository, installing dependencies, or installing your personal dotfiles.
 
 We currently only support creating recipes in the Web UI ([https://devzero.io/dashboard](https://devzero.io/dashboard)), so you'll need to go there to get started. Once you're there, you should see a button on the top-right corner, labeled "Create New".
 
@@ -38,11 +38,11 @@ Once you click that button, you should be taken to a new screen. This is where t
 
 <figure><img src="../.gitbook/assets/CleanShot 2024-05-21 at 16.20.12@2x.png" alt=""><figcaption><p>Recipe generation! We do it!</p></figcaption></figure>
 
-In that text box, you can put _any_ Git repository (that your account can access), and, using some clever heuristics & magic, we'll try to guess what programming languages / tools are used in that repository, and generate a 'recipe' tailored to those languages. Cool, right?
+In that text box, you can put _any_ Git repository (that your account can access), and, using some clever heuristics & magic, we'll detect the programming languages / tools that are used in that repository, and generate a 'recipe' tailored to those languages. Cool, right?
 
 For the sake of this tutorial, let's use a personal website's repository ([https://github.com/hatf0/hat.fo-next](https://github.com/hatf0/hat.fo-next)). This is a Next.js / Tailwind CSS app built on top of Node.js, which we happily support.
 
-<figure><img src="../.gitbook/assets/CleanShot 2024-05-21 at 16.27.59@2x.png" alt=""><figcaption><p>Yes, we know the 'Import' button is comically large. We plan on fixing it Soon<span data-gb-custom-inline data-tag="emoji" data-code="2122">™️</span>.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/CleanShot 2024-05-21 at 16.27.59@2x.png" alt=""><figcaption><p>.</p></figcaption></figure>
 
 Click the 'Import' button, and sit tight! In the background, our code-analyzing hamsters will spin their wheels as fast as they can, trying their best to figure out what the darn repo is using.
 
