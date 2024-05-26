@@ -6,9 +6,9 @@ Estimated time to complete: 5 mins
 
 \[\[ video ]]
 
-### Step 1. Sign up for an account
+### Step 1. Signing up for an account
 
-You'll need to sign up for a DevZero account before you're able to do anything. We require you to have an existing account with an external SSO (Single-Sign On) provider, such as GitHub, Microsoft, or Google. To sign up for a DevZero account & create your DevZero team, please visit this link: [https://devzero.io/dashboard](https://devzero.io/dashboard)
+You'll need to sign up for a DevZero account before you're able to do anything. We require you to have an existing account with an external Identity Provider (such as GitHub, Microsoft, or Google). To sign up for a DevZero account & create your DevZero team, please visit [https://devzero.io/dashboard](https://devzero.io/dashboard)
 
 ### Step 2. Connecting your source code provider
 
@@ -22,7 +22,7 @@ If you only plan to work with public repositories, you do not need to enable our
 For more information (including a hack to get Bitbucket and GitLab repos to work till we finish our integration), see [Source Code in Recipes](../recipes/code.md).
 {% endhint %}
 
-### Step 3. My First Recipe
+### Step 3. Creating Your First Recipe
 
 Great! Now, you'll need a 'recipe' to build your first workspace. A recipe is a blueprint for your environment. DevZero uses these 'recipes' to customize your workspace -- for example, cloning from a Git repository, installing dependencies, or installing your personal dotfiles.
 
@@ -58,7 +58,7 @@ Once you're done naming the recipe (we know, naming things is the hardest part o
 
 <figure><img src="../.gitbook/assets/CleanShot 2024-05-21 at 16.40.20@2x.png" alt=""><figcaption><p>These logs are real-time, so if you're like me &#x26; you like to watch paint dry, this is very exciting.</p></figcaption></figure>
 
-### Step 4. Launch a Workspace
+### Step 4. Launching a Workspace from the Recipe
 
 After some time, a button near the top-right side of your browser should appear, with the label "Launch Workspace Now". Great! You're ready to launch your workspace!
 
@@ -68,7 +68,7 @@ Click the "Launch Workspace Now" button, and you'll be whisked off to your works
 
 <figure><img src="../.gitbook/assets/CleanShot 2024-05-21 at 16.44.11@2x.png" alt=""><figcaption></figcaption></figure>
 
-### Step 5. Download the DevZero CLI
+### Step 5. Downloading the DevZero CLI
 
 The DevZero CLI, or `dz` (we pronounce it 'dee-zee', but you can pronounce it however you want) for short, is the primary way that you'll be connecting to your workspaces. We've built a simple "one-click" installer script that installs the CLI & prepares you to connect to a workspace. To use the installer, in a terminal window, run the following command:
 
@@ -107,7 +107,7 @@ sudo dz auth login && sudo dz net connect
 {% endcode %}
 {% endhint %}
 
-### Step 6. Connect to your Workspace
+### Step 6. Connecting to your Workspace
 
 After some time, a button should appear at the top-right, labeled "Connect". Click that drop-down, and you should be presented with three tabs:
 
