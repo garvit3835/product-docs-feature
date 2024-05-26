@@ -1,6 +1,6 @@
 # User Management
 
-While DevZero is nice for individual developers, most of it's value is derived when using DevZero as a team. Once an `Admin` user creates a Recipe, you can share the Recipe with other members of your team so they can quickly launch ready-to-code Workspaces.
+While DevZero can be used by individual/solo/hobbyist developers, most of it's value is derived when being used in a professional software development team. Once an `Admin` user creates a Recipe, you can share the Recipe with other members of your team so they can quickly launch ready-to-code Workspaces.
 
 To invite a new member, click the top right icon->"Team settings"->"User Management"
 
