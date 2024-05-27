@@ -14,20 +14,13 @@ Developers can use these specifications alongside our CLI to launch their own ep
 
 ## Ready to Get Started?
 
-[Click here](https://www.devzero.io/dashboard) to create your free account. Then head to the [getting-started](product-guides/getting-started/ "mention") section of our docs.
+[Click here](https://www.devzero.io/dashboard) to create your free account. Then head to the [getting-started](getting-started/ "mention") section of our docs.
 
 ## Quick Links
 
 We've put together some helpful guides to get started with our product quickly and easily.
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
 
-{% content-ref url="product-guides/getting-started/" %}
-[getting-started](product-guides/getting-started/)
-{% endcontent-ref %}
-
-{% content-ref url="broken-reference/" %}
-[broken-reference](broken-reference/)
+{% content-ref url="getting-started/" %}
+[getting-started](getting-started/)
 {% endcontent-ref %}
