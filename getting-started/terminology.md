@@ -33,7 +33,7 @@
 
 ### SSO
 
-## Kubernetes Cluster (ephemeral)
+## Kubernetes Cluster (ephemeral, namespaced)
 
 ## Network
 
