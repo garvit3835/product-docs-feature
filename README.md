@@ -21,6 +21,5 @@ Developers can use these specifications alongside our CLI to launch their own ep
 We've put together some helpful guides to get started with our product quickly and easily.
 
 
-{% content-ref url="getting-started/" %}
-[getting-started](getting-started/)
-{% endcontent-ref %}
+
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td>Quickstart</td><td><a href="getting-started/quickstart.md">quickstart.md</a></td></tr><tr><td></td><td></td><td></td><td></td><td>Terminology</td><td><a href="getting-started/terminology.md">terminology.md</a></td></tr><tr><td></td><td></td><td></td><td></td><td>Use-cases</td><td><a href="broken-reference">Broken link</a></td></tr></tbody></table>
