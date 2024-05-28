@@ -4,7 +4,7 @@
 **Coming soon...**
 {% endhint %}
 
-DevZero's workspaces are backed by ephemeral, virtualized Kubernetes clusters. Depending on the service tier that you are on, one of the following will apply:
+DevZero's workspaces are backed by ephemeral, virtualized Kubernetes clusters. Depending on the service tier and/or deployment models that you are being served from, one of the following will apply:
 
 * all your workspaces are in the same underlying virtual Kubernetes cluster
   * in this case, each of your devboxes will be in the `default` namespace in the cluster

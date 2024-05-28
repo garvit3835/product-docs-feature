@@ -44,8 +44,8 @@
 ## Workspaces (CPU, GPU)
 
 * [Regions](workspaces/regions.md)
-* [Stop/Pause/Resume](workspaces-cpu-gpu/stop-pause-resume.md)
-* [Kubernetes cluster](workspaces-cpu-gpu/kubernetes-cluster.md)
+* [Stop/Pause/Resume](workspaces/stop-pause-resume.md)
+* [Kubernetes cluster](workspaces/kubernetes-cluster.md)
 
 ## Builds
 
