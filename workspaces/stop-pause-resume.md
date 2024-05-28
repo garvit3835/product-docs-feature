@@ -9,7 +9,7 @@ Therefore, contents outside of `/home/devzero` (for example, `/var/*`, `/tmp/*`,
 From the devbox's perspective, this would feel like it was restarted.
 
 {% hint style="info" %}
-Our team is actively working on ways to preserve and restore:
+**Coming soon...** Our team is actively working on ways to preserve and restore:
 - running process
 - state of the entire filesystem
 for when a workspace or any of its parts are restarted after being paused/stopped. 
