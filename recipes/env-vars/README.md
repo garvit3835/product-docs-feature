@@ -11,6 +11,8 @@ It will also be available in the running workspaces.
 
 {% hint style="warning" %}
 **Reserved prefix** `DEVZERO_` is a reserved prefix used by the platform. They may change at any time so relying on them is not advisable.
+
+You may store environment variables or secrets with line breaks.
 {% endhint %}
 
 You can access environment variables within builds or at launch-time. If your variable is called `MY_KEY`, to access its value anywhere, use `$MY_KEY`.
