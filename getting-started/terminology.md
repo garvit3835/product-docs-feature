@@ -69,10 +69,13 @@ A peer is another node (or WireGuard endpoint) that your node is trying to talk 
 
 ## Recipe
 
-
+Recipe defines the underlying infrastructure and how tools are configured for a DevZero workspace. Workspaces are created from recipes. Recipes are specified using YAML.
 
 ### Build
-mention Buildkit
+
+Build is a representation of a recipe as an OCI-compatible image. Once a recipe has a build for a certain version, workspaces can be launched from it. This saves every user from having to build their own environments, instead being able to utilize a prebuild. Launch-time steps and other user customizations are handled on a per-workspace basis, and aren't shared in the prebuild.
+
+DevZero transforms a recipe YAML into a Low-Level Build (LLB) definition format before using BuildKit to build the images - this is to enable caching and parallelization during the build process.
 
 ### Execution stages
 <table data-full-width="false">
@@ -101,15 +104,27 @@ mention Buildkit
 
 ### Recipe Library
 
+Recipe library is a collection of recipes that are built for use by the members of a team.
+
 ## Regions
+
+Regions are various cities around the world where DevZero runs workspaces. This is to enable end-users to be as close to compute and data as possible.
 
 ## Secrets
 
+Secrets are sensitive materials used to authenticate to other services (eg: git, third-party services, etc).
+
 ## Team
+
+Team is a collection of 1+ users on DevZero.
 
 ## User
 
+User in DevZero is an entity resource that belongs to a team. They can interact with various components depending on the ACLs that their User entity has access to.
+
 ## Volume
+
+Volume is a storage device. It may be used only by one workspace, or can be attached to multiple, in a read-write capacity. It usually shows up on a workspace as a filesystem.
 
 ## Ceph
 
@@ -117,9 +132,16 @@ Ceph is a free and open-source software-defined storage platform that provides o
 
 ### Mount
 
+The methodology that's used to enable a workspace to have access to persistent volumes (can be verified by running `mount` in a UNIX shell). 
+
 ### Persistent Volumes
 
+Persistent volumes are network-backed block devices that are mounted to workspaces. This ensures that changes made inside a workspace are resilient to restarts, etc.  
+
 ## Workspace
+
+A workspace is the environment that a developer works in, or shares with their colleagues. Developers in a team each work from their own workspace, which is generally isolated from other workspace, and can use various IDEs to connect to it.
+Workspaces are created from a Recipe file - this is to allow for developers to start building their environments from pre-defined golden paths, ensuring identical configuration and provisioning settings.
 
 ## WireGuard
 
@@ -128,5 +150,3 @@ WireGuard is the underlying cryptographic protocol that the DevZero network uses
 ## Tailscale
 
 Tailscale is a provider of a WireGuard-based VPN. DevZero network uses some open-sourced components of Tailscale to enable connectivity over the DevZero network. 
-
-
