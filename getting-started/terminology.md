@@ -34,13 +34,29 @@ SSH stands for the Secure Shell protocol. It is used to set up encrypted connect
 
 Environment refers to a user-defined collection of resources (see Recipe) that hosts one or many applications. An environment is the mechanism for bringing together components that comes together to make an end-user facing software product. Environments are typically modeled on some stage of the software project lifecycle, such as development, QA, staging, pre-production or production.
 
-### Dev/Staging/.. Env
+### Dev Env
+
+Dev environments are environments representative of a production environment, but with a bunch of other tools that are more tuned for development purposes.
+
+### Staging Env
+
+Staging is a common environment that development teams use to ensure that all merged changes work as expected.
+
+### Pre-production Env
+
+Preproduction (or preprod) is a common environment that's representative of, and ideally a copy of production, that maturing software development teams use to validate complex environments by executing synthetic and load tests against to test for regressions, before merging to production. 
 
 ### QA/UAT Env
+
+QA or Quality Assurance envs are used by QA teams to validate that all functionalities have been implemented as intended - often, QA work is performed against Staging or Preprod.
+
+UAT or User Acceptance Testing is usually performed by end-(beta-) users to also perform validation work. This can also be performed against Staging or Preprod environments.
 
 ## Environment Variables
 
 ## Hosting
+
+Hosting refers to the various ways of operating and interacting with the DevZero platform, and workspaces it provisions. DevZero offers a fully-hosted Saas Platform, that can also have dedicated deployments managed by DevZero, as well as fully self-hosted deployments for certain enterprise teams.
 
 ## Identity Provider
 
@@ -54,6 +70,16 @@ SSO stands for single sign-on. Single sign-on lets users log in to one site usin
 
 ## Network
 
+Network is a decentralized VPN strategy that DevZero employs to enable secure access to nodes within that network, over WireGuard. Within the DevZero network, nodes either connect peer-to-peer (using NAT Traversal), or through a relay.
+
+### NAT traversal
+
+NAT traversal is used to connect nodes across the internet through barriers such as firewalls. Usually, internet devices can't talk to each other because of firewals, but NAT traversal is able ot get around this problem by virtue of enabling connections between devices that have outbound connectivity to the internet, and are authorized to talk to each other.
+
+### Relay
+
+Relay is a jump-server (an intermediary server) that passes data between two or more nodes in a network. DevZero network uses Tailscale to use a globally distributed relay server called Designated Encrypted Relay for Packets (DERP). When NAT Traversal fails, nodes connect to each other using the DERP relays.
+
 ### DNS
 
 DNS is used to assigned human-readable names for IP addresses. Workspaces in DevZero have internal IPs for components within DevZero's network. The DevZero network utilizes Tailscale's MagicDNS to automatically register memorable hostnames for resources in your team's DevZero network. It also extends and improves DNS functionality.
@@ -62,6 +88,10 @@ DevZero network runs a DNS resolver (on `100.100.100.100:53`) on all nodes that 
 ### IP Address
 
 An IP address within DevZero's network is a unique IP address assigned to each resource in your team's DevZero network. They are currently of the form `100.x.y.z` (for example, `100.101.102.103`). It stays the same regardless of the Wi-Fi network that you are using to access DevZero. What `127.0.0.1` is for your `localhost`, `100.100.100.100` is for your DevZero network - it is simply a local service.
+
+### Node
+
+A node is a combination of a peer and a DevZero user (that connected the peer to the DevZero network).
 
 ### Peer
 
@@ -100,7 +130,6 @@ DevZero transforms a recipe YAML into a Low-Level Build (LLB) definition format 
         </tr>
     </tbody>
 </table>
-
 
 ### Recipe Library
 
