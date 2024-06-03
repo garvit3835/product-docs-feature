@@ -80,23 +80,6 @@
   * [Connecting GitHub Account](admin/permissions/connecting-github-account.md)
   * [Connecting GitHub Org](admin/permissions/connecting-github-org.md)
 
-## \[\[MOVE CONTENTS TO OTHER SECTIONS]] 🚀 Product Guides
-
-* [Getting Started](product-guides/getting-started/README.md)
-  * [Create Your First Recipe](product-guides/getting-started/create-your-first-recipe.md)
-  * [Launch and Connect to Your First Workspace](product-guides/getting-started/launch-your-first-workspace.md)
-  * [Inviting Users & Managing Permissions](product-guides/getting-started/inviting-teammates.md)
-* [Writing Recipes](product-guides/writing-recipes.md)
-* [Managing Recipes](product-guides/managing-recipes.md)
-* [Launch & Connect to a Workspace](product-guides/launch-and-connect-to-a-workspace.md)
-* [Using a Workspace](product-guides/using-a-workspace.md)
-* [Managing Your Workspaces](product-guides/managing-your-workspaces.md)
-* [How To's](product-guides/how-tos/README.md)
-  * [Connect to an RDS Instance](product-guides/how-tos/connect-to-an-rds-instance.md)
-* [Settings](product-guides/settings/README.md)
-  * [User Settings](product-guides/settings/user-settings.md)
-  * [Team Settings](product-guides/settings/team-settings.md)
-
 ## 📚 How-to Guides
 
 * [Connect to an RDS Instance](product-guides/how-tos/connect-to-an-rds-instance.md)
