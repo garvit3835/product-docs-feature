@@ -88,15 +88,15 @@ DevZero transforms a recipe YAML into a Low-Level Build (LLB) definition format 
     <tbody>
         <tr>
             <td><strong>Build-time</strong></td>
-            <td></td>
+            <td>Covered by the Build (commonly known as prebuild) stage</td>
         </tr>
         <tr>
             <td><strong>Launch-time</strong></td>
-            <td></td>
+            <td>Executed when a workspace is starting up (by default, not when it restarts)</td>
         </tr>
         <tr>
             <td><strong>Run-time</strong></td>
-            <td></td>
+            <td>When a user is inside the workspace, and does whatever they do</td>
         </tr>
     </tbody>
 </table>
