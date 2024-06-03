@@ -43,7 +43,8 @@
 
 ## Workspaces (CPU, GPU)
 
-* [Regions](workspaces/regions.md)
+* [Regions](workspaces/regions/README.md)
+  * * [Supported Regions](workspaces/regions/supported-regions.md)
 * [Stop/Pause/Resume](workspaces/stop-pause-resume.md)
 * [Kubernetes cluster](workspaces/kubernetes-cluster.md)
 
