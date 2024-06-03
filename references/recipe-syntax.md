@@ -10,7 +10,7 @@ build:
       command: touch hello
 ```
 
-### Steps
+## Steps
 
 Steps while optional are the core tool that you will use to configure your workspace and prepare it for work. Steps can be executed either during [build time or launch time](../recipes/exec-stages.md). This is accomplished by placing the steps in the corresponding section:
 
@@ -35,7 +35,7 @@ You can most step you want between launch and build phases of the recipe. But ke
 
 At the moment we have following step types available:
 
-#### Command
+### Command
 
 The bread and butter step, pretty much everything you need can be accomplished using this step.&#x20;
 
@@ -47,7 +47,7 @@ The bread and butter step, pretty much everything you need can be accomplished u
       user: root # Optiona, defaults to devzero
 ```
 
-#### File
+### File
 
 Creates a file.
 
@@ -61,7 +61,7 @@ Creates a file.
 
 ```
 
-#### Directory
+### Directory
 
 Creates a directory.
 
@@ -73,7 +73,7 @@ Creates a directory.
       gid: 1001 # Optional
 ```
 
-#### Apt Get
+### Apt Get
 
 Installs apt packages.
 
@@ -82,7 +82,7 @@ Installs apt packages.
       packages: ["sudo", "tar", "wget"]
 ```
 
-#### Git Clone
+### Git Clone
 
 Clones a git repository.
 
@@ -93,11 +93,11 @@ Clones a git repository.
       directory: /home/devzero/projects/nukagit_clone # default - code clone root + name of the repository
 ```
 
-### Secrets and Environment variables
+## Secrets and Environment variables
 
 Commands often require either their environment to be set up correctly, or secrets to access private resources. Both of these can be managed on a per team or a per user basis.
 
-#### Environment variables
+### Environment variables
 
 If you want to set a particular environment variable to some value you have to do it for each phase separatly. Phases being `build`, `launch`and `runtime`.
 
@@ -126,7 +126,7 @@ Differences between stages are as follows:
 * Launch - these environment variables will be available to launch commands defined in the recipe. This does not include systemd units defined outside of the recipe (for example if you install docker or mysql, environment variables defined here will not be visible to startup scripts for these tools)
 * Runtime - these environment variables will be present in any session (ssh, vscode, vscode terminal) started on the workspace
 
-#### Customizing individual commands
+### Customizing individual commands
 
 You can provide environment variables to a single command only. The syntax for the variable is the same as for global ones for example:
 
@@ -141,7 +141,7 @@ You can provide environment variables to a single command only. The syntax for t
 
 The variable can come from both - the recipe or secrets registry.
 
-#### Repository access
+### Repository access
 
 At the moment build time and launch time repository access can be controlled either automatically by using associated Github access credentials, or can be customized on a per step / per recipe basis. If you don't do any customization of the recipe, personal Github credentials for the user who triggered the build will be used during build time. But if the git-clone step is part of the recipe launch phase, we will use the credentials associated with the user who is starting the workspace.
 
@@ -166,7 +166,7 @@ You are also able to provide git credentials to an individual git step as follow
         from_secret: team.REPO_DEPLOY_KEY
 ```
 
-#### Secrets as files
+### Secrets as files
 
 Sometimes a secret value (like an ssh key) is not very useful when it's stuck in an environment variable. To help you with this you can make sure the value is available as a file within a scope of a command, or as part of your workspace for example:
 
@@ -193,11 +193,11 @@ During the launch (and launch phase only) you can populate files from secrets by
 
 This will only work during the launch. We try very hard not to leak secrets into the build images.
 
-### Configuration
+## Configuration
 
 There are some more advanced configuration options for your workspace. These should be used with care, and most of the time you don't really need to change them.
 
-#### Git clone root
+### Git clone root
 
 By default all the repositories are cloned in `/home/devzero` directory directly, but in some cases you might want your code to be cloned somewhere else like `/home/devzero/projects` for example. To achieve that just add a config section with `code_clone_root` set:
 
@@ -206,11 +206,11 @@ config:
   code_clone_root: /home/devzero/projects
 ```
 
-#### Code clone credentials
+### Code clone credentials
 
 We already discussed default code clone credentials in the [secrets section](recipe-syntax.md#repository-access).
 
-#### Volumes
+### Volumes
 
 Workspaces are based on docker containers, thus not everything is persisted across restarts. You can control which directories you want to persist by setting the volumes attribute in the config section:
 
