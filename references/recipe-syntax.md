@@ -44,7 +44,7 @@ The bread and butter step, pretty much everything you need can be accomplished u
       name: dump_env
       command: env > envdump
       directory: /home/devzero/src # Optional, defaults to /home/devzero
-      user: root # Optiona, defaults to devzero
+      user: root # Optional, defaults to devzero
 ```
 
 ### File
