@@ -11,7 +11,7 @@
   * [Update dz](getting-started/install-devzero/update.md)
   * [Uninstall dz](getting-started/install-devzero/uninstall.md)
 
-## Use-cases
+<!-- ## Use-cases
 
 * [Standardized Dev Environment](use-cases/standardized-dev-env.md)
 * [Cloud Development Environment (CDE)](use-cases/cde.md)
@@ -24,7 +24,7 @@
 * [Namespaced Cloud Services](use-cases/namespaced-cloud-services.md)
 * [Connecting to on-prem/cloud resources](use-cases/connectivity.md)
 * [Sharing build caches](use-cases/sharing-build-caches.md)
-* [Developer Experience Infrastructure](use-cases/dxi.md)
+* [Developer Experience Infrastructure](use-cases/dxi.md) -->
 
 ## Recipes
 
@@ -44,7 +44,7 @@
 ## Workspaces (CPU, GPU)
 
 * [Regions](workspaces/regions/README.md)
-  * * [Supported Regions](workspaces/regions/supported-regions.md)
+  * [Supported Regions](workspaces/regions/supported-regions.md)
 * [Stop/Pause/Resume](workspaces/stop-pause-resume.md)
 * [Kubernetes cluster](workspaces/kubernetes-cluster.md)
 
@@ -65,11 +65,11 @@
 * [Access running apps in your workspace](network/access-own-workspace.md)
 * [Access apps in teammate's workspace](network/access-teammate-workspace.md)
 
-## Volumes
+<!-- ## Volumes
 
 * [Regions](volumes/regions.md)
 * [Sharing volumes across workspaces](volumes/sharing.md)
-* [Persistent volumes](volumes/persistent.md)
+* [Persistent volumes](volumes/persistent.md) -->
 
 ## Admin
 
