@@ -1,4 +1,4 @@
-# Download dz
+# Download `dz` CLI
 
 These instructions will guide you through the DevZero CLI installation process based on your local operating system. The CLI enables building, launching, and connecting to workspaces.
 
