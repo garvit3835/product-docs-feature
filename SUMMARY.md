@@ -41,7 +41,7 @@
 * [Custom base images](recipes/custom-base.md)
 * [Where to save recipe specs?](recipes/saving-recipes.md)
 
-## Workspaces (CPU, GPU)
+## Workspaces
 
 * [Regions](workspaces/regions/README.md)
   * [Supported Regions](workspaces/regions/supported-regions.md)
