@@ -1,1 +1,68 @@
 # Language tools
+
+<table data-card-size="large" data-view="cards">
+   <thead>
+      <tr>
+         <th></th>
+         <th data-hidden data-card-target data-type="content-ref"></th>
+         <th data-hidden data-card-cover data-type="files"></th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td><strong>C#</strong></td>
+         <td><a href="c-sharp.md">c-sharp.md</a></td>
+         <td><a href="../../../.gitbook/assets/c-sharp.png">c-sharp.png</a></td>
+      </tr>
+      <tr>
+         <td><strong>C</strong></td>
+         <td><a href="c.md">c.md</a></td>
+         <td><a href="../../../.gitbook/assets/c.png">c.png</a></td>
+      </tr>
+      <tr>
+         <td><strong>C++</strong></td>
+         <td><a href="cpp.md">cpp.md</a></td>
+         <td><a href="../../../.gitbook/assets/cpp.png">cpp.png</a></td>
+      </tr>
+      <tr>
+         <td><strong>Dart</strong></td>
+         <td><a href="dart.md">dart.md</a></td>
+         <td><a href="../../../.gitbook/assets/dart.png">dart.png</a></td>
+      </tr>
+      <tr>
+         <td><strong>Go</strong></td>
+         <td><a href="go.md">go.md</a></td>
+         <td><a href="../../../.gitbook/assets/go.png">go.png</a></td>
+      </tr>
+      <tr>
+         <td><strong>Java</strong></td>
+         <td><a href="java.md">java.md</a></td>
+         <td><a href="../../../.gitbook/assets/java.png">java.png</a></td>
+      </tr>
+      <tr>
+         <td><strong>JavaScript</strong></td>
+         <td><a href="javascript.md">javascript.md</a></td>
+         <td><a href="../../../.gitbook/assets/javascript.png">javascript.png</a></td>
+      </tr>
+      <tr>
+         <td><strong>PHP</strong></td>
+         <td><a href="php.md">php.md</a></td>
+         <td><a href="../../../.gitbook/assets/php.png">php.png</a></td>
+      </tr>
+      <tr>
+         <td><strong>Python</strong></td>
+         <td><a href="python.md">python.md</a></td>
+         <td><a href="../../../.gitbook/assets/python.png">python.png</a></td>
+      </tr>
+      <tr>
+         <td><strong>Ruby</strong></td>
+         <td><a href="ruby.md">ruby.md</a></td>
+         <td><a href="../../../.gitbook/assets/ruby.png">ruby.png</a></td>
+      </tr>
+      <tr>
+         <td><strong>Rust</strong></td>
+         <td><a href="rust.md">rust.md</a></td>
+         <td><a href="../../../.gitbook/assets/rust.png">rust.png</a></td>
+      </tr>>
+   </tbody>
+</table>
