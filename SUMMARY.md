@@ -48,7 +48,7 @@
 * [Stop/Pause/Resume](workspaces/stop-pause-resume.md)
 * [Kubernetes cluster](workspaces/kubernetes-cluster.md)
 
-## Builds
+<!-- ## Builds
 
 * [Environment variables](builds/README.md)
   * [User](builds/env-vars/user.md)
@@ -56,7 +56,7 @@
 * [Secrets](builds/README.md)
 * [Automatic updates (GitOps)](builds/gitops.md)
 * [Executing builds from CI](builds/ci.md)
-* [Where to store images? (Private registry)](builds/storing-builds.md)
+* [Where to store images? (Private registry)](builds/storing-builds.md) -->
 
 ## Network
 
