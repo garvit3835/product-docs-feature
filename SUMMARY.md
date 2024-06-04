@@ -117,6 +117,7 @@
     * [Nix](references/common-tools/build-tools/nix.md)
   * [Databases](references/common-tools/databases/README.md)
     * [Postgres](references/common-tools/databases/postgres.md)
+  * [IDEs](references/common-tools/ides/README.md)
   * [Infra Tools](references/common-tools/infra/README.md)
     * [Argo CD](references/common-tools/infra/argo.md)
     * [Helm](references/common-tools/infra/helm.md)
@@ -129,5 +130,4 @@
     * [GCP](references/common-tools/third-party/gcp.md)
     * [GitHub](references/common-tools/third-party/github.md)
     * [GitLab](references/common-tools/third-party/gitlab.md)
-  * [IDEs](references/common-tools/ides/README.md)
 * [Leaving DevZero](references/leaving-devzero.md)
