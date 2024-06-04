@@ -74,6 +74,8 @@ SSO stands for single sign-on. Single sign-on lets users log in to one site usin
 
 ## Kubernetes Cluster (ephemeral, namespaced)
 
+A virtualized Kubernetes cluster that's elastically backed by a varying number of nodes. By default, a DevZero workspace is backed by one Kubernetes cluster, with a devbox deployed to the `default` namespace.
+
 ## Network
 
 Network is a decentralized VPN strategy that DevZero employs to enable secure access to nodes within that network, over WireGuard. Within the DevZero network, nodes either connect peer-to-peer (using NAT Traversal), or through a relay.
