@@ -4,7 +4,7 @@ Welcome! Follow the steps below to create your first workspace on the DevZero pl
 
 Estimated time to complete: 5 mins
 
-\[\[ video ]]
+<figure><img src="../.gitbook/assets/Create recipe.gif" alt=""><figcaption><p>Creating a new recipe</p></figcaption></figure>
 
 ### Step 1. Signing up for an account
 
