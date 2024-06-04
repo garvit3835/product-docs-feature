@@ -1,9 +1,5 @@
 # 👋 Welcome to DevZero
 
-{% hint style="info" %}
-**Open Beta Notice:** the DevZero Platform is currently in Open Beta. This program is currently open to anyone, however, the experience is currently optimized for MacOS and Linux users based in North America. We plan to provide support for additional regions and operating systems over the coming months.
-{% endhint %}
-
 ## What is DevZero?
 
 DevZero is a [cloud development platform](https://www.devzero.io/cloud-development-environment) designed to help software engineers spend more time writing code and less time waiting on builds, troubleshooting dev environments, and fighting over shared resources.

@@ -6,7 +6,7 @@
 
 * [Quickstart](getting-started/quickstart.md)
 * [Terminology](getting-started/terminology.md)
-* [Install `dz` CLI](getting-started/install-dz-cli.md)
+* [Install dz CLI](getting-started/install-dz-cli.md)
 
 ## Recipes
 
