@@ -13,7 +13,7 @@ sudo dz auth login
 4. add the node to the network by running (_optional_ `--hostname` flag: replace `<some_name>` with a memorable hostname)
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-sudo dz net connect --hostname=<some_name>
+sudo dz network connect --hostname=<some_name>
 # example: sudo dz net connect --hostname=my-rds-jump-node
 ```
 {% endcode %}
@@ -37,7 +37,7 @@ sudo dz auth login
 4. add the node to the network by running (; _optional_ `--hostname` flag: replace `<some_name>` with a memorable hostname)
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-sudo dz net connect --hostname=<some_name> --advertise-routes=<CIDR range>
+sudo dz network connect --hostname=<some_name> --advertise-routes=<CIDR range>
 # example: sudo dz net connect --hostname=my-rds-jump-node --advertise-routes=172.31.0.0/16 
 # where the current node is on a VPC w/ CIDR range 172.31.0.0/16 
 ```
