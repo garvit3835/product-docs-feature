@@ -1,11 +1,12 @@
 # Kubernetes cluster
 
-Access to the ephemeral, namespaced Kubernetes cluster is enabled via the CLI. 
+Access to the ephemeral, namespaced Kubernetes cluster is enabled via the CLI.
 
-## From anywhere 
+## From anywhere
 
 To view the config, run
-{% code overflow="wrap"%}
+
+{% code overflow="wrap" %}
 ```bash
 dz workspace kubeconfig <workspace-name>
 
@@ -23,6 +24,7 @@ dz workspace kubeconfig <workspace-name> --update-kubeconfig
 {% endcode %}
 
 Then run commands like
+
 {% code overflow="wrap" %}
 ```bash
 kubectl get pods
@@ -31,17 +33,24 @@ kubectl get pods
 
 ## From inside a devbox
 
-When inside a devbox context, the CLI is able to retrieve environmental information from `/etc/devzero`. 
-It is possible to replace the `<workspace-name>` with `.`. For example,
+When inside a devbox context, the CLI is able to retrieve environmental information from `/etc/devzero`. It is possible to replace the `<workspace-name>` with `.`. For example,
+
 {% code overflow="wrap" %}
 ```bash
 dz workspace kubeconfig . --update-kubeconfig
 ```
 {% endcode %}
 
+Then run commands like
+
+{% code overflow="wrap" %}
+```bash
+kubectl get pods
+```
+{% endcode %}
+
 {% hint style="warning" %}
-DevZero reserves the `default` namespace for it's managed deployments. **Do not** operate on this namespace.
-Adding or removing resources in this namespace will lead to undocumented behaviors and cause potential data loss.
+DevZero reserves the `default` namespace for it's managed deployments. **Do not** operate on this namespace. Adding or removing resources in this namespace will lead to undocumented behaviors and cause potential data loss.
 {% endhint %}
 
 {% code overflow="wrap" %}
