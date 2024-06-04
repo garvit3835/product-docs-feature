@@ -16,14 +16,6 @@ Developers can use these specifications alongside our CLI to launch their own [e
 
 [Visit our dashboard](#user-content-fn-2)[^2] ([devzero.io/dashboard](https://devzero.io/dashboard)) to create your free account. Then head to the [Quickstart](getting-started/quickstart.md) section of our docs.
 
-## Quick Links
-
-We've put together some helpful guides to get started with our product quickly and easily.
-
-
-
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td>Quickstart</td><td><a href="getting-started/quickstart.md">quickstart.md</a></td></tr><tr><td></td><td></td><td></td><td></td><td>Terminology</td><td><a href="getting-started/terminology.md">terminology.md</a></td></tr><tr><td></td><td></td><td></td><td></td><td>Use-Cases</td><td><a href="broken-reference">Broken link</a></td></tr></tbody></table>
-
 [^1]: More on this in [Terminology > Kubernetes Cluster](getting-started/terminology.md#kubernetes-cluster-ephemeral-namespaced)
 
 [^2]: The quickstart covers these steps as well.

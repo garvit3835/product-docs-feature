@@ -6,25 +6,8 @@
 
 * [Quickstart](getting-started/quickstart.md)
 * [Terminology](getting-started/terminology.md)
-* [Install the CLI](getting-started/install-the-cli/README.md)
+* [Install our CLI](getting-started/install-the-cli/README.md)
   * [Download dz](getting-started/install-devzero/download.md)
-  * [Update dz](getting-started/install-devzero/update.md)
-  * [Uninstall dz](getting-started/install-devzero/uninstall.md)
-
-<!-- ## Use-cases
-
-* [Standardized Dev Environment](use-cases/standardized-dev-env.md)
-* [Cloud Development Environment (CDE)](use-cases/cde.md)
-* [Improving Build Times](use-cases/build-times.md)
-* [Testing Environment](use-cases/testing-env.md)
-* [Preview Environments](use-cases/preview-env.md)
-* [Internal Developer Platform](use-cases/idp.md)
-* [Faster Onboarding](use-cases/faster-onboarding.md)
-* [Ephemeral Kubernetes Cluster](use-cases/ephemeral-kubernetes-cluster.md)
-* [Namespaced Cloud Services](use-cases/namespaced-cloud-services.md)
-* [Connecting to on-prem/cloud resources](use-cases/connectivity.md)
-* [Sharing build caches](use-cases/sharing-build-caches.md)
-* [Developer Experience Infrastructure](use-cases/dxi.md) -->
 
 ## Recipes
 
@@ -48,28 +31,12 @@
 * [Stop/Pause/Resume](workspaces/stop-pause-resume.md)
 * [Kubernetes cluster](workspaces/kubernetes-cluster.md)
 
-<!-- ## Builds
-
-* [Environment variables](builds/README.md)
-  * [User](builds/env-vars/user.md)
-  * [Team](builds/builds/team.md)
-* [Secrets](builds/README.md)
-* [Automatic updates (GitOps)](builds/gitops.md)
-* [Executing builds from CI](builds/ci.md)
-* [Where to store images? (Private registry)](builds/storing-builds.md) -->
-
 ## Network
 
 * [Status](network/status.md)
 * [Connecting resources to your network](network/connecting.md)
 * [Access running apps in your workspace](network/access-own-workspace.md)
 * [Access apps in teammate's workspace](network/access-teammate-workspace.md)
-
-<!-- ## Volumes
-
-* [Regions](volumes/regions.md)
-* [Sharing volumes across workspaces](volumes/sharing.md)
-* [Persistent volumes](volumes/persistent.md) -->
 
 ## Admin
 
@@ -85,10 +52,12 @@
 * [Connect to an RDS Instance](product-guides/how-tos/connect-to-an-rds-instance.md)
 * [Connect to an S3 Bucket](product-guides/how-tos/connect-to-an-s3-bucket.md)
 
-## 🆘 FAQ + Troubleshooting
+## Troubleshooting
 
 * [Web Console](troubleshooting/web-console.md)
-* [Command Line](troubleshooting/command-line.md)
+* [Command Line](troubleshooting/command-line/README.md)
+  * [Update dz](troubleshooting/command-line/update.md)
+  * [Uninstall dz](troubleshooting/command-line/uninstall.md)
 * [Recipes](troubleshooting/recipes.md)
 * [Workspaces](troubleshooting/workspaces.md)
 * [Visual Studio Code](troubleshooting/vs-code.md)
@@ -96,7 +65,7 @@
 
 ## 🔎 References
 
-* [CLI Man Page](references/cli-man-page.md)
+* [Command Line Interface (CLI)](references/cli-man-page.md)
 * [Recipe Syntax](references/recipe-syntax.md)
 * [Common Tools](references/common-tools/README.md)
   * [Programming Languages](references/common-tools/languages/README.md)
@@ -107,7 +76,7 @@
     * [Go](references/common-tools/languages/go.md)
     * [Java](references/common-tools/languages/java.md)
     * [JavaScript](references/common-tools/languages/javascript.md)
-    * [PHP](references/common-tools/languages/PHP.md)
+    * [PHP](references/common-tools/languages/php.md)
     * [Python](references/common-tools/languages/python.md)
     * [Ruby](references/common-tools/languages/ruby.md)
     * [Rust](references/common-tools/languages/rust.md)
@@ -122,7 +91,7 @@
     * [Argo CD](references/common-tools/infra/argo.md)
     * [Helm](references/common-tools/infra/helm.md)
     * [Kubectl](references/common-tools/infra/kubectl.md)
-    * [Pulumi](references/common-tools/infra/pulumi.md)    
+    * [Pulumi](references/common-tools/infra/pulumi.md)
     * [Terraform](references/common-tools/infra/terraform.md)
   * [Third-Party](references/common-tools/third-party/README.md)
     * [AWS](references/common-tools/third-party/aws.md)
