@@ -32,6 +32,7 @@
 
 ## Network
 
+* [DevZero Network](network/README.md)
 * [Status](network/status.md)
 * [Connecting resources to your network](network/connecting.md)
 * [Access running apps in your workspace](network/access-own-workspace.md)
