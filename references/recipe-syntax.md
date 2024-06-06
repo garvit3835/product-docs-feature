@@ -59,7 +59,11 @@ You can have multiline commands, for example:
 
 ### File
 
-Creates a file.
+Creates a file with some content.
+
+{% hint style="info" %}
+Paths are not using shell expansion, so you have to write out /home/devzero/projects rather than \~/projects
+{% endhint %}
 
 ```
     - type: file
@@ -73,6 +77,10 @@ Creates a file.
 ### Directory
 
 Creates a directory.
+
+{% hint style="info" %}
+Same as with files path is not expanded, so \~ and environment variables will not be replaced with corresponding values
+{% endhint %}
 
 ```
     - type: directory
