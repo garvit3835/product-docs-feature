@@ -151,9 +151,9 @@ build:
     - name: CXX
       value: ccache
     - name: NPM_KEY
-      value: {{secret:team.NPM_KEY}}
+      value: "{{secret:team.NPM_KEY}}"
     - name: ADMIN_KEY
-      value: {{secret:team.ADMIN_KEY}}
+      value: "{{secret:team.ADMIN_KEY}}"
 ```
 
 As you can see - the value of the environment variable can be defined in the recipe, or can be sourced from a secret. Though there are some rules:
@@ -204,7 +204,7 @@ Sometimes though it makes sense to use shared team secret as a way to control gi
 config:
   code_clone_credentials:
     type: ssh-private-key
-    value: {{secret:team.GITHUB_ACCOUNT_KEY}}
+    value: "{{secret:team.GITHUB_ACCOUNT_KEY}}"
 ```
 
 Currently we support two types of credentials: `ssh-private-key` and `github-token` . Credentials set in config will be used for all git operations during `build` and `launch` phases for all `git-clone` steps.
@@ -216,7 +216,7 @@ You are also able to provide git credentials to an individual git step as follow
       url: https://github.com/Ignas/nukagit
       credentials:
         type: ssh-private-key
-        value: {{secret:team.REPO_DEPLOY_KEY}}
+        value: "{{secret:team.REPO_DEPLOY_KEY}}"
 ```
 
 ### Secrets as files
@@ -229,7 +229,7 @@ Sometimes a secret value (like an ssh key) is not very useful when it's stuck in
       directory: /home/devzero
       secret_mounts:
         - path: /etc/gitconfig
-          value: {{secret:devzero.GITHUB_GIT_CONFIG}}
+          value: "{{secret:devzero.GITHUB_GIT_CONFIG}}"
 ```
 
 Will ensure that while executing `git clone` command, the secret is available as `/etc/gitconfig`
@@ -241,7 +241,7 @@ You can populate any file from secrets by using the standard file step:
 ```
 - type: file
   path: /home/devzero/.ssh/id_rsa
-  content: {{secret:user.PRIVATE_SSH_KEY}}
+  content: "{{secret:user.PRIVATE_SSH_KEY}}"
 ```
 
 Be careful using this during build phase, as you might embed secrets into the build, which usualy is not what you want.
@@ -289,6 +289,21 @@ Some text {{secret:team.TEAM_SECRET}} more text {{secret:user.USER_SECRET}}
 ```
 
 As you can see - the structure of the expression consists of 3 parts - source (at the moment only `secret` is supported) namespace (`user`, `team` or `devzero`) matching user secret registry, team registry, or system secrets like `devzero.GITHUB_ACCESS_TOKEN` that comes from github account linked to your devzero account if present and secret name.
+
+As we are using curly braces for variable interpolation, make sure you quote the strings properly:
+
+```
+build:
+  environment:
+    - name: NAME
+      value: {{secret:team.TEAM_SECRET}} # invalid yaml
+    - name: NAME
+      value: "{{secret:team.TEAM_SECRET}}" # valid syntax
+    - name: NAME
+      value: |
+        {{secret:team.TEAM_SECRET}} # also valid
+
+```
 
 We also support more complex expressions for example:
 
