@@ -154,6 +154,17 @@ Differences between stages are as follows:
 * Launch - these environment variables will be available to launch commands defined in the recipe. This does not include systemd units defined outside of the recipe (for example if you install docker or mysql, environment variables defined here will not be visible to startup scripts for these tools)
 * Runtime - these environment variables will be present in any session (ssh, vscode, vscode terminal) started on the workspace
 
+Runtime environment variable customization is a bit special in that it supports Shell expansion (as opposed to build and launch environment variable settings). This is so you could configure development environment for your engineers more easily:
+
+```
+runtime:
+  environment:
+    - name: PATH
+      value: "/opt/go/bin:$PATH"
+```
+
+Would set your path to contain go compiler in all the terminals.
+
 ### Customizing individual commands
 
 You can provide environment variables to a single command only. The syntax for the variable is the same as for global ones for example:
