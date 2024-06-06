@@ -37,14 +37,24 @@ At the moment we have following step types available:
 
 ### Command
 
-The bread and butter step, pretty much everything you need can be accomplished using this step.&#x20;
+The bread and butter step, pretty much everything you need can be accomplished using this step.
 
 ```
     - type: command
-      name: dump_env
+      name: dump_env # Optional
       command: env > envdump
-      directory: /home/devzero/src # Optional, defaults to /home/devzero
-      user: root # Optional, defaults to devzero
+      directory: /home/devzero # Optional
+      user: devzero # Optional
+      shell: /bin/bash -l -o errexit -o nounset -o pipefail {} # Optional, can be any interpreter
+```
+
+You can have multiline commands, for example:
+
+```
+    - type: command
+      command: |
+        echo "Hello"
+        echo "World"
 ```
 
 ### File
@@ -54,11 +64,10 @@ Creates a file.
 ```
     - type: file
       path: /etc/devzero/hello
-      content: hello
-      permissions: "rwxr-x---" # Optional (TODO: What's the default)
-      uid: 1001 # Optional
-      gid: 1001 # Optional
-
+      content: "hello" # Supports secret interpolation discussed further in the docs
+      permissions: "0644" # Optional, can also be formated as "rw-r--r--", both formats are good
+      user: devzero # Optional
+      group: devzero # Optional, defaults to being the same as the user
 ```
 
 ### Directory
@@ -68,9 +77,9 @@ Creates a directory.
 ```
     - type: directory
       path: /home/devzero/src/
-      permissions: "rwxr-x---" # Optional (TODO: What's the default)
-      uid: 1001 # Optional
-      gid: 1001 # Optional
+      permissions: "0755" # Optional, can also be formated as "rwxr-x---", both formats are good
+      user: devzero # Optional
+      group: devzero # Optional, defaults to being the same as the user
 ```
 
 ### Apt Get
@@ -80,6 +89,25 @@ Installs apt packages.
 ```
     - type: apt-get
       packages: ["sudo", "tar", "wget"]
+```
+
+We also support an easy way to add extra repositories, for example:
+
+```
+- type: apt-get
+  packages: ["docker-ce", "docker-ce-cli", "containerd.io"]
+  extra_repositories:
+  - key_url: https://download.docker.com/linux/ubuntu/gpg
+    repository: https://download.docker.com/linux/ubuntu
+```
+
+Or:
+
+```
+- type: apt-get
+  packages: ["python3.13", "python3.13-venv", "libpython3.13-dev"]
+  extra_repositories:
+    - repository: "ppa:deadsnakes/ppa"
 ```
 
 ### Git Clone
@@ -95,7 +123,7 @@ Clones a git repository.
 
 ## Secrets and Environment variables
 
-Commands often require either their environment to be set up correctly, or secrets to access private resources. Both of these can be managed on a per team or a per user basis.
+Commands often require either their environment to be set up correctly, or secrets to access private resources. Both of these can be managed on [a per team or a per user basis](../recipes/secrets/).
 
 ### Environment variables
 
@@ -109,9 +137,9 @@ build:
     - name: CXX
       value: ccache
     - name: NPM_KEY
-      from_secret: team.NPM_KEY
+      value: {{secret:team.NPM_KEY}}
     - name: ADMIN_KEY
-      from_secret: team.SECRET_ADMIN_KEY
+      value: {{secret:team.ADMIN_KEY}}
 ```
 
 As you can see - the value of the environment variable can be defined in the recipe, or can be sourced from a secret. Though there are some rules:
@@ -151,7 +179,7 @@ Sometimes though it makes sense to use shared team secret as a way to control gi
 config:
   code_clone_credentials:
     type: ssh-private-key
-    from_secret: team.GITHUB_ACCOUNT_KEY
+    value: {{secret:team.GITHUB_ACCOUNT_KEY}}
 ```
 
 Currently we support two types of credentials: `ssh-private-key` and `github-token` . Credentials set in config will be used for all git operations during `build` and `launch` phases for all `git-clone` steps.
@@ -163,7 +191,7 @@ You are also able to provide git credentials to an individual git step as follow
       url: https://github.com/Ignas/nukagit
       credentials:
         type: ssh-private-key
-        from_secret: team.REPO_DEPLOY_KEY
+        value: {{secret:team.REPO_DEPLOY_KEY}}
 ```
 
 ### Secrets as files
@@ -176,22 +204,22 @@ Sometimes a secret value (like an ssh key) is not very useful when it's stuck in
       directory: /home/devzero
       secret_mounts:
         - path: /etc/gitconfig
-          secret: devzero.GITHUB_GIT_CONFIG
+          value: {{secret:devzero.GITHUB_GIT_CONFIG}}
 ```
 
 Will ensure that while executing `git clone` command, the secret is available as `/etc/gitconfig`
 
-Secrets mounted this way will only be available during the execution of the command, so they will not be part of the final workspace build.
+Secrets mounted this way will only be available during the execution of the command, so they will not be part of the final workspace build. As opposed to files created using the `file` step.
 
-During the launch (and launch phase only) you can populate files from secrets by using the standard file step:
+You can populate any file from secrets by using the standard file step:
 
 ```
 - type: file
   path: /home/devzero/.ssh/id_rsa
-  from_secret: user.PRIVATE_SSH_KEY
+  content: {{secret:user.PRIVATE_SSH_KEY}}
 ```
 
-This will only work during the launch. We try very hard not to leak secrets into the build images.
+Be careful using this during build phase, as you might embed secrets into the build, which usualy is not what you want.
 
 ## Configuration
 
@@ -226,3 +254,21 @@ config:
 ```
 
 These are the default volumes that are being persisted. Make sure to include at least `/home/devzero` in the list when customizing it, otherwise your workspace might be completely ephemeral.
+
+### Secret interpolation language
+
+Environment values and file contents are special in that you can embed secret values into them. The syntax is quite simple:
+
+```
+Some text {{secret:team.TEAM_SECRET}} more text {{secret:user.USER_SECRET}}
+```
+
+As you can see - the structure of the expression consists of 3 parts - source (at the moment only `secret` is supported) namespace (`user`, `team` or `devzero`) matching user secret registry, team registry, or system secrets like `devzero.GITHUB_ACCESS_TOKEN` that comes from github account linked to your devzero account if present and secret name.
+
+We also support more complex expressions for example:
+
+```
+{{secret:user.AWS_ACCESS_KEY || secret:team.SHARED_AWS_ACCESS_KEY}}
+```
+
+This means - use user aws access key if it exists, and if not - use the team access key instead. This way some team members can use their own keys, while everyone else uses the shared key.
