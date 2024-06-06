@@ -33,7 +33,7 @@ If you're not using GitHub, check out this section on [custom cloning source cod
 _This section is undergoing active development and will change in the near future._
 {% endhint %}
 
-1. Install the CLI tool if you haven't installed it already by following the [Download CLI](../getting-started/install-devzero/download.md) page.
+1. Install the CLI tool if you haven't installed it already by following the [Download CLI](broken-reference) page.
 2. `cd` into your repository directory on your local machine and run
 
 {% code overflow="wrap" lineNumbers="true" %}

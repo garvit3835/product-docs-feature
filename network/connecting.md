@@ -3,7 +3,7 @@
 ## Add a peer to your DevZero network
 
 1. Get a shell inside the node that you want to add to the network.
-2. Install the CLI following [these steps](../getting-started/install-devzero/download.md).
+2. Install the CLI following [these steps](broken-reference).
 3. Run
 
 {% code overflow="wrap" lineNumbers="true" %}
@@ -32,7 +32,7 @@ dz network status
 ## Advertise routes to your DevZero network
 
 1. Get a shell inside the node that you want to add to the network.
-2. Install the CLI following [these steps](../getting-started/install-devzero/download.md).
+2. Install the CLI following [these steps](broken-reference).
 3. Run
 
 {% code overflow="wrap" lineNumbers="true" %}

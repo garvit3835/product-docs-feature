@@ -137,7 +137,7 @@ Semantics for the directory are explained in [git documentation](https://git-scm
 
 ## Secrets and Environment variables
 
-Commands often require either their environment to be set up correctly, or secrets to access private resources. Both of these can be managed on [a per team or a per user basis](../recipes/secrets/).
+Commands often require either their environment to be set up correctly, or secrets to access private resources. Both of these can be managed on [a per team or a per user basis](../recipes/env-vars.md).
 
 ### Environment variables
 
@@ -239,9 +239,9 @@ Secrets mounted this way will only be available during the execution of the comm
 You can populate any file from secrets by using the standard file step:
 
 ```
-- type: file
-  path: /home/devzero/.ssh/id_rsa
-  content: "{{secret:user.PRIVATE_SSH_KEY}}"
+    - type: file
+      path: /home/devzero/.ssh/id_rsa
+      content: "{{secret:user.PRIVATE_SSH_KEY}}"
 ```
 
 Be careful using this during build phase, as you might embed secrets into the build, which usualy is not what you want.
