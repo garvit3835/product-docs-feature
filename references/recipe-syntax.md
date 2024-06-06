@@ -94,20 +94,20 @@ Installs apt packages.
 We also support an easy way to add extra repositories, for example:
 
 ```
-- type: apt-get
-  packages: ["docker-ce", "docker-ce-cli", "containerd.io"]
-  extra_repositories:
-  - key_url: https://download.docker.com/linux/ubuntu/gpg
-    repository: https://download.docker.com/linux/ubuntu
+    - type: apt-get
+      packages: ["docker-ce", "docker-ce-cli", "containerd.io"]
+      extra_repositories:
+      - key_url: https://download.docker.com/linux/ubuntu/gpg
+        repository: https://download.docker.com/linux/ubuntu
 ```
 
 Or:
 
 ```
-- type: apt-get
-  packages: ["python3.13", "python3.13-venv", "libpython3.13-dev"]
-  extra_repositories:
-    - repository: "ppa:deadsnakes/ppa"
+    - type: apt-get
+      packages: ["python3.13", "python3.13-venv", "libpython3.13-dev"]
+      extra_repositories:
+        - repository: "ppa:deadsnakes/ppa"
 ```
 
 ### Git Clone
