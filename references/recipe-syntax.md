@@ -110,6 +110,18 @@ Or:
         - repository: "ppa:deadsnakes/ppa"
 ```
 
+You can also specify [components](https://wiki.debian.org/SourcesList):
+
+```
+    - type: apt-get
+      packages: ["terraform"]
+      extra_repositories:
+      - key_url: https://apt.releases.hashicorp.com/gpg
+        repository: https://apt.releases.hashicorp.com
+        components:
+        - main
+```
+
 ### Git Clone
 
 Clones a git repository.
@@ -120,6 +132,8 @@ Clones a git repository.
       branch: main # default - not set
       directory: /home/devzero/projects/nukagit_clone # default - code clone root + name of the repository
 ```
+
+Semantics for the directory are explained in [git documentation](https://git-scm.com/docs/git-clone#Documentation/git-clone.txt-emltdirectorygtem).
 
 ## Secrets and Environment variables
 
