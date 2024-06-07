@@ -1,37 +1,53 @@
-# Connect to a workspace using JetBrains IDEs
+# JetBrains
 
-## Using Jetbrains Gateway
+## Connect to a workspace
 
-1. Сlick **New Connection** under the **SSH** connection provider.
-   <figure><img src="../../../.gitbook/assets/jetbrains-gateway-connect.png" alt=""><figcaption><p>Connect using SSH</p></figcaption></figure>
+{% tabs %}
+{% tab title="Using Jetbrains Gateway" %}
+* Сlick **New Connection** under the **SSH** connection provider.
 
-2. Create a new connection using username "devzero" and the workspace you want to connect to in host. Then click on **Check Connection and Continue**.
-   <figure><img src="../../../.gitbook/assets/jetbrains-gateway-host-configuration.png" alt=""><figcaption><p>Specify your workspace</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/jetbrains-gateway-connect.png" alt="" width="563"><figcaption><p>Connect using SSH</p></figcaption></figure>
 
-3. Select the IDE of your preference and the path of your codebase. Then click on **Download IDE and Connect**.
-   <figure><img src="../../../.gitbook/assets/jetbrains-gateway-ide-selection.png" alt=""><figcaption><p>Select your IDE</p></figcaption></figure>
+* Create a new connection using username "devzero" and the workspace you want to connect to in host. Then click on **Check Connection and Continue**.
 
-{% hint style="info" %}
-   The default path for your cloned code is `/home/devzero`.
-{% endhint %}
+<figure><img src="../../../.gitbook/assets/jetbrains-gateway-host-configuration.png" alt="" width="563"><figcaption><p>Configure SSH connection to your workspace</p></figcaption></figure>
 
-4. Under **Connections > SSH**, you should see your workspace listed.
-   <figure><img src="../../../.gitbook/assets/jetbrains-gateway-workspaces.png" alt=""><figcaption><p>Your workspaces</p></figcaption></figure>
+* Select the IDE of your preference and the path of your codebase. Then click on **Download IDE and Connect**.
 
-## Using any JetBrains IDE
-
-1. Create a new project under **Remote Development > SSH**.
-   <figure><img src="../../../.gitbook/assets/jetbrains-remote-project.png" alt=""><figcaption><p>Create Remote Project</p></figcaption></figure>
-
-2. Create a new connection using username "devzero" and the workspace you want to connect to in host. Then click on **Check Connection and Continue**.
-   <figure><img src="../../../.gitbook/assets/jetbrains-gateway-host-configuration.png" alt=""><figcaption><p>Specify your workspace</p></figcaption></figure>
-
-3. Select the IDE of your preference and the path of your codebase. Then click on **Download IDE and Connect**.
-   <figure><img src="../../../.gitbook/assets/jetbrains-gateway-ide-selection.png" alt=""><figcaption><p>Select your IDE</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/jetbrains-gateway-ide-selection.png" alt="" width="563"><figcaption><p>Select your IDE</p></figcaption></figure>
 
 {% hint style="info" %}
-The default path for your cloned code is `/home/devzero`.
+The default path for your cloned code is `/home/devzero`
 {% endhint %}
 
-4. Under **Remote Development > SSH**, you should see your workspace listed.
-   <figure><img src="../../../.gitbook/assets/jetbrains-workspaces.png" alt=""><figcaption><p>Your workspaces</p></figcaption></figure>
+* Under **Connections > SSH**, you should see your workspace listed.
+
+<figure><img src="../../../.gitbook/assets/jetbrains-gateway-workspaces.png" alt="" width="563"><figcaption><p>Your workspaces</p></figcaption></figure>
+
+
+{% endtab %}
+
+{% tab title="Using any Jetbrains IDE" %}
+* Create a new project under **Remote Development > SSH**.
+
+<figure><img src="../../../.gitbook/assets/jetbrains-remote-project.png" alt=""><figcaption><p>Connect using SSH </p></figcaption></figure>
+
+* Create a new connection using username "devzero" and the workspace you want to connect to in host. Then click on **Check Connection and Continue**.
+
+<figure><img src="../../../.gitbook/assets/jetbrains-gateway-host-configuration.png" alt="" width="563"><figcaption><p>Configure SSH connection to your workspace</p></figcaption></figure>
+
+* Select the IDE of your preference and the path of your codebase. Then click on **Download IDE and Connect**.
+
+<figure><img src="../../../.gitbook/assets/jetbrains-gateway-ide-selection.png" alt="" width="563"><figcaption><p>Select your IDE</p></figcaption></figure>
+
+{% hint style="info" %}
+The default path for your cloned code is `/home/devzero`
+{% endhint %}
+
+* Under **Remote Development > SSH**, you should see your workspace listed.
+
+<figure><img src="../../../.gitbook/assets/jetbrains-workspaces.png" alt="" width="563"><figcaption><p>Your workspaces</p></figcaption></figure>
+
+
+{% endtab %}
+{% endtabs %}

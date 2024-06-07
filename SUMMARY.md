@@ -85,6 +85,7 @@
   * [Databases](references/common-tools/databases/README.md)
     * [Postgres](references/common-tools/databases/postgres.md)
   * [IDEs](references/common-tools/ides/README.md)
+    * [JetBrains](references/common-tools/ides/jetbrains.md)
   * [Infra Tools](references/common-tools/infra/README.md)
     * [Argo CD](references/common-tools/infra/argo.md)
     * [Helm](references/common-tools/infra/helm.md)
