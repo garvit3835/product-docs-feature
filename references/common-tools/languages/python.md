@@ -16,7 +16,7 @@ dev:
       name: buildtime_install_cmd_for_python
     - command: |-
         python3.8 -m venv venv
-        source venv/bin/activate
+        . venv/bin/activate
         curl https://bootstrap.pypa.io/get-pip.py --output get-pip.py
         python get-pip.py
         rm get-pip.py

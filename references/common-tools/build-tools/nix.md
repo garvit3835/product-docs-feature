@@ -9,7 +9,7 @@ dev:
     
     - command: |-
         curl -L https://nixos.org/nix/install | sh
-        source ~/.nix-profile/etc/profile.d/nix.sh
+        . ~/.nix-profile/etc/profile.d/nix.sh
       name: buildtime_install_cmd_for_Nix
 ```
 {% endcode %}
