@@ -5,7 +5,7 @@
 Visit the Environment Variables section at https://www.devzero.io/dashboard/settings/environment-variables#personal to add, remove or update your environment variables.
 
 {% hint style="warning" %}
-Make sure the `Sensitive` field is **not** checked.
+Make sure the `Sensitive` field is _**not**_ checked.
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/personal-env-var.png" alt=""><figcaption><p>Personal Environment Variables</p></figcaption></figure>
