@@ -10,7 +10,7 @@ Developers can use these [specifications](references/terminology.md#recipe) alon
 
 ## How does it work?
 
-{PLACE HOLDER FOR DIAMGRAM}
+{There's a diagram that we're working on that shows the interactions between the user and their DevZero components - it's undergoing a few finishing touches on Figma and will be here soon.}
 
 ## How can I learn more?
 
