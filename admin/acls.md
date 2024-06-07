@@ -1,6 +1,5 @@
 # ACLs
 
-
 {% hint style="info" %}
-**Coming soon...** Currently, the product only supports the `Super Admin` permission. This will change in Summer 2024.
+**Coming soon...** We currently support a handful of predefined user roles and permission sets. Additional customization options are expected to land later this year.&#x20;
 {% endhint %}

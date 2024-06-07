@@ -1,40 +1,46 @@
-# Recipe Execution Stages
+# Execution Stages
 
-Recipes have 2 execution stages that are controlled by the user:
-1. Build-time: when recipe is getting saved, after validation.
-2. Launch-time: when a workspace is being launched from a recipe.
+## Overview
 
-Irrespective of the stage, command blocks will be executed in the order in which they are specified in the recipe.
+Recipes have two execution stages that you can customize:&#x20;
+
+1. **Build-time:** when recipe is getting saved, after validation.
+2. **Launch-time:** when a workspace is being launched from a recipe.
+
+Irrespective of the stage, [command](../references/recipe-syntax.md#command) blocks will be executed in the order in which they are specified in the recipe.
 
 <figure><img src="../.gitbook/assets/exec-stages.png" alt=""><figcaption><p>Execution stages (difference between built- and launch-time)</p></figcaption></figure>
 
-
 <details>
+
 <summary>What won't work</summary>
+
 Anything that requires user-input to proceed. Build- and launch-time steps are executed by processes in a completely headless mode. As such, if your setup command requires user-input or needs to be attached to a TTY, it will unfortunately not work. You will see it get stuck in the logs, and the best you will be able to do is cancel that build.
 
-Common cases where this is true:
-- Adding `-y` for apt-get operations: `sudo apt-get install -y curl`
-- Prepending apt-get operations with `DEBIAN_FRONTEND=noninteractive`: `DEBIAN_FRONTEND=noninteractive sudo apt-get install tzdata`
+**Common cases where this is true:**
+
+* Adding `-y` for apt-get operations: `sudo apt-get install -y curl`
+* Prepending apt-get operations with `DEBIAN_FRONTEND=noninteractive`: `DEBIAN_FRONTEND=noninteractive sudo apt-get install tzdata`
+
 </details>
 
 ## Build-time
 
-This stage should be used to benefit from caching, i.e., pre-builds. The [YAML specification](../references/recipe-syntax.md) is used by our builder to create container images that are then run as workspaces. 
+This stage should be used when caching of the build is helpful, i.e., pre-builds. Our builder uses the YAML specification to create container images that are then run as workspaces, the build images are layered and cached to improve subsequent workspace launch times.&#x20;
 
-Each command block can be thought of as a layer in a Docker image. They are wrapped in a script and executed within a bash context. 
-In case `directory` is specified:
-- if absolute, it will be used
-- if relative, it will be relative to `/home/devzero`
-- if unspecified, it will default to `/home/devzero`
+Each command block can be thought of as a layer in a Docker image. They are wrapped in a script and executed within a bash context. In case `directory` is specified:
+
+* if absolute, it will be used
+* if relative, it will be relative to `/home/devzero`
+* if unspecified, it will default to `/home/devzero`
 
 `name` is used to help reference and understand what is being achieved in a command block.
 
-{% hint style="warning" %}
+{% hint style="info" %}
 **Note** When invoking binaries, its always best-practice to reference them by their absolute paths. For example, `/usr/local/go/bin/go` instead of `go`. This related to the previous `warning` block.
 {% endhint %}
 
-{% hint style="danger" %}
+{% hint style="warning" %}
 **Warning** Environment variable set by calling `export` are not going to be available in subsequent command blocks. To use them in subsequent blocks, either write to some file, or to `/etc/environment`.
 {% endhint %}
 
@@ -72,29 +78,31 @@ dev:
 For more examples, see [Common Build Commands](../references/common-build-commands.md).
 
 Use-cases:
-- Users in your team don't need to wait for workspaces to build.
-- Users in your team want to start with workspaces that are already configured with golden paths.
+
+* Users in your team don't need to wait for workspaces to build.
+* Users in your team want to start with workspaces that are already configured with golden paths.
 
 <figure><img src="../.gitbook/assets/buildtime-in-recipe.png" alt=""><figcaption><p>Code block in a recipe</p></figcaption></figure>
 
 <details>
-<summary>What to not put here</summary>
-- Starting any sort of daemonized process (eg: `sudo systemctl start ...`)
-    - docker daemon
-    - mysqld, postgres, etc
-- While calling operations to kick-off indexing in IDEs is technically feasible in the build-time stage, it's best left to the launch-time stage.
+
+<summary>What doesn't belong in the build steps? </summary>
+
+Do not use build steps for executing any sort of daemonized process (eg: \`sudo systemctl start ...\`) \
+\
+While calling operations to kick-off indexing in IDEs is technically feasible in the build-time stage, it's best left to the launch-time stage.
+
 </details>
 
 ## launch-time
 
-These steps are run using a systemctl unit at launch-time. Command blocks will be executed in the order in which they are specified in the recipe.
-
+These steps are run using a `systemctl` unit at launch-time. Command blocks will be executed in the order in which they are specified in the recipe.
 
 {% hint style="warning" %}
-**run_at_startup_** needs to be prepended to the command name in order for it to get executed as a launch-time step.
+**run\_at\_startup\_** needs to be prepended to the command name in order for it to get executed as a launch-time step.
 {% endhint %}
 
-Other than that, the same rules from the [Build-time](#build-time) stage apply.
+Other than that, the same rules from the [Build-time](exec-stages.md#build-time) stage apply.
 
 Here's an example of some launch-time steps:
 
@@ -124,7 +132,11 @@ dev:
 <figure><img src="../.gitbook/assets/runtime-in-recipe.png" alt=""><figcaption><p>Code block in a recipe</p></figcaption></figure>
 
 <details>
-<summary>It is advisable to not put these here</summary>
-- Cacheable steps that make filesystems updates are better placed in the build-time stage
-- Binaries, files, interfaces that you expect the user to access as soon as they get into their workspace.
+
+<summary>What doesn't belong in the launch steps? </summary>
+
+Cacheable steps that make filesystem updates are better placed in the build-time stage
+
+Binaries, files, and interfaces that you expect the user to access as soon as they get into their workspace.
+
 </details>

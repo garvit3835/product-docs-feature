@@ -1,13 +1,13 @@
-# Types of Recipes
+# Overview
 
-Recipes are workspace specifications meant to serve as a golden path for workspaces. But while you're working on your recipes, you might not want to expose the work-in-progress to your team's recipe library.
-For team's recipe, check out this section for [Creating New Recipes](new-recipe.md) or [Saving Recipes](saving-recipes.md).
+## What is a Recipe?
 
-This is when you should be using 'User Recipes' (will be called "unstaged recipes" soon). User recipes are only accessible to you.
+[Recipe specifications](../references/terminology.md#recipe) define the resources, infrastructure, and configuration of a DevZero [workspace](../references/terminology.md#workspace). They are expressed in YAML. DevZero stores and version-controls your team's recipe specifications. Recipes can be shared your team via the [Recipe Library](../references/terminology.md#recipe-library). Members of your DevZero team can use this centralized library to launch workspaces. This ensures that your team always uses up-to-date and consistent environments for their development and testing. Recipe specifications most commonly define the "golden path" for the development and testing of a specific application or set of microservices.&#x20;
 
-## User (or draft) Recipes
+## Sharing Recipes
 
-You can see your draft recipes on the [My Recipes](https://www.devzero.io/dashboard/recipes#user) page.
+You can see your recipes on the [My Recipes](https://www.devzero.io/dashboard/recipes#user) page. By default, recipes are private to the author. If you'd like to share your recipe specification with your team, be sure to toggle the button on the recipe details page to "Add Recipe to Shared Library". We only recommend doing this once you have fully testing and confirmed that your recipe generates a workspace successfully.&#x20;
 
-The flow for this is exactly the same as teh flow for [Saving Recipes](saving-recipes.md). The only difference is that the toggle for team recipe needs to be **turned off**.
+You can learn more about this on our [Saving Recipes](saving-recipes.md) page.&#x20;
+
 <figure><img src="../.gitbook/assets/draft-recipe-with-metadata.png" alt=""><figcaption><p>Save New Recipe with Metadata</p></figcaption></figure>

@@ -1,10 +1,14 @@
 # User Management
 
-While DevZero can be used by individual/solo/hobbyist developers, most of it's value is derived when being used in a professional software development team. Once an `Admin` user creates a Recipe, you can share the Recipe with other members of your team so they can quickly launch ready-to-code Workspaces.
+## Inviting Teammates
 
 To invite a new member, click the top right icon->"Team settings"->"User Management"
 
 <figure><img src="../.gitbook/assets/Invite new members.gif" alt=""><figcaption><p>Inviting a new user to DevZero</p></figcaption></figure>
+
+
+
+## Updating User Roles
 
 If you need to update a user's permissions, click the 3 dots next to the user's profile:
 

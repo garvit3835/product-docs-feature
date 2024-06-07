@@ -1,8 +1,6 @@
-# CLI Man Page
+# Help Commands
 
-To install the CLI, go to Install the DevZero CLI.
-
-## dz 
+## dz
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash

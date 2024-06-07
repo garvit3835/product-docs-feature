@@ -1,8 +1,8 @@
-# Kubernetes cluster
+# Workspace Cluster
 
-Access to the ephemeral, namespaced Kubernetes cluster is enabled via the CLI.
+User workspaces are deploying with an [ephemeral, namespaced Kubernetes cluster](../references/terminology.md#workspace-cluster). If you need to interact with this cluster, here's how:&#x20;
 
-## From anywhere
+## From Anywhere
 
 To view the config, run
 
@@ -31,9 +31,9 @@ kubectl get pods
 ```
 {% endcode %}
 
-## From inside a devbox
+## From Inside a DevBox
 
-When inside a devbox context, the CLI is able to retrieve environmental information from `/etc/devzero`. It is possible to replace the `<workspace-name>` with `.`. For example,
+When inside a [DevBox](../references/terminology.md#devbox) context (i.e. when connected to a workspace), the CLI is able to retrieve environmental information from `/etc/devzero`. It is possible to replace the `<workspace-name>` with `.`. For example,
 
 {% code overflow="wrap" %}
 ```bash

@@ -1,13 +1,5 @@
-# Custom base images
+# Recipe Base Images
 
-{% hint style="info" %}
-**Coming soon...**
-{% endhint %}
-
-Recipes currently don't support using custom base images. DevZero currently uses `ubuntu:22.04` as the base OS for all recipes and workspaces. 
-We are aware that we need to support custom base images and this page will be updated once that's a reality (ETA: Summer 2024).
-
-Use cases:
-- Already built dockerfiles with a collection of internal tools and dependencies.
-- Security of the base image that's used.
-- If there are others that we're missing, please drop us a note at [support@devzero.io](mailto:support@devzero.io)
+Custom base images are only support for our Enterprise customers. If you need a custom base image, please reach out to your support contact at DevZero.\
+\
+DevZero currently uses `ubuntu:22.04` as the base OS for all recipe builds. We anticipate releasing custom base images to all users sometime later this year.

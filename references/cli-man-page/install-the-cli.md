@@ -1,4 +1,4 @@
-# Download `dz` CLI
+# Install the CLI
 
 These instructions will guide you through the DevZero CLI installation process based on your local operating system. The CLI enables building, launching, and connecting to workspaces.
 
@@ -29,8 +29,8 @@ To install the Windows CLI open a terminal using WSL 2 and run the following com
 {% endtab %}
 {% endtabs %}
 
-{% hint style="warning" %}
-**Make sure** to run the following steps after the installer completes successfully.
+{% hint style="info" %}
+**Make sure to run the following commands after installation to continue with the setup process:**
 
 {% code overflow="wrap" fullWidth="true" %}
 ```bash
@@ -39,4 +39,6 @@ sudo dz auth login && sudo dz net connect
 {% endcode %}
 {% endhint %}
 
-If you face issues, please reach out to us at [support@devzero.io](mailto:support@devzero.io).
+
+
+If you run into any issues, please reach out to us at [support@devzero.io](mailto:support@devzero.io).

@@ -1,6 +1,6 @@
-# Source code
+# Cloning Source Code
 
-The repos section of our [Recipe specification](https://docs.devzero.io/product-docs/references/recipe-syntax) is used to clone code. This will use the [permissions of the GitHub application](https://docs.devzero.io/product-docs/admin/permissions) you have connected with DevZero.
+The repos block of our [recipe specification](../references/recipe-syntax.md#git-clone) is used to clone code. This will use the [permissions of the GitHub application](https://docs.devzero.io/product-docs/admin/permissions) you have connected with DevZero.
 
 To clone one or multiple repos:
 
@@ -15,11 +15,11 @@ dev:
 
 <details>
 
-<summary>[advanced] Custom ways of clone code</summary>
+<summary>Advanced Methods of Code Cloning</summary>
 
-This usually applies to cases where you need to use secrets to clone code. To learn more about how to save and use secrets: https://docs.devzero.io/product-docs/recipes/secrets
+This usually applies to cases where you need to use secrets to clone code. To learn more about how to save and use secrets: [Broken link](broken-reference "mention")
 
-You can use a `command` block to clone code directly:
+You can use a [`command`](../references/recipe-syntax.md#command) block to clone code directly:
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```yaml
@@ -52,20 +52,20 @@ dev:
 ```
 {% endcode %}
 
-Some of the use-cases where this is applicable:
+Some of the use cases where this is applicable:
 
-* Not using GitHub for source control
-* Cannot connect GitHub app to an organization for access control issues
-* Want to use [deploy keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys), [personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) etc
-* Want to use some other authentication methods than the DevZero default
-* Wanting to clone your repo to a custom directory
-* If there's something else, please drop us a note at [support@devzero.io](mailto:support@devzero.io)
+* You're not using GitHub for source control
+* You cannot authorize the GitHub app due to access control issues
+* You need to use [deploy keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys), [personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens), etc.
+* You need to use some other authentication methods than the DevZero default
+* You want to clone your repo to a custom directory
+* If there's something else you don't see supported, please drop us a note at [support@devzero.io](mailto:support@devzero.io)
 
 </details>
 
 <details>
 
-<summary>Accessing code from Bitbucket</summary>
+<summary>Accessing Code From Bitbucket</summary>
 
 ### Step 1. Go to your repo page on the Bitbucket website
 

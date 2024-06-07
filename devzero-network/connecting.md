@@ -1,9 +1,9 @@
-# Connecting resources to your network
+# Adding Resources to your Network
 
 ## Add a peer to your DevZero network
 
 1. Get a shell inside the node that you want to add to the network.
-2. Install the CLI following [these steps](broken-reference).
+2. [Install the CLI.](../references/cli-man-page/install-the-cli.md)
 3. Run
 
 {% code overflow="wrap" lineNumbers="true" %}

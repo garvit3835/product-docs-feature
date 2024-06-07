@@ -1,4 +1,10 @@
-# Recipe Syntax
+---
+description: >-
+  For documentation on legacy recipe syntaxes (i.e. v1 and v2, please reach out
+  to support@devzero.io)
+---
+
+# Recipe Syntax (v3)
 
 A recipe is a definition of a workspace. It consists of a base workspace configuration, and a set of steps to be executed. Let's look at a simple recipe:
 
@@ -145,7 +151,7 @@ Semantics for the directory are explained in [git documentation](https://git-scm
 
 ## Secrets and Environment variables
 
-Commands often require either their environment to be set up correctly, or secrets to access private resources. Both of these can be managed on [a per team or a per user basis](../recipes/env-vars.md).
+Commands often require either their environment to be set up correctly, or secrets to access private resources. Both of these can be managed on [a per team or a per user basis](../environment-variables/env-vars.md).
 
 ### Environment variables
 

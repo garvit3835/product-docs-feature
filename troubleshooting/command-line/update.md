@@ -1,6 +1,6 @@
-# Update dz
+# Updating the CLI
 
-A single CLI (called `dz`) is used to interact with DevZero control plane. Check out the [CLI main page](../../references/cli-man-page.md) for DevZero CLI options or use.&#x20;
+A single CLI (called `dz`) is used to interact with DevZero control plane. Check out the [CLI main page](../../references/cli-man-page/) for DevZero CLI options or use.&#x20;
 
 To check the currently installed version of your CLI, run:
 

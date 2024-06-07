@@ -1,46 +1,46 @@
 # Table of contents
 
-* [👋 Welcome to DevZero](README.md)
-
 ## ℹ️ Getting Started
 
+* [Welcome to DevZero](README.md)
 * [Quickstart](getting-started/quickstart.md)
-* [Terminology](getting-started/terminology.md)
-* [Install dz CLI](getting-started/install-dz-cli.md)
 
 ## Recipes
 
-* [Building new recipes](recipes/new-recipe.md)
-* [Recipe types](recipes/types.md)
-* [Source code](recipes/code.md)
-* [Secrets and Environment variables](recipes/env-vars.md)
-* [Execution stages (build- vs launch-time)](recipes/exec-stages.md)
-* [Custom base images](recipes/custom-base.md)
-* [Where to save recipe specs?](recipes/saving-recipes.md)
+* [Overview](recipes/types.md)
+* [Creating a Recipe](recipes/new-recipe.md)
+* [Cloning Source Code](recipes/code.md)
+* [Execution Stages](recipes/exec-stages.md)
+* [Recipe Base Images](recipes/custom-base.md)
+* [Sharing Recipes](recipes/saving-recipes.md)
 
 ## Workspaces
 
+* [Overview](workspaces/overview.md)
 * [Regions](workspaces/regions/README.md)
   * [Supported Regions](workspaces/regions/supported-regions.md)
-* [Stop/Pause/Resume](workspaces/stop-pause-resume.md)
-* [Kubernetes cluster](workspaces/kubernetes-cluster.md)
+* [Workspace Lifecycle](workspaces/stop-pause-resume.md)
+* [Workspace Cluster](workspaces/kubernetes-cluster.md)
 
-## Network
+## Environment Variables
 
-* [DevZero Network](network/README.md)
-* [Status](network/status.md)
-* [Connecting resources to your network](network/connecting.md)
-* [Access running apps in your workspace](network/access-own-workspace.md)
-* [Access apps in teammate's workspace](network/access-teammate-workspace.md)
+* [Overview](environment-variables/env-vars.md)
+* [Personal](environment-variables/personal.md)
+* [Team](environment-variables/team.md)
+* [Secrets](environment-variables/secrets.md)
+
+## DevZero Network
+
+* [Overview](devzero-network/overview.md)
+* [Network Status](devzero-network/status.md)
+* [Adding Resources to your Network](devzero-network/connecting.md)
+* [Access Running Applications](devzero-network/access-own-workspace.md)
 
 ## Admin
 
 * [User Management](admin/user-management.md)
 * [ACLs](admin/acls.md)
 * [Hosting](admin/hosting.md)
-* [Permissions](admin/permissions/README.md)
-  * [Connecting GitHub Account](admin/permissions/connecting-github-account.md)
-  * [Connecting GitHub Org](admin/permissions/connecting-github-org.md)
 
 ## 📚 How-to Guides
 
@@ -51,8 +51,8 @@
 
 * [Web Console](troubleshooting/web-console.md)
 * [Command Line](troubleshooting/command-line/README.md)
-  * [Update dz](troubleshooting/command-line/update.md)
-  * [Uninstall dz](troubleshooting/command-line/uninstall.md)
+  * [Updating the CLI](troubleshooting/command-line/update.md)
+  * [Uninstall the CLI](troubleshooting/command-line/uninstall.md)
 * [Recipes](troubleshooting/recipes.md)
 * [Workspaces](troubleshooting/workspaces.md)
 * [Visual Studio Code](troubleshooting/vs-code.md)
@@ -60,8 +60,11 @@
 
 ## 🔎 References
 
-* [Command Line Interface (CLI)](references/cli-man-page.md)
-* [Recipe Syntax](references/recipe-syntax.md)
+* [Terminology](references/terminology.md)
+* [CLI Reference](references/cli-man-page/README.md)
+  * [Install the CLI](references/cli-man-page/install-the-cli.md)
+  * [Help Commands](references/cli-man-page/help-commands.md)
+* [Recipe Syntax (v3)](references/recipe-syntax.md)
 * [Common Tools](references/common-tools/README.md)
   * [Programming Languages](references/common-tools/languages/README.md)
     * [C#](references/common-tools/languages/c-sharp.md)
@@ -94,4 +97,3 @@
     * [GCP](references/common-tools/third-party/gcp.md)
     * [GitHub](references/common-tools/third-party/github.md)
     * [GitLab](references/common-tools/third-party/gitlab.md)
-* [Leaving DevZero](references/leaving-devzero.md)
