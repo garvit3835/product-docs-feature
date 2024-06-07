@@ -94,7 +94,7 @@ While calling operations to kick-off indexing in IDEs is technically feasible in
 
 </details>
 
-## launch-time
+## Launch-time
 
 These steps are run using a `systemctl` unit at launch-time. Command blocks will be executed in the order in which they are specified in the recipe.
 
