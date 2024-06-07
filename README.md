@@ -18,7 +18,7 @@ If you're ready to get hands-on, we recommend diving into the [quickstart.md](ge
 
 ## Ready to Get Started?
 
-[Visit our dashboard](#user-content-fn-2)[^2] ([devzero.io/dashboard](https://devzero.io/dashboard)) to create your free account and install our CLI. Then head to the [Quickstart](getting-started/quickstart.md) section of our docs.&#x20;
+[Visit our dashboard](#user-content-fn-2)[^2] ([devzero.io/dashboard](https://devzero.io/dashboard)) to create your free account and install our CLI. Then head to the [quickstart.md](getting-started/quickstart.md "mention") section of our docs.&#x20;
 
 [^1]: More on this in [Terminology > Kubernetes Cluster](references/terminology.md#kubernetes-cluster-ephemeral-namespaced)
 
