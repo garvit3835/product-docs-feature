@@ -9,12 +9,6 @@ These are usually used by:
 
 Once a secret is saved, it won't be visible in the UI or CLI. It will be available at build- or launch-time. It will also be available in the running workspaces.
 
-{% hint style="warning" %}
-**Reserved prefix** `DEVZERO_` is a reserved prefix used by the platform. They may change at any time so relying on them is not advisable.
-
-You may store environment variables or secrets with line breaks.
-{% endhint %}
-
 You can access secrets within builds or at launch-time, just like you would access any environment variable. If your secret is called `MY_SECRET_KEY`, to access its value anywhere, use `$MY_SECRET_KEY`. At runtime, you can use the `env` binary to verify that the secrets are present within that context.
 
 All secrets are stored securely within DevZero in an isolated HashiCorp Vault deployment.
