@@ -11,6 +11,8 @@ Many organizations use SSO to easily manage onboarding and offboarding of employ
 4. Signature method (eg: `RSA-SHA256`)
 5. Digest method  (eg: `SHA256`)
 
+<figure><img src="../.gitbook/assets/before-entering-email.jpg" alt=""><figcaption><p>Login page when SSO is enabled</p></figcaption></figure>
+
 You can also create this as a [secret GitHub Gist](https://gist.github.com/) and send us a link!
 
 {% hint style="info" %}
