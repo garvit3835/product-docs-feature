@@ -1,33 +1,27 @@
-# 👋 Welcome to DevZero
-
-{% hint style="info" %}
-**Open Beta Notice:** the DevZero Platform is currently in Open Beta. This program is currently open to anyone, however, the experience is currently optimized for MacOS and Linux users based in North America. We plan to provide support for additional regions and operating systems over the coming months.&#x20;
-{% endhint %}
+# Welcome to DevZero
 
 ## What is DevZero?
 
-DevZero is a cloud development platform designed to help software engineers spend more time writing code and less time waiting on builds, troubleshooting dev environments, and fighting over shared resources.&#x20;
+DevZero is a [cloud development platform](https://www.devzero.io/cloud-development-environment) designed to help software engineers spend more time writing code and less time waiting on builds, troubleshooting dev [environments](references/terminology.md#environments), and fighting over shared resources.
 
-With the DevZero platform, you can centrally define and manage cloud environment specifications for development, testing, CI, and more. This ensures that environments are always consistent, up-to-date, and secure.&#x20;
+With the DevZero platform, you can centrally define and manage cloud environment [specifications](references/terminology.md#recipe) for development, testing, CI, and more. This ensures that developer environments are always consistent, up-to-date, and secure.
 
-Developers can use these specifications alongside our CLI to launch their own ephemeral, namespaced, and fully-managed cloud environments. Developers can connect their IDE of choice or leverage Code Server in the browser. We automatically take care of all the ergonomics, too, like shell config, dotfiles, and more, to ensure things match your preferences.&#x20;
+Developers can use these [specifications](references/terminology.md#recipe) alongside our CLI to launch their own [ephemeral, namespaced](#user-content-fn-1)[^1], and [extensible cloud environments](references/terminology.md#workspace). Developers can connect using an IDE of their choice or leverage a browser-based IDE/shell. We automatically take care of all the ergonomics, too, like shell config, dotfiles, and more, to ensure things match your preferences.
+
+## How does it work?
+
+[There are a few finishing touches happening to a Figma version of this diagram and this will be replaced soon.]
+
+<figure><img src=".gitbook/assets/computer-to-workspace-devbox.jpg" alt=""><figcaption><p>The relationship between your computer and DevZero's workspaces and DevBoxes</p></figcaption></figure>
+
+## How can I learn more?
+
+If you're ready to get hands-on, we recommend diving into the [quickstart.md](getting-started/quickstart.md "mention") guide. However, if you'd like to read a bit more, you can check out the [terminology.md](references/terminology.md "mention") reference sheet. You're also welcome to chat with us directly, the best way to get in touch is to email [support@devzero.io](mailto:support@devzero.io).&#x20;
 
 ## Ready to Get Started?
 
-[Click here](https://www.devzero.io/dashboard) to create your free account. Then head to the [getting-started](product-guides/getting-started/ "mention") section of our docs.&#x20;
+[Visit our dashboard](#user-content-fn-2)[^2] ([devzero.io/dashboard](https://devzero.io/dashboard)) to create your free account and install our CLI. Then head to the [quickstart.md](getting-started/quickstart.md "mention") section of our docs.&#x20;
 
-## Quick Links
+[^1]: More on this in [Terminology > Kubernetes Cluster](references/terminology.md#kubernetes-cluster-ephemeral-namespaced)
 
-We've put together some helpful guides to get started with our product quickly and easily.
-
-{% content-ref url="the-basics/use-cases.md" %}
-[use-cases.md](the-basics/use-cases.md)
-{% endcontent-ref %}
-
-{% content-ref url="product-guides/getting-started/" %}
-[getting-started](product-guides/getting-started/)
-{% endcontent-ref %}
-
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
+[^2]: The quickstart covers these steps as well.

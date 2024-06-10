@@ -1,0 +1,28 @@
+# IDE Integrations
+
+<table data-card-size="large" data-view="cards">
+   <thead>
+      <tr>
+         <th></th>
+         <th data-hidden data-card-target data-type="content-ref"></th>
+         <th data-hidden data-card-cover data-type="files"></th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td><strong>JetBrains</strong></td>
+         <td><a href="jetbrains.md">jetbrains.md</a></td>
+         <td><a href="../../../.gitbook/assets/jetbrains.png">jetbrains.png</a></td>
+      </tr>
+      <tr>
+         <td><strong>Visual Studio Code</strong></td>
+         <td><a href="vscode.md">vs-code.md</a></td>
+         <td><a href="../../../.gitbook/assets/vs-code.png">vs-code.png</a></td>
+      </tr>
+      <tr>
+         <td><strong>SSH</strong></td>
+         <td><a href="ssh.md">ssh.md</a></td>
+         <td><a href="../../../.gitbook/assets/ssh.png">ssh.png</a></td>
+      </tr>
+   </tbody>
+</table>
