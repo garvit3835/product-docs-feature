@@ -17,7 +17,7 @@ You can interact with this via:
 - local IDEs (eg: VS Code, JetBrains)
 - SSH
 
-To view running applications, visit `<workspacename>:<port>` in your browser (more info on this under Access Running Applications!).
+To view running applications, visit `<workspacename>:<port>` in your browser (more info on this under [Access Running Applications](../devzero-network/access-own-workspace.md#access-your-running-application-s)!.
 
 Here's a video covering all these concepts:
 
