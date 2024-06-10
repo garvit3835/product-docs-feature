@@ -1,6 +1,8 @@
 # Workspace Cluster
 
-User workspaces are deploying with an [ephemeral, namespaced Kubernetes cluster](../references/terminology.md#workspace-cluster). If you need to interact with this cluster, here's how:&#x20;
+User workspaces are deploying with an [ephemeral, namespaced Kubernetes cluster](../references/terminology.md#workspace-cluster). If you need to interact with this cluster...
+
+If you prefer video from, [click here](#tutorial-video) for a 5min video!
 
 ## From Anywhere
 
@@ -73,6 +75,8 @@ Global Flags:
       --verbose   Get detailed output
 ```
 {% endcode %}
+
+## Tutorial Video
 
 Here's a video covering how you can access and deploy apps to your workspace's Kubernetes cluster...
 
