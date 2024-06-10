@@ -1,6 +1,9 @@
 # Single Sign-on (SSO)
 
-Logging into your DevZero team can be placed behind your current SSO provider. Currently, the web dashboard isn't built out. But if you send an email to [support@devzero.io](mailto:support@devzero.io) with the following information, we can enable SSO for your team!
+Use-case:
+- Using SSO to control your team's login to the DevZero Platform
+
+Many organizations use SSO to easily manage onboarding and offboarding of employees and contractors. Logging into your DevZero team can be placed behind your current SSO provider. Currently, corporate SSO support is in private beta. If you would like to enable SSO support for your account, send an email to [support@devzero.io](mailto:support@devzero.io) with the following information, we can enable SSO for your team!
 
 1. Sign-on URL (might be the same as [2])
 2. Issuer (might be the same as [1])
