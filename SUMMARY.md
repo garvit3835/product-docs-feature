@@ -66,7 +66,7 @@
 * [CLI Reference](references/cli-man-page/README.md)
   * [Install the CLI](references/cli-man-page/install-the-cli.md)
   * [Help Commands](references/cli-man-page/help-commands.md)
-* [Recipe Syntax (v3)](references/recipe-syntax.md)
+* [Recipe Syntax](references/recipe-syntax.md)
 * [Common Tools](references/common-tools/README.md)
   * [Programming Languages](references/common-tools/languages/README.md)
     * [C#](references/common-tools/languages/c-sharp.md)
