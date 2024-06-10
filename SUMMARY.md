@@ -95,6 +95,7 @@
     * [Helm](references/common-tools/infra/helm.md)
     * [Kubectl](references/common-tools/infra/kubectl.md)
     * [Pulumi](references/common-tools/infra/pulumi.md)
+    * [Skaffold](references/common-tools/infra/skaffold.md)
     * [Terraform](references/common-tools/infra/terraform.md)
   * [Third-Party](references/common-tools/third-party/README.md)
     * [AWS](references/common-tools/third-party/aws.md)
