@@ -10,7 +10,7 @@ Developers can use these [specifications](references/terminology.md#recipe) alon
 
 ## How does it work?
 
-[There's a few finishing touches happening to a Figma version of this diagram and this will be replaced soon.]
+[There are a few finishing touches happening to a Figma version of this diagram and this will be replaced soon.]
 
 <figure><img src=".gitbook/assets/computer-to-workspace-devbox.jpg" alt=""><figcaption><p>The relationship between your computer and DevZero's workspaces and DevBoxes</p></figcaption></figure>
 
