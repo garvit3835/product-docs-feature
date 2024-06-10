@@ -41,6 +41,7 @@
 * [User Management](admin/user-management.md)
 * [ACLs](admin/acls.md)
 * [Hosting](admin/hosting.md)
+* [Single-Sign On (SSO)](admin/sso.md)
 
 ## 📚 How-to Guides
 
@@ -86,6 +87,8 @@
     * [Postgres](references/common-tools/databases/postgres.md)
   * [IDEs](references/common-tools/ides/README.md)
     * [JetBrains](references/common-tools/ides/jetbrains.md)
+    * [Visual Studio Code](references/common-tools/ides/vscode.md)
+    * [SSH](references/common-tools/ides/ssh.md)
   * [Infra Tools](references/common-tools/infra/README.md)
     * [Argo CD](references/common-tools/infra/argo.md)
     * [Helm](references/common-tools/infra/helm.md)
