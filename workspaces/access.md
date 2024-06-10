@@ -1,6 +1,6 @@
-# Accessing the Devbox in a Workspace
+# Accessing the DevBox in a Workspace
 
-There are various ways to interact with your devbox. The first step is to verify the name of the workspace that you want to interact with.
+There are various ways to interact with your DevBox. The first step is to verify the name of the workspace that you want to interact with.
 
 {% code overflow="wrap" %}
 ```bash

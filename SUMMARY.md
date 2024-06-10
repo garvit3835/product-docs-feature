@@ -17,7 +17,7 @@
 ## Workspaces
 
 * [Overview](workspaces/overview.md)
-* [Accessing the Devbox](workspaces/access.md)
+* [Accessing the DevBox](workspaces/access.md)
 * [Regions](workspaces/regions/README.md)
   * [Supported Regions](workspaces/regions/supported-regions.md)
 * [Workspace Lifecycle](workspaces/stop-pause-resume.md)
