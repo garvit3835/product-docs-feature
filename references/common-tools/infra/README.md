@@ -30,6 +30,11 @@
          <td><a href="../../../.gitbook/assets/pulumi.svg">pulumi.svg</a></td>
       </tr>
       <tr>
+         <td><strong>Skaffold</strong></td>
+         <td><a href="skaffold.md">skaffold.md</a></td>
+         <td><a href="../../../.gitbook/assets/skaffold.png">skaffold.png</a></td>
+      </tr>
+      <tr>
          <td><strong>Terraform CLI</strong></td>
          <td><a href="terraform.md">terraform.md</a></td>
          <td><a href="../../../.gitbook/assets/terraform.png">terraform.png</a></td>
