@@ -102,7 +102,7 @@ These steps are run using a `systemctl` unit at launch-time. Command blocks will
 **run\_at\_startup\_** needs to be prepended to the command name in order for it to get executed as a launch-time step.
 {% endhint %}
 
-Other than that, the same rules from the [Build-time](exec-stages.md#build-time) stage apply.
+Other than that, the same rules from the [Build-time](#build-time) stage apply.
 
 Here's an example of some launch-time steps:
 
