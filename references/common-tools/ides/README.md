@@ -10,19 +10,24 @@
    </thead>
    <tbody>
       <tr>
+         <td><strong>Cursor</strong></td>
+         <td><a href="cursor.md">cursor.md</a></td>
+         <td><a href="../../../.gitbook/assets/cursor.png">cursor.png</a></td>
+      </tr>
+      <tr>
          <td><strong>JetBrains</strong></td>
          <td><a href="jetbrains.md">jetbrains.md</a></td>
          <td><a href="../../../.gitbook/assets/jetbrains.png">jetbrains.png</a></td>
       </tr>
       <tr>
-         <td><strong>Visual Studio Code</strong></td>
-         <td><a href="vscode.md">vs-code.md</a></td>
-         <td><a href="../../../.gitbook/assets/vs-code.png">vs-code.png</a></td>
-      </tr>
-      <tr>
          <td><strong>SSH</strong></td>
          <td><a href="ssh.md">ssh.md</a></td>
          <td><a href="../../../.gitbook/assets/ssh.png">ssh.png</a></td>
+      </tr>
+      <tr>
+         <td><strong>Visual Studio Code</strong></td>
+         <td><a href="vscode.md">vs-code.md</a></td>
+         <td><a href="../../../.gitbook/assets/vs-code.png">vs-code.png</a></td>
       </tr>
    </tbody>
 </table>
