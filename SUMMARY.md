@@ -49,12 +49,10 @@
 * [Connect to an RDS Instance](product-guides/how-tos/connect-to-an-rds-instance.md)
 * [Connect to an S3 Bucket](product-guides/how-tos/connect-to-an-s3-bucket.md)
 
-## Troubleshooting
+## 🆘 Troubleshooting
 
 * [Web Console](troubleshooting/web-console.md)
-* [Command Line](troubleshooting/command-line/README.md)
-  * [Updating the CLI](troubleshooting/command-line/update.md)
-  * [Uninstall the CLI](troubleshooting/command-line/uninstall.md)
+* [Command Line](troubleshooting/command-line.md)
 * [Recipes](troubleshooting/recipes.md)
 * [Workspaces](troubleshooting/workspaces.md)
 * [Visual Studio Code](troubleshooting/vs-code.md)
@@ -65,6 +63,8 @@
 * [Terminology](references/terminology.md)
 * [CLI Reference](references/cli-man-page/README.md)
   * [Install the CLI](references/cli-man-page/install-the-cli.md)
+  * [Updating the CLI](references/cli-man-page/update.md)
+  * [Uninstall the CLI](references/cli-man-page/uninstall.md)
   * [Help Commands](references/cli-man-page/help-commands.md)
 * [Recipe Syntax](references/recipe-syntax.md)
 * [Common Tools](references/common-tools/README.md)

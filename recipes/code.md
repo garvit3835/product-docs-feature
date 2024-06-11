@@ -17,7 +17,7 @@ dev:
 
 <summary>Advanced Methods of Code Cloning</summary>
 
-This usually applies to cases where you need to use secrets to clone code. To learn more about how to save and use secrets: [Broken link](broken-reference "mention")
+This usually applies to cases where you need to use secrets to clone code. To learn more about how to save and use secrets: [broken-reference](broken-reference/ "mention")
 
 You can use a [`command`](../references/recipe-syntax.md#command) block to clone code directly:
 
@@ -67,15 +67,15 @@ Some of the use cases where this is applicable:
 
 <summary>Accessing Code From Bitbucket</summary>
 
-### Step 1. Go to your repo page on the Bitbucket website
+#### Step 1. Go to your repo page on the Bitbucket website
 
 <img src="../.gitbook/assets/bitbucket-repo.png" alt="Bitbucket Repo" data-size="original">
 
-### Step 2. Go to the `Access Keys` section
+#### Step 2. Go to the `Access Keys` section
 
 <img src="../.gitbook/assets/bitbucket-access-keys.png" alt="Bitbucket Access Keys" data-size="original">
 
-### Step 3(a). Generate keys
+#### Step 3(a). Generate keys
 
 {% code overflow="wrap" %}
 ```bash
@@ -83,7 +83,7 @@ ssh-keygen -t ed25519 -C "devzero-user@my-website.com" -f devzero_id25519 -P '' 
 ```
 {% endcode %}
 
-### Step 3(b). Add the public key to your Bitbucket repo's access keys
+#### Step 3(b). Add the public key to your Bitbucket repo's access keys
 
 First, copy the public key
 
@@ -97,7 +97,7 @@ Then, paste it in the `Key` section in the pop-up box.
 
 <img src="../.gitbook/assets/bitbucket-add-access-key.png" alt="Bitbucket Add Access Keys" data-size="original">
 
-### Step 3(c). Add the private key to DevZero
+#### Step 3(c). Add the private key to DevZero
 
 Check the private key
 
@@ -117,7 +117,7 @@ Call it `BITBUCKET_PVT_KEY` (or whatever you please, but this is referenced in [
 
 <img src="../.gitbook/assets/bitbucket-pvt-key-dz.png" alt="Add private key to DevZero" data-size="original">
 
-### Step 4. Build a recipe
+#### Step 4. Build a recipe
 
 Create a recipe and add a block that looks like the one below (check `line 5` to ensure naming).
 
@@ -136,7 +136,7 @@ dev:
 ```
 {% endcode %}
 
-### Step 5. Launch a workspace from that recipe
+#### Step 5. Launch a workspace from that recipe
 
 Visit your recipes pages here [https://www.devzero.io/dashboard/recipes](https://www.devzero.io/dashboard/recipes), and launch a workspace from that new recipe!
 
