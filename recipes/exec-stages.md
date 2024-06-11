@@ -88,8 +88,8 @@ Use-cases:
 
 <summary>What doesn't belong in the build steps? </summary>
 
-Do not use build steps for executing any sort of daemonized process (eg: \`sudo systemctl start ...\`) \
-\
+Do not use build steps for executing any sort of daemonized process (eg: `sudo systemctl start ...`) 
+
 While calling operations to kick-off indexing in IDEs is technically feasible in the build-time stage, it's best left to the launch-time stage.
 
 </details>
