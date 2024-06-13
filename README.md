@@ -10,17 +10,15 @@ Developers can use these [specifications](references/recipe-syntax.md) alongside
 
 ## How does it work?
 
-[There are a few finishing touches happening to a Figma version of this diagram and this will be replaced soon.]
-
 <figure><img src=".gitbook/assets/computer-to-workspace-devbox.jpg" alt=""><figcaption><p>The relationship between your computer and DevZero's workspaces and DevBoxes</p></figcaption></figure>
 
 ## How can I learn more?
 
-If you're ready to get hands-on, we recommend diving into the [quickstart.md](getting-started/quickstart.md "mention") guide. However, if you'd like to read a bit more, you can check out the [terminology.md](references/terminology.md "mention") reference sheet. You're also welcome to chat with us directly, the best way to get in touch is to email [support@devzero.io](mailto:support@devzero.io).&#x20;
+If you're ready to get hands-on, we recommend diving into the [quickstart.md](getting-started/quickstart.md "mention") guide. However, if you'd like to read a bit more, you can check out the [terminology.md](references/terminology.md "mention") reference sheet. You're also welcome to chat with us directly, the best way to get in touch is to email [support@devzero.io](mailto:support@devzero.io).
 
 ## Ready to Get Started?
 
-[Visit our dashboard](#user-content-fn-2)[^2] ([devzero.io/dashboard](https://devzero.io/dashboard)) to create your free account and install our CLI. Then head to the [quickstart.md](getting-started/quickstart.md "mention") section of our docs.&#x20;
+[Visit our dashboard](#user-content-fn-2)[^2] ([devzero.io/dashboard](https://devzero.io/dashboard)) to create your free account and install our CLI. Then head to the [quickstart.md](getting-started/quickstart.md "mention") section of our docs.
 
 [^1]: More on this in [Terminology > Kubernetes Cluster](references/terminology.md#kubernetes-cluster-ephemeral-namespaced)
 
