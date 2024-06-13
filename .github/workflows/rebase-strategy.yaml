@@ -20,6 +20,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+      - name: Pull down all branches
+        run: git pull
+      
       - name: Checkout staging branch
         run: git checkout staging
 
