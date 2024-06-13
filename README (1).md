@@ -1,4 +1,4 @@
-# Welcome to DevZero
+# Platform Overview
 
 ## What is DevZero?
 

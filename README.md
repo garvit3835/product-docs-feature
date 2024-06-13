@@ -15,13 +15,13 @@ layout:
 
 # Welcome to DevZero
 
-***
-
 {% hint style="info" %}
 **New to the platform?** \
 \
 Get started by reading our [README (1).md](<README (1).md> "mention") and then run through the [quickstart.md](getting-started/quickstart.md "mention") example project.&#x20;
 {% endhint %}
+
+***
 
 ## Product Components
 
