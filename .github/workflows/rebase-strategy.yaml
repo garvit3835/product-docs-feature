@@ -1,0 +1,32 @@
+name: Rebase Staging Branch
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  rebase-staging:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v2
+        with:
+          ref: main
+
+      - name: Setup Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Checkout staging branch
+        run: git checkout staging
+
+      - name: Rebase staging on main
+        run: git rebase main
+
+      - name: Push rebased staging branch
+        run: git push origin staging --force
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
