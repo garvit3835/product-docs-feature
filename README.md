@@ -1,25 +1,48 @@
+---
+description: Learn how to get up and running on the DevZero platform.
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: false
+  pagination:
+    visible: false
+---
+
 # Welcome to DevZero
 
-## What is DevZero?
+***
 
-DevZero is a [cloud development platform](https://www.devzero.io/cloud-development-environment) designed to help software engineers spend more time writing code and less time waiting on builds, troubleshooting dev [environments](references/terminology.md#environments), and fighting over shared resources.
+{% hint style="info" %}
+**New to the platform?** \
+\
+Get started by reading our [README (1).md](<README (1).md> "mention") and then run through the [quickstart.md](getting-started/quickstart.md "mention") example project.&#x20;
+{% endhint %}
 
-With the DevZero platform, you can centrally define and manage cloud environment [specifications](references/terminology.md#recipe) for development, testing, CI, and more. This ensures that developer environments are always consistent, up-to-date, and secure.
+## Product Components
 
-Developers can use these [specifications](references/recipe-syntax.md) alongside our CLI to launch their own [ephemeral, namespaced](#user-content-fn-1)[^1], and [extensible cloud environments](references/terminology.md#workspace). Developers can connect using any IDE of their choice or leverage a browser-based IDE/shell. We automatically take care of all the ergonomics, too, like shell config, dotfiles, and more, to ensure things match your preferences.
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f4bb">💻</span> <strong>DevBox</strong></td><td></td><td>Virtualized cloud development environment that you connect to using your preferred IDE. </td><td><a href="references/terminology.md#devbox">#devbox</a></td></tr><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f310">🌐</span> <strong>Network</strong></td><td></td><td>WireGuard based network connecting all of your workspaces and other network resources. </td><td><a href="broken-reference">Broken link</a></td></tr><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f4be">💾</span> <strong>Storage</strong></td><td></td><td>Fully elastic volumes and S3 buckets that you can use alongside your workspaces.</td><td><a href="product-guides/how-tos/connect-to-an-s3-bucket.md">connect-to-an-s3-bucket.md</a></td></tr><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f47b">👻</span><strong>Ephemeral K8s Cluster</strong></td><td></td><td>Each workspace comes with its own Kubernetes cluster, backed by flexible nodes and compute. </td><td><a href="references/terminology.md#workspace-cluster">#workspace-cluster</a></td></tr><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f513">🔓</span><strong>Secure Environments</strong></td><td></td><td>Securely share workspaces with colleagues or teams to collaborate in real-time. </td><td></td></tr><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f5fa">🗺️</span><strong>Edge Regions</strong></td><td></td><td>Globally distributed edge regions allow you to work from anywhere with virtually no latency. </td><td><a href="workspaces/regions/">regions</a></td></tr></tbody></table>
 
-## How does it work?
+***
 
-<figure><img src=".gitbook/assets/computer-to-workspace-devbox.jpg" alt=""><figcaption><p>The relationship between your computer and DevZero's workspaces and DevBoxes</p></figcaption></figure>
+## Your Stack on DevZero
 
-## How can I learn more?
+_Use your existing tech stack, databases, services, and more by following our setup guides._&#x20;
 
-If you're ready to get hands-on, we recommend diving into the [quickstart.md](getting-started/quickstart.md "mention") guide. However, if you'd like to read a bit more, you can check out the [terminology.md](references/terminology.md "mention") reference sheet. You're also welcome to chat with us directly, the best way to get in touch is to email [support@devzero.io](mailto:support@devzero.io).
+<div data-full-width="true">
 
-## Ready to Get Started?
+<figure><img src=".gitbook/assets/CleanShot 2024-06-13 at 19.19.00@2x.png" alt=""><figcaption><p>Some of our supported services and tools</p></figcaption></figure>
 
-[Visit our dashboard](#user-content-fn-2)[^2] ([devzero.io/dashboard](https://devzero.io/dashboard)) to create your free account and install our CLI. Then head to the [quickstart.md](getting-started/quickstart.md "mention") section of our docs.
+</div>
 
-[^1]: More on this in [Terminology > Kubernetes Cluster](references/terminology.md#kubernetes-cluster-ephemeral-namespaced)
+[_Explore more resources >_](references/common-tools/)
 
-[^2]: The quickstart covers these steps as well.
+***
+
+## Additional Resources
+
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f4ca">📊</span> <strong>DevZero Dashboard</strong></td><td></td><td>Manage your workspaces, team recipes, and settings</td><td></td><td></td><td><a href="references/terminology.md#dashboard">#dashboard</a></td></tr><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f680">🚀</span> <em><strong>dz</strong></em><strong> CLI</strong></td><td></td><td>Use the CLI to manage and connect to your DevZero Workspaces</td><td></td><td></td><td><a href="references/cli-man-page/">cli-man-page</a></td></tr><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f6e0">🛠️</span> <strong>Common Tools</strong></td><td></td><td>Explore how to use your favorites tools and services within DevZero</td><td></td><td></td><td><a href="references/common-tools/">common-tools</a></td></tr></tbody></table>

@@ -3,6 +3,7 @@
 ## ℹ️ Getting Started
 
 * [Welcome to DevZero](README.md)
+* [Platform Overview](<README (1).md>)
 * [Quickstart](getting-started/quickstart.md)
 
 ## Recipes
