@@ -23,5 +23,5 @@ If you're not using GitHub, check out this section on [custom cloning source cod
 <figure><img src="../.gitbook/assets/Build status.png" alt=""><figcaption><p>Build completed</p></figcaption></figure>
 
 {% hint style="info" %}
-You can learn more about launching and managing your workspaces here: [Broken link](broken-reference "mention")
+You can learn more about getting workspaces from recipes in the [Workspace Overview](../workspaces/overview.md) page.
 {% endhint %}

@@ -20,7 +20,7 @@ Anything that requires user-input to proceed. Build- and launch-time steps are e
 **Common cases where this is true:**
 
 * Adding `-y` for apt-get operations: `sudo apt-get install -y curl`
-* Prepending apt-get operations with `DEBIAN_FRONTEND=noninteractive`: `DEBIAN_FRONTEND=noninteractive sudo apt-get install tzdata`
+* Prepending apt-get operations with `DEBIAN_FRONTEND=noninteractive`: `DEBIAN_FRONTEND=noninteractive sudo apt-get install -y tzdata`
 
 </details>
 
@@ -37,11 +37,11 @@ Each command block can be thought of as a layer in a Docker image. They are wrap
 `name` is used to help reference and understand what is being achieved in a command block.
 
 {% hint style="info" %}
-**Note** When invoking binaries, its always best-practice to reference them by their absolute paths. For example, `/usr/local/go/bin/go` instead of `go`. This related to the previous `warning` block.
+**Note** When invoking binaries, its always best-practice to reference them by their absolute paths. For example, `/usr/local/go/bin/go` instead of `go`. This relates to the following `warning` block.
 {% endhint %}
 
 {% hint style="warning" %}
-**Warning** Environment variable set by calling `export` are not going to be available in subsequent command blocks. To use them in subsequent blocks, either write to some file, or to `/etc/environment`.
+**Warning** Environment variable set by calling `export` are not going to be available in subsequent command blocks. To use them in subsequent blocks, either write to some file, or to `/etc/environment`. Please see the previous `info` section for more ways to better utilize this.
 {% endhint %}
 
 Here's an example of some build-time steps:
@@ -75,7 +75,7 @@ dev:
 ```
 {% endcode %}
 
-For more examples, see [Common Build Commands](../references/common-build-commands.md).
+For more examples, see check this collection of build commands for some [Common Tools](../references/common-tools).
 
 Use-cases:
 
@@ -88,8 +88,8 @@ Use-cases:
 
 <summary>What doesn't belong in the build steps? </summary>
 
-Do not use build steps for executing any sort of daemonized process (eg: \`sudo systemctl start ...\`) \
-\
+Do not use build steps for executing any sort of daemonized process (eg: `sudo systemctl start ...`) 
+
 While calling operations to kick-off indexing in IDEs is technically feasible in the build-time stage, it's best left to the launch-time stage.
 
 </details>
@@ -102,7 +102,7 @@ These steps are run using a `systemctl` unit at launch-time. Command blocks will
 **run\_at\_startup\_** needs to be prepended to the command name in order for it to get executed as a launch-time step.
 {% endhint %}
 
-Other than that, the same rules from the [Build-time](exec-stages.md#build-time) stage apply.
+Other than that, the same rules from the [Build-time](#build-time) stage apply.
 
 Here's an example of some launch-time steps:
 
