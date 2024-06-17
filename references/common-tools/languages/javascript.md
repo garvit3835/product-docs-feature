@@ -15,11 +15,5 @@ build:
         echo '. $HOME/.nvm/nvm.sh' >> $HOME/.bashrc
         echo '. $HOME/.nvm/nvm.sh' >> $HOME/.zshrc
         npm install --global yarn
-    # test
-    - type: command
-      command: |
-        . $HOME/.nvm/nvm.sh
-        node --version
-        yarn --version
 ```
 {% endcode %}

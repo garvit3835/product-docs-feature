@@ -5,10 +5,15 @@ The repos block of our [recipe specification](../references/recipe-syntax.md#git
 To clone one or multiple repos:
 
 ```yaml
-dev:
-    repos:
-    - https://github.com/vercel/next.js
-    - https://github.com/my-org/my-repo
+version: "3"
+build:
+  steps:
+    - type: apt-get
+      packages: ["git"]
+    - type: git-clone
+      url: https://github.com/my-org/my-repo
+    - type: git-clone
+      url: https://github.com/vercel/next.js
 ```
 
 <figure><img src="../.gitbook/assets/repos-in-recipe.png" alt=""><figcaption><p>Code block in a recipe</p></figcaption></figure>

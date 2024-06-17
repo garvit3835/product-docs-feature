@@ -48,30 +48,41 @@ Here's an example of some build-time steps:
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```yaml
-dev:
-  commands:
-    - command: sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install -y unzip tar curl gnupg software-properties-common zip
-      name: install_base_packages
-    - command: |-
+version: "3"
+build:
+  steps:
+    - type: apt-get
+      packages: ["curl", "gnupg", "software-properties-common", "tar", "unzip", "zip"]
+    # install NVM
+    - type: command
+      command: |
         curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
         export NVM_DIR=$HOME/.nvm && [ -s $NVM_DIR/nvm.sh ] && \. $NVM_DIR/nvm.sh
-        nvm install 20
+        nvm install 21.0.0
         echo '. $HOME/.nvm/nvm.sh' >> $HOME/.bashrc
         echo '. $HOME/.nvm/nvm.sh' >> $HOME/.zshrc
-        npm install
-      directory: supabase # `supabase` is relative to `codeCloneRoot`, which defaults to /home/devzero if not specified
-      name: buildtime_install_cmd_for_JavaScript
-    - command: |-
-        sudo apt-get update
-        sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
-        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-        sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-        sudo apt-get update
-        sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+        npm install --global yarn
+    # install Docker
+    - type: apt-get
+      packages: ["docker-ce", "docker-ce-cli", "containerd.io"]
+      extra_repositories:
+      - key_url: https://download.docker.com/linux/ubuntu/gpg
+        repository: https://download.docker.com/linux/ubuntu
+    - type: command
+      command: |
         sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
         sudo chmod +x /usr/local/bin/docker-compose
-      directory: supabase # `supabase` is relative to `codeCloneRoot`, which defaults to /home/devzero if not specified
-      name: buildtime_install_cmd_for_Docker
+
+        groupadd docker || true
+        usermod -aG docker devzero
+        mkdir -p /home/devzero/.docker
+        newgrp docker
+        chown devzero:devzero /home/devzero/.docker -R
+        chmod g+rwx /home/devzero/.docker -R
+        systemctl enable docker.service
+        systemctl enable containerd.service
+      directory: /home/devzero
+      user: root
 ```
 {% endcode %}
 
@@ -96,10 +107,10 @@ While calling operations to kick-off indexing in IDEs is technically feasible in
 
 ## Launch-time
 
-These steps are run using a `systemctl` unit at launch-time. Command blocks will be executed in the order in which they are specified in the recipe.
+These steps are run using `systemctl` units at launch-time. Command blocks will be executed in the order in which they are specified in the recipe.
 
 {% hint style="warning" %}
-**run\_at\_startup\_** needs to be prepended to the command name in order for it to get executed as a launch-time step.
+The **launch** block is used for commands to be executed as launch-time steps.
 {% endhint %}
 
 Other than that, the same rules from the [Build-time](#build-time) stage apply.
@@ -108,24 +119,21 @@ Here's an example of some launch-time steps:
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```yaml
-dev:
-  commands:
-    - command: |-
-        sudo groupadd docker || true
-        sudo usermod -aG docker $USER
-        newgrp docker # if you can't access docker, try rebooting the workspace once: `sudo reboot`
-        sudo chown "$USER":"$USER" "$HOME"/.docker -R
-        sudo chmod g+rwx "$HOME/.docker" -R
-        sudo systemctl start docker
-        sudo systemctl enable docker.service
-        sudo systemctl enable containerd.service
-      name: run_at_startup_docker
-    - command: |-
-        sudo systemctl start postgresql.service
+launch:
+  steps:
+    - type: command
+      command: |
+        systemctl start docker
+      directory: /home/devzero
+      user: root
+    - type: command
+      command: |
+        systemctl start postgresql.service
         echo 'postgres     ALL=NOPASSWD: ALL' | sudo tee /etc/sudoers.d/100-postgres
         sudo -u postgres bash -c "psql -c \"CREATE USER pguser WITH PASSWORD 'test1234';\""
         sudo -u postgres createdb testdb -O pguser
-      name: run_at_startup_for_postgres
+      directory: /home/devzero
+      user: root
 ```
 {% endcode %}
 
@@ -138,5 +146,4 @@ dev:
 Cacheable steps that make filesystem updates are better placed in the build-time stage
 
 Binaries, files, and interfaces that you expect the user to access as soon as they get into their workspace.
-
 </details>
