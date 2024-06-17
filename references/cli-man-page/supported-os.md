@@ -28,3 +28,5 @@ Therefore, we're confident that the [`dz CLI`](../../references/terminology.md#c
 - ubuntu:20.04
 - ubuntu:22.04
 - ubuntu:23.04
+
+If you see something that's not supported yet that you'd like to see support for, please tell us at [support@devzero.io](mailto:support@devzero.io)!
