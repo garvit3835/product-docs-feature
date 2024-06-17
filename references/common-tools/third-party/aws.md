@@ -14,6 +14,7 @@ build:
         unzip awscliv2.zip
         sudo ./aws/install
         rm awscliv2.zip
+        rm -rf aws/
       user: devzero
 ```
 {% endcode %}
