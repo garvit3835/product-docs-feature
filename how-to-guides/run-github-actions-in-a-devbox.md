@@ -35,7 +35,7 @@ launch:
       command: |
         cd actions-runner
         ./svc.sh install && ./svc.sh start
-      # directory: /home/devzero needed?
+      directory: /home/devzero needed?
       user: root
 ```
 
