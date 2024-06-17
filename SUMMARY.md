@@ -47,6 +47,7 @@
 
 ## 📚 How-to Guides
 
+* [Connecting to AWS](how-to-guides/connecting-to-aws.md)
 * [Connect to an RDS Instance](product-guides/how-tos/connect-to-an-rds-instance.md)
 * [Connect to an S3 Bucket](product-guides/how-tos/connect-to-an-s3-bucket.md)
 * [Run GitHub Actions in a DevBox](how-to-guides/run-github-actions-in-a-devbox.md)
