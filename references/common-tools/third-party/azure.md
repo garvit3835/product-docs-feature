@@ -2,10 +2,14 @@
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```yaml
-dev:
-  commands:
-    - command: |-
+version: "3"
+build:
+  steps:
+    - type: apt-get
+      packages: ["curl"]
+    - type: command
+      command: |
         curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-      name: install_az_cli
+      user: devzero
 ```
 {% endcode %}
