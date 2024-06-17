@@ -45,10 +45,11 @@
 * [Hosting](admin/hosting.md)
 * [Single-Sign On (SSO)](admin/sso.md)
 
-## 📝 How-to Guides
+## 📚 How-to Guides
 
 * [Connect to an RDS Instance](product-guides/how-tos/connect-to-an-rds-instance.md)
 * [Connect to an S3 Bucket](product-guides/how-tos/connect-to-an-s3-bucket.md)
+* [Run GitHub Actions in a DevBox](how-to-guides/run-github-actions-in-a-devbox.md)
 
 ## 🛠️ Troubleshooting
 
@@ -59,7 +60,7 @@
 * [Visual Studio Code](troubleshooting/vs-code.md)
 * [JetBrains](troubleshooting/jetbrains.md)
 
-## 📚 References
+## 🔎 References
 
 * [Terminology](references/terminology.md)
 * [CLI Reference](references/cli-man-page/README.md)
