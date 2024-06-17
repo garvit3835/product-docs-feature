@@ -120,7 +120,7 @@ launch:
         INSTALLATION_NAME="dz-runner-set"
         NAMESPACE="dz-arc-runners"
         GITHUB_CONFIG_URL=https://github.com/OWNER/REPO
-        GITHUB_PAT=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
+        GITHUB_PAT=ghp_token
         helm install "${INSTALLATION_NAME}" \
             --namespace "${NAMESPACE}" \
             --create-namespace \
