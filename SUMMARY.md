@@ -72,7 +72,7 @@
   * [Supported OSs](references/cli-man-page/supported-os.md)
   * [Help Commands](references/cli-man-page/help-commands.md)
 * [Recipe Syntax](references/recipe-syntax.md)
-* [Common Tools](references/common-tools/README.md)
+* [Templates & Tools](references/common-tools/README.md)
   * [Programming Languages](references/common-tools/languages/README.md)
     * [C#](references/common-tools/languages/c-sharp.md)
     * [C](references/common-tools/languages/c.md)
