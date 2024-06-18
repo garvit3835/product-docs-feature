@@ -1,14 +1,20 @@
+---
+description: Updating team environment variables
+---
+
 # Team
 
 ## Saving a team environment variable
 
-Visit the Environment Variables section at https://www.devzero.io/dashboard/settings/environment-variables#team to add, remove or update your environment variables for your team.
+Visit the Environment Variables section at [https://www.devzero.io/dashboard/settings/environment-variables#team](https://www.devzero.io/dashboard/settings/environment-variables#team) to add, remove or update your environment variables for your team.
 
 {% hint style="warning" %}
 Make sure the `Sensitive` field is **not** checked.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/team-env-var.png" alt=""><figcaption><p>Team Environment Variables</p></figcaption></figure>
+##
+
+<figure><img src="../.gitbook/assets/Update environment variables.png" alt=""><figcaption><p>Team Environment Variables</p></figcaption></figure>
 
 ## Using a team environment variable
 
