@@ -45,7 +45,7 @@
 * [Hosting](admin/hosting.md)
 * [Single-Sign On (SSO)](admin/sso.md)
 
-## 📚 How-to Guides
+## 📝 How-to Guides
 
 * [Connecting to AWS](how-to-guides/connecting-to-aws.md)
 * [Connect to an RDS Instance](product-guides/how-tos/connect-to-an-rds-instance.md)
@@ -62,7 +62,7 @@
 * [Visual Studio Code](troubleshooting/vs-code.md)
 * [JetBrains](troubleshooting/jetbrains.md)
 
-## 🔎 References
+## 📚 References
 
 * [Terminology](references/terminology.md)
 * [CLI Reference](references/cli-man-page/README.md)
