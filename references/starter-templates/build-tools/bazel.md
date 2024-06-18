@@ -16,6 +16,5 @@ build:
           components:
             - jdk1.8
           distribution: stable
-
 ```
 {% endcode %}
