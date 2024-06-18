@@ -10,7 +10,6 @@ build:
       extra_repositories:
       - key_url: https://apt.releases.hashicorp.com/gpg 
         repository: https://apt.releases.hashicorp.com
-        components:
-        - main
+        components: ["main"]
 ```
 {% endcode %}
