@@ -39,10 +39,10 @@ _Use your existing tech stack, databases, services, and more by following our se
 
 </div>
 
-[_Explore more resources >_](references/common-tools/)
+[_Explore more resources >_](references/starter-templates/)
 
 ***
 
 ## Additional Resources
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f4ca">📊</span><strong>DevZero Dashboard</strong></td><td></td><td>Manage your workspaces, team recipes, and settings</td><td></td><td></td><td><a href="references/terminology.md#dashboard">#dashboard</a></td></tr><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f680">🚀</span><em><strong>dz</strong></em><strong> CLI</strong></td><td></td><td>Use the CLI to manage and connect to your DevZero Workspaces</td><td></td><td></td><td><a href="references/cli-man-page/">cli-man-page</a></td></tr><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f6e0">🛠️</span><strong>Common Tools</strong></td><td></td><td>Explore how to use your favorites tools and services within DevZero</td><td></td><td></td><td><a href="references/common-tools/">common-tools</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f4ca">📊</span><strong>DevZero Dashboard</strong></td><td></td><td>Manage your workspaces, team recipes, and settings</td><td></td><td></td><td><a href="references/terminology.md#dashboard">#dashboard</a></td></tr><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f680">🚀</span><em><strong>dz</strong></em><strong> CLI</strong></td><td></td><td>Use the CLI to manage and connect to your DevZero Workspaces</td><td></td><td></td><td><a href="references/cli-man-page/">cli-man-page</a></td></tr><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f6e0">🛠️</span><strong>Common Tools</strong></td><td></td><td>Explore how to use your favorites tools and services within DevZero</td><td></td><td></td><td><a href="references/starter-templates/">starter-templates</a></td></tr></tbody></table>

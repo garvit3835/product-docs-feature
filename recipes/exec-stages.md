@@ -2,7 +2,7 @@
 
 ## Overview
 
-Recipes have two execution stages that you can customize:&#x20;
+Recipes have two execution stages that you can customize:
 
 1. **Build-time:** when recipe is getting saved, after validation.
 2. **Launch-time:** when a workspace is being launched from a recipe.
@@ -26,7 +26,7 @@ Anything that requires user-input to proceed. Build- and launch-time steps are e
 
 ## Build-time
 
-This stage should be used when caching of the build is helpful, i.e., pre-builds. Our builder uses the YAML specification to create container images that are then run as workspaces, the build images are layered and cached to improve subsequent workspace launch times.&#x20;
+This stage should be used when caching of the build is helpful, i.e., pre-builds. Our builder uses the YAML specification to create container images that are then run as workspaces, the build images are layered and cached to improve subsequent workspace launch times.
 
 Each command block can be thought of as a layer in a Docker image. They are wrapped in a script and executed within a bash context. In case `directory` is specified:
 
@@ -86,7 +86,7 @@ build:
 ```
 {% endcode %}
 
-For more examples, see check this collection of build commands for some [Common Tools](../references/common-tools).
+For more examples, see check this collection of build commands for some [Common Tools](../references/starter-templates/).
 
 Use-cases:
 
@@ -97,9 +97,9 @@ Use-cases:
 
 <details>
 
-<summary>What doesn't belong in the build steps? </summary>
+<summary>What doesn't belong in the build steps?</summary>
 
-Do not use build steps for executing any sort of daemonized process (eg: `sudo systemctl start ...`) 
+Do not use build steps for executing any sort of daemonized process (eg: `sudo systemctl start ...`)
 
 While calling operations to kick-off indexing in IDEs is technically feasible in the build-time stage, it's best left to the launch-time stage.
 
@@ -113,7 +113,7 @@ These steps are run using `systemctl` units at launch-time. Command blocks will 
 The **launch** block is used for commands to be executed as launch-time steps.
 {% endhint %}
 
-Other than that, the same rules from the [Build-time](#build-time) stage apply.
+Other than that, the same rules from the [Build-time](exec-stages.md#build-time) stage apply.
 
 Here's an example of some launch-time steps:
 
@@ -141,9 +141,10 @@ launch:
 
 <details>
 
-<summary>What doesn't belong in the launch steps? </summary>
+<summary>What doesn't belong in the launch steps?</summary>
 
 Cacheable steps that make filesystem updates are better placed in the build-time stage
 
 Binaries, files, and interfaces that you expect the user to access as soon as they get into their workspace.
+
 </details>

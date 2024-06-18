@@ -18,8 +18,8 @@ You will see something like this...
 You can interact with this via:
 
 * `dz workspace connect <workspace name>`
-* local IDEs \[eg: VS Code ([doc](../references/common-tools/ides/vscode.md)), JetBrains ([doc](../references/common-tools/ides/jetbrains.md))]
-* SSH ([doc](../references/common-tools/ides/ssh.md))
+* local IDEs \[eg: VS Code ([doc](../references/ide-setup/vscode.md)), JetBrains ([doc](../references/ide-setup/jetbrains.md))]
+* SSH ([doc](../references/ide-setup/ssh.md))
 
 To view running applications, visit `<workspacename>:<port>` in your browser (more info on this under [Access Running Applications](../devzero-network/access-own-workspace.md#access-your-running-application-s)!
 
