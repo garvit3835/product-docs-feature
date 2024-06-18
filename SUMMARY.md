@@ -68,6 +68,7 @@
   * [Install the CLI](references/cli-man-page/install-the-cli.md)
   * [Updating the CLI](references/cli-man-page/update.md)
   * [Uninstall the CLI](references/cli-man-page/uninstall.md)
+  * [Supported OSs](references/cli-man-page/supported-os.md)
   * [Help Commands](references/cli-man-page/help-commands.md)
 * [Recipe Syntax](references/recipe-syntax.md)
 * [Common Tools](references/common-tools/README.md)

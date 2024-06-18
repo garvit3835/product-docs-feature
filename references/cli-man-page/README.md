@@ -12,6 +12,10 @@
 [uninstall.md](uninstall.md)
 {% endcontent-ref %}
 
+{% content-ref url="supported-os.md" %}
+[supported-os.md](supported-os.md)
+{% endcontent-ref %}
+
 {% content-ref url="help-commands.md" %}
 [help-commands.md](help-commands.md)
 {% endcontent-ref %}
