@@ -1,6 +1,7 @@
-# Secure Shell (SSH)
+# Visual Studio Code
 
 First, get the name of the workspace that you want to connect VS Code to...
+
 {% code overflow="wrap" %}
 ```bash
 # to get the workspace name
@@ -9,11 +10,12 @@ dz workspace ls
 {% endcode %}
 
 Then, run ...
+
 {% code overflow="wrap" %}
 ```bash
-dz workspace connect <workspace-name>
+dz workspace code <workspace-name>
 
-# if your workspace is called absconding-rhino-mega
-# this is ssh devzero@absconding-rhino-mega
+# if your workspace is called tremendous-monkey-fewd
+# this is dz workspace code tremendous-monkey-fewd
 ```
 {% endcode %}

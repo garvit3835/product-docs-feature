@@ -23,14 +23,12 @@ The default path for your cloned code is `/home/devzero`
 * Under **Connections > SSH**, you should see your workspace listed.
 
 <figure><img src="../../../.gitbook/assets/jetbrains-gateway-workspaces.png" alt="" width="563"><figcaption><p>Your workspaces</p></figcaption></figure>
-
-
 {% endtab %}
 
 {% tab title="Using any Jetbrains IDE" %}
 * Create a new project under **Remote Development > SSH**.
 
-<figure><img src="../../../.gitbook/assets/jetbrains-remote-project.png" alt=""><figcaption><p>Connect using SSH </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/jetbrains-remote-project.png" alt=""><figcaption><p>Connect using SSH</p></figcaption></figure>
 
 * Create a new connection using username "devzero" and the workspace you want to connect to in host. Then click on **Check Connection and Continue**.
 
@@ -47,7 +45,5 @@ The default path for your cloned code is `/home/devzero`
 * Under **Remote Development > SSH**, you should see your workspace listed.
 
 <figure><img src="../../../.gitbook/assets/jetbrains-workspaces.png" alt="" width="563"><figcaption><p>Your workspaces</p></figcaption></figure>
-
-
 {% endtab %}
 {% endtabs %}
