@@ -1,6 +1,6 @@
 # Docker remote build/cache
 
-### Remote build on a DevBox
+### Remote build/cache using `DOCKER_HOST`
 
 1. Create a new workspace with Docker installed ([How-to](../references/common-tools/build-tools/docker.md)).
 2. Make sure your machine is connected to the DevZero network:\
@@ -17,23 +17,45 @@ When you run a `docker build` command, the build context will be sent to the Dev
 If you're seeing "Host key verification failed" error, try connecting to your DevBox via ssh to verify the fingerprint.
 {% endhint %}
 
-### Remote cache on a DevBox
+### Remote build using BuildKit
 
 1. Create a new workspace with Docker installed ([How-to](../references/common-tools/build-tools/docker.md)).
-2. Install the Docker Registry image inside your DevBox\
+2. Inside your DevBox, install buildkit using Docker Image:\
+   `docker run -d --rm --name=remote-buildkitd --privileged -p 1234:1234 moby/buildkit:latest --addr tcp://0.0.0.0:1234`\
+   \
+   See [Remote driver docs](https://docs.docker.com/build/drivers/remote/) for available options.
+3. On your machine, create a new buildx instance:\
+   `docker buildx create --name remote-container --driver remote tcp://your-devbox-hostname:1234`
+4. Build an image using remote driver (and download it locally):\
+   `docker buildx build --builder=remote-container -t test --load .`
+
+### Remote cache using Docker Registry
+
+1. Create a new workspace with Docker installed ([How-to](../references/common-tools/build-tools/docker.md)).
+2. Inside your DevBox, install the Docker Registry image:\
    `docker run -d -p 5000:5000 --name registry registry:2`\
-   See [CNCF Distribution guide](https://distribution.github.io/distribution/) for all available options.
+   \
+   See [CNCF Distribution guide](https://distribution.github.io/distribution/) for available options.
 3. Make sure your machine is connected to the DevZero network:\
    `dz net connect`
 4. Verify you can access the registry from your machine:\
    `curl http://your-devbox-hostname:5000/v2/_catalog`
-5. Tag and push your image to the registry:\
-   `docker build --push -t your-devbox-hostname:5000/<image> .`
-6. Verify the image has been pushed to and cached on the machine:\
+5.  Build and push your image to the registry\
+    With Docker:\
+    `docker build --push -t your-devbox-hostname:5000/<image> .`\
+    \
+    With BuildKit remote cache (see previous section):
+
+    ```console
+    docker buildx build --push -t your-devbox-hostname:5000/<image> \
+      --cache-to type=registry,ref=your-devbox-hostname:5000/<cache-image> \
+      --cache-from type=registry,ref=your-devbox-hostname:5000/<cache-image>
+    ```
+6. Verify the image is available on the machine:\
    `curl http://your-devbox-hostname:5000/v2/_catalog`
 
 {% hint style="info" %}
-If you're getting "http: server gave HTTP response to HTTPS client", try adding the followign to your Docker daemon json configuration:\
+If you're getting "http: server gave HTTP response to HTTPS client", try adding the following to your Docker daemon json configuration:\
 \
 `insecure-registries": ["your-devbox-hostname:5000"]`
 {% endhint %}
