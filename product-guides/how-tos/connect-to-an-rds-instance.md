@@ -1,13 +1,10 @@
 # Connect to an RDS Instance
 
-## Using a Recipe Step
+### Existing Database
 
-{% hint style="info" %}
-**Coming soon...**
-{% endhint %}
+1. Make sure your followed the [Connecting to AWS](../../how-to-guides/connecting-to-aws.md) guide.
 
-## From a running Workspace
+### New Database
 
-{% hint style="info" %}
-**Coming soon...**
-{% endhint %}
+1. Make sure your followed the [Connecting to AWS](../../how-to-guides/connecting-to-aws.md) guide.
+
