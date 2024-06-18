@@ -17,21 +17,9 @@ build:
         sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
         sudo chmod +x /usr/local/bin/docker-compose
 
-        groupadd docker || true
         usermod -aG docker devzero
-        mkdir -p /home/devzero/.docker
-        newgrp docker
-        chown devzero:devzero /home/devzero/.docker -R
-        chmod g+rwx /home/devzero/.docker -R
         systemctl enable docker.service
         systemctl enable containerd.service
-      directory: /home/devzero
-      user: root
-launch:
-  steps:
-    - type: command
-      command: |
-        systemctl start docker
       directory: /home/devzero
       user: root
 ```
