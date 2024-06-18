@@ -86,7 +86,7 @@ build:
 ```
 {% endcode %}
 
-For more examples, see check this collection of build commands for some [Common Tools](../references/starter-templates/).
+For more examples, see check the build commands in our [starter-templates](../references/starter-templates/ "mention").
 
 Use-cases:
 
