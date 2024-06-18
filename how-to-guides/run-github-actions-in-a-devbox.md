@@ -35,7 +35,7 @@ launch:
       command: |
         cd actions-runner
         ./svc.sh install && ./svc.sh start
-      directory: /home/devzero needed?
+      directory: /home/devzero
       user: root
 ```
 
@@ -56,7 +56,7 @@ curl \
 6. Verify that your runner was added to your repo/org and is either in "Idle" or "Online" state.
 
 {% hint style="info" %}
-Tip: The runner name should be the same as the DevBox hostname.
+Tip: The runner name should be same as the DevBox hostname.
 {% endhint %}
 
 7. Run a GitHub Action on the self-hosted runner to verify that it passes successfully:
