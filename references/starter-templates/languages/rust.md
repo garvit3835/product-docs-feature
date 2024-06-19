@@ -6,7 +6,7 @@ version: "3"
 build:
   steps:
     - type: apt-get
-      packages: ["curl"]
+      packages: ["curl", "libssl-dev", "pkg-config"]
     - type: command
       command: |
         curl -sSf https://sh.rustup.rs | sh -s -- -y

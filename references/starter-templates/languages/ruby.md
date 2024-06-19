@@ -6,7 +6,7 @@ version: "3"
 build:
   steps:
     - type: apt-get
-      packages: ['autoconf', 'build-essential', 'curl', 'git', 'libdb-dev', 'libffi-dev', 'libgdbm-dev', 'libmysqlclient-dev', 'libncurses5-dev', 'libpq-dev', 'libreadline6-dev', 'libsqlite3-dev', 'libssl-dev', 'libxml2-dev', 'libxslt1-dev', 'libyaml-dev', 'patch', 'procps', 'tar', 'unzip', 'zlib1g-dev']
+      packages: ["autoconf", "build-essential", "curl", "git", "libdb-dev", "libffi-dev", "libgdbm-dev", "libmysqlclient-dev", "libncurses5-dev", "libpq-dev", "libreadline6-dev", "libsqlite3-dev", "libssl-dev", "libxml2-dev", "libxslt1-dev", "libyaml-dev", "patch", "procps", "tar", "unzip", "zlib1g-dev"]
     - type: command
       command: |
         curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
