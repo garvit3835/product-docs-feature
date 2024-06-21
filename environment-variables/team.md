@@ -6,7 +6,7 @@ description: Setting team environment variables
 
 ## Saving a team environment variable
 
-Visit the Environment Variables section at [https://www.devzero.io/dashboard/environment-variables/team](https://www.devzero.io/dashboard/environment-variables/team) to add, remove or update your environment variables for your team.
+Visit the Environment Variables section at [https://www.devzero.io/dashboard/environment-variables/team](https://www.devzero.io/dashboard/environment-variables/team) to add, remove or update your environment variables for your team. Team environment variables can be referenced and used by anyone within your DevZero team.&#x20;
 
 {% hint style="info" %}
 Team-scoped environment variables and secrets must be directly referenced in your recipe template steps. Unlike personal environment variables, they are **not** automatically added to every workspace.&#x20;
