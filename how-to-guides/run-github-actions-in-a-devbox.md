@@ -82,7 +82,7 @@ To create one:
 3. In the "scopes" section, select `repo` and optionally `admin:org` for organization runners.
 4. Copy your new Personal Access Token.
 
-Create a new recipe that resembles the following:
+Create a new recipe installing kubectl, helm and GitHub ARC:
 
 {% hint style="info" %}
 Make sure to adjust the `INSTALLATION_NAME`, `NAMESPACE`, `GITHUB_CONFIG_URL`, and `GITHUB_PAT` variables as needed.
