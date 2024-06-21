@@ -201,7 +201,7 @@ You can provide environment variables to a single command only. The syntax for t
     - type: command
       command: make
       directory: project
-      env:
+      environment:
         - name: CXX
           value: ccache
 ```
