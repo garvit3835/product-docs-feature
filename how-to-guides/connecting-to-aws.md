@@ -9,7 +9,7 @@ description: Learn how to connect to AWS resources privately from a DevBox.
 1. Go to **VPC > Your VPCs > Create VPC.**
 2. Select **VPC and more.**
 3. Enter a tag name to auto-generate VPC and Subnet Names. Customize the IPv4 CIDR block if needed.
-4. Select ‘In 1 AZ’ in the **NAT Gateways** section.
+4. Select "**In 1 AZ"** in the **NAT Gateways** section.
 
 ### Step 2: Create an EC2 "proxy" router
 
