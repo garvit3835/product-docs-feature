@@ -3,7 +3,7 @@
 ### Remote build/cache using `DOCKER_HOST`
 
 1. Create a new workspace with Docker installed ([How-to](../references/starter-templates/build-tools/docker.md)).
-2. Make sure your machine is connected to the DevZero network:\
+2. Make sure you are connected to the DevZero network:\
    `dz net connect`
 3. Set `DOCKER_HOST` environment variable on your machine to match the DevBox hostname:\
    `export DOCKER_HOST=ssh://devzero@your-devbox-hostname`
@@ -11,7 +11,7 @@
 
     `docker info`
 
-When you run a `docker build` command, the build context will be sent to the DevBox and the build process will run.
+When you run the `docker build` command, the build context will be sent to the DevBox and the build process will run.
 
 {% hint style="info" %}
 If you're seeing "Host key verification failed" error, try connecting to your DevBox via ssh to verify the fingerprint.
@@ -20,10 +20,10 @@ If you're seeing "Host key verification failed" error, try connecting to your De
 ### Remote build using BuildKit
 
 1. Create a new workspace with Docker installed ([How-to](../references/starter-templates/build-tools/docker.md)).
-2. Inside your DevBox, install buildkit using Docker Image:\
+2. Inside your DevBox, run the BuildKit container:\
    `docker run -d --rm --name=remote-buildkitd --privileged -p 1234:1234 moby/buildkit:latest --addr tcp://0.0.0.0:1234`\
    \
-   See [Remote driver docs](https://docs.docker.com/build/drivers/remote/) for available options.
+   See [Remote driver docs](https://docs.docker.com/build/drivers/remote/) for all available options.
 3. On your machine, create a new buildx instance:\
    `docker buildx create --name remote-container --driver remote tcp://your-devbox-hostname:1234`
 4. Build an image using remote driver (and download it locally):\
@@ -32,7 +32,7 @@ If you're seeing "Host key verification failed" error, try connecting to your De
 ### Remote cache using Docker Registry
 
 1. Create a new workspace with Docker installed ([How-to](../references/starter-templates/build-tools/docker.md)).
-2. Inside your DevBox, install the Docker Registry image:\
+2. Inside your DevBox, install the Docker Registry:\
    `docker run -d -p 5000:5000 --name registry registry:2`\
    \
    See [CNCF Distribution guide](https://distribution.github.io/distribution/) for available options.
@@ -51,7 +51,7 @@ If you're seeing "Host key verification failed" error, try connecting to your De
       --cache-to type=registry,ref=your-devbox-hostname:5000/<cache-image> \
       --cache-from type=registry,ref=your-devbox-hostname:5000/<cache-image>
     ```
-6. Verify the image is available on the machine:\
+6. Verify the image is available in the registry:\
    `curl http://your-devbox-hostname:5000/v2/_catalog`
 
 {% hint style="info" %}

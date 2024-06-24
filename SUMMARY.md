@@ -106,7 +106,7 @@
     * [GitHub](references/starter-templates/third-party/github.md)
     * [GitLab](references/starter-templates/third-party/gitlab.md)
   * [CI/CD](references/starter-templates/ci-cd/README.md)
-    * [Argo CD](references/starter-templates/ci-cd/argo.md)
+    * [Argo CD](references/starter-templates/infra/argo.md)
     * [Bazel Buildfarm](references/starter-templates/ci-cd/bazel-buildfarm.md)
     * [GitHub Actions](references/starter-templates/ci-cd/github-actions.md)
 * [IDE Setup](references/ide-setup/README.md)

@@ -3,7 +3,7 @@
 ### Installation (using Helm)
 
 1. Make sure both kubectl and helm are installed.
-2. When creating new workspace, take a look at the [Kubectl](../references/starter-templates/infra/kubectl.md) recipe and the [Helm](../references/starter-templates/infra/helm.md) recipe.
+2. When creating a new workspace, take a look at the [Kubectl](../references/starter-templates/infra/kubectl.md) recipe and the [Helm](../references/starter-templates/infra/helm.md) recipe.
 3. Install bazel buildfarm on your k8s cluster using the official helm chart:
 
 ```

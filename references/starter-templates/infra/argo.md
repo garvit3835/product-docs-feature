@@ -1,4 +1,4 @@
-# Argo CLI
+# Argo CD
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```yaml
