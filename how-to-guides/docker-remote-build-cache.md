@@ -14,7 +14,7 @@
 When you run the `docker build` command, the build context will be sent to the DevBox and the build process will run.
 
 {% hint style="info" %}
-If you're seeing "Host key verification failed" error, try connecting to your DevBox via ssh to verify the fingerprint.
+If you're seeing "Host key verification failed" error, try connecting to your DevBox via ssh first to verify the fingerprint.
 {% endhint %}
 
 ### Remote build using BuildKit

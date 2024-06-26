@@ -1,10 +1,6 @@
 # Connect to an RDS Instance
 
-### Existing Database
-
-1. Make sure your followed the [Connecting to AWS](../../how-to-guides/connecting-to-aws.md) guide.
-
-### New Database
-
-1. Make sure your followed the [Connecting to AWS](../../how-to-guides/connecting-to-aws.md) guide.
+1. Follow the [Connecting to AWS](../../how-to-guides/connecting-to-aws.md) guide.
+2. Make sure that your RDS database is **on the same VPC** as your EC2 "relay".
+3. Verify that the VPC security group of your RDS instance allows inbound connections from your DevBox IPs (`dz net status` to find it out).
 

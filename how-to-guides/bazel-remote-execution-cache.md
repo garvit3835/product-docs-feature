@@ -1,5 +1,9 @@
 # Bazel remote execution/cache
 
+{% hint style="info" %}
+Looking for a pre-made recipe template? See: [Bazel Buildfarm](../references/starter-templates/ci-cd/bazel-buildfarm.md)
+{% endhint %}
+
 ### Installation (using Helm)
 
 1. Make sure both kubectl and helm are installed.
@@ -15,7 +19,7 @@ helm install \
   --version "0.2.4"
 ```
 
-4. Forward the k8s port to your DevBox:
+4. Forward the port from the k8s cluster to your DevBox:
 
 ```
 kubectl port-forward service/bazel-buildfarm-server -n bazel-buildfarm 8980:8980 --address 0.0.0.0

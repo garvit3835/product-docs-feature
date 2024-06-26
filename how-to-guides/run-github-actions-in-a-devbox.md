@@ -6,42 +6,31 @@ description: >-
 
 # Run GitHub Actions in a DevBox
 
+{% hint style="info" %}
+Pre-built recipe templates are available [here](../references/starter-templates/ci-cd/github-actions.md).
+{% endhint %}
+
 ### Using a self-hosted runner
 
 1. Visit your **GitHub** repository/org settings page.
 2. Go to **Actions > Runners**.
 3. Click on "New runner" and select "New self-hosted runner".
 4. Select "Linux" and set "x64" as architecture.
-5. Create a new recipe from the instructions provided on the page (should look like the following):
+5. Create a new workspace.
+6. Follow the instructions provided on the page:
 
-```yaml
-version: "3"
-build:
-  steps:
-    - type: apt-get
-      packages: ["build-essential", "curl", "git", "nano", "software-properties-common", "ssh", "sudo", "tar", "unzip", "vim", "wget", "zip"]
-    - type: command
-      command: |
-        mkdir actions-runner && cd actions-runner
-        curl -o actions-runner-linux-x64-2.317.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.317.0/actions-runner-linux-x64-2.317.0.tar.gz
-        tar xzf ./actions-runner-linux-x64-2.317.0.tar.gz
-        ./config.sh --unattended --url https://github.com/OWNER/REPO --token <token> --labels devzero
-
-# We have to specify a "launch" command that installs a systemd service
-# and starts it in the background after the workspace has been created
-launch:
-  steps:
-    - type: command
-      command: |
-        cd actions-runner
-        ./svc.sh install && ./svc.sh start
-      directory: /home/devzero
-      user: root
+```
+mkdir actions-runner && cd actions-runner
+curl -o actions-runner-linux-x64-2.317.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.317.0/actions-runner-linux-x64-2.317.0.tar.gz
+tar xzf ./actions-runner-linux-x64-2.317.0.tar.gz
+./config.sh --url https://github.com/OWNER/REPO --token <token> --labels devzero
 ```
 
-{% hint style="info" %}
-Tip: Make sure to pass the `--unattended` flag to `config.sh` script.
-{% endhint %}
+Install and start the systemd service:
+
+```
+./svc.sh install && ./svc.sh start
+```
 
 You can also get the registration token non-interactively by sending a http request using curl:
 
@@ -53,7 +42,7 @@ curl \
     https://api.github.com/repos/OWNER/REPO/actions/runners/registration-token
 ```
 
-6. Verify that your runner was added to your repo/org and is either in "Idle" or "Online" state.
+6. Verify that the runner was added to your repo/org and is either in "Idle" or "Online" state.
 
 {% hint style="info" %}
 Tip: The runner name should be same as the DevBox hostname.
@@ -82,56 +71,39 @@ To create one:
 3. In the "scopes" section, select `repo` and optionally `admin:org` for organization runners.
 4. Copy your new Personal Access Token.
 
-Create a new recipe installing kubectl, helm and GitHub ARC:
+After you obtained the PAT:
 
-{% hint style="info" %}
-Make sure to adjust the `INSTALLATION_NAME`, `NAMESPACE`, `GITHUB_CONFIG_URL`, and `GITHUB_PAT` variables as needed.
-{% endhint %}
+1. Create a new workspace with [kubectl](../references/starter-templates/infra/kubectl.md) and [helm](../references/starter-templates/infra/helm.md) installed.
+2. Install GitHub Actions Runner Controller using helm.
 
-```yaml
-version: "3"
-build:
-  steps:
-    - type: apt-get
-      packages: ["build-essential", "curl", "git", "nano", "software-properties-common", "ssh", "sudo", "tar", "unzip", "vim", "wget", "zip"]
-    - type: command
-      command: |
-        curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-        sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl && rm kubectl
-      directory: /home/devzero
-      user: devzero
-    - type: command
-      command: |
-        curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
-        chmod 700 get_helm.sh
-        ./get_helm.sh
-
-launch:
-  steps:
-    - type: command
-      command: |
-        NAMESPACE=dz-arc-systems
-        helm install arc \
-            --namespace "${NAMESPACE}" \
-            --create-namespace \
-            oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set-controller
-    - type: command
-      command: |
-        INSTALLATION_NAME="dz-runner-set"
-        NAMESPACE="dz-arc-runners"
-        GITHUB_CONFIG_URL=https://github.com/OWNER/REPO
-        GITHUB_PAT=ghp_token
-        helm install "${INSTALLATION_NAME}" \
-            --namespace "${NAMESPACE}" \
-            --create-namespace \
-            --set githubConfigUrl="${GITHUB_CONFIG_URL}" \
-            --set githubConfigSecret.github_token="${GITHUB_PAT}" \
-            oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set
+```
+NAMESPACE=dz-arc-systems
+helm install arc \
+  --namespace "${NAMESPACE}" \
+  --create-namespace \
+  oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set-controller
 ```
 
-After creating the workspace, visit your repository/org settings, select **Actions > Runners**. Your new runner-set should be listed under "Runner scale sets" with the status being "Online".
+{% hint style="info" %}
+Adjust the `INSTALLATION_NAME`, `NAMESPACE`, `GITHUB_CONFIG_URL`, and `GITHUB_PAT` variables as needed.
+{% endhint %}
 
-To verify the installation, run a sample action:
+```
+INSTALLATION_NAME="dz-runner-set"
+NAMESPACE="dz-arc-runners"
+GITHUB_CONFIG_URL=https://github.com/OWNER/REPO
+GITHUB_PAT=ghp_token
+helm install "${INSTALLATION_NAME}" \
+  --namespace "${NAMESPACE}" \
+  --create-namespace \
+  --set githubConfigUrl="${GITHUB_CONFIG_URL}" \
+  --set githubConfigSecret.github_token="${GITHUB_PAT}" \
+  oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set
+```
+
+3. &#x20;Visit your repository/org settings, select **Actions > Runners**.\
+   Your new runner-set should be listed under "Runner scale sets" with the status shown as "Online".
+4. To verify the installation, run a sample action:
 
 ```yaml
 name: Actions Runner Controller Demo
