@@ -48,9 +48,9 @@
 ## 📚 How-to Guides
 
 * [Connecting to AWS](how-to-guides/connecting-to-aws.md)
-* [Connect to an RDS Instance](product-guides/how-tos/connect-to-an-rds-instance.md)
+* [Connect to RDS Instance](product-guides/how-tos/connect-to-an-rds-instance.md)
 * [Connect to SQS](how-to-guides/connect-to-sqs.md)
-* [Connect to an S3 Bucket](product-guides/how-tos/connect-to-an-s3-bucket.md)
+* [Connect to S3](product-guides/how-tos/connect-to-an-s3-bucket.md)
 * [Run GitHub Actions in a DevBox](how-to-guides/run-github-actions-in-a-devbox.md)
 * [Docker Remote Build & Cache](how-to-guides/docker-remote-build-cache.md)
 * [Bazel remote execution/cache](how-to-guides/bazel-remote-execution-cache.md)
