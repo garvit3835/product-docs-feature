@@ -37,22 +37,22 @@ Set your SQS-queue policy as follows:
 
 ```json
 {
-      "Sid": "VPC-only",
-      "Effect": "Deny",
-      "Principal": {
-        "AWS": "<your-aws-user>"
-      },
-      "Action": "SQS:*",
-      "Resource": "<your-sqs-queue>",
-      "Condition": {
-        "StringNotEquals": {
-          "aws:SourceVpce": "<your-vpce-id>"
-        }
-      }
+  "Sid": "VPC-only",
+  "Effect": "Deny",
+  "Principal": {
+    "AWS": "<your-aws-user>"
+  },
+  "Action": "SQS:*",
+  "Resource": "<your-sqs-queue>",
+  "Condition": {
+    "StringNotEquals": {
+      "aws:SourceVpce": "<your-vpce-id>"
     }
+  }
+}
 ```
 
-#### Testing the policy
+#### Test the policy
 
 Running the following in your DevBox terminal:
 
@@ -60,7 +60,7 @@ Running the following in your DevBox terminal:
 aws sqs receive-message --queue-url <your-queue-url>
 ```
 
-Should result in:
+Will result in:
 
 ```
 An error occurred (AccessDenied) when calling the ReceiveMessage operation: User: <your-aws-user> is not authorized to perform: sqs:receivemessage on resource: <your-sqs-queue> with an explicit deny in a resource-based policy
