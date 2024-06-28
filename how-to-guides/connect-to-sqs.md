@@ -10,11 +10,11 @@
 5. Update your SQS access policy to allow access to the new user.
 6.  Send a test message to the queue:
 
-    <pre class="language-bash"><code class="lang-bash"><strong>aws sqs send-message --queue-url &#x3C;your-queue-url> --message-body "Hello from your DevBox!"
+    <pre><code><strong>aws sqs send-message --queue-url &#x3C;your-queue-url> --message-body "Hello from your DevBox!"
     </strong></code></pre>
 7.  Verify you can recieve the messages:
 
-    <pre class="language-bash"><code class="lang-bash"><strong>aws sqs receive-message --queue-url &#x3C;your-queue-url>
+    <pre><code><strong>aws sqs receive-message --queue-url &#x3C;your-queue-url>
     </strong></code></pre>
 
 ### VPC-only access policy
