@@ -15,7 +15,7 @@
 
 #### Configure the Endpoint
 
-1. Follow the [Connecting to AWS](../../how-to-guides/connecting-to-aws.md) guide.
+1. Follow the [Connecting to AWS](../../existing-network/connecting-to-aws.md) guide.
 2. Go to **VPC > Endpoints > Create Endpoint.**
 3. Enter a name then select "AWS Services" as your Service category.
 4. In the "Services" search bar type "S3" and select the suggested service (Interface).

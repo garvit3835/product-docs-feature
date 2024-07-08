@@ -47,13 +47,22 @@
 
 ## 📚 How-to Guides
 
-* [Connecting to AWS](how-to-guides/connecting-to-aws.md)
-* [Connect to RDS Instance](product-guides/how-tos/connect-to-an-rds-instance.md)
-* [Connect to SQS](how-to-guides/connect-to-sqs.md)
-* [Connect to S3](product-guides/how-tos/connect-to-an-s3-bucket.md)
-* [Run GitHub Actions in a DevBox](how-to-guides/run-github-actions-in-a-devbox.md)
-* [Docker Remote Build & Cache](how-to-guides/docker-remote-build-cache.md)
-* [Bazel remote execution/cache](how-to-guides/bazel-remote-execution-cache.md)
+* [Basics](how-to-guides/basics/README.md)
+* [Databases](how-to-guides/databases/README.md)
+* [Cloud Services](how-to-guides/cloud-services/README.md)
+  * [Azure](how-to-guides/cloud-services/azure/README.md)
+  * [AWS](how-to-guides/cloud-services/aws/README.md)
+    * [Connect to RDS Instance](how-to-guides/cloud-services/aws/connect-to-an-rds-instance.md)
+    * [Connect to SQS](how-to-guides/cloud-services/aws/connect-to-sqs.md)
+    * [Connect to S3](how-to-guides/cloud-services/aws/connect-to-an-s3-bucket.md)
+  * [GCP](how-to-guides/cloud-services/gcp/README.md)
+* [Existing Network](how-to-guides/existing-network/README.md)
+  * [Connecting to AWS](how-to-guides/existing-network/connecting-to-aws.md)
+* [Build Cache + Remote Execution](how-to-guides/build-cache/README.md)
+  * [Bazel](how-to-guides/build-cache/bazel-remote-execution-cache.md)
+  * [Docker](how-to-guides/build-cache/docker-remote-build-cache.md)
+* [CI](how-to-guides/ci/README.md)
+  * [GitHub Actions](how-to-guides/ci/run-github-actions-in-a-devbox.md)
 
 ## 🛠️ Troubleshooting
 
