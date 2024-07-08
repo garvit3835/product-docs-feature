@@ -60,7 +60,9 @@
   * [AWS VPC](how-to-guides/existing-network/connecting-to-aws.md)
 * [Build Cache + Remote Execution](how-to-guides/build-cache/README.md)
   * [Bazel](how-to-guides/build-cache/bazel-remote-execution-cache.md)
+  * [Ccache](how-to-guides/build-cache/ccache.md)
   * [Docker](how-to-guides/build-cache/docker-remote-build-cache.md)
+  * [Sccache](how-to-guides/build-cache/sccache.md)
 * [CI](how-to-guides/ci/README.md)
   * [GitHub Actions](how-to-guides/ci/run-github-actions-in-a-devbox.md)
 
