@@ -57,7 +57,7 @@
     * [S3](how-to-guides/cloud-services/aws/connect-to-an-s3-bucket.md)
   * [GCP](how-to-guides/cloud-services/gcp/README.md)
 * [Existing Network](how-to-guides/existing-network/README.md)
-  * [Connecting to AWS](how-to-guides/existing-network/connecting-to-aws.md)
+  * [AWS VPC](how-to-guides/existing-network/connecting-to-aws.md)
 * [Build Cache + Remote Execution](how-to-guides/build-cache/README.md)
   * [Bazel](how-to-guides/build-cache/bazel-remote-execution-cache.md)
   * [Docker](how-to-guides/build-cache/docker-remote-build-cache.md)
