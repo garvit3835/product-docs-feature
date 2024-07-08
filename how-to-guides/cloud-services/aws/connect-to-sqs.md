@@ -2,7 +2,7 @@
 
 ### Using the AWS CLI
 
-1. Install the [AWS CLI](../references/starter-templates/third-party/aws.md) into your DevBox.
+1. Install the [AWS CLI](../../../references/starter-templates/third-party/aws.md) into your DevBox.
 2. Go to **AWS Console > IAM > Users >  Create user**.
 3. Add the following permissions to the user: **AmazonSQSFullAccess**.
 4. After you obtained the credentials, log into the AWS CLI by running:\
@@ -21,7 +21,7 @@
 
 #### Configure the Endpoint
 
-1. Follow the [Connecting to AWS](connecting-to-aws.md) guide.
+1. Follow the [Connecting to AWS](../../existing-network/connecting-to-aws.md) guide.
 2. Go to **VPC > Endpoints > Create Endpoint.**
 3. Enter a name then select "AWS Services" as your Service category.
 4. In the "Services" search bar type "SQS" and select the suggested service.
