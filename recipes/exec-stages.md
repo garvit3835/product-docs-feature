@@ -6,6 +6,7 @@ Recipes have two execution stages that you can customize:
 
 1. **Build-time:** when recipe is getting saved, after validation.
 2. **Launch-time:** when a workspace is being launched from a recipe.
+3. **Run-time**: when a workspace is running (your active coding, app runtime environment)
 
 Irrespective of the stage, [command](../references/recipe-syntax.md#command) blocks will be executed in the order in which they are specified in the recipe.
 
@@ -43,6 +44,8 @@ Each command block can be thought of as a layer in a Docker image. They are wrap
 {% hint style="warning" %}
 **Warning** Environment variable set by calling `export` are not going to be available in subsequent command blocks. To use them in subsequent blocks, either write to some file, or to `/etc/environment`. Please see the previous `info` section for more ways to better utilize this.
 {% endhint %}
+
+While recipe builds are cached, updating a lower layer (eg: the first step in your build steps) will cause the cache to get invalidated for all future steps. Therefore, if you edit step 1 in a 5-step recipe, steps 2, 3, 4 and 5 will get rebuilt. If you just edit step 5, the previous steps will be served out of the cache.
 
 Here's an example of some build-time steps:
 
