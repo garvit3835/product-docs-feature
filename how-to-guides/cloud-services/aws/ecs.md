@@ -1,4 +1,4 @@
-# ECS
+# Running ECS Services and Tasks
 
 ### Installation guide
 

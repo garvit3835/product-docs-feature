@@ -49,10 +49,10 @@
 
 * [Cloud Services](how-to-guides/cloud-services/README.md)
   * [AWS](how-to-guides/cloud-services/aws/README.md)
+    * [ECS](how-to-guides/cloud-services/aws/ecs.md)
     * [RDS](how-to-guides/cloud-services/aws/connect-to-an-rds-instance.md)
     * [SQS](how-to-guides/cloud-services/aws/connect-to-sqs.md)
     * [S3](how-to-guides/cloud-services/aws/connect-to-an-s3-bucket.md)
-    * [ECS](how-to-guides/cloud-services/aws/ecs.md)
 * [Existing Network](how-to-guides/existing-network/README.md)
   * [AWS VPC](how-to-guides/existing-network/connecting-to-aws.md)
 * [Build Cache + Remote Execution](how-to-guides/build-cache/README.md)
