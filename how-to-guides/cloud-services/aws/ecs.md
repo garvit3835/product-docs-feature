@@ -2,7 +2,7 @@
 
 ### Installation guide
 
-You can run services and tasks managed by AWS ECS inside of DevBoxes using AWS ECS Anywhere ([https://aws.amazon.com/ecs/anywhere](https://aws.amazon.com/ecs/anywhere/)).
+You can run services and tasks managed by AWS ECS inside of DevBoxes using [AWS ECS Anywhere](https://aws.amazon.com/ecs/anywhere).
 
 1. Create a new cluster or start with an existing one.\
    **Note**: you can only register external nodes after the cluster has been created.
