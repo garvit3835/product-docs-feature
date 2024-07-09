@@ -47,22 +47,17 @@
 
 ## 📚 How-to Guides
 
-<!-- * [Basics](how-to-guides/basics/README.md) -->
-<!-- * [Databases](how-to-guides/databases/README.md) -->
 * [Cloud Services](how-to-guides/cloud-services/README.md)
-  <!-- * [Azure](how-to-guides/cloud-services/azure/README.md) -->
   * [AWS](how-to-guides/cloud-services/aws/README.md)
     * [RDS](how-to-guides/cloud-services/aws/connect-to-an-rds-instance.md)
     * [SQS](how-to-guides/cloud-services/aws/connect-to-sqs.md)
     * [S3](how-to-guides/cloud-services/aws/connect-to-an-s3-bucket.md)
-  <!-- * [GCP](how-to-guides/cloud-services/gcp/README.md) -->
+    * [ECS](how-to-guides/cloud-services/aws/ecs.md)
 * [Existing Network](how-to-guides/existing-network/README.md)
   * [AWS VPC](how-to-guides/existing-network/connecting-to-aws.md)
 * [Build Cache + Remote Execution](how-to-guides/build-cache/README.md)
   * [Bazel](how-to-guides/build-cache/bazel-remote-execution-cache.md)
-  <!-- * [Ccache](how-to-guides/build-cache/ccache.md) -->
   * [Docker](how-to-guides/build-cache/docker-remote-build-cache.md)
-  <!-- * [Sccache](how-to-guides/build-cache/sccache.md) -->
 * [CI](how-to-guides/ci/README.md)
   * [GitHub Actions](how-to-guides/ci/run-github-actions-in-a-devbox.md)
 
