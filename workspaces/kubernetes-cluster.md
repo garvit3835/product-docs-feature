@@ -86,27 +86,78 @@ Here's a video covering how you can access and deploy apps to your workspace's K
 
 <summary>Tutorial Steps</summary>
 
-Here is a recipe that you can use at [devzero.io/dashboard/recipes/new](https://www.devzero.io/dashboard/recipes/new) (give it any name and leave everything else blank and click `Create a recipe`.
+1. Create a recipe that you can use at [devzero.io/dashboard/recipes/new](https://www.devzero.io/dashboard/recipes/new) (give it any name and leave everything else blank and click `Create a recipe`).
 
-\<Insert image>\
-\
+<figure><img src="../.gitbook/assets/new-recipe-blank.png" alt=""><figcaption><p>Recipe with no repo</p></figcaption></figure>
+
 Use the following recipe, then `Save and Build` and then `Publish` once the build completes successfully (it uses Google Cloud Platform's [`microservices-demo`](https://github.com/GoogleCloudPlatform/microservices-demo) repo).
 
-\<Insert code>
+{% code overflow="wrap" lineNumbers="true" %}
+```yaml
+version: "3"
+build:
+  steps:
+    - type: apt-get
+      packages: ["apt-transport-https", "build-essential", "ca-certificates", "curl", "git", "nano", "software-properties-common", "ssh", "sudo", "tar", "unzip", "vim", "wget", "zip"]
+    - type: git-clone
+      url: https://github.com/GoogleCloudPlatform/microservices-demo
+    - type: command
+      command: |
+        curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+        sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl && rm kubectl
+    - type: command
+      command: |
+        curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+        chmod 700 get_helm.sh && ./get_helm.sh && rm get_helm.sh
+    - type: command
+      command: |
+        curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64 && \
+        sudo install skaffold /usr/local/bin/
+    - type: apt-get
+      packages: ["docker-ce", "docker-ce-cli", "containerd.io"]
+      extra_repositories:
+        - key_url: https://download.docker.com/linux/ubuntu/gpg
+          repository: https://download.docker.com/linux/ubuntu
+          components: []
+          distribution: ""
+    - type: command
+      command: |
+        usermod -aG docker devzero
+        systemctl enable docker.service
+        systemctl enable containerd.service
+      user: root
+```
+{% endcode %}
 
 Build a workspace from the recipe, and run the following in your terminal:
 
-`dz workspace connect <workspace-name>`&#x20;
+{% code overflow="wrap" %}
+```bash
+dz workspace connect <workspace-name>
+```
+{% endcode %}
 
 Then, run the following steps inside the SSH session that's connected to your workspace:
 
-\<Insert code>
+{% code overflow="wrap" %}
+```bash
+dz workspace kubeconfig . --update-kubeconfig  # will ask to login
+kubectl get pods  # verification                 
+
+cd /home/devzero/microservices-demo
+skaffold run --default-repo ttl.sh
+kubectl port-forward --address 0.0.0.0 deployment/frontend 8088:8080
+```
+{% endcode %}
 
 To verify that all the pods are running:
 
-`kubectl get pods`
+{% code overflow="wrap" %}
+```bash
+kubectl get pods
+```
+{% endcode %}
 
-Visit, \<workspace-name:8088> in your browser to see the running frontend!\
-
+Visit, `<workspace-name>:8088` in your browser to see the running frontend!
 
 </details>
