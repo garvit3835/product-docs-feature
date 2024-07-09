@@ -92,7 +92,7 @@ Here's a video covering how you can access and deploy apps to your workspace's K
 
 Use the following recipe, then `Save and Build` and then `Publish` once the build completes successfully (it uses Google Cloud Platform's [`microservices-demo`](https://github.com/GoogleCloudPlatform/microservices-demo) repo).
 
-{% code overflow="wrap" lineNumbers="true" %}
+{% code lineNumbers="true" %}
 ```yaml
 version: "3"
 build:
@@ -145,7 +145,7 @@ dz workspace kubeconfig . --update-kubeconfig  # will ask to login
 kubectl get pods  # verification                 
 
 cd /home/devzero/microservices-demo
-skaffold run --default-repo ttl.sh
+skaffold run --default-repo ttl.sh  # this will take a bit of time since its building multiple docker images (~5mins)
 kubectl port-forward --address 0.0.0.0 deployment/frontend 8088:8080
 ```
 {% endcode %}
