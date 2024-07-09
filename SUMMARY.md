@@ -47,12 +47,19 @@
 
 ## 📚 How-to Guides
 
-* [Connecting to AWS](how-to-guides/connecting-to-aws.md)
-* [Connect to an RDS Instance](product-guides/how-tos/connect-to-an-rds-instance.md)
-* [Connect to an S3 Bucket](product-guides/how-tos/connect-to-an-s3-bucket.md)
-* [Run GitHub Actions in a DevBox](how-to-guides/run-github-actions-in-a-devbox.md)
-* [Docker Remote Build & Cache](how-to-guides/docker-remote-build-cache.md)
-* [Bazel remote execution/cache](how-to-guides/bazel-remote-execution-cache.md)
+* [Cloud Services](how-to-guides/cloud-services/README.md)
+  * [AWS](how-to-guides/cloud-services/aws/README.md)
+    * [ECS](how-to-guides/cloud-services/aws/ecs.md)
+    * [RDS](how-to-guides/cloud-services/aws/connect-to-an-rds-instance.md)
+    * [SQS](how-to-guides/cloud-services/aws/connect-to-sqs.md)
+    * [S3](how-to-guides/cloud-services/aws/connect-to-an-s3-bucket.md)
+* [Existing Network](how-to-guides/existing-network/README.md)
+  * [AWS VPC](how-to-guides/existing-network/connecting-to-aws.md)
+* [Build Cache + Remote Execution](how-to-guides/build-cache/README.md)
+  * [Bazel](how-to-guides/build-cache/bazel-remote-execution-cache.md)
+  * [Docker](how-to-guides/build-cache/docker-remote-build-cache.md)
+* [CI](how-to-guides/ci/README.md)
+  * [GitHub Actions](how-to-guides/ci/run-github-actions-in-a-devbox.md)
 
 ## 🛠️ Troubleshooting
 
@@ -93,7 +100,6 @@
   * [Database Templates](references/starter-templates/databases/README.md)
     * [Postgres](references/starter-templates/databases/postgres.md)
   * [Infra Templates](references/starter-templates/infra/README.md)
-    * [Argo CD](references/starter-templates/infra/argo.md)
     * [Helm](references/starter-templates/infra/helm.md)
     * [Kubectl](references/starter-templates/infra/kubectl.md)
     * [Pulumi](references/starter-templates/infra/pulumi.md)
@@ -105,6 +111,10 @@
     * [GCP](references/starter-templates/third-party/gcp.md)
     * [GitHub](references/starter-templates/third-party/github.md)
     * [GitLab](references/starter-templates/third-party/gitlab.md)
+  * [CI/CD](references/starter-templates/ci-cd/README.md)
+    * [Argo CD](references/starter-templates/infra/argo.md)
+    * [Bazel Buildfarm](references/starter-templates/ci-cd/bazel-buildfarm.md)
+    * [GitHub Actions](references/starter-templates/ci-cd/github-actions.md)
 * [IDE Setup](references/ide-setup/README.md)
   * [Cursor](references/ide-setup/cursor.md)
   * [JetBrains](references/ide-setup/jetbrains.md)

@@ -1,18 +1,14 @@
----
-description: Setting team environment variables
----
-
 # Team
 
 ## Saving a team environment variable
 
-Visit the Environment Variables section at [https://www.devzero.io/dashboard/environment-variables/team](https://www.devzero.io/dashboard/environment-variables/team) to add, remove or update your environment variables for your team. Team environment variables can be referenced and used by anyone within your DevZero team.&#x20;
+Visit the Environment Variables section at [https://www.devzero.io/dashboard/environment-variables/team](https://www.devzero.io/dashboard/environment-variables/team) to add, remove or update your environment variables for your team. Team environment variables can be referenced and used by anyone within your DevZero team.
+
+<figure><img src="../.gitbook/assets/Update environment variables (1).png" alt=""><figcaption><p>Team environment variables</p></figcaption></figure>
 
 {% hint style="info" %}
-Team-scoped environment variables and secrets must be directly referenced in your recipe template steps. Unlike personal environment variables, they are **not** automatically added to every workspace.&#x20;
+Team-scoped environment variables and secrets must be directly referenced in your recipe template steps. Unlike personal environment variables, they are **not** automatically added to every workspace.
 {% endhint %}
-
-
 
 <figure><img src="../.gitbook/assets/Update environment variables.png" alt=""><figcaption><p>Team Environment Variables</p></figcaption></figure>
 
@@ -24,4 +20,4 @@ To use it in a build, you can reference it the same way. If your environment var
 
 <figure><img src="../.gitbook/assets/env-var-in-build.png" alt=""><figcaption><p>Environment Variables during build-stage</p></figcaption></figure>
 
-Need to store a sensitive environment variable or secret? Check out the [secrets.md](secrets.md "mention") page.&#x20;
+Need to store a sensitive environment variable or secret? Check out the [secrets.md](secrets.md "mention") page.
