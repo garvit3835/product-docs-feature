@@ -2,7 +2,7 @@
 
 User workspaces are deploying with an [ephemeral, namespaced Kubernetes cluster](../references/terminology.md#workspace-cluster). If you need to interact with this cluster...
 
-If you prefer video from, [click here](#tutorial-video) for a 5min video!
+If you prefer video from, [click here](kubernetes-cluster.md#tutorial-video) for a 5min video!
 
 ## From Anywhere
 
@@ -81,3 +81,32 @@ Global Flags:
 Here's a video covering how you can access and deploy apps to your workspace's Kubernetes cluster...
 
 {% embed url="https://devzero.b-cdn.net/Kubernetes%20demo.mp4" %}
+
+<details>
+
+<summary>Tutorial Steps</summary>
+
+Here is a recipe that you can use at [devzero.io/dashboard/recipes/new](https://www.devzero.io/dashboard/recipes/new) (give it any name and leave everything else blank and click `Create a recipe`.
+
+\<Insert image>\
+\
+Use the following recipe, then `Save and Build` and then `Publish` once the build completes successfully (it uses Google Cloud Platform's [`microservices-demo`](https://github.com/GoogleCloudPlatform/microservices-demo) repo).
+
+\<Insert code>
+
+Build a workspace from the recipe, and run the following in your terminal:
+
+`dz workspace connect <workspace-name>`&#x20;
+
+Then, run the following steps inside the SSH session that's connected to your workspace:
+
+\<Insert code>
+
+To verify that all the pods are running:
+
+`kubectl get pods`
+
+Visit, \<workspace-name:8088> in your browser to see the running frontend!\
+
+
+</details>
