@@ -1,18 +1,18 @@
----
-description: Setting personal environment variables
----
-
 # Personal
 
-## Saving an environment variable
+Saving an environment variable
 
-Visit the Environment Variables section at [https://www.devzero.io/dashboard/environment-variables/personal](https://www.devzero.io/dashboard/environment-variables/personal) to add, remove or update your environment personal environment variables and secrets. Personal environment variables can only be see, managed, and used by you.&#x20;
+Visit the Environment Variables section at [https://www.devzero.io/dashboard/environment-variables/personal](https://www.devzero.io/dashboard/environment-variables/personal) to add, remove, or update your environment personal environment variables and secrets. Personal environment variables can only be seen, managed, and used by you.
 
 {% hint style="info" %}
-Personal environment variables are automatically made available on each of your running workspaces by default.&#x20;
+Personal environment variables are automatically made available on each of your running workspaces by default.
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/Personal variables.gif" alt=""><figcaption><p>pkjujuiuytreAdding personal environment variables</p></figcaption></figure>
+
+## Using an environment variable
+
+<figure><img src="../.gitbook/assets/Update environment variables (1).png" alt=""><figcaption><p>Personal Environment Variables</p></figcaption></figure>
 
 ## Using an environment variable
 
@@ -22,4 +22,4 @@ To use it in a build, you can reference it the same way. If your environment var
 
 <figure><img src="../.gitbook/assets/env-var-in-build.png" alt=""><figcaption><p>Environment Variables during build-stage</p></figcaption></figure>
 
-Need to store a sensitive environment variable or secret? Check out the [secrets.md](secrets.md "mention") page.&#x20;
+Need to store a sensitive environment variable or secret? Check out the [secrets.md](secrets.md "mention") page.

@@ -1,14 +1,10 @@
----
-description: Getting started with your first Cloud-based Development Environment
----
-
 # Quickstart
 
 **Welcome!** :wave:\
 \
 Follow the steps below to get started on the DevZero platform. Or, if you're more of a visual learner, we have a video tutorial as well!
 
-
+{% embed url="https://devzero.b-cdn.net/New%20onboarding2.mp4" %}
 
 _Estimated time to complete: 5 mins_
 
@@ -16,11 +12,13 @@ _Estimated time to complete: 5 mins_
 
 You'll need to sign up for a DevZero account before you're able to do anything. We require you to have an existing account with an external Identity Provider (such as GitHub, Microsoft, or Google). To sign up for a DevZero account & create your DevZero team, please visit [https://devzero.io/dashboard](https://devzero.io/dashboard)
 
-
-
 ### Step 2. Connecting your source code provider
 
 <figure><img src="../.gitbook/assets/Connect Github.gif" alt=""><figcaption><p>Connecting GitHub</p></figcaption></figure>
+
+<figure><img src="https://devzero.b-cdn.net/Github%20connection.gif" alt=""><figcaption><p>Connecting your source control provider</p></figcaption></figure>
+
+You can connect your source code provider during the workspace creation or though the "User Settings"&#x20;
 
 We currently only offer native support for GitHub as a code provider for DevZero's workspaces. Bitbucket and GitLab support are coming soon!\
 \
@@ -44,19 +42,23 @@ When you click that button, a menu should pop up with two options. We want to cr
 
 Once you click that button, you should be taken to a new screen. This is where the magic happens.
 
-<figure><img src="../.gitbook/assets/CleanShot 2024-05-21 at 16.20.12@2x.png" alt=""><figcaption><p>Recipe generation! We do it!</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Create recipes - page 1 - with GH auth.png" alt=""><figcaption><p>Recipe generation! We do it!</p></figcaption></figure>
 
-In that text box, you can put _any_ Git repository (that your account can access), and, using some clever DevZero magic, we'll detect the programming languages, frameworks, and dependencies that are needed for that repository. We'll also generate a starter recipe with all of those things preloaded. Cool, right?
+In that text box, you can put _any_ Git repositories, public ones or ones you have access to, and, using some clever DevZero magic, we'll detect the programming languages, frameworks, and dependencies that are needed for that repository. We'll also generate a starter recipe with all of those things preloaded. Cool, right?
+
+Make sure to "Add" each repo that you would like to include in your environment.
 
 For the sake of this tutorial, let's use a personal website repository ([https://github.com/hatf0/hat.fo-next](https://github.com/hatf0/hat.fo-next)). This is a Next.js / Tailwind CSS app built on top of Node.js, which we happily support.
 
 <figure><img src="../.gitbook/assets/CleanShot 2024-05-21 at 16.27.59@2x.png" alt=""><figcaption><p>.</p></figcaption></figure>
 
-Click the 'Import' button, and sit tight while we craft your starter recipe!
+Click the 'Next' button, and sit tight while we craft your starter recipe!
 
-After a few moments, you should be redirected to our recipe editor page. We've finished doing our checks on your repo, and now you're ready to start further customizing your recipe. We support two ways of building recipes - the visual editor, or the text editor. To see the raw recipe, click the "View YAML" switch at the rop right.
+After a few moments, you should be redirected to our recipe editor page. We've finished doing our checks on your repo, and now you're ready to start further customizing your recipe. We support two ways of building recipes - the visual editor, or the text editor. To see the raw recipe, click the "View YAML" switch at the top right.
 
 <figure><img src="../.gitbook/assets/CleanShot 2024-05-21 at 16.31.46@2x (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/YAML (2).png" alt=""><figcaption><p>Recipe YAML editor </p></figcaption></figure>
 
 Review the recipe we generated, and if everything looks good, click the "Save" button at the top-right of the page. A modal should pop up, asking you to name the newly generated recipe. Don't worry -- you can always change this later. Let's keep things simple, and call it "My First Recipe".
 
@@ -65,6 +67,8 @@ Review the recipe we generated, and if everything looks good, click the "Save" b
 Once you're done naming the recipe (we know, naming things is the hardest part of any software engineer's job), click the "Save" button at the bottom-right of the modal. You'll be redirected to the next page, where we'll attempt to build your recipe. These builds are similar to a base-image for any workspace that is launched from the recipe specification. We do a lot of clever caching to keep things snappy and prevent needing to rebuild everything each time you launch a workspace.
 
 <figure><img src="../.gitbook/assets/CleanShot 2024-05-21 at 16.40.20@2x.png" alt=""><figcaption><p>These logs are real-time, so if you're like me &#x26; you like to watch paint dry, this is very exciting.</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/YAML (3).png" alt=""><figcaption></figcaption></figure>
 
 ### Step 4. Launching a Workspace from the Recipe
 
@@ -75,6 +79,12 @@ If your build is successful, a button near the top-right side of your browser sh
 Click the "Launch Workspace Now" button, and you'll be whisked off to your workspace's page! What's happening here? During this stage, we are initializing a [cluster](../references/terminology.md#workspace-cluster) for your user (if one doesn't already exist), deploying the workspace into that cluster, and setting up all of the fun networking bits.
 
 <figure><img src="../.gitbook/assets/CleanShot 2024-05-21 at 16.44.11@2x.png" alt=""><figcaption></figcaption></figure>
+
+
+
+<figure><img src="../.gitbook/assets/Launch workspace - from recipe.png" alt=""><figcaption><p>Click "Launch" to create a remote environment</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/Workspace details (1).png" alt=""><figcaption><p>A workspace is created</p></figcaption></figure>
 
 ### Step 5. Downloading the DevZero CLI
 
@@ -104,6 +114,10 @@ curl -fsSL https://get.devzero.io | sh
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+
+
+<figure><img src="../.gitbook/assets/Connect to workspace (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 **Please be sure to run these two commands after the installer finishes:**

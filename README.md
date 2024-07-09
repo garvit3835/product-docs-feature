@@ -16,7 +16,7 @@ layout:
 # Welcome to DevZero
 
 {% hint style="info" %}
-**New to the platform?** \
+**New to the platform?**\
 \
 We recommend getting started with our [README (1).md](<README (1).md> "mention") and then running through the [quickstart.md](getting-started/quickstart.md "mention") example.
 {% endhint %}
@@ -25,13 +25,13 @@ We recommend getting started with our [README (1).md](<README (1).md> "mention")
 
 ## Product Components
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f4bb">💻</span><strong>DevBox</strong></td><td></td><td>Virtualized cloud development environment that you connect to using your preferred IDE. </td><td><a href="references/terminology.md#devbox">#devbox</a></td></tr><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f310">🌐</span><strong>Network</strong></td><td></td><td>WireGuard based network connecting all of your workspaces and other network resources. </td><td><a href="broken-reference">Broken link</a></td></tr><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f4be">💾</span><strong>Storage</strong></td><td></td><td>Fully elastic volumes and S3 buckets that you can use alongside your workspaces.</td><td><a href="product-guides/how-tos/connect-to-an-s3-bucket.md">connect-to-an-s3-bucket.md</a></td></tr><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f47b">👻</span><strong>Ephemeral K8s Cluster</strong></td><td></td><td>Each workspace comes with its own Kubernetes cluster, backed by flexible nodes and compute. </td><td><a href="references/terminology.md#workspace-cluster">#workspace-cluster</a></td></tr><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f513">🔓</span><strong>Secure Environments</strong></td><td></td><td>Securely share workspaces with colleagues or teams to collaborate in real-time. </td><td></td></tr><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f5fa">🗺️</span><strong>Edge Regions</strong></td><td></td><td>Globally distributed edge regions allow you to work from anywhere with virtually no latency. </td><td><a href="workspaces/regions/">regions</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f4bb">💻</span><strong>DevBox</strong></td><td></td><td>Virtualized cloud development environment that you connect to using your preferred IDE.</td><td><a href="references/terminology.md#devbox">#devbox</a></td></tr><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f310">🌐</span><strong>Network</strong></td><td></td><td>WireGuard based network connecting all of your workspaces and other network resources.</td><td><a href="broken-reference/">broken-reference</a></td></tr><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f4be">💾</span><strong>Storage</strong></td><td></td><td>Fully elastic volumes and S3 buckets that you can use alongside your workspaces.</td><td><a href="broken-reference">Broken link</a></td></tr><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f47b">👻</span><strong>Ephemeral K8s Cluster</strong></td><td></td><td>Each workspace comes with its own Kubernetes cluster, backed by flexible nodes and compute.</td><td><a href="references/terminology.md#workspace-cluster">#workspace-cluster</a></td></tr><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f513">🔓</span><strong>Secure Environments</strong></td><td></td><td>Securely share workspaces with colleagues or teams to collaborate in real-time.</td><td></td></tr><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f5fa">🗺️</span><strong>Edge Regions</strong></td><td></td><td>Globally distributed edge regions allow you to work from anywhere with virtually no latency.</td><td><a href="workspaces/regions/">regions</a></td></tr></tbody></table>
 
 ***
 
 ## Your Stack on DevZero
 
-_Use your existing tech stack, databases, services, and more by following our setup guides._&#x20;
+_Use your existing tech stack, databases, services, and more by following our setup guides._
 
 <div data-full-width="true">
 

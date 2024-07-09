@@ -4,10 +4,10 @@ description: >-
   actions.
 ---
 
-# Run GitHub Actions in a DevBox
+# GitHub Actions
 
 {% hint style="info" %}
-Pre-built recipe templates are available [here](../references/starter-templates/ci-cd/github-actions.md).
+Pre-built recipe templates are available [here](../../references/starter-templates/ci-cd/github-actions.md).
 {% endhint %}
 
 ### Using a self-hosted runner
@@ -73,7 +73,7 @@ To create one:
 
 After you obtained the PAT:
 
-1. Create a new workspace with [kubectl](../references/starter-templates/infra/kubectl.md) and [helm](../references/starter-templates/infra/helm.md) installed.
+1. Create a new workspace with [kubectl](../../references/starter-templates/infra/kubectl.md) and [helm](../../references/starter-templates/infra/helm.md) installed.
 2. Install GitHub Actions Runner Controller using helm.
 
 ```
