@@ -90,7 +90,7 @@ Here's a video covering how you can access and deploy apps to your workspace's K
 
 <figure><img src="../.gitbook/assets/new-recipe-blank.png" alt=""><figcaption><p>Recipe with no repo</p></figcaption></figure>
 
-Use the following recipe, then `Save and Build` and then `Publish` once the build completes successfully (it uses Google Cloud Platform's [`microservices-demo`](https://github.com/GoogleCloudPlatform/microservices-demo) repo).
+2. Use the following recipe, then `Save and Build` and then `Publish` once the build completes successfully (it uses Google Cloud Platform's [`microservices-demo`](https://github.com/GoogleCloudPlatform/microservices-demo) repo).
 
 {% code lineNumbers="true" %}
 ```yaml
@@ -129,7 +129,7 @@ build:
 ```
 {% endcode %}
 
-Build a workspace from the recipe, and run the following in your terminal:
+3. Build a workspace from the recipe, and run the following in your terminal:
 
 {% code overflow="wrap" %}
 ```bash
@@ -137,7 +137,7 @@ dz workspace connect <workspace-name>
 ```
 {% endcode %}
 
-Then, run the following steps inside the SSH session that's connected to your workspace:
+4. Run the following steps inside the SSH session that's connected to your workspace:
 
 {% code overflow="wrap" %}
 ```bash
@@ -150,7 +150,7 @@ kubectl port-forward --address 0.0.0.0 deployment/frontend 8088:8080
 ```
 {% endcode %}
 
-To verify that all the pods are running:
+5. Verify that all the pods are running:
 
 {% code overflow="wrap" %}
 ```bash
