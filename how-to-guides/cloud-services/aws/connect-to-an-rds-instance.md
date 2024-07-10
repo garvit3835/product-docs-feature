@@ -1,4 +1,4 @@
-# AWS RDS Peering:
+# RDS
 Connecting a managed AWS service (RDS in this case) in the private subnet of an AWS Virtual Private Cloud to the DevZero workspace and accessing it from the local machine.
 
 ## Architecture Diagram:
