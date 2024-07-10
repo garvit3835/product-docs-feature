@@ -1,9 +1,9 @@
-# AWS RDS Peering:
+# RDS
 Connecting a managed AWS service (RDS in this case) in the private subnet of an AWS Virtual Private Cloud to the DevZero workspace and accessing it from the local machine.
 
 ## Architecture Diagram:
 
-![image](https://github.com/devzero-inc/product-docs/assets/97427673/3cfeb0bf-6bc9-47c8-bdc9-4c8863f84270)
+![image](../../../.gitbook/assets/rds-arch.png)
 
 
 ## Step1: Creating an AWS VPC:
@@ -41,7 +41,7 @@ Create the RDS database instance on a private subnet of the VPC using the follow
     dz net status
     ```
 
-    ![image](https://github.com/devzero-inc/product-docs/assets/97427673/d53029db-2bc5-4274-9c54-fa1fbe8fa748)
+    ![image](../../../.gitbook/assets/rds-ss-1.png)
 
 
 ## Step4: Creating a Bastion Host/EC2 Proxy Route/Jump Host:
@@ -97,7 +97,7 @@ Create the RDS database instance on a private subnet of the VPC using the follow
     ping <DevZero-IP-Address>
     ```
 
-    ![image](https://github.com/devzero-inc/product-docs/assets/97427673/57672bde-0c61-449e-a8c9-633ac80d0ac0)
+    ![image](../../../.gitbook/assets/rds-ss-2.png)
 
 
 7. Finally, connect to the RDS Server through the DevZero Network with your local machine:
@@ -106,5 +106,6 @@ Create the RDS database instance on a private subnet of the VPC using the follow
     psql -h <DevZero-IP-Address / Public IP> -U <your_database_user> -d <your_database_name>
     ```
 
-![image](https://github.com/devzero-inc/product-docs/assets/97427673/e52bd909-92ef-4a69-b34a-8c88f1cfd6b3)
+    ![image](../../../.gitbook/assets/rds-ss-3.png)
+   
 NOTE: The AWS RDS in the Screenshot is currently public due to some bugs in DZ. It will be updated as soon as the bug gets fixed
