@@ -106,5 +106,6 @@ Create the RDS database instance on a private subnet of the VPC using the follow
     psql -h <DevZero-IP-Address / Public IP> -U <your_database_user> -d <your_database_name>
     ```
 
-![image](../../../.gitbook/assets/rds-ss-3.png)
+    ![image](../../../.gitbook/assets/rds-ss-3.png)
+   
 NOTE: The AWS RDS in the Screenshot is currently public due to some bugs in DZ. It will be updated as soon as the bug gets fixed
