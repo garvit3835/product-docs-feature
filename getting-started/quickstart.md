@@ -1,3 +1,7 @@
+---
+description: 'Estimated time to complete: ~5 mins'
+---
+
 # Quickstart
 
 **Welcome!** :wave:\
@@ -5,8 +9,6 @@
 Follow the steps below to get started on the DevZero platform. Or, if you're more of a visual learner, we have a video tutorial as well!
 
 {% embed url="https://devzero.b-cdn.net/New%20onboarding2.mp4" %}
-
-_Estimated time to complete: 5 mins_
 
 ### Step 1. Signing up for an account
 
