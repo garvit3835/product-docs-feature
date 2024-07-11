@@ -3,7 +3,7 @@ Connecting a managed AWS service (RDS in this case) in the private subnet of an 
 
 ## Architecture Diagram:
 
-![image](../../../.gitbook/assets/rds-arch.png)
+![](../../../.gitbook/assets/rds-arch.png)
 
 
 ## Step1: Creating an AWS VPC:
@@ -41,7 +41,7 @@ Create the RDS database instance on a private subnet of the VPC using the follow
     dz net status
     ```
 
-    ![image](../../../.gitbook/assets/rds-ss-1.png)
+    ![](../../../.gitbook/assets/rds-ss-1.png)
 
 
 ## Step4: Creating a Bastion Host/EC2 Proxy Route/Jump Host:
@@ -97,7 +97,7 @@ Create the RDS database instance on a private subnet of the VPC using the follow
     ping <DevZero-IP-Address>
     ```
 
-    ![image](../../../.gitbook/assets/rds-ss-2.png)
+    ![](../../../.gitbook/assets/rds-ss-2.png)
 
 
 7. Finally, connect to the RDS Server through the DevZero Network with your local machine:
@@ -106,6 +106,6 @@ Create the RDS database instance on a private subnet of the VPC using the follow
     psql -h <DevZero-IP-Address / Public IP> -U <your_database_user> -d <your_database_name>
     ```
 
-    ![image](../../../.gitbook/assets/rds-ss-3.png)
+    ![](../../../.gitbook/assets/rds-ss-3.png)
    
 NOTE: The AWS RDS in the Screenshot is currently public due to some bugs in DZ. It will be updated as soon as the bug gets fixed
