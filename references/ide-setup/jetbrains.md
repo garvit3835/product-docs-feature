@@ -1,9 +1,20 @@
 # JetBrains
 
+This doc contains information about connecting to DevZero workspaces using any of the following JetBrains IDEs:
+- CLion
+- GoLand
+- IntelliJ
+- PhpStorm
+- PyCharm
+- Rider
+- RubyMine
+- RustRover
+- WebStorm
+
 ## Connect to a workspace
 
 {% tabs %}
-{% tab title="Using Jetbrains Gateway" %}
+{% tab title="Using JetBrains Gateway" %}
 * Сlick **New Connection** under the **SSH** connection provider.
 
 <figure><img src="../../../.gitbook/assets/jetbrains-gateway-connect.png" alt="" width="563"><figcaption><p>Connect using SSH</p></figcaption></figure>
@@ -25,7 +36,7 @@ The default path for your cloned code is `/home/devzero`
 <figure><img src="../../../.gitbook/assets/jetbrains-gateway-workspaces.png" alt="" width="563"><figcaption><p>Your workspaces</p></figcaption></figure>
 {% endtab %}
 
-{% tab title="Using any Jetbrains IDE" %}
+{% tab title="Using any JetBrains IDE" %}
 * Create a new project under **Remote Development > SSH**.
 
 <figure><img src="../../../.gitbook/assets/jetbrains-remote-project.png" alt=""><figcaption><p>Connect using SSH</p></figcaption></figure>
