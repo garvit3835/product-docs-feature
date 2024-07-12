@@ -2,10 +2,18 @@
 
 {% code overflow="wrap" %}
 ```bash
-$ dz storage create volume --region=usw1
+$ dz storage volume create --region=usw1
 {"id":"vol-123"}
 
-$ dz workspace launch recipe-my-uuid --with-volume vol-123
+$ dz workspace launch recipe-my-uuid --with-volume vol-123 --region us-west-1
+```
+{% endcode %}
+
+
+{% code overflow="wrap" %}
+```bash
+$ dz storage volume list
+[{"id":"vol-123", "region":"usw1", "created_at":"2024-06-26", "size":"20"}]
 ```
 {% endcode %}
 
