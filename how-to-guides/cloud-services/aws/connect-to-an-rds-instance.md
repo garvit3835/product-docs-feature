@@ -68,10 +68,8 @@ psql -h <RDS Endpoint> --username <Username> -d <Database Name> --password
 7. Scroll Down to the **Settings** and specify your **Database Name.**
 8. Choose **Cluster Storage Configuration** and **DB Instance Class.**
 9. Go to **Connectivity > VPC.**
-10. Choose your **VPC** and **DB Subnet Group** and **Security Group.**
+10. Choose your **VPC** , **DB Subnet Group** and **Security Group.** Make sure the specified **Security Group** allows inbound db connections.
 11. Click on **Create Database.**
-12. Go to **DB Instance > Security > Security Group.**
-13. In the security groups configuration, edit the Security Group to allow inbound psql connection (Port range = **5432**, Source = **<**Bastion Host Private IP**>**).
 ![image](../../../.gitbook/assets/rds-devzero.png)
 
 ### Step 2: Accessing RDS from DevBox
