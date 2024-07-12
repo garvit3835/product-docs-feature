@@ -50,6 +50,7 @@
 * [Cloud Services](how-to-guides/cloud-services/README.md)
   * [AWS](how-to-guides/cloud-services/aws/README.md)
     * [ECS](how-to-guides/cloud-services/aws/ecs.md)
+    * [ECS (local)](how-to-guides/cloud-services/aws/ecs-local.md)
     * [RDS](how-to-guides/cloud-services/aws/connect-to-an-rds-instance.md)
     * [SQS](how-to-guides/cloud-services/aws/connect-to-sqs.md)
     * [S3](how-to-guides/cloud-services/aws/connect-to-an-s3-bucket.md)
