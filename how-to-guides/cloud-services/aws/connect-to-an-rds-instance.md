@@ -61,9 +61,17 @@ psql -h <RDS Endpoint> --username <Username> -d <Database Name> --password
 
 1. Follow the [Connecting to AWS](../../existing-network/connecting-to-aws.md) guide.
 2. Go to **RDS > DB Instances.**
-3. Select **Easy Create.**
+3. Select **Standard Create.**
 4. Use one of the [DB Engine](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.Overview.Engines.html) in the Configuration.
-5. Click on **Create Database**.
+5. Choose the **Available Versions** of the **Database.**
+6. Choose the **Templates** based on your use-case. It could be **Production** or **Dev/Test.**
+7. Scroll Down to the **Settings** and specify your **Database Name.**
+8. Choose **Cluster Storage Configuration** and **DB Instance Class.**
+9. Go to **Connectivity > VPC.**
+10. Choose your **VPC** and **DB Subnet Group** and **Security Group.**
+11. Click on **Create Database.**
+12. Go to **DB Instance > Security > Security Group.**
+13. In the security groups configuration, edit the Security Group to allow inbound psql connection (Port range = **5432**, Source = **<**Bastion Host Private IP**>**).
 ![image](../../../.gitbook/assets/rds-devzero.png)
 
 ### Step 2: Accessing RDS from DevBox
@@ -75,5 +83,3 @@ psql -h <RDS Endpoint> --username <Username> -d <Database Name> --password
 5. Connecting to the Database:\
    `psql -h <RDS Endpoint> --username <Username> -d <Database Name> --password`
 ![image](../../../.gitbook/assets/rds-access.png)
-
-**NOTE**: We have identified a bug in our dz cli network routing. Currently, this document works only when RDS is in public subnet. We are working on resolving it asap. Soon, you will be able to use it with Private RDS.
