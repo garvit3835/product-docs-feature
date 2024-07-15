@@ -98,6 +98,7 @@ helm install "${INSTALLATION_NAME}" \
   --create-namespace \
   --set githubConfigUrl="${GITHUB_CONFIG_URL}" \
   --set githubConfigSecret.github_token="${GITHUB_PAT}" \
+  --set template.spec.containers[0].image=ghcr.io/devzero-inc/dz-runner:latest
   oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set
 ```
 
