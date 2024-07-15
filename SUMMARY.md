@@ -99,6 +99,7 @@
     * [Docker](references/starter-templates/build-tools/docker.md)
     * [Nix](references/starter-templates/build-tools/nix.md)
   * [Database Templates](references/starter-templates/databases/README.md)
+    * [MongoDB](references/starter-templates/databases/mongodb.md)
     * [Postgres](references/starter-templates/databases/postgres.md)
   * [Infra Templates](references/starter-templates/infra/README.md)
     * [Helm](references/starter-templates/infra/helm.md)
