@@ -45,7 +45,7 @@
 * [Hosting](admin/hosting.md)
 * [Single-Sign On (SSO)](admin/sso.md)
 
-## 📚 How-to Guides
+## 📝 How-to Guides
 
 * [Cloud Services](how-to-guides/cloud-services/README.md)
   * [AWS](how-to-guides/cloud-services/aws/README.md)
@@ -70,7 +70,7 @@
 * [Visual Studio Code](troubleshooting/vs-code.md)
 * [JetBrains](troubleshooting/jetbrains.md)
 
-## 🔎 References
+## 📚 References
 
 * [Terminology](references/terminology.md)
 * [CLI Reference](references/cli-man-page/README.md)

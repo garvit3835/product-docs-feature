@@ -153,11 +153,15 @@ Semantics for the directory are explained in [git documentation](https://git-scm
 
 Commands often require either their environment to be set up correctly, or secrets to access private resources. Both of these can be managed on [a per team or a per user basis](../environment-variables/env-vars.md).
 
+{% hint style="info" %}
+System secrets are in the namespace `devzero` currently only one such secret exists `devzero.GITHUB_ACCESS_TOKEN` this token is populated using github account information for the user who is invoking the build
+{% endhint %}
+
 ### Environment variables
 
 If you want to set a particular environment variable to some value you have to do it for each phase separatly. Phases being `build`, `launch`and `runtime`.
 
-You do this by providing an environment section:
+#### Build time environment variables
 
 ```
 build:
@@ -170,19 +174,24 @@ build:
       value: "{{secret:team.ADMIN_KEY}}"
 ```
 
-As you can see - the value of the environment variable can be defined in the recipe, or can be sourced from a secret. Though there are some rules:
+Build time secrets can only come from team secrets or system (devzero) secrets. These environment variables will be available to any command executed within build phase, any values that make it into the final image will be part of it and will be available to anyone who launches the workspace.
 
-* Build time secrets can only come from team secrets or system (devzero) secrets
-* Launch and runtime secrets can be sourced from both team and user secrets
-* System secrets are in the namespace `devzero` currently only one such secret exists `devzero.GITHUB_ACCESS_TOKEN` this token is populated using github account information for the user who is invoking the build
+#### Launch time environment variables
 
-Differences between stages are as follows:
+```
+launch:
+  environment:
+    - name: CXX
+      value: ccache
+    - name: NPM_KEY
+      value: "{{secret:team.NPM_KEY}}"
+    - name: ADMIN_KEY
+      value: "{{secret:team.ADMIN_KEY}}"
+```
 
-* Build - these environment variables will be available to any command executed within build phase, any values that make it into the final image will be part of it and will be available to anyone who launches the workspace
-* Launch - these environment variables will be available to launch commands defined in the recipe. This does not include systemd units defined outside of the recipe (for example if you install docker or mysql, environment variables defined here will not be visible to startup scripts for these tools)
-* Runtime - these environment variables will be present in any session (ssh, vscode, vscode terminal) started on the workspace
+Launch time secrets can be sourced from both team and user secrets.  These environment variables will be available to launch commands defined in the recipe. This does not include systemd units defined outside of the recipe (for example if you install docker or mysql, environment variables defined here will not be visible to startup scripts for these tools).
 
-Runtime environment variable customization is a bit special in that it supports Shell expansion (as opposed to build and launch environment variable settings). This is so you could configure development environment for your engineers more easily:
+#### Runtime environment variables
 
 ```
 runtime:
@@ -191,7 +200,9 @@ runtime:
       value: "/opt/go/bin:$PATH"
 ```
 
-Would set your path to contain go compiler in all the terminals.
+Runtime environment variables will be present in any session (ssh, vscode, vscode terminal) started on the workspace.
+
+Runtime environment variable customization is a bit special in that it supports Shell expansion (as opposed to build and launch environment variable settings). This is so you could configure development environment for your engineers more easily.
 
 ### Customizing individual commands
 
