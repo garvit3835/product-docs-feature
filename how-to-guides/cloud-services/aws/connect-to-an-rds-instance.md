@@ -15,13 +15,14 @@ Connecting to an RDS running in the private subnet of AWS VPC to your DevBox.
 4. Copy **Endpoint**.
 
 ![image](../../../.gitbook/assets/rds-endpoint.png)
+
 5. Go to **DevBox**.
 6. Connecting to the Database.
 
 Run the following commands as per the RDS Database Engine:
 
 {% tabs %}
-{% tab title="PostgreSQL" %}
+{% tab title="MySQL" %}
 To install the mysql client cli:
 
 ```sh
@@ -80,6 +81,7 @@ psql -h <RDS Endpoint> --username <Username> -d <Database Name> --password
 2. Go to the **Secrets Manager.**
 
 ![image](../../../.gitbook/assets/rds-secrets.png)
+
 3. Click on **Retrieve Secret Value**. This secret is storing your Database **Username** and **Password.**
 4. Go to **DevBox.**
 5. Connecting to the Database:\
