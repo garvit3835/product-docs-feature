@@ -20,4 +20,4 @@ To use it in a build, you can reference it the same way. If your environment var
 
 <figure><img src="../.gitbook/assets/env-var-in-build.png" alt=""><figcaption><p>Environment Variables during build-stage</p></figcaption></figure>
 
-Need to store a sensitive environment variable or secret? Check out the [secrets.md](secrets.md "mention") page.
+Need to store a secret environment variable? Check out the [secrets.md](secrets.md "mention") page.

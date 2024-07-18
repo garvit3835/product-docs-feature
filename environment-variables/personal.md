@@ -8,7 +8,7 @@ Visit the Environment Variables section at [https://www.devzero.io/dashboard/env
 Personal environment variables are automatically made available on each of your running workspaces by default.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/Personal variables.gif" alt=""><figcaption><p>pkjujuiuytreAdding personal environment variables</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Personal variables.gif" alt=""><figcaption><p>Adding personal environment variables</p></figcaption></figure>
 
 ## Using an environment variable
 
@@ -22,4 +22,4 @@ To use it in a build, you can reference it the same way. If your environment var
 
 <figure><img src="../.gitbook/assets/env-var-in-build.png" alt=""><figcaption><p>Environment Variables during build-stage</p></figcaption></figure>
 
-Need to store a sensitive environment variable or secret? Check out the [secrets.md](secrets.md "mention") page.
+Need to store a secret environment variable? Check out the [secrets.md](secrets.md "mention") page.
