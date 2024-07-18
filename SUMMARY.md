@@ -27,8 +27,8 @@
 ## 🔩 Environment Variables
 
 * [Overview](environment-variables/env-vars.md)
-* [Personal](environment-variables/personal.md)
-* [Team](environment-variables/team.md)
+* [User-scoped](environment-variables/personal.md)
+* [Team-scoped](environment-variables/team.md)
 * [Secrets](environment-variables/secrets.md)
 
 ## 🌐 DevZero Network
