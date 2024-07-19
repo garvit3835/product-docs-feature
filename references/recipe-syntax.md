@@ -153,6 +153,10 @@ Semantics for the directory are explained in [git documentation](https://git-scm
 
 Commands often require either their environment to be set up correctly, or secrets to access private resources. Both of these can be managed on [a per team or a per user basis](../environment-variables/env-vars.md).
 
+{% hint style="info" %}
+System secrets are in the namespace `devzero` currently only one such secret exists `devzero.GITHUB_ACCESS_TOKEN` this token is populated using github account information for the user who is invoking the build
+{% endhint %}
+
 ### Environment variables
 
 If you want to set a particular environment variable to some value you have to do it for each phase separatly. Phases being `build`, `launch`and `runtime`.
