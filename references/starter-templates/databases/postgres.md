@@ -14,6 +14,14 @@ build:
         sudo apt update
         sudo DEBIAN_FRONTEND=noninteractive apt install -y postgresql-14
       user: devzero
+    - type: apt-get
+      name: "postgres tools"
+      packages: ["postgresql-16"]
+      extra_repositories:
+      - key_url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
+        repository: http://apt.postgresql.org/pub/repos/apt
+        distribution: jammy-pgdg
+        components: ["main"]
 
 launch:
   steps:

@@ -75,5 +75,8 @@ launch:
             --create-namespace \
             --set githubConfigUrl="${GITHUB_CONFIG_URL}" \
             --set githubConfigSecret.github_token="${GITHUB_PAT}" \
+            --set template.spec.containers[0].image=ghcr.io/devzero-inc/dz-runner:latest \
+            --set template.spec.containers[0].name=runner \
+            --set template.spec.containers[0].command={"/home/runner/run.sh"} \
             oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set
 ```

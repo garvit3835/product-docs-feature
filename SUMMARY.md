@@ -27,8 +27,8 @@
 ## 🔩 Environment Variables
 
 * [Overview](environment-variables/env-vars.md)
-* [Personal](environment-variables/personal.md)
-* [Team](environment-variables/team.md)
+* [User-scoped](environment-variables/personal.md)
+* [Team-scoped](environment-variables/team.md)
 * [Secrets](environment-variables/secrets.md)
 
 ## 🌐 DevZero Network
@@ -50,6 +50,7 @@
 * [Cloud Services](how-to-guides/cloud-services/README.md)
   * [AWS](how-to-guides/cloud-services/aws/README.md)
     * [ECS](how-to-guides/cloud-services/aws/ecs.md)
+    * [ECS (local)](how-to-guides/cloud-services/aws/ecs-local.md)
     * [RDS](how-to-guides/cloud-services/aws/connect-to-an-rds-instance.md)
     * [SQS](how-to-guides/cloud-services/aws/connect-to-sqs.md)
     * [S3](how-to-guides/cloud-services/aws/connect-to-an-s3-bucket.md)
@@ -98,6 +99,7 @@
     * [Docker](references/starter-templates/build-tools/docker.md)
     * [Nix](references/starter-templates/build-tools/nix.md)
   * [Database Templates](references/starter-templates/databases/README.md)
+    * [MongoDB](references/starter-templates/databases/mongodb.md)
     * [Postgres](references/starter-templates/databases/postgres.md)
   * [Infra Templates](references/starter-templates/infra/README.md)
     * [Helm](references/starter-templates/infra/helm.md)
