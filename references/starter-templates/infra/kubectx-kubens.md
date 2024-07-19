@@ -6,7 +6,7 @@ version: "3"
 build:
   steps:
     - type: apt-get
-      packages: ["curl"]
+      packages: ["git"]
     - type: command
       command: |
         git clone https://github.com/ahmetb/kubectx /usr/local/src
