@@ -12,6 +12,15 @@
 	</thead>
 	<tbody>
 		<tr>
+			<td>Connecting to DocumentDB</td>
+			<td>
+				<a href="connect-to-a-documentdb-cluster.md">connect-to-a-documentdb-cluster.md</a>
+			</td>
+			<td>
+				<a href="../../../.gitbook/assets/aws-documentdb.png">aws-documentdb.png</a>
+			</td>
+		</tr>
+		<tr>
 			<td>Running ECS services/tasks</td>
 			<td>
 				<a href="ecs.md">ecs.md</a>
