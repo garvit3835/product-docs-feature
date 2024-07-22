@@ -153,6 +153,10 @@ Semantics for the directory are explained in [git documentation](https://git-scm
 
 Commands often require either their environment to be set up correctly, or secrets to access private resources. Both of these can be managed on [a per team or a per user basis](../environment-variables/env-vars.md).
 
+{% hint style="info" %}
+System secrets are in the namespace `devzero` currently only one such secret exists `devzero.GITHUB_ACCESS_TOKEN` this token is populated using github account information for the user who is invoking the build
+{% endhint %}
+
 ### Environment variables
 
 If you want to set a particular environment variable to some value you have to do it for each phase separatly. Phases being `build`, `launch`and `runtime`.
@@ -165,9 +169,9 @@ build:
     - name: CXX
       value: ccache
     - name: NPM_KEY
-      value: "{{secret:team.NPM_KEY}}"
+      value: "{{var:team.NPM_KEY}}"
     - name: ADMIN_KEY
-      value: "{{secret:team.ADMIN_KEY}}"
+      value: "{{var:team.ADMIN_KEY}}"
 ```
 
 Build time secrets can only come from team secrets or system (devzero) secrets. These environment variables will be available to any command executed within build phase, any values that make it into the final image will be part of it and will be available to anyone who launches the workspace.
@@ -180,9 +184,9 @@ launch:
     - name: CXX
       value: ccache
     - name: NPM_KEY
-      value: "{{secret:team.NPM_KEY}}"
+      value: "{{var:team.NPM_KEY}}"
     - name: ADMIN_KEY
-      value: "{{secret:team.ADMIN_KEY}}"
+      value: "{{var:team.ADMIN_KEY}}"
 ```
 
 Launch time secrets can be sourced from both team and user secrets.  These environment variables will be available to launch commands defined in the recipe. This does not include systemd units defined outside of the recipe (for example if you install docker or mysql, environment variables defined here will not be visible to startup scripts for these tools).
@@ -225,7 +229,7 @@ Sometimes though it makes sense to use shared team secret as a way to control gi
 config:
   code_clone_credentials:
     type: ssh-private-key
-    value: "{{secret:team.GITHUB_ACCOUNT_KEY}}"
+    value: "{{var:team.GITHUB_ACCOUNT_KEY}}"
 ```
 
 Currently we support two types of credentials: `ssh-private-key` and `github-token` . Credentials set in config will be used for all git operations during `build` and `launch` phases for all `git-clone` steps.
@@ -237,7 +241,7 @@ You are also able to provide git credentials to an individual git step as follow
       url: https://github.com/Ignas/nukagit
       credentials:
         type: ssh-private-key
-        value: "{{secret:team.REPO_DEPLOY_KEY}}"
+        value: "{{var:team.REPO_DEPLOY_KEY}}"
 ```
 
 ### Secrets as files
@@ -250,7 +254,7 @@ Sometimes a secret value (like an ssh key) is not very useful when it's stuck in
       directory: /home/devzero
       secret_mounts:
         - path: /etc/gitconfig
-          value: "{{secret:devzero.GITHUB_GIT_CONFIG}}"
+          value: "{{var:devzero.GITHUB_GIT_CONFIG}}"
 ```
 
 Will ensure that while executing `git clone` command, the secret is available as `/etc/gitconfig`
@@ -262,7 +266,7 @@ You can populate any file from secrets by using the standard file step:
 ```
     - type: file
       path: /home/devzero/.ssh/id_rsa
-      content: "{{secret:user.PRIVATE_SSH_KEY}}"
+      content: "{{var:user.PRIVATE_SSH_KEY}}"
 ```
 
 Be careful using this during build phase, as you might embed secrets into the build, which usualy is not what you want.
@@ -306,7 +310,7 @@ These are the default volumes that are being persisted. Make sure to include at 
 Environment values and file contents are special in that you can embed secret values into them. The syntax is quite simple:
 
 ```
-Some text {{secret:team.TEAM_SECRET}} more text {{secret:user.USER_SECRET}}
+Some text {{var:team.TEAM_SECRET}} more text {{var:user.USER_SECRET}}
 ```
 
 As you can see - the structure of the expression consists of 3 parts - source (at the moment only `secret` is supported) namespace (`user`, `team` or `devzero`) matching user secret registry, team registry, or system secrets like `devzero.GITHUB_ACCESS_TOKEN` that comes from github account linked to your devzero account if present and secret name.
@@ -317,19 +321,19 @@ As we are using curly braces for variable interpolation, make sure you quote the
 build:
   environment:
     - name: NAME
-      value: {{secret:team.TEAM_SECRET}} # invalid yaml
+      value: {{var:team.TEAM_SECRET}} # invalid yaml
     - name: NAME
-      value: "{{secret:team.TEAM_SECRET}}" # valid syntax
+      value: "{{var:team.TEAM_SECRET}}" # valid syntax
     - name: NAME
       value: |
-        {{secret:team.TEAM_SECRET}} # also valid
+        {{var:team.TEAM_SECRET}} # also valid
 
 ```
 
 We also support more complex expressions for example:
 
 ```
-{{secret:user.AWS_ACCESS_KEY || secret:team.SHARED_AWS_ACCESS_KEY}}
+{{var:user.AWS_ACCESS_KEY || var:team.SHARED_AWS_ACCESS_KEY}}
 ```
 
 This means - use user aws access key if it exists, and if not - use the team access key instead. This way some team members can use their own keys, while everyone else uses the shared key.

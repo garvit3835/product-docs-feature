@@ -27,8 +27,8 @@
 ## 🔩 Environment Variables
 
 * [Overview](environment-variables/env-vars.md)
-* [Personal](environment-variables/personal.md)
-* [Team](environment-variables/team.md)
+* [User-scoped](environment-variables/personal.md)
+* [Team-scoped](environment-variables/team.md)
 * [Secrets](environment-variables/secrets.md)
 
 ## 🌐 DevZero Network
@@ -45,7 +45,7 @@
 * [Hosting](admin/hosting.md)
 * [Single-Sign On (SSO)](admin/sso.md)
 
-## 📚 How-to Guides
+## 📝 How-to Guides
 
 * [Cloud Services](how-to-guides/cloud-services/README.md)
   * [AWS](how-to-guides/cloud-services/aws/README.md)
@@ -71,7 +71,7 @@
 * [Visual Studio Code](troubleshooting/vs-code.md)
 * [JetBrains](troubleshooting/jetbrains.md)
 
-## 🔎 References
+## 📚 References
 
 * [Terminology](references/terminology.md)
 * [CLI Reference](references/cli-man-page/README.md)
@@ -103,6 +103,9 @@
     * [Postgres](references/starter-templates/databases/postgres.md)
   * [Infra Templates](references/starter-templates/infra/README.md)
     * [Helm](references/starter-templates/infra/helm.md)
+    * [Kubectl](references/starter-templates/infra/kubectl.md)
+    * [Kubectx / Kubens](references/starter-templates/infra/kubectx - kubens.md)
+    * [K9s](references/starter-templates/infra/k9s.md)
     * [Kubectl](references/starter-templates/infra/kubectl.md)
     * [Pulumi](references/starter-templates/infra/pulumi.md)
     * [Skaffold](references/starter-templates/infra/skaffold.md)
