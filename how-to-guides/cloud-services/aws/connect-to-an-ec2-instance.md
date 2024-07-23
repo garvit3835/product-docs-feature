@@ -14,9 +14,11 @@ Connecting to EC2 running in the private subnet of AWS VPC from your DevBox.
 3. Click on **Connect**. You will see the commands for accessing it.
 4. Go to **DevBox** and make a copy of the key pair.
 5. Connect to EC2 machine:\
-`
+{% code overflow="wrap" lineNumbers="false" %}
+```bash
 ssh -i "path/to/key.pem" username@instance-ip
-`
+```
+{% endcode %}
 
 ![image](../../../.gitbook/assets/ec2-access.png)
 
@@ -36,8 +38,10 @@ ssh -i "path/to/key.pem" username@instance-ip
 ### Step 2: Accessing EC2 from a DevBox
 1. Go to **DevBox** and make a copy of the key pair.
 2. Connect to this EC2 using ssh and the new key pair:\
-`
+{% code overflow="wrap" lineNumbers="false" %}
+```bash
 ssh -i "path/to/key.pem" username@instance-ip
-`
+```
+{% endcode %}
 
 ![image](../../../.gitbook/assets/ec2-access.png)
