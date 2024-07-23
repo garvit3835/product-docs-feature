@@ -29,15 +29,15 @@ ssh -i "path/to/key.pem" username@instance-ip
 
 1. Follow the [Connecting to AWS](../../existing-network/connecting-to-aws.md) guide.
 2. Go to **Amazon EC2 > Instances > Launch Instances**.
-3. Enter name of the instance.
+3. Enter the name of the instance.
 4. Use one of the [supported linux distros](https://web.archive.org/web/20230927004045/https://tailscale.com/kb/1017/install).
-5. Choose **Instance type**.
+5. Choose the **Instance type**.
 6. Create a new **key pair** and save it.
-7. In **Network settings**, click on **edit** and choose the VPC where your bastion host is running, the private subnet and the security group which allows inbound access to VPC.
+7. In the **Network settings**, click on **edit** and choose the VPC where your bastion host is running, the private subnet and the security group which allows inbound access to VPC.
 
 ### Step 2: Accessing EC2 from a DevBox
-1. Go to **DevBox** and make a copy of the key pair.
-2. Connect to this EC2 using ssh and the new key pair:\
+1. Go to the **DevBox** and make a copy of the key pair.
+2. Connect to the desired EC2 instance using ssh and the new key pair:\
 {% code overflow="wrap" lineNumbers="false" %}
 ```bash
 ssh -i "path/to/key.pem" username@instance-ip
