@@ -20,6 +20,15 @@
 				<a href="../../../.gitbook/assets/aws-documentdb.png">aws-documentdb.png</a>
 			</td>
 		</tr>
+        <tr>
+			<td>Connecting to EC2</td>
+			<td>
+				<a href="connect-to-an-ec2-instance.md">connect-to-an-ec2-instance.md</a>
+			</td>
+			<td>
+				<a href="../../../.gitbook/assets/aws-ec2.png">aws-ec2.png</a>
+			</td>
+		</tr>
 		<tr>
 			<td>Running ECS services/tasks</td>
 			<td>
