@@ -61,22 +61,21 @@ launch:
       command: |
         NAMESPACE=dz-arc-systems
         helm install arc \
-            --namespace "${NAMESPACE}" \
-            --create-namespace \
-            oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set-controller
+          --namespace "${NAMESPACE}" \
+          --create-namespace \
+          oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set-controller
     - type: command
       command: |
-        INSTALLATION_NAME="dz-runner-set"
-        NAMESPACE="dz-arc-runners"
-        GITHUB_CONFIG_URL=https://github.com/OWNER/REPO
-        GITHUB_PAT=ghp_token
         helm install "${INSTALLATION_NAME}" \
-            --namespace "${NAMESPACE}" \
-            --create-namespace \
-            --set githubConfigUrl="${GITHUB_CONFIG_URL}" \
-            --set githubConfigSecret.github_token="${GITHUB_PAT}" \
-            --set template.spec.containers[0].image=ghcr.io/devzero-inc/dz-runner:latest \
-            --set template.spec.containers[0].name=runner \
-            --set template.spec.containers[0].command={"/home/runner/run.sh"} \
-            oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set
+          --namespace "${NAMESPACE}" \
+          --create-namespace \
+          --set githubConfigUrl="${GITHUB_CONFIG_URL}" \
+          --set githubConfigSecret.github_token="${GITHUB_PAT}" \
+          --set containerMode.type="kubernetes" \
+          --set containerMode.kubernetesModeWorkVolumeClaim.accessModes={"ReadWriteOnce"} \
+          --set containerMode.kubernetesModeWorkVolumeClaim.storageClassName=gp2 \
+          --set containerMode.kubernetesModeWorkVolumeClaim.resources.requests.storage=1Gi \
+          --set template.spec.securityContext.fsGroup=1001 \
+          oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set
+
 ```
