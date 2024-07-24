@@ -76,35 +76,41 @@ After you obtained the PAT:
 1. Create a new workspace with [kubectl](../../references/starter-templates/infra/kubectl.md) and [helm](../../references/starter-templates/infra/helm.md) installed.
 2. Install GitHub Actions Runner Controller using helm.
 
+**Scale-set controller**
+
+{% hint style="info" %}
+Adjust the `NAMESPACE`variable as needed.
+{% endhint %}
+
 ```
 NAMESPACE=dz-arc-systems
 helm install arc \
   --namespace "${NAMESPACE}" \
   --create-namespace \
-  oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set-controller
+  oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set-controllerRunner scale-set
 ```
+
+**Runner scale-set**
 
 {% hint style="info" %}
 Adjust the `INSTALLATION_NAME`, `NAMESPACE`, `GITHUB_CONFIG_URL`, and `GITHUB_PAT` variables as needed.
 {% endhint %}
 
 ```
-INSTALLATION_NAME="dz-runner-set"
-NAMESPACE="dz-arc-runners"
-GITHUB_CONFIG_URL=https://github.com/OWNER/REPO
-GITHUB_PAT=ghp_token
 helm install "${INSTALLATION_NAME}" \
   --namespace "${NAMESPACE}" \
   --create-namespace \
   --set githubConfigUrl="${GITHUB_CONFIG_URL}" \
   --set githubConfigSecret.github_token="${GITHUB_PAT}" \
-  --set template.spec.containers[0].image=ghcr.io/devzero-inc/dz-runner:latest \
-  --set template.spec.containers[0].name=runner \
-  --set template.spec.containers[0].command={"/home/runner/run.sh"} \
+  --set containerMode.type="kubernetes" \
+  --set containerMode.kubernetesModeWorkVolumeClaim.accessModes={"ReadWriteOnce"} \
+  --set containerMode.kubernetesModeWorkVolumeClaim.storageClassName=gp2 \
+  --set containerMode.kubernetesModeWorkVolumeClaim.resources.requests.storage=1Gi \
+  --set template.spec.securityContext.fsGroup=1001 \
   oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set
 ```
 
-3. &#x20;Visit your repository/org settings, select **Actions > Runners**.\
+3. Visit your repository/org settings, select **Actions > Runners**.\
    Your new runner-set should be listed under "Runner scale sets" with the status shown as "Online".
 4. To verify the installation, run a sample action:
 

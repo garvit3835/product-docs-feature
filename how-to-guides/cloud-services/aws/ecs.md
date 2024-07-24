@@ -1,4 +1,4 @@
-# Running ECS Services and Tasks
+# ECS
 
 ### Installation guide
 
@@ -10,14 +10,14 @@ You can run services and tasks managed by AWS ECS inside of DevBoxes using [AWS 
 3. Click on "Register external instances".
 4. In the popup, confirm the settings and click on "Generate registration command".
 5. Copy the command for Linux. **You will need it later.**
-6. In your DevZero box, download the installation script for ECS Anywhere:\
-   `curl --proto "https" -o "./ecs-anywhere-install.sh" "https://amazon-ecs-agent.s3.amazonaws.com/ecs-anywhere-install-latest.sh"`
-7. Make sure the the downloaded script has the correct permissions:\
+6. In your DevZero box, download the installation script for ECS Anywhere:
+7. `curl --proto "https" -o "./ecs-anywhere-install.sh" "https://amazon-ecs-agent.s3.amazonaws.com/ecs-anywhere-install-latest.sh"`
+8. Make sure the the downloaded script has the correct permissions:\
    `chmod 700 ./ecs-anywhere-install.sh`
-8. Run the installation script with the parameters from the command in step #5:\
+9. Run the installation script with the parameters from the command in step #5:\
    `sudo ./ecs-anywhere-install.sh --region "<region>" --cluster "<ECS cluster>" --activation-id "<id>" --activation-code "<code>"`\
    **Note**: the installation script will also install Docker.
-9. The new instance should now be visible in the ECS console under **Your Cluster > Infrastructure > Container instances** as "External" instance type.
+10. The new instance should now be visible in the ECS console under **Your Cluster > Infrastructure > Container instances** as "External" instance type.
 
 ### Recipe example
 

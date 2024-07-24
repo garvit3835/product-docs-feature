@@ -1,4 +1,5 @@
-# Amazon DocumentDB
+# DocumentDB
+
 Connecting to DocumentDB running in the private subnet of AWS VPC from your DevBox.
 
 ## Architecture Diagram:
@@ -15,8 +16,9 @@ Connecting to DocumentDB running in the private subnet of AWS VPC from your DevB
 
 ![image](../../../.gitbook/assets/documentDB-connectivity-and-security.png)
 
-4. In your **DevBox**, import the MongoDB public GPG key:\
-{% code overflow="wrap" lineNumbers="false" %}
+4. In your **DevBox**, import the MongoDB public GPG key:
+
+{% code overflow="wrap" lineNumbers="true" %}
 ```bash
 curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
    sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
@@ -24,36 +26,41 @@ curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
 ```
 {% endcode %}
 
-5. Add MongoDB package repository source:\
-{% code overflow="wrap" lineNumbers="false" %}
+5. Add MongoDB package repository source:
+
+{% code overflow="wrap" lineNumbers="true" %}
 ```bash
 echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
 ```
 {% endcode %}
 
-6. Reload local package database:\
-{% code overflow="wrap" lineNumbers="false" %}
+6. Reload local package database:
+
+{% code overflow="wrap" lineNumbers="true" %}
 ```bash
 sudo apt-get update
 ```
 {% endcode %}
 
-7. Install MongoDB:\
-{% code overflow="wrap" lineNumbers="false" %}
+7. Install MongoDB:
+
+{% code overflow="wrap" lineNumbers="true" %}
 ```bash
 sudo apt-get install -y mongodb-org
 ```
 {% endcode %}
 
-8. Download the certificate:\
-{% code overflow="wrap" lineNumbers="false" %}
+8. Download the certificate:
+
+{% code overflow="wrap" lineNumbers="true" %}
 ```bash
 wget https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem
 ```
 {% endcode %}
 
-9.  Connect to the database:\
-{% code overflow="wrap" lineNumbers="false" %}
+9. Connect to the database:
+
+{% code overflow="wrap" lineNumbers="true" %}
 ```bash
 mongosh --tls --host <your-cluster-endpoint>:27017 --tlsCAFile /path/to/global-bundle.pem --username <your-username> --password <your-password>
 ```
@@ -62,7 +69,6 @@ mongosh --tls --host <your-cluster-endpoint>:27017 --tlsCAFile /path/to/global-b
 where the cluster endpoint will be available in **Connectivity & Security** section.
 
 ![image](../../../.gitbook/assets/documentdb-access.png)
-
 
 ## New Database
 
@@ -81,8 +87,9 @@ where the cluster endpoint will be available in **Connectivity & Security** sect
 
 ### Step 2: Accessing DocumentDB from a DevBox
 
-1. In your **DevBox**, import the MongoDB public GPG key:\
-{% code overflow="wrap" lineNumbers="false" %}
+1. In your **DevBox**, import the MongoDB public GPG key:
+
+{% code overflow="wrap" lineNumbers="true" %}
 ```bash
 curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
    sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
@@ -90,36 +97,41 @@ curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
 ```
 {% endcode %}
 
-2. Add MongoDB package repository source:\
-{% code overflow="wrap" lineNumbers="false" %}
+2. Add MongoDB package repository source:
+
+{% code overflow="wrap" lineNumbers="true" %}
 ```bash
 echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
 ```
 {% endcode %}
 
-3. Reload local package database:\
-{% code overflow="wrap" lineNumbers="false" %}
+3. Reload local package database:
+
+{% code overflow="wrap" lineNumbers="true" %}
 ```bash
 sudo apt-get update
 ```
 {% endcode %}
 
-4. Install MongoDB:\
-{% code overflow="wrap" lineNumbers="false" %}
+4. Install MongoDB:
+
+{% code overflow="wrap" lineNumbers="true" %}
 ```bash
 sudo apt-get install -y mongodb-org
 ```
 {% endcode %}
 
-5. Download the certificate:\
-{% code overflow="wrap" lineNumbers="false" %}
+5. Download the certificate:
+
+{% code overflow="wrap" lineNumbers="true" %}
 ```bash
 wget https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem
 ```
 {% endcode %}
 
-6. Connect to the database:\
-{% code overflow="wrap" lineNumbers="false" %}
+6. Connect to the database:
+
+{% code overflow="wrap" lineNumbers="true" %}
 ```bash
 mongosh --tls --host <your-cluster-endpoint>:27017 --tlsCAFile /path/to/global-bundle.pem --username <your-username> --password <your-password>
 ```

@@ -45,12 +45,12 @@
 * [Hosting](admin/hosting.md)
 * [Single-Sign On (SSO)](admin/sso.md)
 
-## 📝 How-to Guides
+## 📚 How-to Guides
 
 * [Cloud Services](how-to-guides/cloud-services/README.md)
   * [AWS](how-to-guides/cloud-services/aws/README.md)
     * [DocumentDB](how-to-guides/cloud-services/aws/connect-to-a-documentdb-cluster.md)
-    * [EC2](how-to-guides/cloud-services/aws/connect-to-a-ec2-instance.md)
+    * [EC2](how-to-guides/cloud-services/aws/ec2.md)
     * [ECS](how-to-guides/cloud-services/aws/ecs.md)
     * [ECS (local)](how-to-guides/cloud-services/aws/ecs-local.md)
     * [RDS](how-to-guides/cloud-services/aws/connect-to-an-rds-instance.md)
@@ -73,7 +73,7 @@
 * [Visual Studio Code](troubleshooting/vs-code.md)
 * [JetBrains](troubleshooting/jetbrains.md)
 
-## 📚 References
+## 🔎 References
 
 * [Terminology](references/terminology.md)
 * [CLI Reference](references/cli-man-page/README.md)
@@ -106,7 +106,7 @@
   * [Infra Templates](references/starter-templates/infra/README.md)
     * [Helm](references/starter-templates/infra/helm.md)
     * [Kubectl](references/starter-templates/infra/kubectl.md)
-    * [Kubectx / Kubens](references/starter-templates/infra/kubectx - kubens.md)
+    * [\[Kubectx / Kubens\](references/starter-templates/infra/kubectx - kubens.md)](references/starter-templates/infra/kubectx-kubens-references-starter-templates-infra-kubectx-kubens.md.md)
     * [K9s](references/starter-templates/infra/k9s.md)
     * [Kubectl](references/starter-templates/infra/kubectl.md)
     * [Pulumi](references/starter-templates/infra/pulumi.md)
