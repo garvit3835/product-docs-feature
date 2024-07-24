@@ -50,7 +50,7 @@
 * [Cloud Services](how-to-guides/cloud-services/README.md)
   * [AWS](how-to-guides/cloud-services/aws/README.md)
     * [DocumentDB](how-to-guides/cloud-services/aws/connect-to-a-documentdb-cluster.md)
-      * [EKS](how-to-guides/cloud-services/aws/connect-to-an-eks-cluster.md)
+    * [EKS](how-to-guides/cloud-services/aws/connect-to-an-eks-cluster.md)
     * [EC2](how-to-guides/cloud-services/aws/connect-to-an-ec2-instance.md)
     * [ECS](how-to-guides/cloud-services/aws/ecs.md)
     * [ECS (local)](how-to-guides/cloud-services/aws/ecs-local.md)

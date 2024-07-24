@@ -49,13 +49,13 @@ kubectl get svc
 ![image](../../../.gitbook/assets/eks-access.png)
 
 
-## New EKS Machine
+## New EKS Cluster
 
 ### Step 1: Creating an EKS Cluster
 
 1. Go to **Amazon Elastic Kubernetes Service > Clusters > Add cluster > Create**.
 2. Enter name of the cluster and assign a **Cluster service role** that has **AmazonEKSClusterPolicy** permission. If no role is present, create a new one with the same permission.
-3. Click on **Next**. In the **Networking** section, choose your VPC that the bastion host is running on and assign 2 private subnets . In the **Cluster endpoint access**, select **Private**.
+3. Click on the **Next**. In the **Networking** section, choose the VPC where your bastion host is running on and assign 2 private subnets . In the **Cluster endpoint access**, select **Private**.
 4. Configure other configurations as required and then create the cluster. After creating the cluster, go to the **compute** section and under **Node groups** click on **Add node group**.
 5. Enter the name of the node group and assign a node IAM role with **AmazonEC2ContainerRegistryReadOnly**, **AmazonEKS_CNI_Policy** and **AmazonEKSWorkerNodePolicy** permission. If no role is present, create a new one with the same permissions.
 6. Configure other configurations as required and create the nodes.
