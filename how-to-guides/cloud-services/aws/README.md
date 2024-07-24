@@ -21,7 +21,7 @@
 			</td>
 		</tr>
         <tr>
-			<td>Connecting to EC2</td>
+			<td>Connecting to EKS</td>
 			<td>
 				<a href="connect-to-an-eks-cluster.md">connect-to-an-eks-cluster.md</a>
 			</td>
