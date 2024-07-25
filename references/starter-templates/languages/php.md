@@ -1,6 +1,6 @@
 # PHP
 
-{% code overflow="wrap" lineNumbers="true" %}
+{% code lineNumbers="true" %}
 ```yaml
 version: "3"
 build:

@@ -8,14 +8,16 @@
 4. After you obtained the credentials, log into the AWS CLI by running:\
    `aws configure`
 5. Update your SQS access policy to allow access to the new user.
-6.  Send a test message to the queue:
+6. Send a test message to the queue:
 
-    <pre><code><strong>aws sqs send-message --queue-url &#x3C;your-queue-url> --message-body "Hello from your DevBox!"
-    </strong></code></pre>
+    ```
+    aws sqs send-message --queue-url <your-queue-url> --message-body "Hello from your DevBox!"
+    ```
 7.  Verify you can recieve the messages:
 
-    <pre><code><strong>aws sqs receive-message --queue-url &#x3C;your-queue-url>
-    </strong></code></pre>
+    ```
+    aws sqs receive-message --queue-url <your-queue-url>
+    ```
 
 ### VPC-only access policy
 

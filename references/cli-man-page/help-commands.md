@@ -2,14 +2,14 @@
 
 ## dz
 
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
+{% code %}
+```
 % dz -h
-Welcome to the DevZero CLI!                                        
-                                                                   
+Welcome to the DevZero CLI!
+
 This CLI is still under active development. Commands and flags will
-change in the future.                                              
-                                                                   
+change in the future.
+
 Made with <3 in Seattle, WA
 
 Usage:
@@ -31,8 +31,8 @@ Flags:
 
 ## dz > workspace
 
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
+{% code %}
+```
 % dz workspace -h
 Operate against and manage your workspaces
 
@@ -56,9 +56,9 @@ Flags:
 
 ## dz > network
 
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-% dz network -h 
+{% code %}
+```
+% dz network -h
 Control your connection to your team's DevZero network.
 
 Usage:

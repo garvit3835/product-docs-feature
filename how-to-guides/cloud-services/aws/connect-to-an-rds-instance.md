@@ -25,14 +25,14 @@ Run the following commands as per the RDS Database Engine:
 {% tab title="MySQL" %}
 To install the mysql client cli:
 
-```sh
+```
 sudo apt install mysql-client
 ```
 
 To access the database:
 
-{% code overflow="wrap" %}
-```bash
+{% code %}
+```
 mysql -h <RDS Endpoint> -u <Username> --database <Database Name> -p
 ```
 {% endcode %}
@@ -41,14 +41,14 @@ mysql -h <RDS Endpoint> -u <Username> --database <Database Name> -p
 {% tab title="PostgreSQL" %}
 To install the psql client cli:
 
-```sh
+```
 sudo apt install postgresql-client
 ```
 
 To access the database:
 
-{% code overflow="wrap" %}
-```bash
+{% code %}
+```
 psql -h <RDS Endpoint> --username <Username> -d <Database Name> --password
 ```
 {% endcode %}

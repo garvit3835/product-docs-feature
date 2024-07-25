@@ -23,9 +23,9 @@ description: Learn how to connect to AWS resources privately from a DevBox.
    `dz auth login`
 7.  Enable IP forwarding to access resources on private subnets:
 
-    ```bash
-    echo 'net.ipv4.ip_forward = 1' | sudo tee -a /etc/sysctl.conf 
-    echo 'net.ipv6.conf.all.forwarding = 1' | sudo tee -a /etc/sysctl.conf 
+    ```
+    echo 'net.ipv4.ip_forward = 1' | sudo tee -a /etc/sysctl.conf
+    echo 'net.ipv6.conf.all.forwarding = 1' | sudo tee -a /etc/sysctl.conf
     sudo sysctl -p /etc/sysctl.conf
     ```
 8.  Connect to DevZero network:

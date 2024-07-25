@@ -2,7 +2,7 @@
 
 ## AWS CLI
 
-{% code overflow="wrap" lineNumbers="true" %}
+{% code lineNumbers="true" %}
 ```yaml
 version: "3"
 build:
@@ -21,7 +21,7 @@ build:
 
 ## Docker Credential ECR Login
 
-{% code overflow="wrap" lineNumbers="true" %}
+{% code lineNumbers="true" %}
 ```yaml
 version: "3"
 build:

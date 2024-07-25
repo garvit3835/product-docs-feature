@@ -4,8 +4,8 @@ There are various ways to interact with your DevBox. The first step is to verify
 
 If you prefer video from, [click here](access.md#tutorial-video) for a 7min video!
 
-{% code overflow="wrap" %}
-```bash
+{% code %}
+```
 # to get the workspace name
 dz workspace list
 ```
