@@ -101,7 +101,7 @@ The [DevZero CLI](../references/cli-man-page/), or `dz` for short, is the primar
 {% tab title="Windows" %}
 To run on Windows, the CLI requires [WSL 2](https://learn.microsoft.com/en-us/windows/wsl/install). We **do not** support WSL 1. To verify your WSL version you can run the following from your Command shell or PowerShell:
 
-```sh
+```
 wsl -l -v
 ```
 
@@ -109,8 +109,8 @@ To update your WSL version, please [follow these instructions](https://learn.mic
 
 If you have WSL 2, open a terminal using WSL 2 and run the following command:
 
-{% code overflow="wrap" %}
-```bash
+{% code %}
+```
 curl -fsSL https://get.devzero.io | sh
 ```
 {% endcode %}
@@ -124,8 +124,8 @@ curl -fsSL https://get.devzero.io | sh
 {% hint style="info" %}
 **Please be sure to run these two commands after the installer finishes:**
 
-{% code overflow="wrap" %}
-```bash
+{% code %}
+```
 sudo dz auth login && sudo dz net connect
 ```
 {% endcode %}

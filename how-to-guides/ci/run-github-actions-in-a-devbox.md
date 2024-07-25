@@ -34,7 +34,7 @@ Install and start the systemd service:
 
 You can also get the registration token non-interactively by sending a http request using curl:
 
-```sh
+```
 curl \
     -X POST \
     -H "Accept: application/vnd.github+json" \
