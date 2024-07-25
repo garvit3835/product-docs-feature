@@ -101,10 +101,8 @@ aws configure
 
 3. Check if the cluster is accessible:
 
-{% code overflow="wrap" lineNumbers="false" %}
+{% code overflow="wrap" %}
 ```bash
 kubectl get svc
-```
-
 
 ![image](../../../.gitbook/assets/eks-access.png)
