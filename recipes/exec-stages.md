@@ -49,7 +49,7 @@ While recipe builds are cached, updating a lower layer (eg: the first step in yo
 
 Here's an example of some build-time steps:
 
-{% code overflow="wrap" lineNumbers="true" %}
+{% code lineNumbers="true" %}
 ```yaml
 version: "3"
 build:
@@ -120,7 +120,7 @@ Other than that, the same rules from the [Build-time](exec-stages.md#build-time)
 
 Here's an example of some launch-time steps:
 
-{% code overflow="wrap" lineNumbers="true" %}
+{% code lineNumbers="true" %}
 ```yaml
 launch:
   steps:

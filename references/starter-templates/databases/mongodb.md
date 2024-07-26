@@ -1,6 +1,6 @@
 # MongoDB
 
-{% code overflow="wrap" lineNumbers="true" %}
+{% code lineNumbers="true" %}
 ```yaml
 version: "3"
 build:
@@ -14,7 +14,7 @@ build:
         wget https://downloads.mongodb.com/compass/mongosh-$VERSION-linux-x64.tgz
         tar -zxvf mongosh-$VERSION-linux-x64.tgz
         sudo cp mongosh-$VERSION-linux-x64/bin/mongosh /usr/local/bin/
-        rm -rf mongosh-$VERSION-linux-x64*    
+        rm -rf mongosh-$VERSION-linux-x64*
     - type: command
       name: "mongodb tools"
       command: |
