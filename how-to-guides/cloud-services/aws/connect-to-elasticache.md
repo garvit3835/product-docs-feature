@@ -4,7 +4,7 @@ Connecting to ElastiCache running in the private subnet of AWS VPC from your Dev
 
 ## Architecture Diagram:
 
-![image](../../../.gitbook/assets/elasticache-architecture.png)
+![image](../../../.gitbook/assets/elasticache-arch.png)
 
 ## Existing ElastiCache Cluster
 
@@ -13,11 +13,11 @@ Connecting to ElastiCache running in the private subnet of AWS VPC from your Dev
 1. Follow the [Connecting to AWS](../../existing-network/connecting-to-aws.md) guide.
 2. Go to **Amazon ElastiCache > Redis/Memcached > Your Cluster**.
 3. Select **Configuration & Security**.
-4. Copy **Primary Endpoint**.
+4. Copy **Primary endpoint**.
 
-![image](../../../.gitbook/assets/elasticache-configuration-and-security.png)
+![image](../../../.gitbook/assets/elasticache-endpoints.png)
 
-5. Go to **DevBox**.
+5. Go to your **DevBox**.
 6. Connecting to the Cache.
 
 Run the following commands as per the Elasticache:
@@ -72,19 +72,16 @@ memcstat --servers=<memcached-endpoint>:<port>
 6. Choose the **Engine Version** and **Node Type** in the **Cluster settings.**
 9. Go to **Connectivity** section.
 10. Choose your **VPC** and **Subnet group**
-11. In the next section, choose the **Security Group.** Make sure the specified **Security Group** allows inbound db connections.
+11. In the next section, choose the **Security Group.** Make sure the specified **Security Group** allows inbound connections.
 11. Click on **Create.**
 
-![image](../../../.gitbook/assets/elasticache-devzero.png)
-
 ### Step 2: Accessing Elasticache from DevBox
-1. You will see two endpoints. Copy **Writer Type Endpoint.**
-2. Go to the **Secrets Manager.**
+1. Go to your ElastiCache and copy **Primary endpoint.**
 
 ![image](../../../.gitbook/assets/elasticache-endpoints.png)
 
-4. Go to **DevBox.**
-5. Connecting to the Database:\
+2. Go to **DevBox.**
+3. Connecting to the Cache:
    `redis-cli -h <Redis Endpoint> -p <Port>`
 
 ![image](../../../.gitbook/assets/elasticache-access.png)
