@@ -1,5 +1,5 @@
-# EC2
-Connecting to Compute Instance running in the private subnet of AWS VPC from your DevBox.
+# GCP Compute Instance
+Connecting to Compute Instance running in the private subnet of GCP VPC from your DevBox.
 
 ## Architecture Diagram:
 
