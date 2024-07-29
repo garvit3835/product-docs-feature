@@ -36,7 +36,7 @@ curl -X GET "<opensearch-endpoint>"
 2. Go to **Amazon OpenSearch Service > Create domain.**
 3. Give a unique **Domain name.**
 4. Select **Standard create** in the **Creation method.**
-5. Refer to [OpenSearch Documentation](https://docs.aws.amazon.com/opensearch-service/) for the Configuration.
+5. Use the default configurations for creating the service.
 6. Keep the **Data nodes** according to your requirements.
 7. Go to **Network** section and choose your **VPC** and **Subnets.**
 8. In the next section, choose the **Security Group.** Make sure the specified **Security Group** allows inbound connection from the VPC and click on **Create.**
