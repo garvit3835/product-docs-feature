@@ -7,13 +7,6 @@ build:
   steps:
     - type: apt-get
       packages: ["curl", "tar", "unzip"]
-    - type: command
-      command: |
-        curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/apt.postgresql.org.gpg >/dev/null
-        sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
-        sudo apt update
-        sudo DEBIAN_FRONTEND=noninteractive apt install -y postgresql-14
-      user: devzero
     - type: apt-get
       name: "postgres tools"
       packages: ["postgresql-16"]

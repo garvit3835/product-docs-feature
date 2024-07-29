@@ -12,6 +12,5 @@ build:
         curl -s "https://get.sdkman.io" | bash
         . "$HOME/.sdkman/bin/sdkman-init.sh"
         sdk install java
-      shell: /bin/bash -l {}
 ```
 {% endcode %}
