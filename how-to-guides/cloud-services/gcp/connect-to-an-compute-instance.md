@@ -33,7 +33,7 @@ ssh -i "path/to/private/key" username@instance-ip
 5. Choose the **Instance type**.
 6. Go to **Advanced Options > Networking > Network Tags** and enter the firewall tags.
 7. Go to **Advanced Options > Networking > Network Interfaces**, click on **Network** and choose the VPC where your bastion host is running, then click on **Subnetwork** and choose the private subnet.
-8. Copy in the newly created SSH key pair when the machine is created.
+8. Copy the newly created SSH key pair once the instance gets created.
 
 ### Step 2: Accessing Compute Instance from a DevBox
 1. Go to the **DevBox** and make a copy of the key pair.
