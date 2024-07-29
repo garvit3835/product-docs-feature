@@ -80,7 +80,7 @@ memcstat --servers=<memcached-endpoint>:<port>
 
 ![image](../../../.gitbook/assets/elasticache-endpoints.png)
 
-2. Go to **DevBox.** and connect to Cache:
+2. Go to your **DevBox** and connect to Cache:
 
 ```sh
 redis-cli -h <Redis Endpoint> -p <Port>

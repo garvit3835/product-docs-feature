@@ -46,7 +46,7 @@ curl -X GET "<opensearch-endpoint>"
 
 ![image](../../../.gitbook/assets/opensearch-endpoints.png)
 
-2. Go to **DevBox.** and connect to Service:
+2. Go to your **DevBox** and connect to Service:
 
 ```sh
 curl -X GET "<opensearch-endpoint>"
