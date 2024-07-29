@@ -20,5 +20,14 @@
 				<a href="../../.gitbook/assets/aws-vpc.png">aws-vpc.png</a>
 			</td>
 		</tr>
+		<tr>
+			<td>Access GCP VPC</td>
+			<td>
+				<a href="connecting-to-gcp.md">connecting-to-gcp.md</a>
+			</td>
+			<td>
+				<a href="../../.gitbook/assets/gcp.png">gcp.png</a>
+			</td>
+		</tr>
 	</tbody>
 </table>
