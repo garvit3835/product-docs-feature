@@ -6,7 +6,7 @@
 If you don't have any recipes yet, please follow the "[Creating a Recipe](new-recipe.md)" guide first.
 {% endhint %}
 
-## Sharing a recipe link with your teammates:
+### Sharing a recipe link with your teammates:
 
 1. Visit DevZero **Web console > Recipes**.\
    You should be able to see recipes published by your teammates.
