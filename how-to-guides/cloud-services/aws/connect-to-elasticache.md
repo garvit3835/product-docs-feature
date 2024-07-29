@@ -22,15 +22,19 @@ Connecting to ElastiCache running in the private subnet of AWS VPC from your Dev
 
 4. Go to your **DevBox** and install the Redis CLI:
 
-```sh
+{% code overflow="wrap" lineNumbers="false" %}
+```bash
 sudo apt install redis-tools
 ```
+{% endcode %}
 
 5. Access the cluster using the CLI:
 
-```sh
+{% code overflow="wrap" lineNumbers="false" %}
+```bash
 redis-cli -h <redis-endpoint> -p <port>
 ```
+{% endcode %}
 
 ![image](../../../.gitbook/assets/elasticache-access.png)
 
@@ -39,15 +43,14 @@ redis-cli -h <redis-endpoint> -p <port>
 
 ### Step 1: Creating an ElastiCache Cluster
 
-1. Follow the [Connecting to AWS](../../existing-network/connecting-to-aws.md) guide.
-2. Go to **Amazon ElastiCache > Create.**
-3. Select **Design your own cache.**
-4. Select **Cluster cache** in the **Creation method.**
-5. Use the default configurations for creating the cluster.
-6. Scroll Down to the **Cluster info** and specify your **Cluster Name.**
-7. Choose the **Engine Version** and **Node Type** in the **Cluster settings.**
-8. Go to **Connectivity** section and choose your **VPC** and **Subnet group.**
-9. In the next section, choose the **Security Group.** Make sure the specified **Security Group** allows inbound connection from the VPC and click on **Create.**
+1. Go to **Amazon ElastiCache > Create.**
+2. Select **Design your own cache.**
+3. Select **Cluster cache** in the **Creation method.**
+4. Use the default configurations for creating the cluster.
+5. Scroll Down to the **Cluster info** and specify your **Cluster Name.**
+6. Choose the **Engine Version** and **Node Type** in the **Cluster settings.**
+7. Go to **Connectivity** section and choose your **VPC** and **Subnet group.**
+8. In the next section, choose the **Security Group.** Make sure the specified **Security Group** allows inbound connection from the VPC and click on **Create.**
 
 ### Step 2: Accessing Elasticache from DevBox
 1. Go to your ElastiCache and copy **Primary endpoint.**
@@ -56,15 +59,19 @@ redis-cli -h <redis-endpoint> -p <port>
 
 2. Go to your **DevBox** and install the Redis CLI:
 
-```sh
+{% code overflow="wrap" lineNumbers="false" %}
+```bash
 sudo apt install redis-tools
 ```
+{% endcode %}
 
 3. Access the cluster using the CLI:
 
-```sh
+{% code overflow="wrap" lineNumbers="false" %}
+```bash
 redis-cli -h <redis-endpoint> -p <port>
 ```
+{% endcode %}
 
 ![image](../../../.gitbook/assets/elasticache-access.png)
 

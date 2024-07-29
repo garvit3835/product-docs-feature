@@ -21,9 +21,11 @@ Connecting to OpenSearch running in the private subnet of AWS VPC from your DevB
 
 3. Go to your **DevBox** and connect to Service:
 
-```sh
+{% code overflow="wrap" lineNumbers="false" %}
+```bash
 curl -X GET "<opensearch-endpoint>"
 ```
+{% endcode %}
 
 ![image](../../../.gitbook/assets/opensearch-access.png)
 
@@ -32,14 +34,13 @@ curl -X GET "<opensearch-endpoint>"
 
 ### Step 1: Creating an OpenSearch Service
 
-1. Follow the [Connecting to AWS](../../existing-network/connecting-to-aws.md) guide.
-2. Go to **Amazon OpenSearch Service > Create domain.**
-3. Give a unique **Domain name.**
-4. Select **Standard create** in the **Creation method.**
-5. Use the default configurations for creating the service.
-6. Keep the **Data nodes** according to your requirements.
-7. Go to **Network** section and choose your **VPC** and **Subnets.**
-8. In the next section, choose the **Security Group.** Make sure the specified **Security Group** allows inbound connection from the VPC and click on **Create.**
+1. Go to **Amazon OpenSearch Service > Create domain.**
+2. Give a unique **Domain name.**
+3. Select **Standard create** in the **Creation method.**
+4. Use the default configurations for creating the service.
+5. Keep the **Data nodes** according to your requirements.
+6. Go to **Network** section and choose your **VPC** and **Subnets.**
+7. In the next section, choose the **Security Group.** Make sure the specified **Security Group** allows inbound connection from the VPC and click on **Create.**
 
 ### Step 2: Accessing OpenSearch from DevBox
 1. Go to your OpenSearch and copy **Domain endpoint.**
@@ -48,9 +49,11 @@ curl -X GET "<opensearch-endpoint>"
 
 2. Go to your **DevBox** and connect to Service:
 
-```sh
+{% code overflow="wrap" lineNumbers="false" %}
+```bash
 curl -X GET "<opensearch-endpoint>"
 ```
+{% endcode %}
 
 ![image](../../../.gitbook/assets/opensearch-access.png)
 
