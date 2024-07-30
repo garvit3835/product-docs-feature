@@ -60,6 +60,7 @@
     * [Compute Instance](how-to-guides/cloud-services/gcp/connect-to-an-compute-instance.md)
 * [Existing Network](how-to-guides/existing-network/README.md)
   * [AWS VPC](how-to-guides/existing-network/connecting-to-aws.md)
+  * [GCP VPC](how-to-guides/existing-network/connecting-to-gcp.md)
 * [Build Cache + Remote Execution](how-to-guides/build-cache/README.md)
   * [Bazel](how-to-guides/build-cache/bazel-remote-execution-cache.md)
   * [Docker](how-to-guides/build-cache/docker-remote-build-cache.md)
