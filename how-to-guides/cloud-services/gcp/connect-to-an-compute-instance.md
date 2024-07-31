@@ -19,7 +19,7 @@ Follow [Connecting to GCP](../../existing-network/connecting-to-gcp.md) guide.
 4. Connect to Compute Instance:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 ssh -i "path/to/private/key" username@instance-ip
 ```
 {% endcode %}
@@ -44,7 +44,7 @@ ssh -i "path/to/private/key" username@instance-ip
 2. Connect to the desired Compute instance using ssh and the new key pair:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 ssh -i "path/to/private/key" username@instance-ip
 ```
 {% endcode %}
