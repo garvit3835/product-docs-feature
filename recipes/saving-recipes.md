@@ -13,5 +13,5 @@ If you don't have any recipes yet, please follow the "[Creating a Recipe](new-re
 2. Open the menu by pressing the **3 dots icon** on the recipe you want to share.
 3. Click on Copy Link to share the recipe source code with your colleagues.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-07-29 at 17.48.23.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://devzero.b-cdn.net/copy-recipe.gif" alt=""><figcaption></figcaption></figure>
 
