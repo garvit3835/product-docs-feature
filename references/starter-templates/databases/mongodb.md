@@ -7,6 +7,13 @@ build:
   steps:
     - type: apt-get
       packages: ["curl", "tar", "unzip", "wget"]
+    - type: apt-get
+      packages: ["mongodb-org"]
+      extra_repositories:
+        - key_url: https://www.mongodb.org/static/pgp/server-7.0.asc
+          repository: https://repo.mongodb.org/apt/ubuntu
+          components: ["multiverse"]
+          distribution: "jammy/mongodb-org/7.0"
     - type: command
       name: "mongosh"
       command: |
