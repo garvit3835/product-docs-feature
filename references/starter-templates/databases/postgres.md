@@ -1,7 +1,8 @@
 # Postgres
 
 {% code lineNumbers="true" %}
-```yamlversion: "3"
+```yaml
+version: "3"
 build:
   steps:
     - type: apt-get
