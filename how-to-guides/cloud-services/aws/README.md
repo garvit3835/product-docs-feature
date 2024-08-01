@@ -21,6 +21,15 @@
 			</td>
 		</tr>
         <tr>
+			<td>Connecting to EKS</td>
+			<td>
+				<a href="connect-to-an-eks-cluster.md">connect-to-an-eks-cluster.md</a>
+			</td>
+			<td>
+				<a href="../../../.gitbook/assets/aws-eks.png">aws-eks.png</a>
+			</td>
+		</tr>
+        <tr>
 			<td>Connecting to EC2</td>
 			<td>
 				<a href="connect-to-an-ec2-instance.md">connect-to-an-ec2-instance.md</a>

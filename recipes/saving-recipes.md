@@ -1,21 +1,17 @@
 # Sharing Recipes
 
-Recipes are private by default, meaning that they will only be available to the authoring user. To enable your teammates to use recipes that you have built, update the recipe to add it to your team's [recipe library.](../references/terminology.md#recipe-library)&#x20;
 
-**Here's how to do that:**
 
-1. Create a recipe by clicking `Create New` (top-right) >> `Create New Recipe`
+{% hint style="info" %}
+If you don't have any recipes yet, please follow the "[Creating a Recipe](new-recipe.md)" guide first.
+{% endhint %}
 
-<figure><img src="../.gitbook/assets/create-new-recipe.png" alt=""><figcaption><p>Create New Recipe</p></figcaption></figure>
+### Sharing a recipe link with your teammates:
 
-2. Modify your recipe, then click `Save` (top-right)
+1. Visit DevZero **Web console > Recipes**.\
+   You should be able to see recipes published by your teammates.
+2. Open the menu by pressing the **3 dots icon** on the recipe you want to share.
+3. Click on Copy Link to share the recipe source code with your colleagues.
 
-<figure><img src="../.gitbook/assets/save-new-recipe.png" alt=""><figcaption><p>Save New Recipe</p></figcaption></figure>
+<figure><img src="https://devzero.b-cdn.net/copy-recipe.gif" alt=""><figcaption></figcaption></figure>
 
-3. Give the recipe a name and description, **check the toggle** for team recipe, and save it!
-
-<figure><img src="../.gitbook/assets/save-new-recipe-with-metadata.png" alt=""><figcaption><p>Save New Recipe with Metadata</p></figcaption></figure>
-
-4. Visit the [shared recipes](https://www.devzero.io/dashboard/recipes#shared) page, to verift that the recipe has been saved!
-
-<figure><img src="../.gitbook/assets/saved-recipes-list.png" alt=""><figcaption><p>Save New Recipe with Metadata</p></figcaption></figure>
