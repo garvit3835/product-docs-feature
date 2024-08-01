@@ -27,35 +27,46 @@ description: Learn how to connect to GCP resources privately from a DevBox.
 4. Attach public subnet to the instance from the VPC and assign it a public IP Address.
 5. SSH into the machine and Install the DevZero CLI from the script:
 
-```bash
+{% code overflow="wrap" lineNumbers="false" %}
+```
 curl -fsSL https://get.devzero.io | sh
 ```
+{% endcode %}
 
 6. Log into your account by executing:
 
-```bash
+{% code overflow="wrap" lineNumbers="false" %}
+```
 dz auth login
 ```
+{% endcode %}
 
 7. Enable IP forwarding to access resources on VPC CIDR:
 
-```bash
+{% code overflow="wrap" lineNumbers="false" %}
+```
 echo 'net.ipv4.ip_forward = 1' | sudo tee -a /etc/sysctl.conf
 echo 'net.ipv6.conf.all.forwarding = 1' | sudo tee -a /etc/sysctl.conf
 sudo sysctl -p /etc/sysctl.conf
 ```
+{% endcode %}
 
 8. Connect to DevZero network:
 
-```bash
+{% code overflow="wrap" lineNumbers="false" %}
+```
 sudo dz net connect --ssh --advertise-routes=<VPC-CIDR>
 ```
+{% endcode %}
 
 9. Verify that the machine was connected to your DevZero network:
 
-```bash
+{% code overflow="wrap" lineNumbers="false" %}
+```
 dz net status
 ```
+{% endcode %}
+
 ![image](../../.gitbook/assets/gcp-dz-net-status.png)
 
 You should see the GCP virtual machine hostname.
