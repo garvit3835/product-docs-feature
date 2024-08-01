@@ -6,14 +6,15 @@
 * [Platform Overview](<README (1).md>)
 * [Quickstart](getting-started/quickstart.md)
 
-## 📜 Recipes
+## 🧩 Recipes
 
-* [Overview](recipes/types.md)
-* [Creating a Recipe](recipes/new-recipe.md)
-* [Cloning Source Code](recipes/code.md)
+* [Overview](recipes/overview.md)
+* [Creating a Recipe](recipes/create-recipe.md)
+* [Cloning Source Code](clone-source-code.md)
 * [Execution Stages](recipes/exec-stages.md)
 * [Recipe Base Images](recipes/custom-base.md)
 * [Sharing Recipes](recipes/saving-recipes.md)
+* [Recipe Syntax](recipes/syntax.md)
 
 ## 🖥️ Workspaces
 
@@ -83,7 +84,7 @@
   * [Uninstall the CLI](references/cli-man-page/uninstall.md)
   * [Supported OSs](references/cli-man-page/supported-os.md)
   * [Help Commands](references/cli-man-page/help-commands.md)
-* [Recipe Syntax](references/recipe-syntax.md)
+* [Recipe Syntax](recipes/syntax.md)
 * [Starter Templates](references/starter-templates/README.md)
   * [Language Templates](references/starter-templates/languages/README.md)
     * [C#](references/starter-templates/languages/c-sharp.md)

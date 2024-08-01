@@ -1,6 +1,6 @@
 # Cloning Source Code
 
-The repos block of our [recipe specification](../references/recipe-syntax.md#git-clone) is used to clone code. This will use the [permissions of the GitHub application](https://docs.devzero.io/product-docs/admin/permissions) you have connected with DevZero.
+The repos block of our [recipe specification](syntax.md#git-clone) is used to clone code. This will use the [permissions of the GitHub application](https://docs.devzero.io/product-docs/admin/permissions) you have connected with DevZero.
 
 To clone one or multiple repos:
 
@@ -24,7 +24,7 @@ build:
 
 This usually applies to cases where you need to use secrets to clone code. To learn more about how to save and use secrets: [broken-reference](broken-reference/ "mention")
 
-You can use a [`command`](../references/recipe-syntax.md#command) block to clone code directly:
+You can use a [`command`](syntax.md#command) block to clone code directly:
 
 {% code lineNumbers="true" %}
 ```yaml

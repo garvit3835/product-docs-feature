@@ -6,7 +6,7 @@ DevZero is a [cloud development platform](https://www.devzero.io/cloud-developme
 
 With the DevZero platform, you can centrally define and manage cloud environment [specifications](references/terminology.md#recipe) for development, testing, CI, and more. This ensures that developer environments are always consistent, up-to-date, and secure.
 
-Developers can use these [specifications](references/recipe-syntax.md) alongside our CLI to launch their own [ephemeral, namespaced](#user-content-fn-1)[^1], and [extensible cloud environments](references/terminology.md#workspace). Developers can connect using any IDE of their choice or leverage a browser-based IDE/shell. We automatically take care of all the ergonomics, too, like shell config, dotfiles, and more, to ensure things match your preferences.
+Developers can use these [specifications](recipes/syntax.md) alongside our CLI to launch their own [ephemeral, namespaced](#user-content-fn-1)[^1], and [extensible cloud environments](references/terminology.md#workspace). Developers can connect using any IDE of their choice or leverage a browser-based IDE/shell. We automatically take care of all the ergonomics, too, like shell config, dotfiles, and more, to ensure things match your preferences.
 
 ## How does it work?
 
