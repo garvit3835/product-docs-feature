@@ -57,6 +57,8 @@
     * [RDS](how-to-guides/cloud-services/aws/connect-to-an-rds-instance.md)
     * [SQS](how-to-guides/cloud-services/aws/connect-to-sqs.md)
     * [S3](how-to-guides/cloud-services/aws/connect-to-an-s3-bucket.md)
+    * [ElastiCache](how-to-guides/cloud-services/aws/connect-to-elasticache.md)
+    * [OpenSearch](how-to-guides/cloud-services/aws/connect-to-opensearch.md)
   * [GCP](how-to-guides/cloud-services/gcp/README.md)
     * [Compute Instance](how-to-guides/cloud-services/gcp/connect-to-an-compute-instance.md)
     * [BigQuery](how-to-guides/cloud-services/gcp/connecting-to-bigquery.md)

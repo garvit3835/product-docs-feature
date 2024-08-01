@@ -83,5 +83,23 @@
 				<a href="../../../.gitbook/assets/aws-s3.png">aws-s3.png</a>
 			</td>
 		</tr>
+		<tr>
+			<td>Connect to ElastiCache</td>
+			<td>
+				<a href="connect-to-elasticache.md">connect-to-elasticache.md</a>
+			</td>
+			<td>
+				<a href="../../../.gitbook/assets/aws-elasticache.png">aws-elasticache.png</a>
+			</td>
+		</tr>
+		<tr>
+			<td>Connect to OpenSearch</td>
+			<td>
+				<a href="connect-to-opensearch.md">connect-to-opensearch.md</a>
+			</td>
+			<td>
+				<a href="../../../.gitbook/assets/aws-opensearch.png">aws-opensearch.png</a>
+			</td>
+		</tr>
 	</tbody>
 </table>
