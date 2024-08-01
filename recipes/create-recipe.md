@@ -6,15 +6,25 @@
 Create a new recipe
 {% endembed %}
 
-1. From your [DevZero Console](https://devzero.io/dashboard), select `Create New` >> `Create New Recipe`. This will take you to the [new repo](https://www.devzero.io/dashboard/new/repo) page.
+<details>
+<summary>Create New Recipe</summary>
+From your [DevZero Console](https://devzero.io/dashboard), select `Create New` >> `Create New Recipe`. This will take you to the [new repo](https://www.devzero.io/dashboard/new/repo) page.
 
 <figure><img src="../.gitbook/assets/runtime-in-recipe.png" alt=""><figcaption><p>Code block in a recipe</p></figcaption></figure>
+</details>
 
-2. Provide a name for your new recipe.
+<details>
+<summary>Name Your Recipe</summary>
+Provide a name for your new recipe.
 
 <figure><img src="../.gitbook/assets/runtime-in-recipe.png" alt=""><figcaption><p>Code block in a recipe</p></figcaption></figure>
+</details>
 
-3. From here, you can choose to use a public Github repository by providing a URL or you can authenticate to our Github App to select a private repository.
+<details>
+<summary>Select Repository</summary>
+From here, you can choose to use a public Github repository by providing a URL or you can authenticate to our Github App to select a private repository.
+
+Alternatively, you can launch a blank Recipe by clicking "Create a recipe" without providing a code repo.
 
 <figure><img src="../.gitbook/assets/runtime-in-recipe.png" alt=""><figcaption><p>Code block in a recipe</p></figcaption></figure>
 
@@ -22,20 +32,32 @@ Create a new recipe
 If you're not using GitHub or prefer a different authentication method, check out this section on [cloning source code](clone-source-code.md).
 {% endhint %}
 
-4. Modify your recipe, then click `Save and Build` -- this will run a build to ensure the recipe builds successfully. Also, we provide suggested recipe steps based on introspecting your code to make building a recipe faster and easier. 
+</details>
+
+<details>
+<summary>Make Recipe Changes</summary>
+Make desired changes to your Recipe, select Save and Build to initiate the build process, verifying successful recipe compilation. To streamline recipe creation, we offer suggested steps based on an analysis of your code.
 
 <figure><img src="../.gitbook/assets/runtime-in-recipe.png" alt=""><figcaption><p>Code block in a recipe</p></figcaption></figure>
 
-5. We provide detailed build logs to help you identify any errors in your build and make iterating on Recipes easy.
+{% hint style="info" %}
+ We provide detailed build logs to help you identify any errors in your build and make iterating on Recipes easy.
+{% endhint %}
+
+</details>
+
+<details>
+<summary>Publish Your Recipe
+After you've successfully build your Recipe and are done iterating, you're ready to Publish the recipe to your Recipe Library.
 
 <figure><img src="../.gitbook/assets/runtime-in-recipe.png" alt=""><figcaption><p>Code block in a recipe</p></figcaption></figure>
+</details>
 
-5. After you've successfully build your Recipe and are done iterating, you're ready to Publish the recipe to your Recipe Library.
+<details>
+<summary>Launch A Workspace from New Recipe</summary>
+Click Launch to create a new Workspace from your Recipe
 
 <figure><img src="../.gitbook/assets/runtime-in-recipe.png" alt=""><figcaption><p>Code block in a recipe</p></figcaption></figure>
+</details>
 
-6. Click Launch to create a new Workspace from your Recipe
-
-<figure><img src="../.gitbook/assets/runtime-in-recipe.png" alt=""><figcaption><p>Code block in a recipe</p></figcaption></figure>
-
-Next:[Create your first recipe!](create-recipe.md)
+Next: [Create your first recipe!](create-recipe.md)
