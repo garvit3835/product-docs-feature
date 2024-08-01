@@ -8,7 +8,7 @@ Recipes have two execution stages that you can customize:
 2. **Launch-time:** when a workspace is being launched from a recipe.
 3. **Run-time**: when a workspace is running (your active coding, app runtime environment)
 
-Irrespective of the stage, [command](../references/recipe-syntax.md#command) blocks will be executed in the order in which they are specified in the recipe.
+Irrespective of the stage, [command](syntax.md#command) blocks will be executed in the order in which they are specified in the recipe.
 
 <figure><img src="../.gitbook/assets/exec-stages.png" alt=""><figcaption><p>Execution stages (difference between built- and launch-time)</p></figcaption></figure>
 

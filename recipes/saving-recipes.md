@@ -3,7 +3,7 @@
 
 
 {% hint style="info" %}
-If you don't have any recipes yet, please follow the "[Creating a Recipe](new-recipe.md)" guide first.
+If you don't have any recipes yet, please follow the "[Creating a Recipe](create-recipe.md)" guide first.
 {% endhint %}
 
 ### Sharing a recipe link with your teammates:
