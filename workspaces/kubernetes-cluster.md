@@ -122,7 +122,6 @@ kubectl get pods  # verification
 
 cd /home/devzero/microservices-demo
 skaffold run --default-repo ttl.sh  # this will take a bit of time since its building multiple docker images (~5mins)
-kubectl port-forward --address 0.0.0.0 deployment/frontend 8088:8080
 ```
 
 5. Verify that all the pods are running:
@@ -131,6 +130,12 @@ kubectl port-forward --address 0.0.0.0 deployment/frontend 8088:8080
 kubectl get pods
 ```
 
-Visit, `<workspace-name>:8088` in your browser to see the running frontend!
+6. Port forward the `frontend` to your terminal session
+
+```
+kubectl port-forward --address 0.0.0.0 deployment/frontend 8088:8080
+```
+
+7. Visit, `<workspace-name>:8088` in your browser to see the app!
 
 </details>
