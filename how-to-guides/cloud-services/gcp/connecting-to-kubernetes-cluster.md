@@ -79,13 +79,13 @@ kubectl get svc
 
 ![imgae](../../../.gitbook/assets/gcp-gke-setup-1.png)
 
-6. Enter the **Public Subnet** in the **Authorized Networks** section.
+6. Enter the **Bastion Host's CIDR Range** in the **Authorized Networks** section.
 
-![imgae](../../../.gitbook/assets/gcp-gke-setup-2.png)
+![image](../../../.gitbook/assets/gcp-gke-setup-2.png)
 
 7. Click on **Create**.
 
-![imgae](../../../.gitbook/assets/gcp-gke-setup-3.png)
+![image](../../../.gitbook/assets/gcp-gke-setup-3.png)
 
 ### Step 2: Installing the necessary tools:
 
