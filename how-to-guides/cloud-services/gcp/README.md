@@ -14,7 +14,7 @@
 		<tr>
 			<td>Connecting to BigQuery</td>
 			<td>
-				<a href="connect-to-bigquery.md">connect-to-bigquery.md</a>
+				<a href="connecting-to-bigquery.md">connect-to-bigquery.md</a>
 			</td>
 			<td>
 				<a href="../../../.gitbook/assets/gcp-bigquery.png">gcp-bigquery.png</a>
