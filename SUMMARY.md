@@ -115,7 +115,7 @@
   * [Infra Templates](references/starter-templates/infra/README.md)
     * [Helm](references/starter-templates/infra/helm.md)
     * [Kubectl](references/starter-templates/infra/kubectl.md)
-    * [\[Kubectx / Kubens\](references/starter-templates/infra/kubectx - kubens.md)](references/starter-templates/infra/kubectx-kubens-references-starter-templates-infra-kubectx-kubens.md.md)
+    * [Kubectx / Kubens](references/starter-templates/infra/kubectx-kubens.md)
     * [K9s](references/starter-templates/infra/k9s.md)
     * [Pulumi](references/starter-templates/infra/pulumi.md)
     * [Skaffold](references/starter-templates/infra/skaffold.md)
