@@ -41,9 +41,8 @@ gsutil ls gs://<storage-name>
 
 ### Step 1: Creating a storage bucket
 
-1. Go to **Cloud Storage > Buckets**.
-2. Click on **Create**.
-3. Enter a unique name for the bucket and click on **Create**.
+1. Go to **Cloud Storage > Buckets > Create**.
+2. Enter a unique name for the bucket and click on **Create**.
 
 ![image](../../../.gitbook/assets/gcp-cloudstorage-creation.png)
 
