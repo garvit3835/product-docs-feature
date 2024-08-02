@@ -14,13 +14,22 @@
 		<tr>
 			<td>Connecting to BigQuery</td>
 			<td>
+				<a href="connecting-to-compute-instance.md">connect-to-compute-instance.md</a>
+			</td>
+			<td>
+				<a href="../../../.gitbook/assets/gcp-compute-engine-logo.png">gcp-compute-engine-logo.png</a>
+			</td>
+		</tr>
+		<tr>
+			<td>Connecting to BigQuery</td>
+			<td>
 				<a href="connecting-to-bigquery.md">connect-to-bigquery.md</a>
 			</td>
 			<td>
 				<a href="../../../.gitbook/assets/gcp-bigquery.png">gcp-bigquery.png</a>
-      </td>
-    </tr>
-    <tr>
+			</td>
+		</tr>
+		<tr>
 			<td>Connecting to GCP Kubernetes Cluster</td>
 			<td>
 				<a href="connecting-to-kubernetes-cluster.md">connecting-to-kubernetes-cluster.md</a>

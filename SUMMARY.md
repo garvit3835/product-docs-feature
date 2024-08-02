@@ -64,6 +64,7 @@
     * [Compute Instance](how-to-guides/cloud-services/gcp/connect-to-an-compute-instance.md)
     * [BigQuery](how-to-guides/cloud-services/gcp/connecting-to-bigquery.md)
     * [GKE](how-to-guides/cloud-services/gcp/connecting-to-kubernetes-cluster.md)
+    * [Cloud Storage](how-to-guides/cloud-services/gcp/connecting-to-cloud-storage.md)
 * [Existing Network](how-to-guides/existing-network/README.md)
   * [AWS VPC](how-to-guides/existing-network/connecting-to-aws.md)
   * [GCP VPC](how-to-guides/existing-network/connecting-to-gcp.md)
