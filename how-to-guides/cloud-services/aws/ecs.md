@@ -58,6 +58,10 @@ docker volumes ls
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2024-07-31 at 14.54.42.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="warning" %}
+If you select "Configure at deployment" in your task definition, you might not be able to deploy it to the external instance type, because this configuration only supports Amazon EBS, which is not available with external instances.
+{% endhint %}
+
 ### Recipe example
 
 <pre class="language-yaml"><code class="lang-yaml">version: "3"
