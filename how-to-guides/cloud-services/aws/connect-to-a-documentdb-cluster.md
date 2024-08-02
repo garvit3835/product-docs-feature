@@ -4,7 +4,7 @@ Connecting to DocumentDB running in the private subnet of AWS VPC from your DevB
 
 ## Architecture Diagram:
 
-![image](../../../.gitbook/assets/documentdb-architecture.png)
+![](../../../.gitbook/assets/documentdb-architecture.png)
 
 ## Existing Database
 
@@ -14,7 +14,7 @@ Connecting to DocumentDB running in the private subnet of AWS VPC from your DevB
 2. Go to **Amazon DocumentDB > Clusters > Your Cluster**.
 3. Select **Connectivity & Security**. You will see the commands and DocumentDB hostname for accessing it.
 
-![image](../../../.gitbook/assets/documentDB-connectivity-and-security.png)
+![](../../../.gitbook/assets/documentDB-connectivity-and-security.png)
 
 4. In your **DevBox**, import the MongoDB public GPG key:
 
@@ -56,7 +56,7 @@ mongosh --tls --host <your-cluster-endpoint>:27017 --tlsCAFile /path/to/global-b
 
 where the cluster endpoint will be available in **Connectivity & Security** section.
 
-![image](../../../.gitbook/assets/documentdb-access.png)
+![](../../../.gitbook/assets/documentdb-access.png)
 
 ## New Database
 
@@ -71,7 +71,7 @@ where the cluster endpoint will be available in **Connectivity & Security** sect
 7. In the **Network settings** , choose the VPC where your bastion host is running, subnet group and assign a security group which has inbound access to only VPC.
 8. Click **Create cluster**.
 
-![image](../../../.gitbook/assets/documentdb-cluster.png)
+![](../../../.gitbook/assets/documentdb-cluster.png)
 
 ### Step 2: Accessing DocumentDB from a DevBox
 
@@ -115,4 +115,4 @@ mongosh --tls --host <your-cluster-endpoint>:27017 --tlsCAFile /path/to/global-b
 
 where the cluster endpoint will be available in **Connectivity & Security** section.
 
-![image](../../../.gitbook/assets/documentdb-access.png)
+![](../../../.gitbook/assets/documentdb-access.png)

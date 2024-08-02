@@ -4,7 +4,7 @@ Connecting to GCP Kubernetes Cluster running in the private subnet of GCP VPC fr
 
 ## Architecture Diagram:
 
-![image](../../../.gitbook/assets/gcp-gke-architecture.png)
+![](../../../.gitbook/assets/gcp-gke-architecture.png)
 
 ## Prerequisites:
 
@@ -16,7 +16,7 @@ Connecting to GCP Kubernetes Cluster running in the private subnet of GCP VPC fr
 
 1. Go to your **DevBox** and install Gcloud SDK:
 
-{% code overflow="wrap" lineNumbers="false" %}
+{% code lineNumbers="false" %}
 ```
 sudo apt-get update
 sudo apt-get install apt-transport-https ca-certificates gnupg curl
@@ -26,7 +26,7 @@ sudo apt-get update && sudo apt-get install google-cloud-cli
 
 2. Authenticate your GCP account with Gcloud SDK:
 
-{% code overflow="wrap" lineNumbers="false" %}
+{% code lineNumbers="false" %}
 ```
 gcloud init
 ```
@@ -34,7 +34,7 @@ gcloud init
 
 3. Download the **kubectl** binaries:
 
-{% code overflow="wrap" lineNumbers="false" %}
+{% code lineNumbers="false" %}
 ```
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 ```
@@ -42,7 +42,7 @@ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stabl
 
 4. Install **kubectl**:
 
-{% code overflow="wrap" lineNumbers="false" %}
+{% code lineNumbers="false" %}
 ```
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
@@ -50,7 +50,7 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
 5. Connect to the cluster:
 
-{% code overflow="wrap" lineNumbers="false" %}
+{% code lineNumbers="false" %}
 ```
 gcloud container clusters get-credentials <cluster-name> --zone <zone-name> --project <project-name>
 ```
@@ -58,13 +58,13 @@ gcloud container clusters get-credentials <cluster-name> --zone <zone-name> --pr
 
 6. Check if the cluster is accessible:
 
-{% code overflow="wrap" lineNumbers="false" %}
+{% code lineNumbers="false" %}
 ```
 kubectl get svc
 ```
 {% endcode %}
 
-![image](../../../.gitbook/assets/gcp-gke-devbox-access.png)
+![](../../../.gitbook/assets/gcp-gke-devbox-access.png)
 
 
 ## New GKE Cluster
@@ -74,24 +74,24 @@ kubectl get svc
 1. Go to **Kubernetes Engine > Kubernetes Cluster > Create**.
 2. Select the standard Cluster, enter the name of the cluster and assign a **Regional** location where your **Private Subnet** is located.
 3. Click on **Next**. In the **Node Pool > Default Pool > Nodes > Configure node settings** section, choose the desired **Machine Configuration** for the nodes.
-4. Go to **Cluster > Networking** and select the Network VPC along with the **Private Subnet** for the cluster. Choose **Private cluster** in the **IPv4 network access** and uncheck the **Access control plane using its external IP address** checkbox. 
+4. Go to **Cluster > Networking** and select the Network VPC along with the **Private Subnet** for the cluster. Choose **Private cluster** in the **IPv4 network access** and uncheck the **Access control plane using its external IP address** checkbox.
 5. Enter a desired **Default pod address range** and **service address range**. Here we have taken **192.168.0.0/16** and **192.169.0.0/16** for **pod address range** and **service address range** repectively.
 
-![imgae](../../../.gitbook/assets/gcp-gke-setup-1.png)
+![](../../../.gitbook/assets/gcp-gke-setup-1.png)
 
 6. Enter the **Bastion Host's CIDR Range** in the **Authorized Networks** section.
 
-![image](../../../.gitbook/assets/gcp-gke-setup-2.png)
+![](../../../.gitbook/assets/gcp-gke-setup-2.png)
 
 7. Click on **Create**.
 
-![image](../../../.gitbook/assets/gcp-gke-setup-3.png)
+![](../../../.gitbook/assets/gcp-gke-setup-3.png)
 
 ### Step 2: Installing the necessary tools:
 
 1. Go to your **DevBox** and install Gcloud SDK:
 
-{% code overflow="wrap" lineNumbers="false" %}
+{% code lineNumbers="false" %}
 ```
 sudo apt-get update
 sudo apt-get install apt-transport-https ca-certificates gnupg curl
@@ -101,7 +101,7 @@ sudo apt-get update && sudo apt-get install google-cloud-cli
 
 2. Authenticate your GCP account with Gcloud SDK:
 
-{% code overflow="wrap" lineNumbers="false" %}
+{% code lineNumbers="false" %}
 ```
 gcloud init
 ```
@@ -109,7 +109,7 @@ gcloud init
 
 3. Download **kubectl** binaries:
 
-{% code overflow="wrap" lineNumbers="false" %}
+{% code lineNumbers="false" %}
 ```
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 ```
@@ -117,7 +117,7 @@ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stabl
 
 4. Install **kubectl**:
 
-{% code overflow="wrap" lineNumbers="false" %}
+{% code lineNumbers="false" %}
 ```
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
@@ -127,7 +127,7 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
 1. Connect to the cluster:
 
-{% code overflow="wrap" lineNumbers="false" %}
+{% code lineNumbers="false" %}
 ```
 gcloud container clusters get-credentials <cluster-name> --zone <zone-name> --project <project-name>
 ```
@@ -135,10 +135,10 @@ gcloud container clusters get-credentials <cluster-name> --zone <zone-name> --pr
 
 2. Check if the cluster is accessible:
 
-{% code overflow="wrap" %}
+{% code %}
 ```
 kubectl get svc
 ```
 {% endcode %}
 
-![image](../../../.gitbook/assets/gcp-gke-devbox-access.png)
+![](../../../.gitbook/assets/gcp-gke-devbox-access.png)

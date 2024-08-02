@@ -3,19 +3,19 @@ Connecting to GCP BigQuery Service from your DevBox.
 
 ## Architecture Diagram:
 
-![image](../../../.gitbook/assets/gcp-bigquery-architecture.png)
+![](../../../.gitbook/assets/gcp-bigquery-architecture.png)
 
 ## Devzero Workspace
 
 ### Step 1: Generating Google Authentication Credentials for BigQuery
 
 1. Go to **IAM & Admin > Service Accounts**.
-2. Click on **Create Service Account**, enter the **Service Account Name** and click on **Create and Continue**. 
+2. Click on **Create Service Account**, enter the **Service Account Name** and click on **Create and Continue**.
 3. Click on **Select a role**, select **BigQuery Admin**, and click on **Continue**.
 4. Select the new service account and go to **Keys**.
 5. Click on **Add Key > Create a new key** and click on **Create**.
 
-![image](../../../.gitbook/assets/gcp-bigquery-key-creation.png)
+![](../../../.gitbook/assets/gcp-bigquery-key-creation.png)
 
 ### Step 2: Connecting to BigQuery through Python API
 
@@ -23,7 +23,7 @@ Connecting to GCP BigQuery Service from your DevBox.
 2. Store the **Google Authentication Credentials** on the workspace.
 3. Install **Python** and **PIP**:
 
-{% code overflow="wrap" lineNumbers="false" %}
+{% code lineNumbers="false" %}
 ```
 sudo apt update
 sudo apt install python3 python3-dev python3-venv
@@ -34,7 +34,7 @@ wget https://bootstrap.pypa.io/get-pip.py
 
 4. Install **BigQuery API**:
 
-{% code overflow="wrap" lineNumbers="false" %}
+{% code lineNumbers="false" %}
 ```
 pip install google-cloud-bigquery
 ```
@@ -42,7 +42,7 @@ pip install google-cloud-bigquery
 
 5. Set the **GOOGLE_APPLICATION_CREDENTIALS** environment variable.
 
-{% code overflow="wrap" lineNumbers="false" %}
+{% code lineNumbers="false" %}
 ```
 export GOOGLE_APPLICATION_CREDENTIALS=/path/to/the/key.json
 ```
@@ -50,8 +50,8 @@ export GOOGLE_APPLICATION_CREDENTIALS=/path/to/the/key.json
 
 6. Write a Python scipt to test the BigQuery API Connection:
 
-{% code overflow="wrap" lineNumbers="false" %}
-```
+{% code lineNumbers="false" %}
+```python
 from google.cloud import bigquery
 
 client = bigquery.Client()
@@ -65,7 +65,7 @@ else:
 
 7. Run the Python Script:
 
-{% code overflow="wrap" lineNumbers="false" %}
+{% code lineNumbers="false" %}
 ```
 python3 <file-name>.py
 ```
@@ -73,4 +73,4 @@ python3 <file-name>.py
 
 If the connection is successful, you should see **"Connected"** printed in the terminal output.
 
-![image](../../../.gitbook/assets/gcp-bigquery-connection.png)
+![](../../../.gitbook/assets/gcp-bigquery-connection.png)

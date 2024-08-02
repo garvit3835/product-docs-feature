@@ -8,16 +8,16 @@ description: Learn how to connect to GCP resources privately from a DevBox.
 
 1. Go to **VPC Network > VPC Networks**.
 2. Select **Create VPC Network.**
-3. Enter VPC name, and under **Subnets** choose region, IP Stack option and **IP CIDR** range. Remember to select **On** option for **Private Google Access** while creating the private subnet. 
+3. Enter VPC name, and under **Subnets** choose region, IP Stack option and **IP CIDR** range. Remember to select **On** option for **Private Google Access** while creating the private subnet.
 4. Here we are using **10.0.1.0/24** for public subnet range and **10.0.2.0/24** for private subnet range. Customize the IPv4 CIDR block if needed.
-![image](../../.gitbook/assets/gcp-vpc-subnet.png)
+![](../../.gitbook/assets/gcp-vpc-subnet.png)
 
 5. Click on **Create** and it will generate the VPC Network for you.
 6. After the VPC network creation, go to **VPC-Name > Firewalls**. Select **Add Firewall Rule** and then enter the rule name, and source IP range (Source = **0.0.0.0/0**).
-![image](../../.gitbook/assets/gcp-firewall-ssh-1.png)
+![](../../.gitbook/assets/gcp-firewall-ssh-1.png)
 
 7. After that you will be asked to select the ingress ports and protocols. Allow inbound SSH (Port range = **22**). We’ll need this during initial setup but can close the firewall later.‍
-![image](../../.gitbook/assets/gcp-firewall-ssh-2.png)
+![](../../.gitbook/assets/gcp-firewall-ssh-2.png)
 
 ### Step 2: Create a Bastion Host
 
@@ -67,7 +67,7 @@ dz net status
 ```
 {% endcode %}
 
-![image](../../.gitbook/assets/gcp-dz-net-status.png)
+![](../../.gitbook/assets/gcp-dz-net-status.png)
 
 You should see the GCP virtual machine hostname.
 
