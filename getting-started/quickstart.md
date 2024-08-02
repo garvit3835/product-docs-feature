@@ -20,14 +20,14 @@ You'll need to sign up for a DevZero account before you're able to do anything. 
 
 <figure><img src="https://devzero.b-cdn.net/Github%20connection.gif" alt=""><figcaption><p>Connecting your source control provider</p></figcaption></figure>
 
-You can connect your source code provider during the workspace creation or though the "User Settings"&#x20;
+You can connect your source code provider during the workspace creation or though the "User Settings"
 
 We currently only offer native support for GitHub as a code provider for DevZero's workspaces. Bitbucket and GitLab support are coming soon!\
 \
 If you only plan to work with public repositories, you do not need to enable our GitHub integration. However, if you'd like to work with private codebases, you'll need to head to [https://www.devzero.io/dashboard/settings/personal#git-providers](https://www.devzero.io/dashboard/settings/personal#git-providers) and complete the installation and authorization steps.
 
 {% hint style="info" %}
-For more information (including a hack to use Bitbucket and GitLab repos), see our [Source Code in Recipes](../recipes/code.md) guide.
+For more information (including a hack to use Bitbucket and GitLab repos), see our [Source Code in Recipes](broken-reference) guide.
 {% endhint %}
 
 ### Step 3. Creating Your First Recipe
@@ -60,7 +60,7 @@ After a few moments, you should be redirected to our recipe editor page. We've f
 
 <figure><img src="../.gitbook/assets/CleanShot 2024-05-21 at 16.31.46@2x (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/YAML (2).png" alt=""><figcaption><p>Recipe YAML editor </p></figcaption></figure>
+<figure><img src="../.gitbook/assets/YAML (2).png" alt=""><figcaption><p>Recipe YAML editor</p></figcaption></figure>
 
 Review the recipe we generated, and if everything looks good, click the "Save" button at the top-right of the page. A modal should pop up, asking you to name the newly generated recipe. Don't worry -- you can always change this later. Let's keep things simple, and call it "My First Recipe".
 
@@ -81,8 +81,6 @@ If your build is successful, a button near the top-right side of your browser sh
 Click the "Launch Workspace Now" button, and you'll be whisked off to your workspace's page! What's happening here? During this stage, we are initializing a [cluster](../references/terminology.md#workspace-cluster) for your user (if one doesn't already exist), deploying the workspace into that cluster, and setting up all of the fun networking bits.
 
 <figure><img src="../.gitbook/assets/CleanShot 2024-05-21 at 16.44.11@2x.png" alt=""><figcaption></figcaption></figure>
-
-
 
 <figure><img src="../.gitbook/assets/Launch workspace - from recipe.png" alt=""><figcaption><p>Click "Launch" to create a remote environment</p></figcaption></figure>
 
@@ -109,26 +107,20 @@ To update your WSL version, please [follow these instructions](https://learn.mic
 
 If you have WSL 2, open a terminal using WSL 2 and run the following command:
 
-{% code %}
 ```
 curl -fsSL https://get.devzero.io | sh
 ```
-{% endcode %}
 {% endtab %}
 {% endtabs %}
-
-
 
 <figure><img src="../.gitbook/assets/Connect to workspace (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 **Please be sure to run these two commands after the installer finishes:**
 
-{% code %}
 ```
 sudo dz auth login && sudo dz net connect
 ```
-{% endcode %}
 {% endhint %}
 
 ### Step 6. Connecting to your Workspace

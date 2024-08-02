@@ -34,6 +34,30 @@ Note: the installation script will also install Docker.
 
 The new instance should now be visible in the ECS console under **Your Cluster > Infrastructure > Container instances** as "External" instance type.
 
+### Mounting volumes
+
+If you want to add volumes to your services/tasks:
+
+1. Go to your Task definition.
+2. Scroll down to the "Storage" section.
+3. Click on the "Add volume" button.
+4. Enter the volume name.
+5. In "Configuration type", select "Configure at task definition creation".
+6. Choose "Docker volume" in the "Volume type" section.
+7. Under "Driver" enter "local" and select "Task" as Scope.
+8. Create a new container mount point:\
+   Select the container in question, the source volume and enter a mount path.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2024-07-31 at 14.53.21.png" alt=""><figcaption></figcaption></figure>
+
+The new volume should now be available after your task has been created:
+
+```
+docker volumes ls
+```
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2024-07-31 at 14.54.42.png" alt=""><figcaption></figcaption></figure>
+
 ### Recipe example
 
 <pre class="language-yaml"><code class="lang-yaml">version: "3"
