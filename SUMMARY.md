@@ -117,7 +117,6 @@
     * [Kubectl](references/starter-templates/infra/kubectl.md)
     * [\[Kubectx / Kubens\](references/starter-templates/infra/kubectx - kubens.md)](references/starter-templates/infra/kubectx-kubens-references-starter-templates-infra-kubectx-kubens.md.md)
     * [K9s](references/starter-templates/infra/k9s.md)
-    * [Kubectl](references/starter-templates/infra/kubectl.md)
     * [Pulumi](references/starter-templates/infra/pulumi.md)
     * [Skaffold](references/starter-templates/infra/skaffold.md)
     * [Terraform](references/starter-templates/infra/terraform.md)
