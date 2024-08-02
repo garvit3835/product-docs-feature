@@ -24,7 +24,7 @@ Connecting to GCP BigQuery Service from your DevBox.
 3. Install **Python** and **PIP**:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```
+```bash
 sudo apt update
 sudo apt install python3 python3-dev python3-venv
 sudo apt-get install wget
@@ -35,7 +35,7 @@ wget https://bootstrap.pypa.io/get-pip.py
 4. Install **BigQuery API**:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```
+```bash
 pip install google-cloud-bigquery
 ```
 {% endcode %}
@@ -43,7 +43,7 @@ pip install google-cloud-bigquery
 5. Set the **GOOGLE_APPLICATION_CREDENTIALS** environment variable.
 
 {% code overflow="wrap" lineNumbers="false" %}
-```
+```bash
 export GOOGLE_APPLICATION_CREDENTIALS=/path/to/the/key.json
 ```
 {% endcode %}
@@ -51,7 +51,7 @@ export GOOGLE_APPLICATION_CREDENTIALS=/path/to/the/key.json
 6. Write a Python scipt to test the BigQuery API Connection:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```
+```python
 from google.cloud import bigquery
 
 client = bigquery.Client()
@@ -66,7 +66,7 @@ else:
 7. Run the Python Script:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```
+```bash
 python3 <file-name>.py
 ```
 {% endcode %}

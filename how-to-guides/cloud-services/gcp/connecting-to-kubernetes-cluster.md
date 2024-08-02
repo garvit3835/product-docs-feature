@@ -17,7 +17,7 @@ Connecting to GCP Kubernetes Cluster running in the private subnet of GCP VPC fr
 1. Go to your **DevBox** and install Gcloud SDK:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```
+```bash
 sudo apt-get update
 sudo apt-get install apt-transport-https ca-certificates gnupg curl
 sudo apt-get update && sudo apt-get install google-cloud-cli
@@ -27,7 +27,7 @@ sudo apt-get update && sudo apt-get install google-cloud-cli
 2. Authenticate your GCP account with Gcloud SDK:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```
+```bash
 gcloud init
 ```
 {% endcode %}
@@ -35,7 +35,7 @@ gcloud init
 3. Download the **kubectl** binaries:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```
+```bash
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 ```
 {% endcode %}
@@ -43,7 +43,7 @@ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stabl
 4. Install **kubectl**:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```
+```bash
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
 {% endcode %}
@@ -51,7 +51,7 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 5. Connect to the cluster:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```
+```bash
 gcloud container clusters get-credentials <cluster-name> --zone <zone-name> --project <project-name>
 ```
 {% endcode %}
@@ -59,7 +59,7 @@ gcloud container clusters get-credentials <cluster-name> --zone <zone-name> --pr
 6. Check if the cluster is accessible:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```
+```bash
 kubectl get svc
 ```
 {% endcode %}
@@ -92,7 +92,7 @@ kubectl get svc
 1. Go to your **DevBox** and install Gcloud SDK:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```
+```bash
 sudo apt-get update
 sudo apt-get install apt-transport-https ca-certificates gnupg curl
 sudo apt-get update && sudo apt-get install google-cloud-cli
@@ -102,7 +102,7 @@ sudo apt-get update && sudo apt-get install google-cloud-cli
 2. Authenticate your GCP account with Gcloud SDK:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```
+```bash
 gcloud init
 ```
 {% endcode %}
@@ -110,7 +110,7 @@ gcloud init
 3. Download **kubectl** binaries:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```
+```bash
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 ```
 {% endcode %}
@@ -118,7 +118,7 @@ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stabl
 4. Install **kubectl**:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```
+```bash
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
 {% endcode %}
@@ -128,7 +128,7 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 1. Connect to the cluster:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```
+```bash
 gcloud container clusters get-credentials <cluster-name> --zone <zone-name> --project <project-name>
 ```
 {% endcode %}
@@ -136,7 +136,7 @@ gcloud container clusters get-credentials <cluster-name> --zone <zone-name> --pr
 2. Check if the cluster is accessible:
 
 {% code overflow="wrap" %}
-```
+```bash
 kubectl get svc
 ```
 {% endcode %}
