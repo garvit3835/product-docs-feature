@@ -22,7 +22,7 @@ Connecting to OpenSearch running in the private subnet of AWS VPC from your DevB
 3. Go to your **DevBox** and connect to Service:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 curl -X GET "<opensearch-endpoint>"
 ```
 {% endcode %}
@@ -50,10 +50,9 @@ curl -X GET "<opensearch-endpoint>"
 2. Go to your **DevBox** and connect to Service:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 curl -X GET "<opensearch-endpoint>"
 ```
 {% endcode %}
 
 ![image](../../../.gitbook/assets/opensearch-access.png)
-
