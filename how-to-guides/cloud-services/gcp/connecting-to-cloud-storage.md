@@ -12,7 +12,7 @@ Connecting to GCP Cloud Storage Service from your DevBox.
 1. Go to your **DevBox** and install Gcloud SDK:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 sudo apt-get update
 sudo apt-get install apt-transport-https ca-certificates gnupg curl
 sudo apt-get update && sudo apt-get install google-cloud-cli
@@ -22,7 +22,7 @@ sudo apt-get update && sudo apt-get install google-cloud-cli
 2. Authenticate your GCP account with Gcloud SDK:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 gcloud init
 ```
 {% endcode %}
@@ -30,7 +30,7 @@ gcloud init
 3. Access your cloud storage list by:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 gsutil ls gs://<storage-name>
 ```
 {% endcode %}
@@ -41,8 +41,9 @@ gsutil ls gs://<storage-name>
 
 ### Step 1: Creating a storage bucket
 
-1. Go to **Cloud Storage > Buckets**. Click on **Create**.
-2. Enter a unique name for the bucket and click on **Create**.
+1. Go to **Cloud Storage > Buckets**.
+2. Click on **Create**.
+3. Enter a unique name for the bucket and click on **Create**.
 
 ![image](../../../.gitbook/assets/gcp-cloudstorage-creation.png)
 
@@ -51,7 +52,7 @@ gsutil ls gs://<storage-name>
 1. Go to your **DevBox** and install Gcloud SDK:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 sudo apt-get update
 sudo apt-get install apt-transport-https ca-certificates gnupg curl
 sudo apt-get update && sudo apt-get install google-cloud-cli
@@ -61,7 +62,7 @@ sudo apt-get update && sudo apt-get install google-cloud-cli
 2. Authenticate your GCP account with Gcloud SDK:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 gcloud init
 ```
 {% endcode %}
@@ -69,7 +70,7 @@ gcloud init
 3. Access your cloud storage list by:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 gsutil ls gs://<storage-name>
 ```
 {% endcode %}
