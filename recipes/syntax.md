@@ -8,7 +8,7 @@ description: >-
 
 A recipe is a definition of a workspace. It consists of a base workspace configuration, and a set of steps to be executed. Let's look at a simple recipe:
 
-```
+```yaml
 version: "3" # Required so we would know how to interpret the recipe
 build:
   steps:
@@ -20,7 +20,7 @@ build:
 
 Steps while optional are the core tool that you will use to configure your workspace and prepare it for work. Steps can be executed either during [build time or launch time](../recipes/exec-stages.md). This is accomplished by placing the steps in the corresponding section:
 
-```
+```yaml
 version: "3"
 
 build:
@@ -45,7 +45,7 @@ At the moment we have following step types available:
 
 The bread and butter step, pretty much everything you need can be accomplished using this step.
 
-```
+```yaml
     - type: command
       name: dump_env # Optional
       command: env > envdump
@@ -56,7 +56,7 @@ The bread and butter step, pretty much everything you need can be accomplished u
 
 You can have multiline commands, for example:
 
-```
+```yaml
     - type: command
       command: |
         echo "Hello"
@@ -71,7 +71,7 @@ Creates a file with some content.
 Paths are not using shell expansion, so you have to write out /home/devzero/projects rather than \~/projects
 {% endhint %}
 
-```
+```yaml
     - type: file
       path: /etc/devzero/hello
       content: "hello" # Supports secret interpolation discussed further in the docs
@@ -88,7 +88,7 @@ Creates a directory.
 Same as with files path is not expanded, so \~ and environment variables will not be replaced with corresponding values
 {% endhint %}
 
-```
+```yaml
     - type: directory
       path: /home/devzero/src/
       permissions: "0755" # Optional, can also be formated as "rwxr-x---", both formats are good
@@ -100,14 +100,14 @@ Same as with files path is not expanded, so \~ and environment variables will no
 
 Installs apt packages.
 
-```
+```yaml
     - type: apt-get
       packages: ["sudo", "tar", "wget"]
 ```
 
 We also support an easy way to add extra repositories, for example:
 
-```
+```yaml
     - type: apt-get
       packages: ["docker-ce", "docker-ce-cli", "containerd.io"]
       extra_repositories:
@@ -117,7 +117,7 @@ We also support an easy way to add extra repositories, for example:
 
 Or:
 
-```
+```yaml
     - type: apt-get
       packages: ["python3.13", "python3.13-venv", "libpython3.13-dev"]
       extra_repositories:
@@ -126,7 +126,7 @@ Or:
 
 You can also specify [components](https://wiki.debian.org/SourcesList):
 
-```
+```yaml
     - type: apt-get
       packages: ["terraform"]
       extra_repositories:
@@ -140,7 +140,7 @@ You can also specify [components](https://wiki.debian.org/SourcesList):
 
 Clones a git repository.
 
-```
+```yaml
     - type: git-clone
       url: https://github.com/Ignas/nukagit
       branch: main # default - not set
@@ -163,7 +163,7 @@ If you want to set a particular environment variable to some value you have to d
 
 #### Build time environment variables
 
-```
+```yaml
 build:
   environment:
     - name: CXX
@@ -178,7 +178,7 @@ Build time secrets can only come from team secrets or system (devzero) secrets. 
 
 #### Launch time environment variables
 
-```
+```yaml
 launch:
   environment:
     - name: CXX
@@ -193,7 +193,7 @@ Launch time secrets can be sourced from both team and user secrets.  These envir
 
 #### Runtime environment variables
 
-```
+```yaml
 runtime:
   environment:
     - name: PATH
@@ -208,7 +208,7 @@ Runtime environment variable customization is a bit special in that it supports 
 
 You can provide environment variables to a single command only. The syntax for the variable is the same as for global ones for example:
 
-```
+```yaml
     - type: command
       command: make
       directory: project
@@ -225,7 +225,7 @@ At the moment build time and launch time repository access can be controlled eit
 
 Sometimes though it makes sense to use shared team secret as a way to control git access instead. You can do this by providing a `code_clone_credentials` section in the recipe configuration section:
 
-```
+```yaml
 config:
   code_clone_credentials:
     type: ssh-private-key
@@ -236,7 +236,7 @@ Currently we support two types of credentials: `ssh-private-key` and `github-tok
 
 You are also able to provide git credentials to an individual git step as follows:
 
-```
+```yaml
     - type: git-clone
       url: https://github.com/Ignas/nukagit
       credentials:
@@ -248,7 +248,7 @@ You are also able to provide git credentials to an individual git step as follow
 
 Sometimes a secret value (like an ssh key) is not very useful when it's stuck in an environment variable. To help you with this you can make sure the value is available as a file within a scope of a command, or as part of your workspace for example:
 
-```
+```yaml
     - type: command
       command: git clone https://github.com/devzero-inc/services
       directory: /home/devzero
@@ -263,7 +263,7 @@ Secrets mounted this way will only be available during the execution of the comm
 
 You can populate any file from secrets by using the standard file step:
 
-```
+```yaml
     - type: file
       path: /home/devzero/.ssh/id_rsa
       content: "{{var:user.PRIVATE_SSH_KEY}}"
@@ -279,7 +279,7 @@ There are some more advanced configuration options for your workspace. These sho
 
 By default all the repositories are cloned in `/home/devzero` directory directly, but in some cases you might want your code to be cloned somewhere else like `/home/devzero/projects` for example. To achieve that just add a config section with `code_clone_root` set:
 
-```
+```yaml
 config:
   code_clone_root: /home/devzero/projects
 ```
@@ -292,7 +292,7 @@ We already discussed default code clone credentials in the [secrets section](rec
 
 Workspaces are based on docker containers, thus not everything is persisted across restarts. You can control which directories you want to persist by setting the volumes attribute in the config section:
 
-```
+```yaml
 config:
     volumes:
     - path: /home/devzero
@@ -317,7 +317,7 @@ As you can see - the structure of the expression consists of 3 parts - source (a
 
 As we are using curly braces for variable interpolation, make sure you quote the strings properly:
 
-```
+```yaml
 build:
   environment:
     - name: NAME

@@ -23,7 +23,7 @@ Connecting to ElastiCache running in the private subnet of AWS VPC from your Dev
 4. Go to your **DevBox** and install the Redis CLI:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 sudo apt install redis-tools
 ```
 {% endcode %}
@@ -31,7 +31,7 @@ sudo apt install redis-tools
 5. Access the cluster using the CLI:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 redis-cli -h <redis-endpoint> -p <port>
 ```
 {% endcode %}
@@ -60,7 +60,7 @@ redis-cli -h <redis-endpoint> -p <port>
 2. Go to your **DevBox** and install the Redis CLI:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 sudo apt install redis-tools
 ```
 {% endcode %}
@@ -68,10 +68,9 @@ sudo apt install redis-tools
 3. Access the cluster using the CLI:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 redis-cli -h <redis-endpoint> -p <port>
 ```
 {% endcode %}
 
 ![image](../../../.gitbook/assets/elasticache-access.png)
-

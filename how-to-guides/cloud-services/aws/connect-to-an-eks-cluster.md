@@ -17,7 +17,7 @@ Connecting to EKS running in the private subnet of AWS VPC from your DevBox.
 2. Go to your **DevBox** and install awscli:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 sudo apt install awscli
 ```
 {% endcode %}
@@ -25,7 +25,7 @@ sudo apt install awscli
 3. Download the **kubectl** binaries:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 ```
 {% endcode %}
@@ -33,7 +33,7 @@ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stabl
 4. Install **kubectl**:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
 {% endcode %}
@@ -41,7 +41,7 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 5. Check if the cluster is accessible:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 kubectl get svc
 ```
 {% endcode %}
@@ -67,7 +67,7 @@ kubectl get svc
 1. Go to your **DevBox** and install awscli:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 sudo apt install awscli
 ```
 {% endcode %}
@@ -75,7 +75,7 @@ sudo apt install awscli
 2. Download **kubectl** binaries:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 ```
 {% endcode %}
@@ -83,7 +83,7 @@ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stabl
 3. Install **kubectl**:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
 {% endcode %}
@@ -94,7 +94,7 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 2. In your **DevBox**, use the csv credentials to configure the awscli to your account:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 aws configure
 ```
 {% endcode %}
@@ -102,7 +102,7 @@ aws configure
 3. Check if the cluster is accessible:
 
 {% code overflow="wrap" %}
-```bash
+```
 kubectl get svc
 
 ![image](../../../.gitbook/assets/eks-access.png)

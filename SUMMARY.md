@@ -6,11 +6,11 @@
 * [Platform Overview](<README (1).md>)
 * [Quickstart](getting-started/quickstart.md)
 
-## 🧩 Recipes
+## 📜 Recipes
 
 * [Overview](recipes/overview.md)
 * [Creating a Recipe](recipes/create-recipe.md)
-* [Cloning Source Code](clone-source-code.md)
+* [Cloning Source Code](recipes/cloning-source-code.md)
 * [Execution Stages](recipes/exec-stages.md)
 * [Recipe Base Images](recipes/custom-base.md)
 * [Sharing Recipes](recipes/saving-recipes.md)
