@@ -3,7 +3,7 @@ Connecting to EC2 running in the private subnet of AWS VPC from your DevBox.
 
 ## Architecture Diagram:
 
-![image](../../../.gitbook/assets/ec2-architecture.png)
+![](../../../.gitbook/assets/ec2-architecture.png)
 
 ## Existing EC2
 
@@ -19,7 +19,7 @@ Connecting to EC2 running in the private subnet of AWS VPC from your DevBox.
 ssh -i "path/to/key.pem" username@instance-ip
 ```
 
-![image](../../../.gitbook/assets/ec2-access.png)
+![](../../../.gitbook/assets/ec2-access.png)
 
 
 ## New EC2 Machine
@@ -42,4 +42,4 @@ ssh -i "path/to/key.pem" username@instance-ip
 ssh -i "path/to/key.pem" username@instance-ip
 ```
 
-![image](../../../.gitbook/assets/ec2-access.png)
+![](../../../.gitbook/assets/ec2-access.png)

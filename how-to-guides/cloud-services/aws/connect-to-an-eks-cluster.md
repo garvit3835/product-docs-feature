@@ -3,7 +3,7 @@ Connecting to EKS running in the private subnet of AWS VPC from your DevBox.
 
 ## Architecture Diagram:
 
-![image](../../../.gitbook/assets/eks-architecture.png)
+![](../../../.gitbook/assets/eks-architecture.png)
 
 ## Prerequisites:
 
@@ -46,7 +46,7 @@ kubectl get svc
 ```
 {% endcode %}
 
-![image](../../../.gitbook/assets/eks-access.png)
+![](../../../.gitbook/assets/eks-access.png)
 
 
 ## New EKS Cluster
@@ -60,7 +60,7 @@ kubectl get svc
 5. Enter the name of the node group and assign a node IAM role with **AmazonEC2ContainerRegistryReadOnly**, **AmazonEKS_CNI_Policy** and **AmazonEKSWorkerNodePolicy** permissions. If no role is present, create a new one with the same permissions.
 6. Configure other configurations as required and create the nodes.
 
-![imgae](../../../.gitbook/assets/eks-cluster.png)
+![](../../../.gitbook/assets/eks-cluster.png)
 
 ### Step 2: Installing the necessary tools:
 
@@ -105,4 +105,4 @@ aws configure
 ```
 kubectl get svc
 
-![image](../../../.gitbook/assets/eks-access.png)
+![](../../../.gitbook/assets/eks-access.png)
