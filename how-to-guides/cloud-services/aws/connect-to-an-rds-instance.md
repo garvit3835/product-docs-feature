@@ -3,7 +3,7 @@ Connecting to an RDS running in the private subnet of AWS VPC to your DevBox.
 
 ## Architecture Diagram:
 
-![image](../../../.gitbook/assets/rds-architecture.png)
+![](../../../.gitbook/assets/rds-architecture.png)
 
 ## Existing Database
 
@@ -14,7 +14,7 @@ Connecting to an RDS running in the private subnet of AWS VPC to your DevBox.
 3. Select **Connectivity and Security.**
 4. Copy **Endpoint**.
 
-![image](../../../.gitbook/assets/rds-endpoint.png)
+![](../../../.gitbook/assets/rds-endpoint.png)
 
 5. Go to **DevBox**.
 6. Connecting to the Database.
@@ -25,14 +25,14 @@ Run the following commands as per the RDS Database Engine:
 {% tab title="MySQL" %}
 To install the mysql client cli:
 
-```sh
+```
 sudo apt install mysql-client
 ```
 
 To access the database:
 
-{% code overflow="wrap" %}
-```bash
+{% code %}
+```
 mysql -h <RDS Endpoint> -u <Username> --database <Database Name> -p
 ```
 {% endcode %}
@@ -41,21 +41,21 @@ mysql -h <RDS Endpoint> -u <Username> --database <Database Name> -p
 {% tab title="PostgreSQL" %}
 To install the psql client cli:
 
-```sh
+```
 sudo apt install postgresql-client
 ```
 
 To access the database:
 
-{% code overflow="wrap" %}
-```bash
+{% code %}
+```
 psql -h <RDS Endpoint> --username <Username> -d <Database Name> --password
 ```
 {% endcode %}
 {% endtab %}
 {% endtabs %}
 
-![image](../../../.gitbook/assets/rds-access.png)
+![](../../../.gitbook/assets/rds-access.png)
 
 
 ## New Database
@@ -74,17 +74,17 @@ psql -h <RDS Endpoint> --username <Username> -d <Database Name> --password
 10. Choose your **VPC** , **DB Subnet Group** and **Security Group.** Make sure the specified **Security Group** allows inbound db connections.
 11. Click on **Create Database.**
 
-![image](../../../.gitbook/assets/rds-devzero.png)
+![](../../../.gitbook/assets/rds-devzero.png)
 
 ### Step 2: Accessing RDS from DevBox
 1. You will see two endpoints. Copy **Writer Type Endpoint.**
 2. Go to the **Secrets Manager.**
 
-![image](../../../.gitbook/assets/rds-secrets.png)
+![](../../../.gitbook/assets/rds-secrets.png)
 
 3. Click on **Retrieve Secret Value**. This secret is storing your Database **Username** and **Password.**
 4. Go to **DevBox.**
 5. Connecting to the Database:\
    `psql -h <RDS Endpoint> --username <Username> -d <Database Name> --password`
 
-![image](../../../.gitbook/assets/rds-access.png)
+![](../../../.gitbook/assets/rds-access.png)

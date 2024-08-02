@@ -1,6 +1,6 @@
 # Rust
 
-{% code overflow="wrap" lineNumbers="true" %}
+{% code lineNumbers="true" %}
 ```yaml
 version: "3"
 build:
@@ -11,7 +11,7 @@ build:
       command: |
         curl -sSf https://sh.rustup.rs | sh -s -- -y
         . $HOME/.cargo/env
-        rustup install 1.63.0
-        rustup default 1.63.0
+        rustup install 1.80.0
+        rustup default 1.80.0
 ```
 {% endcode %}

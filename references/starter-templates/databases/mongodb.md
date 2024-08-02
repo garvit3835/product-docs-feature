@@ -1,12 +1,19 @@
 # MongoDB
 
-{% code overflow="wrap" lineNumbers="true" %}
+{% code lineNumbers="true" %}
 ```yaml
 version: "3"
 build:
   steps:
     - type: apt-get
       packages: ["curl", "tar", "unzip", "wget"]
+    - type: apt-get
+      packages: ["mongodb-org"]
+      extra_repositories:
+        - key_url: https://www.mongodb.org/static/pgp/server-7.0.asc
+          repository: https://repo.mongodb.org/apt/ubuntu
+          components: ["multiverse"]
+          distribution: "jammy/mongodb-org/7.0"
     - type: command
       name: "mongosh"
       command: |
@@ -14,7 +21,7 @@ build:
         wget https://downloads.mongodb.com/compass/mongosh-$VERSION-linux-x64.tgz
         tar -zxvf mongosh-$VERSION-linux-x64.tgz
         sudo cp mongosh-$VERSION-linux-x64/bin/mongosh /usr/local/bin/
-        rm -rf mongosh-$VERSION-linux-x64*    
+        rm -rf mongosh-$VERSION-linux-x64*
     - type: command
       name: "mongodb tools"
       command: |

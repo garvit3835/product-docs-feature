@@ -6,8 +6,8 @@ These instructions will guide you through the DevZero CLI installation process b
 {% tab title="MacOS / Linux" %}
 Open terminal and run the following command:
 
-{% code overflow="wrap" %}
-```bash
+{% code %}
+```
 curl -fsSL https://get.devzero.io | sh
 ```
 {% endcode %}
@@ -16,7 +16,7 @@ curl -fsSL https://get.devzero.io | sh
 {% tab title="Windows" %}
 The Windows CLI requires [WSL 2](https://learn.microsoft.com/en-us/windows/wsl/install). We **do not** support WSL 1. To verify your WSL version you can run the following from your Command shell or PowerShell:
 
-```sh
+```
 wsl -l -v
 ```
 
@@ -32,8 +32,8 @@ To install the Windows CLI open a terminal using WSL 2 and run the following com
 {% hint style="info" %}
 **Make sure to run the following commands after installation to continue with the setup process:**
 
-{% code overflow="wrap" fullWidth="true" %}
-```bash
+{% code fullWidth="true" %}
+```
 sudo dz auth login && sudo dz net connect
 ```
 {% endcode %}

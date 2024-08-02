@@ -1,4 +1,4 @@
-# Running ECS Services and Tasks
+# ECS
 
 ### Installation guide
 
@@ -10,14 +10,57 @@ You can run services and tasks managed by AWS ECS inside of DevBoxes using [AWS 
 3. Click on "Register external instances".
 4. In the popup, confirm the settings and click on "Generate registration command".
 5. Copy the command for Linux. **You will need it later.**
-6. In your DevZero box, download the installation script for ECS Anywhere:\
-   `curl --proto "https" -o "./ecs-anywhere-install.sh" "https://amazon-ecs-agent.s3.amazonaws.com/ecs-anywhere-install-latest.sh"`
-7. Make sure the the downloaded script has the correct permissions:\
-   `chmod 700 ./ecs-anywhere-install.sh`
-8. Run the installation script with the parameters from the command in step #5:\
-   `sudo ./ecs-anywhere-install.sh --region "<region>" --cluster "<ECS cluster>" --activation-id "<id>" --activation-code "<code>"`\
-   **Note**: the installation script will also install Docker.
-9. The new instance should now be visible in the ECS console under **Your Cluster > Infrastructure > Container instances** as "External" instance type.
+6. In your DevZero box, download the installation script for ECS Anywhere:
+
+```
+curl --proto "https" -o "./ecs-anywhere-install.sh" "https://amazon-ecs-agent.s3.amazonaws.com/ecs-anywhere-install-latest.sh"
+```
+
+7. Make sure the the downloaded script has the correct permissions:
+
+```
+chmod 700 ./ecs-anywhere-install.sh
+```
+
+8. Run the installation script with the parameters from the command in step #5:
+
+```
+sudo ./ecs-anywhere-install.sh --region "<region>" --cluster "<ECS cluster>" --activation-id "<id>" --activation-code "<code>"
+```
+
+{% hint style="info" %}
+Note: the installation script will also install Docker.
+{% endhint %}
+
+The new instance should now be visible in the ECS console under **Your Cluster > Infrastructure > Container instances** as "External" instance type.
+
+### Mounting volumes
+
+If you want to add volumes to your services/tasks:
+
+1. Go to your Task definition.
+2. Scroll down to the "Storage" section.
+3. Click on the "Add volume" button.
+4. Enter the volume name.
+5. In "Configuration type", select "Configure at task definition creation".
+6. Choose "Docker volume" in the "Volume type" section.
+7. Under "Driver" enter "local" and select "Task" as Scope.
+8. Create a new container mount point:\
+   Select the container in question, the source volume and enter a mount path.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2024-07-31 at 14.53.21.png" alt=""><figcaption></figcaption></figure>
+
+The new volume should now be available after your task has been created:
+
+```
+docker volumes ls
+```
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2024-07-31 at 14.54.42.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="warning" %}
+If you select "Configure at deployment" in your task definition, you might not be able to deploy it to the external instance type, because this configuration only supports Amazon EBS, which is not available with external instances.
+{% endhint %}
 
 ### Recipe example
 

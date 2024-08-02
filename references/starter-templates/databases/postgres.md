@@ -1,19 +1,12 @@
 # Postgres
 
-{% code overflow="wrap" lineNumbers="true" %}
+{% code lineNumbers="true" %}
 ```yaml
 version: "3"
 build:
   steps:
     - type: apt-get
       packages: ["curl", "tar", "unzip"]
-    - type: command
-      command: |
-        curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/apt.postgresql.org.gpg >/dev/null
-        sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
-        sudo apt update
-        sudo DEBIAN_FRONTEND=noninteractive apt install -y postgresql-14
-      user: devzero
     - type: apt-get
       name: "postgres tools"
       packages: ["postgresql-16"]
@@ -22,16 +15,23 @@ build:
         repository: http://apt.postgresql.org/pub/repos/apt
         distribution: jammy-pgdg
         components: ["main"]
-
+    - type: command
+      command: |
+        echo 'postgres     ALL=NOPASSWD: ALL' | sudo tee /etc/sudoers.d/100-postgres
+        # Modify pg_hba.conf to allow trust authentication for devzero
+        echo "local   all             devzero                                trust" | sudo tee -a /etc/postgresql/16/main/pg_hba.conf
+        echo "host    all             devzero        127.0.0.1/32            trust" | sudo tee -a /etc/postgresql/16/main/pg_hba.conf
+        echo "host    all             devzero        ::1/128                 trust" | sudo tee -a /etc/postgresql/16/main/pg_hba.conf
+      directory: /home/devzero
+      user: root
 launch:
   steps:
     - type: command
       command: |
-        systemctl start postgresql.service
-        echo 'postgres     ALL=NOPASSWD: ALL' | sudo tee /etc/sudoers.d/100-postgres
-        sudo -u postgres bash -c "psql -c \"CREATE USER pguser WITH PASSWORD 'test1234';\""
-        sudo -u postgres createdb testdb -O pguser
-      directory: /home/devzero
+        # create the devzero user
+        sudo -u postgres bash -c "psql -c \"CREATE USER devzero;\""
+        # create a devzero database
+        sudo -u postgres createdb devzero -O devzero
       user: root
 ```
 {% endcode %}

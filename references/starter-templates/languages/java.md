@@ -1,6 +1,6 @@
 # Java
 
-{% code overflow="wrap" lineNumbers="true" %}
+{% code lineNumbers="true" %}
 ```yaml
 version: "3"
 build:
@@ -12,6 +12,5 @@ build:
         curl -s "https://get.sdkman.io" | bash
         . "$HOME/.sdkman/bin/sdkman-init.sh"
         sdk install java
-      shell: /bin/bash -l {}
 ```
 {% endcode %}

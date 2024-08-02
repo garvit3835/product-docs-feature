@@ -1,6 +1,6 @@
 # Cloning Source Code
 
-The repos block of our [recipe specification](../references/recipe-syntax.md#git-clone) is used to clone code. This will use the [permissions of the GitHub application](https://docs.devzero.io/product-docs/admin/permissions) you have connected with DevZero.
+The repos block of our [recipe specification](syntax.md#git-clone) is used to clone code. This will use the [permissions of the GitHub application](https://docs.devzero.io/product-docs/admin/permissions) you have connected with DevZero.
 
 To clone one or multiple repos:
 
@@ -24,9 +24,9 @@ build:
 
 This usually applies to cases where you need to use secrets to clone code. To learn more about how to save and use secrets: [broken-reference](broken-reference/ "mention")
 
-You can use a [`command`](../references/recipe-syntax.md#command) block to clone code directly:
+You can use a [`command`](syntax.md#command) block to clone code directly:
 
-{% code overflow="wrap" lineNumbers="true" %}
+{% code lineNumbers="true" %}
 ```yaml
 dev:
     commands:
@@ -40,11 +40,11 @@ dev:
         git clone https://$MY_PERSONAL_TOKEN@github.com/vercel/next.js
       directory: /home/devzero
       name: clone private repo using PAT
-    
+
      - command: |-
         # MY_PRIVATE_KEY is the key for secret/environment variable saved at https://www.devzero.io/dashboard/settings/environment-variables#team
         # The value for that should be the private key part of what you saved as a deploy key: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys
-        
+
         mkdir -p .ssh
         echo "-----BEGIN OPENSSH PRIVATE KEY-----" >> .ssh/devzero_id25519
         echo $MY_PRIVATE_KEY >> .ssh/devzero_id25519
@@ -82,8 +82,8 @@ Some of the use cases where this is applicable:
 
 #### Step 3(a). Generate keys
 
-{% code overflow="wrap" %}
-```bash
+{% code %}
+```
 ssh-keygen -t ed25519 -C "devzero-user@my-website.com" -f devzero_id25519 -P '' -q
 ```
 {% endcode %}
@@ -92,8 +92,8 @@ ssh-keygen -t ed25519 -C "devzero-user@my-website.com" -f devzero_id25519 -P '' 
 
 First, copy the public key
 
-{% code overflow="wrap" %}
-```bash
+{% code %}
+```
 cat ~/.ssh/devzero_id25519.pub | pbcopy
 ```
 {% endcode %}
@@ -110,8 +110,8 @@ Check the private key
 
 Copy it
 
-{% code overflow="wrap" %}
-```bash
+{% code %}
+```
 cat ~/.ssh/devzero_id25519 | pbcopy
 ```
 {% endcode %}
@@ -126,7 +126,7 @@ Call it `BITBUCKET_PVT_KEY` (or whatever you please, but this is referenced in [
 
 Create a recipe and add a block that looks like the one below (check `line 5` to ensure naming).
 
-{% code overflow="wrap" %}
+{% code %}
 ```yaml
 dev:
   commands:

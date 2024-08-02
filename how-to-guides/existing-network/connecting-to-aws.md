@@ -17,26 +17,42 @@ description: Learn how to connect to AWS resources privately from a DevBox.
 2. In the **Network Settings,** edit the VPC to assign the one you created above.
 3. Assign the instance to a public subnet of the VPC, and assign it a public IP address.
 4. In the security groups configuration, edit the Security Group to allow inbound ssh (Port range = **22**, Source = **0.0.0.0/0**). We’ll need this during initial setup but can close the firewall later.‍
-5. SSH into the machine and Install the DevZero CLI from the script:\
-   &#x20;`curl -fsSL https://get.devzero.io | sh`
-6. Log into your account by executing:\
-   `dz auth login`
-7.  Enable IP forwarding to access resources on private subnets:
+5. SSH into the machine and Install the DevZero CLI from the script:
 
-    ```bash
-    echo 'net.ipv4.ip_forward = 1' | sudo tee -a /etc/sysctl.conf 
-    echo 'net.ipv6.conf.all.forwarding = 1' | sudo tee -a /etc/sysctl.conf 
-    sudo sysctl -p /etc/sysctl.conf
-    ```
-8.  Connect to DevZero network:
+```
+curl -fsSL https://get.devzero.io | sh
+```
 
-    ```
-    sudo dz net connect --ssh --advertise-routes=10.0.0.0/24,10.0.1.0/24
-    ```
+6. Log into your account by executing:
+
+```
+dz auth login
+```
+
+7. Enable IP forwarding to access resources on private subnets:
+
+```
+echo 'net.ipv4.ip_forward = 1' | sudo tee -a /etc/sysctl.conf
+echo 'net.ipv6.conf.all.forwarding = 1' | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p /etc/sysctl.conf
+```
+
+8. Connect to DevZero network:
+
+```
+sudo dz net connect --ssh --advertise-routes=10.0.0.0/24,10.0.1.0/24
+```
+
 9. Verify that the machine was connected to your DevZero network:\
-   `dz net status`\
-   \
+
+```
+dz net status
+```
+
    You should see the EC2 machine hostname.
+
 10. You should now be able to ping or ssh private AWS resources from your DevBox:
 
-    `ping <ip_address>`
+```
+ping <ip_address>
+```

@@ -8,12 +8,13 @@
 
 ## 📜 Recipes
 
-* [Overview](recipes/types.md)
-* [Creating a Recipe](recipes/new-recipe.md)
-* [Cloning Source Code](recipes/code.md)
+* [Overview](recipes/overview.md)
+* [Creating a Recipe](recipes/create-recipe.md)
+* [Cloning Source Code](recipes/cloning-source-code.md)
 * [Execution Stages](recipes/exec-stages.md)
 * [Recipe Base Images](recipes/custom-base.md)
 * [Sharing Recipes](recipes/saving-recipes.md)
+* [Recipe Syntax](recipes/syntax.md)
 
 ## 🖥️ Workspaces
 
@@ -45,17 +46,28 @@
 * [Hosting](admin/hosting.md)
 * [Single-Sign On (SSO)](admin/sso.md)
 
-## 📝 How-to Guides
+## 📚 How-to Guides
 
 * [Cloud Services](how-to-guides/cloud-services/README.md)
   * [AWS](how-to-guides/cloud-services/aws/README.md)
+    * [DocumentDB](how-to-guides/cloud-services/aws/connect-to-a-documentdb-cluster.md)
+    * [EKS](how-to-guides/cloud-services/aws/connect-to-an-eks-cluster.md)
+    * [EC2](how-to-guides/cloud-services/aws/connect-to-an-ec2-instance.md)
     * [ECS](how-to-guides/cloud-services/aws/ecs.md)
     * [ECS (local)](how-to-guides/cloud-services/aws/ecs-local.md)
     * [RDS](how-to-guides/cloud-services/aws/connect-to-an-rds-instance.md)
     * [SQS](how-to-guides/cloud-services/aws/connect-to-sqs.md)
     * [S3](how-to-guides/cloud-services/aws/connect-to-an-s3-bucket.md)
+    * [ElastiCache](how-to-guides/cloud-services/aws/connect-to-elasticache.md)
+    * [OpenSearch](how-to-guides/cloud-services/aws/connect-to-opensearch.md)
+  * [GCP](how-to-guides/cloud-services/gcp/README.md)
+    * [Compute Instance](how-to-guides/cloud-services/gcp/connecting-to-compute-instance.md)
+    * [BigQuery](how-to-guides/cloud-services/gcp/connecting-to-bigquery.md)
+    * [GKE](how-to-guides/cloud-services/gcp/connecting-to-kubernetes-cluster.md)
+    * [Cloud Storage](how-to-guides/cloud-services/gcp/connecting-to-cloud-storage.md)
 * [Existing Network](how-to-guides/existing-network/README.md)
   * [AWS VPC](how-to-guides/existing-network/connecting-to-aws.md)
+  * [GCP VPC](how-to-guides/existing-network/connecting-to-gcp.md)
 * [Build Cache + Remote Execution](how-to-guides/build-cache/README.md)
   * [Bazel](how-to-guides/build-cache/bazel-remote-execution-cache.md)
   * [Docker](how-to-guides/build-cache/docker-remote-build-cache.md)
@@ -71,7 +83,7 @@
 * [Visual Studio Code](troubleshooting/vs-code.md)
 * [JetBrains](troubleshooting/jetbrains.md)
 
-## 📚 References
+## 🔎 References
 
 * [Terminology](references/terminology.md)
 * [CLI Reference](references/cli-man-page/README.md)
@@ -80,7 +92,7 @@
   * [Uninstall the CLI](references/cli-man-page/uninstall.md)
   * [Supported OSs](references/cli-man-page/supported-os.md)
   * [Help Commands](references/cli-man-page/help-commands.md)
-* [Recipe Syntax](references/recipe-syntax.md)
+* [Recipe Syntax](recipes/syntax.md)
 * [Starter Templates](references/starter-templates/README.md)
   * [Language Templates](references/starter-templates/languages/README.md)
     * [C#](references/starter-templates/languages/c-sharp.md)
@@ -104,9 +116,8 @@
   * [Infra Templates](references/starter-templates/infra/README.md)
     * [Helm](references/starter-templates/infra/helm.md)
     * [Kubectl](references/starter-templates/infra/kubectl.md)
-    * [Kubectx / Kubens](references/starter-templates/infra/kubectx - kubens.md)
+    * [Kubectx / Kubens](references/starter-templates/infra/kubectx-kubens.md)
     * [K9s](references/starter-templates/infra/k9s.md)
-    * [Kubectl](references/starter-templates/infra/kubectl.md)
     * [Pulumi](references/starter-templates/infra/pulumi.md)
     * [Skaffold](references/starter-templates/infra/skaffold.md)
     * [Terraform](references/starter-templates/infra/terraform.md)

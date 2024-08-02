@@ -8,56 +8,41 @@ If you prefer video from, [click here](kubernetes-cluster.md#tutorial-video) for
 
 To view the config, run
 
-{% code overflow="wrap" %}
-```bash
+```
 dz workspace kubeconfig <workspace-name>
 
 # to get the workspace name
 dz workspace ls
 ```
-{% endcode %}
 
 To write the config to the default Kubernetes configuration location, run
 
-{% code overflow="wrap" %}
-```bash
+```
 dz workspace kubeconfig <workspace-name> --update-kubeconfig
 ```
-{% endcode %}
 
 Then run commands like
 
-{% code overflow="wrap" %}
-```bash
+```
 kubectl get pods
 ```
-{% endcode %}
 
 ## From Inside a DevBox
 
-When inside a [DevBox](../references/terminology.md#devbox) context (i.e. when connected to a workspace), the CLI is able to retrieve environmental information from `/etc/devzero`. It is possible to replace the `<workspace-name>` with `.`. For example,
+When inside a [DevBox](../references/terminology.md#devbox) context (i.e. when connected to a workspace), the CLI is able to retrieve environmental information from `/etc/devzero`.
 
-{% code overflow="wrap" %}
-```bash
-dz workspace kubeconfig . --update-kubeconfig
+In a fresh new workspace, you can immediately run:
+
 ```
-{% endcode %}
-
-Then run commands like
-
-{% code overflow="wrap" %}
-```bash
 kubectl get pods
 ```
-{% endcode %}
 
 {% hint style="warning" %}
 DevZero reserves the `default` namespace for it's managed deployments. **Do not** operate on this namespace. Adding or removing resources in this namespace will lead to undocumented behaviors and cause potential data loss.
 {% endhint %}
 
-{% code overflow="wrap" %}
-```bash
-dz workspace kubeconfig -h 
+```
+dz workspace kubeconfig -h
 This kubeconfig can be used by any kubectl to interact with the virtual cluster backing a workspace.
 Usage: kubectl --kubeconfig <(dz ws kubeconfig <workspace_id | workspace_name>) ...
 
@@ -74,7 +59,6 @@ Flags:
 Global Flags:
       --verbose   Get detailed output
 ```
-{% endcode %}
 
 ## Tutorial Video
 
@@ -88,7 +72,7 @@ Here's a video covering how you can access and deploy apps to your workspace's K
 
 1. Create a recipe that you can use at [devzero.io/dashboard/recipes/new](https://www.devzero.io/dashboard/recipes/new) (give it any name and leave everything else blank and click `Create a recipe`).
 
-<figure><img src="../.gitbook/assets/new-recipe-blank.png" alt=""><figcaption><p>Recipe with no repo</p></figcaption></figure>
+<img src="../.gitbook/assets/new-recipe-blank.png" alt="Recipe with no repo" data-size="original">
 
 2. Use the following recipe, then `Save and Build` and then `Publish` once the build completes successfully (it uses Google Cloud Platform's [`microservices-demo`](https://github.com/GoogleCloudPlatform/microservices-demo) repo).
 
@@ -127,33 +111,31 @@ build:
 
 3. Build a workspace from the recipe, and run the following in your terminal:
 
-{% code overflow="wrap" %}
-```bash
+```
 dz workspace connect <workspace-name>
 ```
-{% endcode %}
 
 4. Run the following steps inside the SSH session that's connected to your workspace:
 
-{% code overflow="wrap" %}
-```bash
-dz workspace kubeconfig . --update-kubeconfig  # will ask to login
-kubectl get pods  # verification                 
+```
+kubectl get pods  # verification
 
 cd /home/devzero/microservices-demo
 skaffold run --default-repo ttl.sh  # this will take a bit of time since its building multiple docker images (~5mins)
-kubectl port-forward --address 0.0.0.0 deployment/frontend 8088:8080
 ```
-{% endcode %}
 
 5. Verify that all the pods are running:
 
-{% code overflow="wrap" %}
-```bash
+```
 kubectl get pods
 ```
-{% endcode %}
 
-Visit, `<workspace-name>:8088` in your browser to see the running frontend!
+6. Port forward the `frontend` to your terminal session
+
+```
+kubectl port-forward --address 0.0.0.0 deployment/frontend 8088:8080
+```
+
+7. Visit, `<workspace-name>:8088` in your browser to see the app!
 
 </details>

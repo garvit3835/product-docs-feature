@@ -8,18 +8,41 @@ Schedule ECS tasks locally using ecs-cli
 2. &#x20;Go to **AWS Console > IAM > Users > Create user**.
 3. Add the following permissions to the user: **AmazonECS\_FullAccess**.
 4. Obtain the credentials under **Users > id > Security credentials > Access keys > Create access key.**
-5. Install the ECS CLI:\
-   `curl -o "ecs-cli" "https://amazon-ecs-cli.s3.amazonaws.com/ecs-cli-linux-amd64-latest"`
-6. Set the correct permissions:\
-   `chmod +x ./ecs-cli`
-7. Configure the default profile:\
-   `./ecs-cli configure profile --profile-name default --secret-key="<secret key>" --access-key="<access key>"`
-8. Configure the default cluster:\
-   `./ecs-cli configure --cluster=<your ecs cluster> --region <your aws region> --config-name default`
-9. Download a task definition:\
-   `./ecs-cli local create --task-def-remote Hello-World:2`
-10. Bring up the containers:\
-    `./ecs-cli local up`
+5. Install the ECS CLI:
+
+```
+curl -o "ecs-cli" "https://amazon-ecs-cli.s3.amazonaws.com/ecs-cli-linux-amd64-latest"
+```
+
+6. Set the correct permissions:
+
+```
+chmod +x ./ecs-cli
+```
+
+7. Configure the default profile:
+
+```
+./ecs-cli configure profile --profile-name default --secret-key="<secret key>" --access-key="<access key>"
+```
+
+8. Configure the default cluster:
+
+```
+./ecs-cli configure --cluster=<your ecs cluster> --region <your aws region> --config-name default
+```
+
+9. Download a task definition:
+
+```
+./ecs-cli local create --task-def-remote Hello-World:2
+```
+
+10. Bring up the containers:
+
+```
+./ecs-cli local up
+```
 
 ### Recipe
 
