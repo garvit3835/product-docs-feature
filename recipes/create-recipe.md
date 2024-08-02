@@ -12,23 +12,23 @@ From your [DevZero Console](https://devzero.io/dashboard), select `Create New` >
 ## 2. Name Your Recipe
 Provide a name for your new recipe.
 
-<figure><img src="https://devzero.b-cdn.net/name-recipe.gif" alt=""><figcaption><p>Name your recipe.</p></figcaption></figure>
+<figure><img src="https://devzero.b-cdn.net/name-recipe.gif" alt=""><figcaption><p>Name your Recipe.</p></figcaption></figure>
 
 ## 3. Select Repository
 From here, you can choose to use a public Github repository by providing a URL or you can authenticate to our Github App to select a private repository.
 
 Alternatively, you can launch a blank Recipe by clicking "Create a recipe" without providing a code repo.
 
-<figure><img src="https://devzero.b-cdn.net/add-repo-to-recipe.gif" alt=""><figcaption><p>Add code to your recipe.</p></figcaption></figure>
+<figure><img src="https://devzero.b-cdn.net/add-repo-to-recipe.gif" alt=""><figcaption><p>Add code to your Recipe.</p></figcaption></figure>
 
 {% hint style="info" %}
 If you're not using GitHub or prefer a different authentication method, check out this section on [cloning source code](clone-source-code.md).
 {% endhint %}
 
 ## 4. Make Recipe Changes
-Make desired changes to your Recipe, select 'Save and Build' to initiate a build process, verifying successful recipe compilation. To streamline recipe creation, we offer suggested steps based on an analysis of your code.
+Make desired changes to your Recipe, select 'Save and Build' to initiate a build process, verifying successful Recipe compilation. To streamline Recipe creation, we offer suggested steps based on an analysis of your code.
 
-After you've successfully build your Recipe and are done iterating, you're ready to Publish the recipe to your Recipe Library.
+After you've successfully build your Recipe and are done iterating, you're ready to Publish the Recipe to your Recipe Library.
 
 <figure><img src="https://devzero.b-cdn.net/recipe-edit.gif" alt=""><figcaption><p>Make Recipe changes.</p></figcaption></figure>
 
