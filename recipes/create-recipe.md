@@ -30,7 +30,7 @@ Make desired changes to your Recipe, select 'Save and Build' to initiate a build
 
 After you've successfully build your Recipe and are done iterating, you're ready to Publish the recipe to your Recipe Library.
 
-<figure><img src="https://devzero.b-cdn.net/recipe-edit.gif" alt=""><figcaption><p>Code block in a recipe</p></figcaption></figure>
+<figure><img src="https://devzero.b-cdn.net/recipe-edit.gif" alt=""><figcaption><p>Make Recipe changes.</p></figcaption></figure>
 
 {% hint style="info" %}
  We provide detailed build logs to help you identify any errors in your build and make iterating on Recipes easy.
@@ -39,4 +39,4 @@ After you've successfully build your Recipe and are done iterating, you're ready
 ## 5. Launch A Workspace from New Recipe and Connect
 Click Launch to create a new Workspace from your Recipe. To connect to your Workspace, you'll need to [install the DevZero CLI](../references/cli-man-page/install-the-cli.md). From there you can connect with VSCode or a directly with a terminal.
 
-<figure><img src="https://devzero.b-cdn.net/connect-to-workspace.gif" alt=""><figcaption><p>Code block in a recipe</p></figcaption></figure>
+<figure><img src="https://devzero.b-cdn.net/connect-to-workspace.gif" alt=""><figcaption><p>Launch and connect to a Workspace.</p></figcaption></figure>
