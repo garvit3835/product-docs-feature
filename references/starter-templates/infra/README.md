@@ -80,7 +80,7 @@
 				<strong>Skaffold</strong>
 			</td>
 			<td>
-				<a href="../../common-tools/infra/skaffold.md">skaffold.md</a>
+				<a href="skaffold.md">skaffold.md</a>
 			</td>
 			<td>
 				<a href="../../../.gitbook/assets/skaffold.png">skaffold.png</a>
