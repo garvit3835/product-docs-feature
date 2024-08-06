@@ -286,7 +286,7 @@ config:
 
 ### Code clone credentials
 
-We already discussed default code clone credentials in the [secrets section](recipe-syntax.md#repository-access).
+We already discussed default code clone credentials in the [secrets section](syntax.md#repository-access).
 
 ### Volumes
 

@@ -32,7 +32,7 @@ dz network status
 ## Advertise routes to your DevZero network
 
 1. Get a shell inside the node that you want to add to the network.
-2. Install the CLI following [these steps](broken-reference).
+2. Install the CLI following [these steps](./../references/cli-man-page/install-the-cli.md).
 3. Run
 
 {% code %}
