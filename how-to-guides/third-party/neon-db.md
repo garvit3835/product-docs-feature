@@ -42,9 +42,9 @@ For the purpose of this guide, we will be using a [todo app](https://github.com/
 
 ### Creating a Recipe for our ToDo App
 
+When asked for repository, feel free to use [https://github.com/myestery/todo-app](https://github.com/myestery/todo-app) or create a fork of it if you want to follow this guide.
+
 We will be implementing the above steps using the recipe file below
-
-
 
 ```yaml
 version: "3"
@@ -95,9 +95,7 @@ launch:
   steps:
     - type: command
       name: Start Application
-      command: |
-        . /etc/profile.d/nvm-installation.sh
-        npm start
+      command: echo Ready
       directory: todo-app
 
 ```
@@ -113,4 +111,6 @@ Now that we have a working recipe, we can create a workspace off it from the [re
 ### Video Walkthrough
 
 
+
+{% embed url="https://vimeo.com/995427315/a450ca646a?share=copy" %}
 
