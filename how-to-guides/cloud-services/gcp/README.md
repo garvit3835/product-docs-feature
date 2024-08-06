@@ -47,5 +47,14 @@
 				<a href="../../../.gitbook/assets/gcp-cloudstorage-logo.png">gcp-cloudstorage-logo.png</a>
 			</td>
 		</tr>
+		<tr>
+			<td>Connecting to GCP Cloud SQL</td>
+			<td>
+				<a href="connecting-to-cloud-sql.md">connecting-to-cloud-sql.md</a>
+			</td>
+			<td>
+				<a href="../../../.gitbook/assets/gcp-cloudstorage-logo.png">gcp-cloudstorage-logo.png</a>
+			</td>
+		</tr>
 	</tbody>
 </table>
