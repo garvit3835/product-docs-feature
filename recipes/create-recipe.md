@@ -5,7 +5,7 @@ Create your first DevZero Recipe!
 {% endembed %}
 
 ## 1. Create New Recipe
-From your [DevZero Console](https://devzero.io/dashboard), select `Create New` >> `Create new recipe`. This will take you to the [new repo](https://www.devzero.io/dashboard/new/repo) page.
+From your [DevZero Console](https://devzero.io/dashboard), select `Create New` >> `Create new recipe`. This will take you to the [new repo](https://www.devzero.io/dashboard/recipes/new) page.
 
 <figure><img src="https://devzero.b-cdn.net/click-create.gif" alt=""><figcaption><p>Click 'Create new recipe'</p></figcaption></figure>
 
@@ -22,7 +22,7 @@ Alternatively, you can launch a blank Recipe by clicking "Create a recipe" witho
 <figure><img src="https://devzero.b-cdn.net/add-repo-to-recipe.gif" alt=""><figcaption><p>Add code to your Recipe.</p></figcaption></figure>
 
 {% hint style="info" %}
-If you're not using GitHub or prefer a different authentication method, check out this section on [cloning source code](clone-source-code.md).
+If you're not using GitHub or prefer a different authentication method, check out this section on [cloning source code](cloning-source-code.md).
 {% endhint %}
 
 ## 4. Make Recipe Changes

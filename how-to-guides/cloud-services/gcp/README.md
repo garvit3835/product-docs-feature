@@ -48,7 +48,13 @@
 			</td>
 		</tr>
 		<tr>
-			<td>Connecting to GCP Memorystore</td>
+			<td>Connecting to GCP Cloud SQL</td>
+			<td>
+				<a href="connecting-to-cloud-sql.md">connecting-to-cloud-sql.md</a>
+			</td>
+			<td>
+				<a href="../../../.gitbook/assets/gcp-cloudstorage-logo.png">gcp-cloudstorage-logo.png</a>
+        <td>Connecting to GCP Memorystore</td>
 			<td>
 				<a href="connecting-to-Memorystore.md">connecting-to-Memorystore.md</a>
 			</td>
