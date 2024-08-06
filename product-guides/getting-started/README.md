@@ -16,7 +16,7 @@ Head to [devzero.io/dashboard](https://devzero.io/dashboard) and create your acc
 
 We currently only support GitHub as a code provider for DevZero workspaces. Bitbucket and GitLab support are coming soon!\
 \
-If you only plan to work with Public Repositories, you do not need to enable our GitHub integration. However, if you'd like to work with private repositories from within a DevZero workspace you'll need to head to [https://www.devzero.io/dashboard/settings/personal#git-providers](https://www.devzero.io/dashboard/settings/personal#git-providers) and complete the installation steps.
+If you only plan to work with Public Repositories, you do not need to enable our GitHub integration. However, if you'd like to work with private repositories from within a DevZero workspace you'll need to head to [https://www.devzero.io/dashboard/settings/user-settings](https://www.devzero.io/dashboard/settings/user-settings) and complete the installation steps.
 
 </details>
 
@@ -26,7 +26,7 @@ If you only plan to work with Public Repositories, you do not need to enable our
 
 DevZero CLI is required if you want to connect a local IDE to a remote environment.
 
-[install-the-cli](../../getting-started/install-the-cli/ "mention")
+[install-the-cli](./../../references/cli-man-page/install-the-cli.md)
 
 </details>
 
