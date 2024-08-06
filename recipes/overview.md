@@ -13,5 +13,3 @@ Key features of recipe specifications:
 5. **Resource Management:** Specifies all necessary resources and infrastructure for a workspace.
 
 By utilizing recipe specifications, teams can streamline their development process, reduce environment-related issues, and maintain consistency across different projects and team members.
-
-Next: [Create your first recipe!](create-recipe.md)
