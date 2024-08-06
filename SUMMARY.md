@@ -74,6 +74,7 @@
   * [Docker](how-to-guides/build-cache/docker-remote-build-cache.md)
 * [CI](how-to-guides/ci/README.md)
   * [GitHub Actions](how-to-guides/ci/run-github-actions-in-a-devbox.md)
+* [Remote Desktop](how-to-guides/remote-desktop.md)
 
 ## 🛠️ Troubleshooting
 
