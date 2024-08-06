@@ -75,6 +75,8 @@
 * [CI](how-to-guides/ci/README.md)
   * [GitHub Actions](how-to-guides/ci/run-github-actions-in-a-devbox.md)
 * [Remote Desktop](how-to-guides/remote-desktop.md)
+* [Third Party](how-to-guides/third-party/README.md)
+  * [Neon DB](how-to-guides/third-party/neon-db.md)
 
 ## 🛠️ Troubleshooting
 
