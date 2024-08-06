@@ -36,7 +36,7 @@ telnet <domain-endpoint> 6379
 
 1. Go to **Memorystore > Clusters** and click on **Create Instance**.
 2. Enter the **Cluster ID** and choose the **region**.
-3. Choose the **Node type**, **Cluster Size** and **Replias**.
+3. Choose the **Node type**, **Cluster Size** and **Replicas**.
 4. Choose the **VPC Network** under the **Set up connection** section.
 5. Setup the service connection policy if prompted.
 6. Fill in the network name and the **private subnet** in the policy section.
