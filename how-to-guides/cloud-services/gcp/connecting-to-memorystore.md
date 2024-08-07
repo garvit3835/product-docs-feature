@@ -46,7 +46,7 @@ telnet <domain-endpoint> 6379
 
 ### Step 2: Accessing Memeorystore from DevBox
 
-1. Go to **Memeorystore > Clusters**.
+1. Go to **Memorystore > Clusters**.
 2. Select your Instance and copy your **Domain Endpoint**.
 
 ![image](../../../.gitbook/assets/gcp-memorystore-endpoint.png)
