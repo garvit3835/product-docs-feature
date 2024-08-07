@@ -22,7 +22,7 @@ build:
 
 <summary>Advanced Methods of Code Cloning</summary>
 
-This usually applies to cases where you need to use secrets to clone code. To learn more about how to save and use secrets: [broken-reference](broken-reference/ "mention")
+This usually applies to cases where you need to use secrets to clone code. To learn more about how to save and use secrets: [Secrets](./../environment-variables/secrets.md)
 
 You can use a [`command`](syntax.md#command) block to clone code directly:
 
@@ -36,13 +36,13 @@ dev:
       name: clone public repo
 
     - command: |-
-        # MY_PERSONAL_TOKEN is the key for a secret/environment variable saved at https://www.devzero.io/dashboard/settings/environment-variables#team
+        # MY_PERSONAL_TOKEN is the key for a secret/environment variable saved at https://www.devzero.io/dashboard/environment-variables/team
         git clone https://$MY_PERSONAL_TOKEN@github.com/vercel/next.js
       directory: /home/devzero
       name: clone private repo using PAT
 
      - command: |-
-        # MY_PRIVATE_KEY is the key for secret/environment variable saved at https://www.devzero.io/dashboard/settings/environment-variables#team
+        # MY_PRIVATE_KEY is the key for secret/environment variable saved at https://www.devzero.io/dashboard/environment-variables/team
         # The value for that should be the private key part of what you saved as a deploy key: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys
 
         mkdir -p .ssh
@@ -116,9 +116,9 @@ cat ~/.ssh/devzero_id25519 | pbcopy
 ```
 {% endcode %}
 
-Then paste it into your team's secrets section at [https://www.devzero.io/dashboard/settings/environment-variables#team](https://www.devzero.io/dashboard/settings/environment-variables#team)
+Then paste it into your team's secrets section at [https://www.devzero.io/dashboard/environment-variables/team](https://www.devzero.io/dashboard/environment-variables/team)
 
-Call it `BITBUCKET_PVT_KEY` (or whatever you please, but this is referenced in [`Step 4`](code.md#step-4.-build-a-recipe))
+Call it `BITBUCKET_PVT_KEY` (or whatever you please, but this is referenced in Step 4)
 
 <img src="../.gitbook/assets/bitbucket-pvt-key-dz.png" alt="Add private key to DevZero" data-size="original">
 

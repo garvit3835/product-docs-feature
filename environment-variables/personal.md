@@ -2,7 +2,7 @@
 
 ### Saving an user-scoped environment variable
 
-Visit the Environment Variables section at [https://www.devzero.io/dashboard/environment-variables/u](https://www.devzero.io/dashboard/environment-variables/personal)[ser](https://www.devzero.dev/dashboard/environment-variables/user) to add, remove, or update your user-scoped environment variables and secrets. User-scoped environment variables can only be seen, managed, and used by you.
+Visit the Environment Variables section at [https://www.devzero.io/dashboard/environment-variables/user](https://www.devzero.io/dashboard/environment-variables/user) to add, remove, or update your user-scoped environment variables and secrets. User-scoped environment variables can only be seen, managed, and used by you.
 
 {% hint style="info" %}
 User-scoped environment variables are automatically made available on each of your running workspaces by default.

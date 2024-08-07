@@ -1,7 +1,5 @@
 # Existing Network
 
-
-
 <table data-card-size="large" data-view="cards">
 	<thead>
 		<tr>
