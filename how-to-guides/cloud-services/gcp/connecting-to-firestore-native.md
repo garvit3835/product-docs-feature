@@ -1,9 +1,9 @@
-# GCP Firestore
-Connecting to an Firestore instance running in the private subnet of GCP VPC to your DevBox.
+# GCP Firestore (Native Mode)
+Connecting to an Firestore instance to your DevBox.
 
 ## Architecture Diagram:
 
-![image](../../../.gitbook/assets/gcp-firestore-firebase-architecture.png)
+![image](../../../.gitbook/assets/gcp-firestore-native-architecture.png)
 
 ## Prerequisites:
 
@@ -68,7 +68,7 @@ python3 <file-name>.py
 
 If the connection is successful, you should see **"Connected"** printed in the terminal output.
 
-![](../../../.gitbook/assets/gcp-firestore-firebase-access.png)
+![](../../../.gitbook/assets/gcp-firestore-native-access.png)
 
 
 ## New Database
@@ -139,4 +139,4 @@ python3 <file-name>.py
 
 If the connection is successful, you should see **"Connected"** printed in the terminal output.
 
-![](../../../.gitbook/assets/gcp-firestore-access.png)
+![](../../../.gitbook/assets/gcp-firestore-native-access.png)

@@ -57,9 +57,9 @@
 			</td>
 		</tr>
 		<tr>
-			<td>Connecting to GCP Firestore (with Firebase for Realtime Database)</td>
+			<td>Connecting to GCP Firestore (Native Mode)</td>
 			<td>
-				<a href="connecting-to-firestore-firebase.md">connecting-to-firestore-firebase.md</a>
+				<a href="connecting-to-firestore-native.md">connecting-to-firestore-native.md</a>
 			</td>
 			<td>
 				<a href="../../../.gitbook/assets/gcp-firestore-logo.png">gcp-firestore-logo.png</a>
