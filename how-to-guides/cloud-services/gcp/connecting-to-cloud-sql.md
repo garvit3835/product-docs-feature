@@ -13,7 +13,7 @@ Connecting to an Cloud SQL running in the private subnet of GCP VPC to your DevB
 
 ### Step 1: Accessing Cloud SQL Instance from a DevBox
 
-1. Go to **Cloud SQL > Instances** and copy the Internal IP Address of the instance.
+1. Go to **Cloud SQL > Instances** and note down the Internal IP Address of the instance.
 
 ![image](../../../.gitbook/assets/gcp-cloudsql-creation.png)
 
@@ -90,7 +90,7 @@ psql -h <Endpoint> --username <Username> -d <Database Name> --password
 
 ### Step 2: Accessing Cloud SQL from DevBox
 
-1. Go to **Cloud SQL > Instances** and copy the Internal IP Address of the instance.
+1. Go to **Cloud SQL > Instances** and note down the Internal IP Address of the instance.
 2. Go to **VPC network > Routes** and select the region where you have deployed the instance.
 3. Copy the **Destination IP Range** of the **Peering Subnet** route which contains the IP address of the Cloud SQL Instance.
 
