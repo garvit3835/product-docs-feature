@@ -56,5 +56,14 @@
 				<a href="../../../.gitbook/assets/gcp-cloudstorage-logo.png">gcp-cloudstorage-logo.png</a>
 			</td>
 		</tr>
+		<tr>
+			<td>Connecting to GCP Firestore</td>
+			<td>
+				<a href="connecting-to-firestore-datastore.md">connecting-to-firestore-datastore.md</a>
+			</td>
+			<td>
+				<a href="../../../.gitbook/assets/gcp-firestore-logo.png">gcp-firestore-logo.png</a>
+			</td>
+		</tr>
 	</tbody>
 </table>
