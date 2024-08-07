@@ -24,10 +24,10 @@ You can connect your source code provider during the workspace creation or thoug
 
 We currently only offer native support for GitHub as a code provider for DevZero's workspaces. Bitbucket and GitLab support are coming soon!\
 \
-If you only plan to work with public repositories, you do not need to enable our GitHub integration. However, if you'd like to work with private codebases, you'll need to head to [https://www.devzero.io/dashboard/settings/personal#git-providers](https://www.devzero.io/dashboard/settings/personal#git-providers) and complete the installation and authorization steps.
+If you only plan to work with public repositories, you do not need to enable our GitHub integration. However, if you'd like to work with private codebases, you'll need to head to [https://www.devzero.io/dashboard/settings/user-settings](https://www.devzero.io/dashboard/settings/user-settings) and complete the installation and authorization steps.
 
 {% hint style="info" %}
-For more information (including a hack to use Bitbucket and GitLab repos), see our [Source Code in Recipes](broken-reference) guide.
+For more information (including a hack to use Bitbucket and GitLab repos), see our [Source Code in Recipes](./../recipes/cloning-source-code.md) guide.
 {% endhint %}
 
 ### Step 3. Creating Your First Recipe
