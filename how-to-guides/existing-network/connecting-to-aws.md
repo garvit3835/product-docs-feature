@@ -40,7 +40,7 @@ sudo sysctl -p /etc/sysctl.conf
 8. Connect to DevZero network:
 
 ```
-sudo dz net connect --ssh --advertise-routes=10.0.0.0/24,10.0.1.0/24
+sudo dz net connect --ssh --advertise-routes=<VPC_CIDR>
 ```
 
 9. Verify that the machine was connected to your DevZero network:\
