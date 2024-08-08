@@ -1,11 +1,12 @@
 # EKS
+
 Connecting to EKS running in the private subnet of AWS VPC from your DevBox.
 
-## Architecture Diagram:
+## Architecture Diagram
 
-![](../../../.gitbook/assets/eks-architecture.png)
+![AWS EKS Architecture](../../../.gitbook/assets/eks-architecture.png)
 
-## Prerequisites:
+## Prerequisites
 
 - Follow [Connecting to AWS](../../existing-network/connecting-to-aws.md) guide.
 
@@ -46,8 +47,7 @@ kubectl get svc
 ```
 {% endcode %}
 
-![](../../../.gitbook/assets/eks-access.png)
-
+![AWS EKS Access](../../../.gitbook/assets/eks-access.png)
 
 ## New EKS Cluster
 
@@ -60,9 +60,9 @@ kubectl get svc
 5. Enter the name of the node group and assign a node IAM role with **AmazonEC2ContainerRegistryReadOnly**, **AmazonEKS_CNI_Policy** and **AmazonEKSWorkerNodePolicy** permissions. If no role is present, create a new one with the same permissions.
 6. Configure other configurations as required and create the nodes.
 
-![](../../../.gitbook/assets/eks-cluster.png)
+![AWS EKS Cluster](../../../.gitbook/assets/eks-cluster.png)
 
-### Step 2: Installing the necessary tools:
+### Step 2: Installing the necessary tools
 
 1. Go to your **DevBox** and install awscli:
 
@@ -88,7 +88,7 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
 {% endcode %}
 
-### Step 3: Accessing the EKS Cluster:
+### Step 3: Accessing the EKS Cluster
 
 1. Click on your AWS username at the top right corner and go to **Security credentials**. In the **Access keys** section, click on **Create access key**. Create the key and save the **CSV** file.
 2. In your **DevBox**, use the csv credentials to configure the awscli to your account:
@@ -105,4 +105,4 @@ aws configure
 ```
 kubectl get svc
 
-![](../../../.gitbook/assets/eks-access.png)
+![AWS EKS Access](../../../.gitbook/assets/eks-access.png)

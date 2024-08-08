@@ -1,12 +1,13 @@
+
 # ElastiCache
 
 Connecting to ElastiCache running in the private subnet of AWS VPC from your DevBox.
 
-## Architecture Diagram:
+## Architecture Diagram
 
-![](../../../.gitbook/assets/elasticache-arch.png)
+![AWS ElastiCache Architecture](../../../.gitbook/assets/elasticache-arch.png)
 
-## Prerequisites:
+## Prerequisites
 
 - Follow [Connecting to AWS](../../existing-network/connecting-to-aws.md) guide.
 
@@ -18,7 +19,7 @@ Connecting to ElastiCache running in the private subnet of AWS VPC from your Dev
 2. Select **Configuration & Security**.
 3. Copy **Primary endpoint**.
 
-![](../../../.gitbook/assets/elasticache-endpoints.png)
+![AWS ElastiCache Endpoints](../../../.gitbook/assets/elasticache-endpoints.png)
 
 4. Go to your **DevBox** and install the Redis CLI:
 
@@ -36,8 +37,7 @@ redis-cli -h <redis-endpoint> -p <port>
 ```
 {% endcode %}
 
-![](../../../.gitbook/assets/elasticache-access.png)
-
+![AWS ElastiCache Access](../../../.gitbook/assets/elasticache-access.png)
 
 ## New ElastiCache Cluster
 
@@ -54,9 +54,10 @@ redis-cli -h <redis-endpoint> -p <port>
 9. Click on **Create.**
 
 ### Step 2: Accessing Elasticache from DevBox
+
 1. Go to your ElastiCache and copy **Primary endpoint.**
 
-![](../../../.gitbook/assets/elasticache-endpoints.png)
+![AWS ElastiCache Endpoints](../../../.gitbook/assets/elasticache-endpoints.png)
 
 2. Go to your **DevBox** and install the Redis CLI:
 
@@ -74,4 +75,4 @@ redis-cli -h <redis-endpoint> -p <port>
 ```
 {% endcode %}
 
-![](../../../.gitbook/assets/elasticache-access.png)
+![AWS ElastiCache Access](../../../.gitbook/assets/elasticache-access.png)

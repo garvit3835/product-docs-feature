@@ -3,19 +3,15 @@
 1. Images should have descriptive alt description
 
    Wrong:
-    
-   ```
+      ```
    ![](image.png)
    ```
-    
-   Correct:
-    
-   ```
+      Correct:
+      ```
    ![a giraffe](image.png)
    ```
 
 2. Prefer code-blocks (```) instead of code-formatting (`)
- 
    Wrong:
 
    `ssh root@example.com`
@@ -29,14 +25,11 @@
 3. Shell commands should not have syntax highlighting
 
     Wrong:
-    
-    ```sh
+       ```sh
     ssh root@example.com
     ```
-    
-    Correct:
-    
-    ```
+       Correct:
+       ```
     ssh root@example.com
     ```
 
@@ -49,7 +42,6 @@
    Correct:
 
    **End of sentence**.
-
 
 5. Navigation
 
@@ -66,5 +58,4 @@
    Use respective labels to refer to input elements.
 
    Example:
-   
-   Click on "Create new recipe". Select "Operating System". Type into the "Search" field.
+     Click on "Create new recipe". Select "Operating System". Type into the "Search" field.

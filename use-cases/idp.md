@@ -1,4 +1,4 @@
-# Internal Developer Platform (IDP)
+# Internal Developer Platform (IDP
 
 {% hint style="info" %}
 **Coming soon...**
@@ -7,5 +7,5 @@
 * Reduce build and compile times
 * Ensure consistency of development environments
 * Provide production-symmetric testing and QA environments
-* Speed up inner development loops&#x20;
+* Speed up inner development loops
 * Maintain security and compliance across the SDLC

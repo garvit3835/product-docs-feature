@@ -1,20 +1,21 @@
 ---
 description: 'Estimated time to complete: ~5 mins'
+
 ---
 
 # Quickstart
 
-**Welcome!** :wave:\
-\
+**Welcome!** :wave:
+
 Follow the steps below to get started on the DevZero platform. Or, if you're more of a visual learner, we have a video tutorial as well!
 
 {% embed url="https://devzero.b-cdn.net/New%20onboarding2.mp4" %}
 
-### Step 1. Signing up for an account
+## Step 1. Signing up for an account
 
 You'll need to sign up for a DevZero account before you're able to do anything. We require you to have an existing account with an external Identity Provider (such as GitHub, Microsoft, or Google). To sign up for a DevZero account & create your DevZero team, please visit [https://devzero.io/dashboard](https://devzero.io/dashboard)
 
-### Step 2. Connecting your source code provider
+## Step 2. Connecting your source code provider
 
 <figure><img src="../.gitbook/assets/Connect Github.gif" alt=""><figcaption><p>Connecting GitHub</p></figcaption></figure>
 
@@ -22,15 +23,15 @@ You'll need to sign up for a DevZero account before you're able to do anything. 
 
 You can connect your source code provider during the workspace creation or though the "User Settings"
 
-We currently only offer native support for GitHub as a code provider for DevZero's workspaces. Bitbucket and GitLab support are coming soon!\
-\
+We currently only offer native support for GitHub as a code provider for DevZero's workspaces. Bitbucket and GitLab support are coming soon!
+
 If you only plan to work with public repositories, you do not need to enable our GitHub integration. However, if you'd like to work with private codebases, you'll need to head to [https://www.devzero.io/dashboard/settings/user-settings](https://www.devzero.io/dashboard/settings/user-settings) and complete the installation and authorization steps.
 
 {% hint style="info" %}
 For more information (including a hack to use Bitbucket and GitLab repos), see our [Source Code in Recipes](./../recipes/cloning-source-code.md) guide.
 {% endhint %}
 
-### Step 3. Creating Your First Recipe
+## Step 3. Creating Your First Recipe
 
 Great! Now, you'll need a [recipe](../references/terminology.md#recipe) to build your first [workspace](../references/terminology.md#workspace). A recipe is a blueprint for your environment. DevZero uses these recipes to provision your workspaces -- for example, cloning from a Git repository, installing dependencies, or importing your dotfiles.
 
@@ -72,7 +73,7 @@ Once you're done naming the recipe (we know, naming things is the hardest part o
 
 <figure><img src="../.gitbook/assets/YAML (3).png" alt=""><figcaption></figcaption></figure>
 
-### Step 4. Launching a Workspace from the Recipe
+## Step 4. Launching a Workspace from the Recipe
 
 If your build is successful, a button near the top-right side of your browser should appear, allowing you to "Launch Workspace Now". Great! Clicking that will deploy a workspace from the [build image](../references/terminology.md#build) we just created.
 
@@ -123,7 +124,7 @@ sudo dz auth login && sudo dz net connect
 ```
 {% endhint %}
 
-### Step 6. Connecting to your Workspace
+## Step 6. Connecting to your Workspace
 
 Once ready, a button should appear at the top-right, labeled "Connect". Click that drop-down, and you should be presented with three tabs:
 
@@ -133,8 +134,8 @@ Click the "Terminal" tab, and then copy the command at the bottom of the drop-do
 
 <figure><img src="../.gitbook/assets/CleanShot 2024-05-21 at 16.50.11@2x.png" alt=""><figcaption><p>The font is Berkeley Mono, just in case you're interested.</p></figcaption></figure>
 
-### Need help?
+## Need help?
 
-If you face any issues, please send an email to [support@devzero.io](mailto:support@devzero.io), or visit [https://devzero.io/dashboard ](https://devzero.io/dashboard)and click the "chat" icon in the bottom right-hand side of your browser window. We'd be happy to assist you.
+If you face any issues, please send an email to [support@devzero.io](mailto:support@devzero.io), or visit [https://devzero.io/dashboard](https://devzero.io/dashboard)and click the "chat" icon in the bottom right-hand side of your browser window. We'd be happy to assist you.
 
 <figure><img src="../.gitbook/assets/Create recipe.gif" alt=""><figcaption><p>Creating a new recipe</p></figcaption></figure>

@@ -7,7 +7,7 @@
 You are probably reading this because you encountered the following error:
 
 ```
-$ code -r my-folder/
+code -r my-folder/
 Unable to connect to VS Code server: Error in request.
 Error: connect ENOENT /tmp/vscode-ipc-73cdc2ea-86d3-4e98-8237-5b535ba16353.sock
     at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1555:16) {
@@ -21,7 +21,7 @@ Error: connect ENOENT /tmp/vscode-ipc-73cdc2ea-86d3-4e98-8237-5b535ba16353.sock
 This happens because the a variable used by VS Code (called `$VSCODE_IPC_HOOK_CLI`) is referencing the wrong socket file. To fix this, rerun your command like this:
 
 ```
-$ VSCODE_IPC_HOOK_CLI=$(lsof | grep /tmp/vscode-ipc | awk '{print $(NF-1)}' | head -n 1) code -r my-folder/
+VSCODE_IPC_HOOK_CLI=$(lsof | grep /tmp/vscode-ipc | awk '{print $(NF-1)}' | head -n 1) code -r my-folder/
 ```
 
 \
