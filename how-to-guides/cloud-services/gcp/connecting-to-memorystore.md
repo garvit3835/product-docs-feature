@@ -10,11 +10,11 @@ Connecting to Memorystore running in the private subnet of GCP VPC from your Dev
 
 - Follow [Connecting to GCP](../../existing-network/connecting-to-gcp.md) guide.
 
-## Existing Memeorystore Service
+## Existing Memorystore Service
 
-### Step 1: Accessing Memeorystore from a DevBox
+### Step 1: Accessing Memorystore from a DevBox
 
-1. Go to **Memeorystore > Clusters**.
+1. Go to **Memorystore > Clusters**.
 2. Select your Instance and copy your **Domain Endpoint**.
 
 ![image](../../../.gitbook/assets/gcp-memorystore-endpoint.png)
@@ -44,7 +44,7 @@ telnet <domain-endpoint> 6379
 
 ![image](../../../.gitbook/assets/gcp-memorystore-creation.png)
 
-### Step 2: Accessing Memeorystore from DevBox
+### Step 2: Accessing Memorystore from DevBox
 
 1. Go to **Memorystore > Clusters**.
 2. Select your Instance and copy your **Domain Endpoint**.
