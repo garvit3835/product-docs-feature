@@ -4,8 +4,6 @@
 
 To invite a new member, click the top right icon->"Team settings"->"Invite team member"
 
-
-
 <figure><img src="https://devzero.b-cdn.net/Team%20management.gif" alt=""><figcaption><p>Inviting new users to DevZero</p></figcaption></figure>
 
 ## Updating User Roles

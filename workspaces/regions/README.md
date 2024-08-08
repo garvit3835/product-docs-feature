@@ -10,6 +10,6 @@ Workspaces can be launched in any supported DevZero region, provided your team a
 
 <figure><img src="../../.gitbook/assets/region-selector.png" alt=""><figcaption><p>Region selector</p></figcaption></figure>
 
-3. After you've selected the region you want your workspace to be in, click on `Launch`! 
+3. After you've selected the region you want your workspace to be in, click on `Launch`!
 
 <figure><img src="../../.gitbook/assets/launch-workspace-with-region.png" alt=""><figcaption><p>Launching a workspace in a region</p></figcaption></figure>

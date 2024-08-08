@@ -12,6 +12,25 @@ Developers can use these [specifications](recipes/syntax.md) alongside our CLI t
 
 <figure><img src=".gitbook/assets/computer-to-workspace-devbox.jpg" alt=""><figcaption><p>The relationship between your computer and DevZero's workspaces and DevBoxes</p></figcaption></figure>
 
+The DevZero platform consists of the following key components:
+
+* Management Plane:
+  * The core of the DevZero system
+  * Houses databases and Vault for secure secret storage
+  * Includes an image registry and workspace builder
+  * An API gateway that interfaces with the DevZero web console and headless clients
+* Version Control Integration:
+  * A GitHub application that connects to your chosen version control system
+* Workspace Hosting:
+  * Offers two options: a) Multi-tenant VPC b) Self-hosted VPC
+  * Hosts workspaces within a virtual cluster
+* Client-Side Tools:
+  * Primarily consists of the DevZero CLI
+  <!-- markdown-link-check-disable-next-line -->
+  * Facilitates secure connectivity to workspaces via [Wireguard](https://www.wireguard.com)
+* Identity Provider (IdP):
+  * Utilizes Auth0 for secure, IdP-based authentication
+
 ## How can I learn more?
 
 If you're ready to get hands-on, we recommend diving into the [quickstart.md](getting-started/quickstart.md "mention") guide. However, if you'd like to read a bit more, you can check out the [terminology.md](references/terminology.md "mention") reference sheet. You're also welcome to chat with us directly, the best way to get in touch is to email [support@devzero.io](mailto:support@devzero.io).
@@ -19,7 +38,3 @@ If you're ready to get hands-on, we recommend diving into the [quickstart.md](ge
 ## Ready to Get Started?
 
 Visit our dashboard ([devzero.io/dashboard](https://devzero.io/dashboard)) to create your free account and install our CLI. Then head to the [quickstart.md](getting-started/quickstart.md "mention") section of our docs.
-
-[^1]: More on this in [Terminology > Kubernetes Cluster](references/terminology.md#kubernetes-cluster-ephemeral-namespaced)
-
-[^2]: The quickstart covers these steps as well.
