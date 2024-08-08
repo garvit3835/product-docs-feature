@@ -11,7 +11,6 @@ Workspaces are be hibernated when inactivity is detected (or when the DevZero pl
 * state of the entire filesystem for when a workspace or any of its parts are restarted after being paused/stopped.
 {% endhint %}
 
-Users cannot manually hibernate a workspace, however they are automatically restarted (if in a hibernated state) when you attempt to reconnect to the workspace.&#x20;
+Users cannot manually hibernate a workspace, however they are automatically restarted (if in a hibernated state) when you attempt to reconnect to the workspace.
 
 Workspace activity is determined by active connections that it's serving. This could be sessions connected via SSH, via various IDEs, etc. Workspaces are considered to be dormant after **30+ minutes** of inactivity, and may be candidates for hibernation.
-

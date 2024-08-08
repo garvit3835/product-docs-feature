@@ -1,6 +1,7 @@
-# Single Sign-on (SSO)
+# Single Sign-on (SSO
 
 Use-case:
+
 - Using your company's SSO to control your team's login to the DevZero Platform
 
 Many organizations use SSO to easily manage onboarding and offboarding of employees and contractors. Logging into your DevZero team can be placed behind your current SSO provider. Currently, corporate SSO support is in private beta. If you would like to enable SSO support for your account, send an email to [support@devzero.io](mailto:support@devzero.io) with the following information, we can enable SSO for your team!

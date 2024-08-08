@@ -1,6 +1,6 @@
 # GitHub Actions
 
-### Self-hosted runner
+## Self-hosted runner
 
 ```yaml
 version: "3"
@@ -31,7 +31,7 @@ launch:
 Tip: Make sure to pass the `--unattended` flag to `config.sh` script.
 {% endhint %}
 
-### Actions Runner Controller
+## Actions Runner Controller
 
 {% hint style="info" %}
 Adjust the `INSTALLATION_NAME`, `NAMESPACE`, `GITHUB_CONFIG_URL`, and `GITHUB_PAT` variables as needed.

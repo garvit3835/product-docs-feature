@@ -1,13 +1,14 @@
 # Cloud SQL
+
 Connecting to an Cloud SQL running in the private subnet of GCP VPC to your DevBox.
 
-## Architecture Diagram:
+## Architecture Diagram
 
-![image](../../../.gitbook/assets/gcp-cloudsql-architecture.png)
+![GCP Cloud SQL Architecture](../../../.gitbook/assets/gcp-cloudsql-architecture.png)
 
-## Prerequisites:
+## Prerequisites
 
-- Follow the [Connecting to GCP](../../existing-network/connecting-to-GCP.md) guide.
+- Follow the [Connecting to GCP](../../existing-network/connecting-to-gcp.md) guide.
 
 ## Existing Database
 
@@ -15,12 +16,12 @@ Connecting to an Cloud SQL running in the private subnet of GCP VPC to your DevB
 
 1. Go to **Cloud SQL > Instances** and copy the Internal IP Address of the instance.
 
-![image](../../../.gitbook/assets/gcp-cloudsql-creation.png)
+![GCP Cloud SQL Creation](../../../.gitbook/assets/gcp-cloudsql-creation.png)
 
 2. Go to **VPC network > Routes** and select the region where you have deployed the instance.
 3. Copy the **Destination IP Range** of the **Peering Subnet** route which contains the IP address of the Cloud SQL Instance.
 
-![image](../../../.gitbook/assets/gcp-cloudsql-network-peer.png)
+![GCP Cloud SQL Network Peer](../../../.gitbook/assets/gcp-cloudsql-network-peer.png)
 
 4. SSH into your **Bastion Host** and enter the following command:
 
@@ -69,8 +70,7 @@ psql -h <Endpoint> --username <Username> -d <Database Name> --password
 {% endtab %}
 {% endtabs %}
 
-![image](../../../.gitbook/assets/gcp-cloudsql-access.png)
-
+![GCP Cloud SQL Access](../../../.gitbook/assets/gcp-cloudsql-access.png)
 
 ## New Database
 
@@ -86,7 +86,7 @@ psql -h <Endpoint> --username <Username> -d <Database Name> --password
 8. Click on create a **private service access connection** and select **Use automatically assigned IP range** while choosing **Allocated IP range**.
 9. Click on **Create Instance**.
 
-![image](../../../.gitbook/assets/gcp-cloudsql-creation.png)
+![GCP Cloud SQL Creation](../../../.gitbook/assets/gcp-cloudsql-creation.png)
 
 ### Step 2: Accessing Cloud SQL from DevBox
 
@@ -94,7 +94,7 @@ psql -h <Endpoint> --username <Username> -d <Database Name> --password
 2. Go to **VPC network > Routes** and select the region where you have deployed the instance.
 3. Copy the **Destination IP Range** of the **Peering Subnet** route which contains the IP address of the Cloud SQL Instance.
 
-![image](../../../.gitbook/assets/gcp-cloudsql-network-peer.png)
+![GCP Cloud SQL Network Peer](../../../.gitbook/assets/gcp-cloudsql-network-peer.png)
 
 4. SSH into your **Bastion Host** and enter the following command:
 
@@ -143,4 +143,4 @@ psql -h <Endpoint> --username <Username> -d <Database Name> --password
 {% endtab %}
 {% endtabs %}
 
-![image](../../../.gitbook/assets/gcp-cloudsql-access.png)
+![GCP Cloud SQL Access](../../../.gitbook/assets/gcp-cloudsql-access.png)

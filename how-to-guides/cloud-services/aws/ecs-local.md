@@ -1,11 +1,11 @@
 # ECS (local)
 
-### Installation guide
+## Installation guide
 
 Schedule ECS tasks locally using ecs-cli
 
 1. Create a new workspace with Docker installed ([How-to](../../../references/starter-templates/build-tools/docker.md)).
-2. &#x20;Go to **AWS Console > IAM > Users > Create user**.
+2. Go to **AWS Console > IAM > Users > Create user**.
 3. Add the following permissions to the user: **AmazonECS\_FullAccess**.
 4. Obtain the credentials under **Users > id > Security credentials > Access keys > Create access key.**
 5. Install the ECS CLI:
@@ -44,7 +44,7 @@ chmod +x ./ecs-cli
 ./ecs-cli local up
 ```
 
-### Recipe
+## Recipe
 
 ```yaml
 version: "3"

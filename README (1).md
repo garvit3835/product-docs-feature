@@ -26,7 +26,8 @@ The DevZero platform consists of the following key components:
   * Hosts workspaces within a virtual cluster
 * Client-Side Tools:
   * Primarily consists of the DevZero CLI
-  * Facilitates secure connectivity to workspaces via [Wireguard](https://www.wireguard.com/)
+  <!-- markdown-link-check-disable-next-line -->
+  * Facilitates secure connectivity to workspaces via [Wireguard](https://www.wireguard.com)
 * Identity Provider (IdP):
   * Utilizes Auth0 for secure, IdP-based authentication
 
