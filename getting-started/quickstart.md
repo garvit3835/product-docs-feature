@@ -134,7 +134,7 @@ Click the "Terminal" tab, and then copy the command at the bottom of the drop-do
 
 <figure><img src="../.gitbook/assets/CleanShot 2024-05-21 at 16.50.11@2x.png" alt=""><figcaption><p>The font is Berkeley Mono, just in case you're interested.</p></figcaption></figure>
 
-## Need help
+## Need help?
 
 If you face any issues, please send an email to [support@devzero.io](mailto:support@devzero.io), or visit [https://devzero.io/dashboard](https://devzero.io/dashboard)and click the "chat" icon in the bottom right-hand side of your browser window. We'd be happy to assist you.
 

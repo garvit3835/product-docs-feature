@@ -1,4 +1,4 @@
-# ECS (local
+# ECS (local)
 
 ## Installation guide
 

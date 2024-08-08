@@ -4,7 +4,7 @@
 Looking for a pre-made recipe template? See: [Bazel Buildfarm](../../references/starter-templates/ci-cd/bazel-buildfarm.md)
 {% endhint %}
 
-## Installation (using Helm
+## Installation (using Helm)
 
 1. Make sure both kubectl and helm are installed.
 2. When creating a new workspace, take a look at the [Kubectl](../../references/starter-templates/infra/kubectl.md) recipe and the [Helm](../../references/starter-templates/infra/helm.md) recipe.

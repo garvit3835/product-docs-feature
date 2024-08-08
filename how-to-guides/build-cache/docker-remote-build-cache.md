@@ -1,6 +1,6 @@
 # Docker
 
-## Remote build/cache using `DOCKER_HOST
+## Remote build/cache using `DOCKER_HOST`
 
 1. Create a new workspace with Docker installed ([How-to](../../references/starter-templates/build-tools/docker.md)).
 2. Make sure you are connected to the DevZero network:

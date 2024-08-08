@@ -1,6 +1,6 @@
 # Access Running Applications
 
-## Access Your Running Application(s
+## Access Your Running Application(s)
 
 First, find the workspace you care about by running
 
@@ -56,7 +56,7 @@ dz ws connect popular-bluejay-yzrt
 
 You can access the workspace using either the MagicDNS hostname (`popular-bluejay-yzrt`) or its private IP address (`100.64.0.202`) just like you would any application. You don't need to forward any ports etc since the `0.0.0.0` network interface of the workspace is available via either of those 2 approaches.
 
-## Access Your Team's Running Application(s
+## Access Your Team's Running Application(s)
 
 The flow for this is exactly the same as above.
 
