@@ -1,11 +1,11 @@
 name: Markdown Lint
 on: [pull_request]
 jobs:
-  check-links:
+  markdown-linter:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: DavidAnson/markdownlint-cli2-action@v16
         with:
-          config: 'markdownlint.jsonc'
+          config: 'custom.markdownlint.jsonc'
           globs: '**/*.md'

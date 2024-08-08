@@ -1,6 +1,6 @@
 # Docker
 
-### Remote build/cache using `DOCKER_HOST`
+## Remote build/cache using `DOCKER_HOST`
 
 1. Create a new workspace with Docker installed ([How-to](../../references/starter-templates/build-tools/docker.md)).
 2. Make sure you are connected to the DevZero network:
@@ -15,7 +15,7 @@ dz net connect
 export DOCKER_HOST=ssh://devzero@your-devbox-hostname
 ```
 
-4.  Verify the installation by running:
+4. Verify the installation by running:
 
 ```
 docker info
@@ -27,7 +27,7 @@ When you run the `docker build` command, the build context will be sent to the D
 If you're seeing "Host key verification failed" error, try connecting to your DevBox via ssh first to verify the fingerprint.
 {% endhint %}
 
-### Remote build using BuildKit
+## Remote build using BuildKit
 
 1. Create a new workspace with Docker installed ([How-to](../../references/starter-templates/build-tools/docker.md)).
 2. Inside your DevBox, run the BuildKit container:
@@ -50,7 +50,7 @@ docker buildx create --name remote-container --driver remote tcp://your-devbox-h
 docker buildx build --builder=remote-container -t test --load .
 ```
 
-### Remote cache using Docker Registry
+## Remote cache using Docker Registry
 
 1. Create a new workspace with Docker installed ([How-to](../../references/starter-templates/build-tools/docker.md)).
 2. Inside your DevBox, install the Docker Registry:
@@ -73,7 +73,7 @@ dz net connect
 curl http://your-devbox-hostname:5000/v2/_catalog
 ```
 
-5.  Build and push your image to the registry
+5. Build and push your image to the registry
 
 **With Docker**:
 

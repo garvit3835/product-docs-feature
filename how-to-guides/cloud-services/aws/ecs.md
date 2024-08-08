@@ -1,6 +1,6 @@
 # ECS
 
-### Installation guide
+## Installation guide
 
 You can run services and tasks managed by AWS ECS inside of DevBoxes using [AWS ECS Anywhere](https://aws.amazon.com/ecs/anywhere).
 
@@ -34,7 +34,7 @@ Note: the installation script will also install Docker.
 
 The new instance should now be visible in the ECS console under **Your Cluster > Infrastructure > Container instances** as "External" instance type.
 
-### Mounting volumes
+## Mounting volumes
 
 If you want to add volumes to your services/tasks:
 
@@ -62,7 +62,7 @@ docker volumes ls
 If you select "Configure at deployment" in your task definition, you might not be able to deploy it to the external instance type, because this configuration only supports Amazon EBS, which is not available with external instances.
 {% endhint %}
 
-### Recipe example
+## Recipe example
 
 <pre class="language-yaml"><code class="lang-yaml">version: "3"
 build:

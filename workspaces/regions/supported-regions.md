@@ -1,5 +1,6 @@
 ---
 description: Edge compute regions supported by the hosted DevZero platform
+
 ---
 
 # Supported Regions

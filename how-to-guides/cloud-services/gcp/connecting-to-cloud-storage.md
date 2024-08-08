@@ -1,7 +1,8 @@
 # Cloud Storage
+
 Connecting to GCP Cloud Storage Service from your DevBox.
 
-## Architecture Diagram:
+## Architecture Diagram
 
 ![image](../../../.gitbook/assets/gcp-cloudstorage-architecture.png)
 

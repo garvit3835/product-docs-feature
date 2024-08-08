@@ -1,4 +1,4 @@
-# C++
+# C+
 
 {% code lineNumbers="true" %}
 ```yaml

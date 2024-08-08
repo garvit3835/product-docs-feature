@@ -1,6 +1,6 @@
 # Overview
 
-## What is a Recipe?
+## What is a Recipe
 
 [Recipe specifications](../references/terminology.md#recipe) are YAML-based definitions that outline the resources, infrastructure, and configuration of a DevZero [workspace](../references/terminology.md#workspace). These specifications are centrally stored and version-controlled by DevZero, ensuring your team always has access to the most up-to-date and consistent environments.
 

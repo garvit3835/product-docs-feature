@@ -1,9 +1,10 @@
 # BigQuery
+
 Connecting to GCP BigQuery Service from your DevBox.
 
-## Architecture Diagram:
+## Architecture Diagram
 
-![](../../../.gitbook/assets/gcp-bigquery-architecture.png)
+![GCP BigQuery Architecture](../../../.gitbook/assets/gcp-bigquery-architecture.png)
 
 ## Devzero Workspace
 
@@ -15,7 +16,7 @@ Connecting to GCP BigQuery Service from your DevBox.
 4. Select the new service account and go to **Keys**.
 5. Click on **Add Key > Create a new key** and click on **Create**.
 
-![](../../../.gitbook/assets/gcp-bigquery-key-creation.png)
+![GCP BigQuery Key Creation](../../../.gitbook/assets/gcp-bigquery-key-creation.png)
 
 ### Step 2: Connecting to BigQuery through Python API
 
@@ -73,4 +74,4 @@ python3 <file-name>.py
 
 If the connection is successful, you should see **"Connected"** printed in the terminal output.
 
-![](../../../.gitbook/assets/gcp-bigquery-connection.png)
+![GCP BigQuery Connection](../../../.gitbook/assets/gcp-bigquery-connection.png)

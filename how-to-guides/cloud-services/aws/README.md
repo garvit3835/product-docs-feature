@@ -1,7 +1,5 @@
 # AWS
 
-
-
 <table data-view="cards">
 	<thead>
 		<tr>
