@@ -1,7 +1,5 @@
 # Settings
 
-
-
 <details>
 
 <summary>User Settings</summary>

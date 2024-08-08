@@ -1,6 +1,5 @@
 # Recipes
 
-
 <details>
 <summary>ERROR: mount options is too long</summary>
 You are probably reading this because you encountered an error that looks like this when building a recipe:
@@ -40,6 +39,7 @@ To get Docker working in your workspace, add the following command to your recip
 
 {% code lineNumbers="true" %}
 ```yaml
+
 - command: |-
       sudo groupadd docker || true
       sudo usermod -aG docker $USER

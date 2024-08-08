@@ -1,6 +1,6 @@
 # Connect to SQS
 
-### Using the AWS CLI
+## Using the AWS CLI
 
 1. Install the [AWS CLI](../../../references/starter-templates/third-party/aws.md) into your DevBox.
 2. Go to **AWS Console > IAM > Users >  Create user**.
@@ -18,15 +18,15 @@ aws configure
 aws sqs send-message --queue-url <your-queue-url> --message-body "Hello from your DevBox!"
 ```
 
-7.  Verify you can recieve the messages:
+7. Verify you can recieve the messages:
 
 ```
 aws sqs receive-message --queue-url <your-queue-url>
 ```
 
-### VPC-only access policy
+## VPC-only access policy
 
-#### Configure the Endpoint
+### Configure the Endpoint
 
 1. Follow the [Connecting to AWS](../../existing-network/connecting-to-aws.md) guide.
 2. Go to **VPC > Endpoints > Create Endpoint.**
@@ -38,7 +38,7 @@ aws sqs receive-message --queue-url <your-queue-url>
 8. Specify custom VPC endpoint policies, if required.
 9. Click on "Create endpoint" to proceed.
 
-#### Apply the policy
+### Apply the policy
 
 Set your SQS-queue policy as follows:
 
@@ -59,7 +59,7 @@ Set your SQS-queue policy as follows:
 }
 ```
 
-#### Test the policy
+### Test the policy
 
 Running the following in your DevBox terminal:
 

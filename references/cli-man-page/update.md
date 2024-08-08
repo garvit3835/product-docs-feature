@@ -1,6 +1,6 @@
 # Updating the CLI
 
-A single CLI (called `dz`) is used to interact with DevZero control plane. Check out the [CLI main page](../../references/cli-man-page/) for DevZero CLI options or use.&#x20;
+A single CLI (called `dz`) is used to interact with DevZero control plane. Check out the [CLI main page](../../references/cli-man-page/) for DevZero CLI options or use.
 
 To check the currently installed version of your CLI, run:
 
@@ -8,14 +8,13 @@ To check the currently installed version of your CLI, run:
 dz version
 ```
 
-&#x20;To update your CLI, run (might require `sudo`!):
+To update your CLI, run (might require `sudo`!):
 
 ```python
 dz update
 ```
 
-&#x20;To see the manpage for the CLI (with all the commands), run &#x20;
-
+To see the manpage for the CLI (with all the commands), run
 ```
 dz -h
 ```

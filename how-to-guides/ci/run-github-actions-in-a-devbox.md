@@ -2,6 +2,7 @@
 description: >-
   The following guide outlines how to use DevBox as a runtime for GitHub
   actions.
+
 ---
 
 # GitHub Actions
@@ -10,7 +11,7 @@ description: >-
 Pre-built recipe templates are available [here](../../references/starter-templates/ci-cd/github-actions.md).
 {% endhint %}
 
-### Using a self-hosted runner
+## Using a self-hosted runner
 
 1. Visit your **GitHub** repository/org settings page.
 2. Go to **Actions > Runners**.
@@ -60,7 +61,7 @@ jobs:
     - run: echo "🎉 This job uses self-hosted runners!"
 ```
 
-### Using Actions Runner Controller
+## Using Actions Runner Controller
 
 You will need a Personal Access Token (PAT).
 
@@ -76,7 +77,7 @@ After you obtained the PAT:
 1. Create a new workspace with [kubectl](../../references/starter-templates/infra/kubectl.md) and [helm](../../references/starter-templates/infra/helm.md) installed.
 2. Install GitHub Actions Runner Controller using helm.
 
-**Scale-set controller**
+### Scale-set controller
 
 {% hint style="info" %}
 Adjust the `NAMESPACE`variable as needed.
@@ -89,7 +90,7 @@ helm install arc \
   oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set-controllerRunner scale-set
 </code></pre>
 
-**Runner scale-set**
+### Runner scale-set
 
 {% hint style="info" %}
 Adjust the `INSTALLATION_NAME`, `NAMESPACE`, `GITHUB_CONFIG_URL`, and `GITHUB_PAT` variables as needed.
