@@ -56,5 +56,14 @@
 				<a href="../../../.gitbook/assets/gcp-cloudstorage-logo.png">gcp-cloudstorage-logo.png</a>
 			</td>
 		</tr>
+		<tr>
+			<td>Connecting to GCP Cloud Run</td>
+			<td>
+				<a href="connecting-to-cloudrun.md">connecting-to-cloudrun.md</a>
+			</td>
+			<td>
+				<a href="../../../.gitbook/assets/gcp-cloudrun-logo.png">gcp-cloudrun-logo.png</a>
+			</td>
+		</tr>
 	</tbody>
 </table>
