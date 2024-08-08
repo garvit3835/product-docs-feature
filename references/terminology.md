@@ -10,7 +10,7 @@ DevZero transforms a [recipe](terminology.md#recipe) YAML into a Low-Level Build
 
 ### Dashboard
 
-The dashboard is the central location to view, edit, and manage your DevZero [workspaces](terminology.md#workspace). You can manage [recipes](terminology.md#recipe), users and their permissions, and settings such as [environment variables](terminology.md#environment-variables), secrets, etc. The admin console also informs you if updates are needed in any of your recipes and workspaces.&#x20;
+The dashboard is the central location to view, edit, and manage your DevZero [workspaces](terminology.md#workspace). You can manage [recipes](terminology.md#recipe), users and their permissions, and settings such as [environment variables](terminology.md#environment-variables), secrets, etc. The admin console also informs you if updates are needed in any of your recipes and workspaces.
 
 ### DevBox
 
@@ -34,19 +34,19 @@ Recipe library is a collection of recipes that are built for use by the members 
 
 ### Regions
 
-Regions are various physical locations around the world where you can run your DevZero [workspaces](terminology.md#workspace). For most use cases, you'll want to use the region closest to your physical location.&#x20;
+Regions are various physical locations around the world where you can run your DevZero [workspaces](terminology.md#workspace). For most use cases, you'll want to use the region closest to your physical location.
 
 ### Workspace
 
-A workspace is the DevZero environment that a developer works in. A workspace consists of a [cluster](terminology.md#workspace-cluster), a [DevBox](terminology.md#devbox), and all of the underlying infrastructure and resources defined in the workspace's [recipe](terminology.md#recipe) specification. Developers in a [team](terminology.md#team) each work from their own workspace, which is generally isolated from other workspace, and can use various [IDEs](terminology.md#ide) to connect to it. Workspaces are created from a [Recipe](terminology.md#recipe) file - this is to allow for developers to start building their environments from pre-defined golden paths, ensuring identical configuration and provisioning settings.&#x20;
+A workspace is the DevZero environment that a developer works in. A workspace consists of a [cluster](terminology.md#workspace-cluster), a [DevBox](terminology.md#devbox), and all of the underlying infrastructure and resources defined in the workspace's [recipe](terminology.md#recipe) specification. Developers in a [team](terminology.md#team) each work from their own workspace, which is generally isolated from other workspace, and can use various [IDEs](terminology.md#ide) to connect to it. Workspaces are created from a [Recipe](terminology.md#recipe) file - this is to allow for developers to start building their environments from pre-defined golden paths, ensuring identical configuration and provisioning settings.
 
 ### Workspace Cluster
 
-A virtualized Kubernetes cluster that's elastically backed by a varying number of [nodes](terminology.md#node). By default, a DevZero workspace is backed by one Kubernetes cluster, with a [DevBox](terminology.md#devbox) deployed to the `default` namespace. Each Workspace Cluster is ephemeral and fully namespaced; clusters are automatically provisioned at workspace launch time as needed.&#x20;
+A virtualized Kubernetes cluster that's elastically backed by a varying number of [nodes](terminology.md#node). By default, a DevZero workspace is backed by one Kubernetes cluster, with a [DevBox](terminology.md#devbox) deployed to the `default` namespace. Each Workspace Cluster is ephemeral and fully namespaced; clusters are automatically provisioned at workspace launch time as needed.
 
 ### Team
 
-A team is the parent-most organizational unit for users within the DevZero ecosystem (oftentimes your company or organization). Users may only belong to one (1) team. Switching teams requires a team admin to reach out to [support@devzero.io](mailto:support@devzero.io).&#x20;
+A team is the parent-most organizational unit for users within the DevZero ecosystem (oftentimes your company or organization). Users may only belong to one (1) team. Switching teams requires a team admin to reach out to [support@devzero.io](mailto:support@devzero.io).
 
 ***
 
@@ -56,11 +56,11 @@ A team is the parent-most organizational unit for users within the DevZero ecosy
 
 An access control list (ACL) controls platform access using rules in the driven by the team's DevZero settings. ACLs can be used to restrict recipe authors/editors, assign permissions for workspace regions and compute classes (CPU/GPU), control network access, control volume access.
 
-### Continuous Integration (CI)
+### Continuous Integration (CI
 
 Continuous Integration (CI) is a software development practice where developers frequently commit code changes to a shared repository, triggering automated builds and tests to ensure new code integrates smoothly and does not introduce errors. This process provides immediate feedback, helping to detect and fix bugs early, improving code quality, and reducing integration issues. By fostering collaborative development and streamlining the release process, CI enables faster and more reliable software delivery. Popular CI tools include Jenkins, Travis CI, CircleCI, GitLab CI, and Bamboo.
 
-### Continuous Delivery (CD)
+### Continuous Delivery (CD
 
 Continuous Delivery (CD) is a software development practice where code changes are automatically built, tested, and prepared for a release to production, ensuring that the software can be reliably and quickly delivered at any time. This approach involves deploying code to a staging environment where it undergoes further automated tests and manual verifications. The goal is to minimize the risks associated with releasing new features and updates, enabling faster and more frequent delivery of high-quality software to end-users. Continuous Delivery builds on the foundation of Continuous Integration (CI), extending it to ensure that the software is always in a deployable state.
 
@@ -114,7 +114,8 @@ SSH stands for the Secure Shell protocol. It is used to set up encrypted connect
 
 ### WireGuard
 
-WireGuard is the underlying cryptographic protocol that the DevZero network uses. WireGuard is a registered trademark of [Jason A. Donenfeld](https://www.wireguard.com/).
+<!-- markdown-link-check-disable-next-line -->
+WireGuard is the underlying cryptographic protocol that the DevZero network uses. WireGuard is a registered trademark of [Jason A. Donenfeld](https://www.wireguard.com).
 
 ### Tailscale
 

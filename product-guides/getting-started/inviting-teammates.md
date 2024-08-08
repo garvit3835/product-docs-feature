@@ -1,8 +1,8 @@
 # Inviting Users & Managing Permissions
 
-**Custom Roles:** Only the enterprise version of DevZero supports custom roles. All other tiers support the following standard user roles.&#x20;
+**Custom Roles:** Only the enterprise version of DevZero supports custom roles. All other tiers support the following standard user roles.
 
-You can invite additional users and manage existing users' access and permissions by navigating to [https://www.devzero.io/dashboard/settings/team-settings](https://www.devzero.io/dashboard/settings/team-settings).&#x20;
+You can invite additional users and manage existing users' access and permissions by navigating to [https://www.devzero.io/dashboard/settings/team-settings](https://www.devzero.io/dashboard/settings/team-settings).
 
 <figure><img src="../../.gitbook/assets/CleanShot 2024-05-01 at 20.42.09@2x.png" alt=""><figcaption><p>User Invite &#x26; Management Settings</p></figcaption></figure>
 
