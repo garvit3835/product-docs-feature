@@ -9,11 +9,11 @@ description: >-
 
 <figure><img src="../../.gitbook/assets/neondb.drawio.png" alt=""><figcaption></figcaption></figure>
 
-## Prerequisites:
+## Prerequisites
 
 Basic knowledge of [Neon DB](https://neon.tech/docs) and [Neon DB branching](https://neon.tech/docs/introduction/branching)
 
-### Creating a Branch <a href="#existing-compute-instance" id="existing-compute-instance"></a>
+### Creating a Branch
 
 1. Go to **Your Project > Project Dashboard.**
 2. Click on **Branch** , create a new branch.
