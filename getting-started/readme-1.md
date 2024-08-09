@@ -20,6 +20,6 @@ If you're ready to get hands-on, we recommend diving into the [quickstart.md](qu
 
 Visit our dashboard ([devzero.io/dashboard](https://devzero.io/dashboard)) to create your free account and install our CLI. Then head to the [quickstart.md](quickstart.md "mention") section of our docs.
 
-[^1]: More on this in [Terminology > Kubernetes Cluster](../references/terminology.md#kubernetes-cluster-ephemeral-namespaced)
+More on this in [Terminology > Kubernetes Cluster](../references/terminology.md#kubernetes-cluster-ephemeral-namespaced)
 
-[^2]: The quickstart covers these steps as well.
+The quickstart covers these steps as well.
