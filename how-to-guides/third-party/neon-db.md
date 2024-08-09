@@ -1,7 +1,6 @@
 ---
 description: >-
-  Using a NeonDB database branch from a DevZero workspace is a very good use
-  case for workspaces on dev zero.
+  Using a NeonDB database branch from a DevZero workspace is a very good use case for workspaces on dev zero.
 ---
 
 # Neon DB
@@ -17,12 +16,12 @@ Basic knowledge of [Neon DB](https://neon.tech/docs) and [Neon DB branching](htt
 ### Creating a Branch <a href="#existing-compute-instance" id="existing-compute-instance"></a>
 
 1. Go to **Your Project > Project Dashboard.**
-2. Click on **Branch** ,  create a new branch.
+2. Click on **Branch** , create a new branch.
 3. Give it a name and select Current point to time to create the branch off the current state of your main database.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-08-06 at 14.03.47.png" alt=""><figcaption></figcaption></figure>
 
-Once the branch is created, please copy the connection string and add it  to your [user environment secrets](../../environment-variables/personal.md#saving-an-user-scoped-environment-variable). In this guide, it is saved as `DATABASE_URL`
+Once the branch is created, please copy the connection string and add it to your [user environment secrets](../../environment-variables/personal.md#saving-an-user-scoped-environment-variable). In this guide, it is saved as `DATABASE_URL`
 
 ### Building a Todo App
 
@@ -30,15 +29,15 @@ For the purpose of this guide, we will be using a [todo app](https://github.com/
 
 #### Build Steps
 
-* install linux helper packages
-* clone repo
-* install nodejs
-* run npm install
-* run npm build: In, this step, we need the database URL to be present so we can run some [prisma](https://www.prisma.io/) commands that are required for manipulating the database
+- install linux helper packages
+- clone repo
+- install nodejs
+- run npm install
+- run npm build: In, this step, we need the database URL to be present so we can run some [prisma](https://www.prisma.io/) commands that are required for manipulating the database
 
 #### Launch Steps
 
-* npm start: to start the application
+- npm start: to start the application
 
 ### Creating a Recipe for our ToDo App
 
@@ -54,7 +53,21 @@ build:
   steps:
     # This step adds basic packages you're likely to need in every workspace, we recommend leaving it in most recipes
     - type: apt-get
-      packages: ["build-essential", "curl", "git", "nano", "software-properties-common", "ssh", "sudo", "tar", "unzip", "vim", "wget", "zip"]
+      packages:
+        [
+          "build-essential",
+          "curl",
+          "git",
+          "nano",
+          "software-properties-common",
+          "ssh",
+          "sudo",
+          "tar",
+          "unzip",
+          "vim",
+          "wget",
+          "zip",
+        ]
     - type: command
       command: "echo 'Hello, Build step!'"
     #
@@ -80,7 +93,7 @@ build:
         . /etc/profile.d/nvm-installation.sh
         npm install
       directory: todo-app
-      user: devzero  
+      user: devzero
     - type: command
       name: |
         Install dependencies
@@ -88,7 +101,7 @@ build:
         . /etc/profile.d/nvm-installation.sh
         npm run build
       directory: todo-app
-      user: devzero  
+      user: devzero
 
 # Launch-time steps are run as part of a workspace launch stage
 launch:
@@ -97,12 +110,9 @@ launch:
       name: Start Application
       command: echo Ready
       directory: todo-app
-
 ```
 
 The Recipe page has some helper snippet to guide you ingenerating such files
-
-
 
 ### Creating a workspace
 
@@ -110,7 +120,4 @@ Now that we have a working recipe, we can create a workspace off it from the [re
 
 ### Video Walkthrough
 
-
-
 {% embed url="https://vimeo.com/995427315/a450ca646a?share=copy" %}
-
