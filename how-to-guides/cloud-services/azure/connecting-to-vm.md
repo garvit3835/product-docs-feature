@@ -10,7 +10,7 @@ Here we will connecting to a private virtual machine instance from our DevZero's
 
 ## Prerequisites
 
-Before we begin, you'll follow [Connecting to GCP](../../existing-network/connecting-to-gcp.md) guide to setup the DevZero network and have it configured with atleast one one existing device.
+Before we begin, you'll follow [Connecting to Azure](../../existing-network/connecting-to-azure.md) guide to setup the DevZero network and have it configured with atleast one one existing device.
 
 ## Existing VM
 
