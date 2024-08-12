@@ -33,7 +33,7 @@ For the purpose of this guide, we will be using a [todo app](https://github.com/
 - clone repo
 - install nodejs
 - run `npm install`
-- run `npm run build`: In, this step, we need the database URL to be present so we can run some [prisma](https://www.prisma.io/) commands that are required for manipulating the database
+- run `npm run build`: in this step, we need the database URL to be present so we can run some [prisma](https://www.prisma.io/) commands that are required for manipulating the database
 
 #### Launch Steps
 
