@@ -37,7 +37,7 @@ For the purpose of this guide, we will be using a [todo app](https://github.com/
 
 #### Launch Steps
 
-- npm start: to start the application
+- `npm start`: to start the application
 
 ### Creating a Recipe for our ToDo App
 
