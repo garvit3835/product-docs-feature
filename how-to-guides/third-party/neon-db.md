@@ -1,6 +1,6 @@
 ---
 description: >-
-  Using a NeonDB database branch from a DevZero workspace is a very good use case for workspaces on dev zero.
+  Using a NeonDB database branch from a DevZero workspace.
 ---
 
 # Neon DB
@@ -21,7 +21,7 @@ Basic knowledge of [Neon DB](https://neon.tech/docs) and [Neon DB branching](htt
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-08-06 at 14.03.47.png" alt=""><figcaption></figcaption></figure>
 
-Once the branch is created, please copy the connection string and add it to your [user environment secrets](../../environment-variables/personal.md#saving-an-user-scoped-environment-variable). In this guide, it is saved as `DATABASE_URL`
+Once the branch is created, please copy the connection string and add it to your [user environment secrets](../../environment-variables/personal.md#saving-an-user-scoped-environment-variable). In this guide, it is saved as `DATABASE_URL`.
 
 ### Building a Todo App
 
@@ -32,8 +32,8 @@ For the purpose of this guide, we will be using a [todo app](https://github.com/
 - install linux helper packages
 - clone repo
 - install nodejs
-- run npm install
-- run npm build: In, this step, we need the database URL to be present so we can run some [prisma](https://www.prisma.io/) commands that are required for manipulating the database
+- run `npm install`
+- run `npm run build`: In, this step, we need the database URL to be present so we can run some [prisma](https://www.prisma.io/) commands that are required for manipulating the database
 
 #### Launch Steps
 
@@ -76,8 +76,7 @@ build:
       url: https://github.com/Myestery/todo-app
     - type: command
       name: |
-        Download and install NVM, Rationale: File: package.json
-        Install Node.js 21.0.0, Rationale: No Node.js version specified; using default
+        Download and install NVM; then install node.js 21
       command: |
         curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
         echo 'export NVM_DIR=$HOME/.nvm' | sudo tee -a /etc/profile.d/nvm-installation.sh
@@ -92,13 +91,6 @@ build:
       command: |
         . /etc/profile.d/nvm-installation.sh
         npm install
-      directory: todo-app
-      user: devzero
-    - type: command
-      name: |
-        Install dependencies
-      command: |
-        . /etc/profile.d/nvm-installation.sh
         npm run build
       directory: todo-app
       user: devzero
