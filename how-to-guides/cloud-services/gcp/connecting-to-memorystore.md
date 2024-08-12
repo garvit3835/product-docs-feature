@@ -2,11 +2,11 @@
 
 Connecting to Memorystore running in the private subnet of GCP VPC from your DevBox.
 
-## Architecture Diagram:
+## Architecture Diagram
 
-![](../../../.gitbook/assets/gcp-memorystore-architecture.png)
+![GCP Memorystor Architecture](../../../.gitbook/assets/gcp-memorystore-architecture.png)
 
-## Prerequisites:
+## Prerequisites
 
 - Follow [Connecting to GCP](../../existing-network/connecting-to-gcp.md) guide.
 
@@ -28,7 +28,6 @@ telnet <domain-endpoint> 6379
 {% endcode %}
 
 ![image](../../../.gitbook/assets/gcp-memorystore-access.png)
-
 
 ## New Memorystore Service
 
