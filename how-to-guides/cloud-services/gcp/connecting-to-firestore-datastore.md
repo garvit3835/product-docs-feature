@@ -70,7 +70,6 @@ If the connection is successful, you should see **"Connected"** printed in the t
 
 ![image](../../../.gitbook/assets/gcp-firestore-datastore-access.png)
 
-
 ## New Database
 
 ### Step 1: Creating an Firestore Instance
