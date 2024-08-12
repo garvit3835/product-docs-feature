@@ -5,7 +5,7 @@ description: Learn how to connect to Azure resources privately from a DevBox.
 
 # Connecting to Azure
 
-In this guide you will know how to setup a Bastion Host on Azure Infrastructure. This Bastion Host will allow us to connect to Private Azure services and use them directly from our DevZero DevBox.
+In this guide you will know how to setup a Bastion Host on Azure Infrastructure. This Bastion Host will allow you to connect to Private Azure services and use them directly from your DevBox.
 
 ## Step 1: Create a VNET
 
@@ -37,7 +37,7 @@ Now you need to create and setup a Virtual Machine which you would be using as t
 4. Enter your desired username and select the *allow selected ports* for the **Public inbound ports** option.
 5. Go to the **Networking** section and enter your Virtual Network (VNET). Remember to choose the public IP option as you need to configure this virutal machine to access private azure services.
 6. Select the **Basic** option for **NIC network security group**, it would create a security group for you which allows port access for SSH.
-7. Click on **Review + Create** and click on **Create**. Your VNET will be created.
+7. Click on **Review + Create** and click on **Create**.
 8. Download the SSH private key when prompted, this will help you SSH into the Bastion Host later on.
 
 ## Step 3: Connect to DevZero Network
@@ -63,7 +63,7 @@ echo 'net.ipv6.conf.all.forwarding = 1' | sudo tee -a /etc/sysctl.conf
 sudo sysctl -p /etc/sysctl.conf
 ```
 
-4. Now you need to advertise your subnet routes to connect to DevZero network:
+4. Now you need to advertise your VNET route to connect to DevZero network:
 
 ```
 sudo dz net connect --ssh --advertise-routes=<VNET-cidr>
