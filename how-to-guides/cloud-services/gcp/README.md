@@ -61,6 +61,13 @@
 			</td>
 			<td>
 				<a href="../../../.gitbook/assets/gcp-firestore-logo.png">gcp-firestore-logo.png</a>
+				<a href="../../../.gitbook/assets/gcp-cloudstorage-logo.png">gcp-cloudstorage-logo.png</a>
+        <td>Connecting to GCP Memorystore</td>
+			<td>
+				<a href="connecting-to-memorystore.md">connecting-to-memorystore.md</a>
+			</td>
+			<td>
+				<a href="../../../.gitbook/assets/gcp-memorystore-logo.png">gcp-memorystore-logo.png</a>
 			</td>
 		</tr>
 	</tbody>

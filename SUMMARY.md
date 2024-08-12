@@ -67,6 +67,7 @@
     * [Cloud Storage](how-to-guides/cloud-services/gcp/connecting-to-cloud-storage.md)
     * [Cloud SQL](how-to-guides/cloud-services/gcp/connecting-to-cloud-sql.md)
     * [Firestore (Native Mode)](how-to-guides/cloud-services/gcp/connecting-to-firestore-native.md)
+    * [Memorystore](how-to-guides/cloud-services/gcp/connecting-to-memorystore.md)
 * [Existing Network](how-to-guides/existing-network/README.md)
   * [AWS VPC](how-to-guides/existing-network/connecting-to-aws.md)
   * [GCP VPC](how-to-guides/existing-network/connecting-to-gcp.md)
