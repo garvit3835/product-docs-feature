@@ -1,13 +1,14 @@
 # GCP Firestore (Native Mode)
+
 Connecting to an Firestore instance to your DevBox.
 
-## Architecture Diagram:
+## Architecture Diagram
 
-![image](../../../.gitbook/assets/gcp-firestore-native-architecture.png)
+![GCP Firestore (Native Mode) Architecture](../../../.gitbook/assets/gcp-firestore-native-architecture.png)
 
-## Prerequisites:
+## Prerequisites
 
-- Follow the [Connecting to GCP](../../existing-network/connecting-to-GCP.md) guide.
+- Follow the [Connecting to GCP](../../existing-network/connecting-to-gcp.md) guide.
 
 ## Existing Database
 
@@ -68,8 +69,7 @@ python3 <file-name>.py
 
 If the connection is successful, you should see **"Connected"** printed in the terminal output.
 
-![](../../../.gitbook/assets/gcp-firestore-native-access.png)
-
+![image](../../../.gitbook/assets/gcp-firestore-native-access.png)
 
 ## New Database
 
@@ -139,4 +139,4 @@ python3 <file-name>.py
 
 If the connection is successful, you should see **"Connected"** printed in the terminal output.
 
-![](../../../.gitbook/assets/gcp-firestore-native-access.png)
+![image](../../../.gitbook/assets/gcp-firestore-native-access.png)
