@@ -22,7 +22,7 @@ Connecting to Memorystore running in the private subnet of GCP VPC from your Dev
 3. Go to your **DevBox** and connect to Service:
 
 {% code lineNumbers="false" %}
-```bash
+```
 telnet <domain-endpoint> 6379
 ```
 {% endcode %}
@@ -53,7 +53,7 @@ telnet <domain-endpoint> 6379
 3. Go to your **DevBox** and connect to Service:
 
 {% code lineNumbers="false" %}
-```bash
+```
 telnet <domain-endpoint> 6379
 ```
 {% endcode %}

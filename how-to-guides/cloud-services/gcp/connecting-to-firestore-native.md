@@ -14,7 +14,7 @@ Connecting to an Firestore instance to your DevBox.
 
 ### Step 1: Accessing GCP Firestore Instance from a DevBox
 
-1. Connect to your Devzero workspace.
+1. Connect to your DevZero workspace.
 2. Store the **Google Authentication Credentials** on the workspace.
 3. Install **Python** and **PIP**:
 
@@ -84,7 +84,7 @@ If the connection is successful, you should see **"Connected"** printed in the t
 
 ### Step 2: Accessing Firestore Database from DevBox
 
-1. Connect to your Devzero workspace.
+1. Connect to your DevZero workspace.
 2. Store the **Google Authentication Credentials** on the workspace.
 3. Install **Python** and **PIP**:
 
