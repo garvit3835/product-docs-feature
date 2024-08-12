@@ -9,7 +9,7 @@ In this guide you will know how to setup a Bastion Host on Azure Infrastructure.
 
 ## Step 1: Create a VNET
 
-In this step, you will be creating a VNET. This will house all of your resources together including the bastion host. 
+In this step, you will be creating a VNET. This will house all of your resources together including the bastion host.
 
 1. Go to **Home > Virtual Networks > Create Virtual Network**.
 2. Under the **Basics** section, enter the **Resource group** name.
@@ -22,7 +22,6 @@ In this step, you will be creating a VNET. This will house all of your resources
 5. To make a private subnet in Azure, you just need to check the **Enable private subnet (no default outbound access)** checkbox under the **Private Subnet** section while creating the subnet.
 
 6. After everything is setup, you can navigate to the **Review + Create** section and click on **Create**.
-
 
 ## Step 2: Create a Bastion Host
 
@@ -45,6 +44,7 @@ Now you need to create and setup a Virtual Machine which you would be using as t
 Now you just need to install DevZero CLI and enable IP forwarding to access the private resources.
 
 1. SSH into your Bastion Host and install the DevZero CLI:
+
 ```
 curl -fsSL https://get.devzero.io | sh
 ```
