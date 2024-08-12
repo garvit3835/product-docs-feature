@@ -68,10 +68,7 @@ build:
           "wget",
           "zip",
         ]
-    - type: command
-      command: "echo 'Hello, Build step!'"
-    #
-    ## Here is where you can add code repositories to be cloned into your workspace. Import multiple repositories by adding additional git-clone steps
+    # Here is where you can add code repositories to be cloned into your workspace. Import multiple repositories by adding additional git-clone steps
     - type: git-clone
       url: https://github.com/Myestery/todo-app
     - type: command
