@@ -66,6 +66,7 @@
     * [GKE](how-to-guides/cloud-services/gcp/connecting-to-kubernetes-cluster.md)
     * [Cloud Storage](how-to-guides/cloud-services/gcp/connecting-to-cloud-storage.md)
     * [Cloud SQL](how-to-guides/cloud-services/gcp/connecting-to-cloud-sql.md)
+    * [Firestore (Datastore Mode)](how-to-guides/cloud-services/gcp/connecting-to-firestore-datastore.md)
     * [Firestore (Native Mode)](how-to-guides/cloud-services/gcp/connecting-to-firestore-native.md)
     * [Memorystore](how-to-guides/cloud-services/gcp/connecting-to-memorystore.md)
 * [Existing Network](how-to-guides/existing-network/README.md)
