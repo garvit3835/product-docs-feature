@@ -19,6 +19,15 @@
 			</td>
 		</tr>
 		<tr>
+			<td>Access Azure VPC</td>
+			<td>
+				<a href="connecting-to-azure.md">connecting-to-azure.md</a>
+			</td>
+			<td>
+				<a href="../../.gitbook/assets/azure.png">azure.png</a>
+			</td>
+		</tr>
+		<tr>
 			<td>Access GCP VPC</td>
 			<td>
 				<a href="connecting-to-gcp.md">connecting-to-gcp.md</a>
