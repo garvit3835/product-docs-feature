@@ -6,7 +6,7 @@ You are connecting to a Virtual Machine running in the private subnet of Azure V
 
 ![Azure VM Architecture](../../../.gitbook/assets/azure-vm-architecture.png)
 
-Here, you will connect to a private virtual machine instance from your DevZero's DevBox. This would be done by setting up a bastion host that advertises the private routes to your DevZero network so that you can access the private service through network tunneling.
+Here, you will connect to a private virtual machine instance from your DevBox. This would be done by setting up a bastion host that advertises the VNET CIDR to your DevZero network so that you can access the private service through the network tunneling.
 
 ## Prerequisites
 
@@ -38,9 +38,7 @@ If you need to make a new virtual machine running in a private subnet and access
 
 1. Go to **Home > Virtual Machines > Create a virtual machine**.
 2. In the **Basics** section, select the resource group you previously selected for your VNET.
-3. Then input your VM name and region and choose your desired image.
-
-*you can view the available images [here](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?filters=virtual-machine-images)*.
+3. Then input your VM name and region and choose your desired image. You can view the available images [here](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?filters=virtual-machine-images).
 
 4. Enter your desired username and select the *allow selected ports* for the **Public inbound ports** option.
 5. Go to the **Networking** section and enter your Virtual Network (VNET). Please remember to choose **None** in the public IP option because we must make the instance private.
@@ -50,7 +48,7 @@ If you need to make a new virtual machine running in a private subnet and access
 
 ### Step 2: Accessing virtual machine from DevBox
 
-1. Go to the **DevBox** and make a copy of the key pair.
+1. Go to **DevBox** and make a copy of the key pair.
 2. Connect to the Virtual Machine using ssh and the new key pair:
 
 {% code lineNumbers="false" %}
