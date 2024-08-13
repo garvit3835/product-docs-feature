@@ -64,7 +64,7 @@ sudo dz net connect --ssh --advertise-routes=<VPC-CIDR>
 ```
 {% endcode %}
 
-9. Verify that the machine was connected to your DevZero network:
+9. Verify that the machine is connected to your DevZero network:
 
 {% code lineNumbers="false" %}
 ```

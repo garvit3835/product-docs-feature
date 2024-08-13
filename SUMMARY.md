@@ -71,6 +71,7 @@
     * [Memorystore](how-to-guides/cloud-services/gcp/connecting-to-memorystore.md)
 * [Existing Network](how-to-guides/existing-network/README.md)
   * [AWS VPC](how-to-guides/existing-network/connecting-to-aws.md)
+  * [Azure VPC](how-to-guides/existing-network/connecting-to-azure.md)
   * [GCP VPC](how-to-guides/existing-network/connecting-to-gcp.md)
 * [Build Cache + Remote Execution](how-to-guides/build-cache/README.md)
   * [Bazel](how-to-guides/build-cache/bazel-remote-execution-cache.md)
