@@ -6,7 +6,7 @@ Setting up a DNS Private Resolver so that you can access the Azure Private DNS z
 
 ![Azure VM Architecture](../../../.gitbook/assets/azure-dns-private-resolver-architecture.png)
 
-Here, you will setup DNS Private Resolver through which you would resolve DNS queries from the DNS Private zones and direct them to the Bastion Host. The Bastion Host will then forward those queries to the DevZero Network through advertised routes. 
+Here, you will setup DNS Private Resolver through which you would resolve DNS queries from the DNS Private zones and direct them to the Bastion Host. The Bastion Host will then forward those queries to the DevZero Network through advertised routes.
 
 ## Prerequisites
 
@@ -17,6 +17,7 @@ Before you begin, follow the [Connecting to Azure](../../existing-network/connec
 To create a DNS Private Resolver, you need to ensure that you have no other DNS Private Resolver instances in your **Resource Group**.
 
 If the above criteria are followed, then follow these steps:
+
 1. Go to **Home > DNS Private Resolvers** and click on **Create**.
 2. Enter Subscription and Resource Group name in the Project Details section.
 3. Then enter the instance name and region. Remember to choose the region which houses your VNET.
