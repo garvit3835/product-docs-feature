@@ -14,7 +14,7 @@ Before you begin, follow the [Connecting to Azure](../../existing-network/connec
 
 ## Existing Azure Virtual Machine
 
-To connect to a Virtual Machine running in the private subnet, ensure it is within the same **Resource Group** and **VNET** containing the Bastion Host. 
+To connect to a Virtual Machine running in the private subnet, ensure it is within the same **Resource Group** and **VNET** containing the Bastion Host.
 
 If the above criteria are followed, then log into your DevBox and SSH into the private VM by following these steps:
 
