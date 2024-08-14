@@ -20,7 +20,8 @@ Pre-built recipe templates are available [here](../../references/starter-templat
 5. Select "Linux" and set "x64" as architecture.
 6. Follow the instructions from GitHub provided on the page, which are similar to:
 
-**Download**
+### Download
+
 ```
 # Create a folder
 $ mkdir actions-runner && cd actions-runner# Download the latest runner package
@@ -28,7 +29,8 @@ $ curl -o actions-runner-linux-x64-2.319.0.tar.gz -L https://github.com/actions/
 $ echo "52b8f9c5abb1a47cc506185a1a20ecea19daf0d94bbf4ddde7e617e7be109b14  actions-runner-linux-x64-2.319.0.tar.gz" | shasum -a 256 -c# Extract the installer
 $ tar xzf ./actions-runner-linux-x64-2.319.0.tar.gz
 ```
-**Configure**
+
+### Configure
 
 ```
 # Create the runner and start the configuration experience
@@ -49,7 +51,8 @@ curl \
 
 {% endhint %}
 
-**Install and Start**
+### Configure and Start
+
 ```
 # Installs the actions service to run in background using systemd
 sudo ./svc.sh install && sudo ./svc.sh start
