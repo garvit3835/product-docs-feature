@@ -1,6 +1,6 @@
 # Azure Virtual Machine
 
-You are connecting to a Virtual Machine running in the private subnet of Azure VNET from your DevBox.
+You are connecting to a Virtual Machine running in the private subnet of Azure Virtual Network (VNET) from your DevBox.
 
 ## Architecture Diagram
 
