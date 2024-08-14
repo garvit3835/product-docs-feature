@@ -60,7 +60,7 @@
     * [S3](how-to-guides/cloud-services/aws/connect-to-an-s3-bucket.md)
     * [ElastiCache](how-to-guides/cloud-services/aws/connect-to-elasticache.md)
     * [OpenSearch](how-to-guides/cloud-services/aws/connect-to-opensearch.md)
-  * [AWS](how-to-guides/cloud-services/aws/README.md)
+  * [Azure](how-to-guides/cloud-services/azure/README.md)
     * [DNS Private Resolver](how-to-guides/cloud-services/azure/setting-up-dns-private-resolver.md.md)
   * [GCP](how-to-guides/cloud-services/gcp/README.md)
     * [Compute Instance](how-to-guides/cloud-services/gcp/connecting-to-compute-instance.md)
