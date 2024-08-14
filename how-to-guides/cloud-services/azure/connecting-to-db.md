@@ -1,12 +1,12 @@
 # Azure Database
 
-You are connecting to a Azure database instance running in the private subnet of Azure VNET from your DevBox.
+You are connecting to a Azure database instance running in the private subnet of Azure Virtual Network (VNET) from your DevBox.
 
 ## Architecture Diagram
 
 ![Azure database Architecture](../../../.gitbook/assets/azure-db-architecture.png)
 
-Here, you will connect to a private Azuer database instance from your DevZero's DevBox. This would be done by setting up a bastion host that advertises the private routes to your DevZero network so that you can access the private service through network tunneling.
+Here, you will connect to a private Azure database instance from your DevBox. This would be done by setting up a bastion host that advertises the private routes to your DevZero network so that you can access the private service through network tunneling.
 
 ## Prerequisites
 
@@ -18,10 +18,10 @@ To connect to a database running in the private subnet, ensure it is within the 
 
 If the above criteria is followed then follow the [Setting up DNS Private Resolver](./setting-up-dns-private-resolver.md) guide to access the DNS Private Zones.
 
-Now follow to below steps to access the Database instance on your DevBox:
+Now follow the below steps to access the Database instance on your DevBox:
 
-1. Go to the **DevBox**.
-2. To Setup Database client and connect to the instance, follow the steps:
+1. Go to **DevBox**.
+2. To Setup Database client and connect to the instance, follow these steps:
 
 {% tabs %}
 {% tab title="MySQL" %}
@@ -36,7 +36,7 @@ To access the database:
 
 {% code %}
 ```
-mysql -h <Endpoint> -u <Username> --database <Database Name> -p
+mysql -h <Endpoint> -u <Username> --database <Database-Name> -p
 ```
 {% endcode %}
 {% endtab %}
@@ -52,7 +52,7 @@ To access the database:
 
 {% code %}
 ```
-psql -h <Endpoint> --username <Username> -d <Database Name> --password
+psql -h <Endpoint> --username <Username> -d <Database-Name> --password
 ```
 {% endcode %}
 {% endtab %}
@@ -71,14 +71,14 @@ If you need to make a new database running in a private subnet and access it thr
 
 1. Go to **Home > Azure Database for MySQL servers** and click on **Create**.
 2. In the **Basics** section, select the **Resource group** you previously selected for your **VNET**.
-3. Then input your database **Server name**, **Region** and the desired **PostgresSQL version**.
+3. Then input your database **Server name**, **Region** and the desired **MySQL version**.
 
-*Remember to select the region which your VNET covers, otherwise you won't be able to access the subnets later on.*
+*Remember to select the region where your VNET resides.*
 
 4. Under the **Authentication** section, Enter your **Admin Username** and **password**.
 5. Go to the **Networking** page and under **Network connectivity** choose **Private access (VNet Integration)** option as we need to make the instance private.
-6. In the **Virtual Network** section, select the **VNET** and **Private Subnet** we made earlier.
-7. Click on Review + Create and click on Create to create database.
+6. In the **Virtual Network** section, select the **VNET** and **Private Subnet**.
+7. Click on Review + Create and click on Create to create the database.
 
 {% endtab %}
 
@@ -86,14 +86,14 @@ If you need to make a new database running in a private subnet and access it thr
 
 1. Go to **Home > Azure Database for PostgresSQL servers** and click on **Create**.
 2. In the **Basics** section, select the **Resource group** you previously selected for your **VNET**.
-3. Then input your database **Server name**, **Region** and the desired **MySQL version**.
+3. Then input your database **Server name**, **Region** and the desired **PostgresSQL version**.
 
-*Remember to select the region which your VNET covers, otherwise you won't be able to access the subnets later on.*
+*Remember to select the region where your VNET resides.*
 
 4. Under the **Authentication** section, Enter your **Admin Username** and **password**.
 5. Go to the **Networking** page and under **Network connectivity** choose **Private access (VNet Integration)** option as we need to make the instance private.
-6. In the **Virtual Network** section, select the **VNET** and **Private Subnet** we made earlier.
-7. Click on **Review + Create** and click on **Create** to create database.
+6. In the **Virtual Network** section, select the **VNET** and **Private Subnet**.
+7. Click on **Review + Create** and click on **Create** to create the database.
 
 {% endtab %}
 {% endtabs %}
@@ -106,7 +106,7 @@ After creating the database, you need to follow the [Setting up DNS Private Reso
 
 Now you just need to follow the below steps to install the database clients and connect to DevBox:
 
-1. Go to the **DevBox**.
+1. Go to **DevBox**.
 2. To Setup Database client and connect to the instance, follow the steps:
 
 {% tabs %}
@@ -122,7 +122,7 @@ To access the database:
 
 {% code %}
 ```
-mysql -h <Endpoint> -u <Username> --database <Database Name> -p
+mysql -h <Endpoint> -u <Username> --database <Database-Name> -p
 ```
 {% endcode %}
 {% endtab %}
@@ -138,7 +138,7 @@ To access the database:
 
 {% code %}
 ```
-psql -h <Endpoint> --username <Username> -d <Database Name> --password
+psql -h <Endpoint> --username <Username> -d <Database-Name> --password
 ```
 {% endcode %}
 {% endtab %}
