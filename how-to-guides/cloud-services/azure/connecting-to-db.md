@@ -12,25 +12,13 @@ Here, you will connect to a private Azuer database instance from your DevZero's 
 
 Before you begin, follow the [Connecting to Azure](../../existing-network/connecting-to-azure.md) guide to set up the Bastion Host to access your private Azure services.
 
-## Existing Database
+## Existing Azure Database
 
 To connect to a database running in the private subnet, ensure it is within the same **Resource Group** and **VNET** containing the Bastion Host.
 
-If the above criteria is followed then simply login into your DevBox and download the required package by following these steps:
+If the above criteria is followed then follow the [Setting up DNS Private Resolver](./setting-up-dns-private-resolver.md) guide to access the DNS Private Zones.
 
-1. Go to **DevBox**.
-3. Copy the private SSH key within the `.ssh` directory.
-4. Connect to virtual machine:
-
-{% code lineNumbers="false" %}
-```
-ssh -i "path/to/private/key" username@instance-private-ip
-```
-{% endcode %}
-
-## New Azure Database
-
-If you need to make a new database running in a private subnet and access it through DevZero's network, then follow the below steps:
+Now follow to below steps to access the Database instance on your DevBox:
 
 1. Go to the **DevBox**.
 2. To Setup Database client and connect to the instance, follow the steps:
@@ -69,6 +57,12 @@ psql -h <Endpoint> --username <Username> -d <Database Name> --password
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+![Azure database access](../../../.gitbook/assets/azure-db-access.png)
+
+## New Azure Database
+
+If you need to make a new database running in a private subnet and access it through DevZero's network, then follow the below steps:
 
 ### Step 1: Creating a Database
 
@@ -99,12 +93,18 @@ psql -h <Endpoint> --username <Username> -d <Database Name> --password
 4. Under the **Authentication** section, Enter your **Admin Username** and **password**.
 5. Go to the **Networking** page and under **Network connectivity** choose **Private access (VNet Integration)** option as we need to make the instance private.
 6. In the **Virtual Network** section, select the **VNET** and **Private Subnet** we made earlier.
-7. Click on Review + Create and click on Create to create database.
+7. Click on **Review + Create** and click on **Create** to create database.
 
 {% endtab %}
 {% endtabs %}
 
+![Azure database creation](../../../.gitbook/assets/azure-db-creation.png)
+
+After creating the database, you need to follow the [Setting up DNS Private Resolver](./setting-up-dns-private-resolver.md) guide to access the DNS Private Zones which houses your database's private domain endpoint for easy access.
+
 ### Step 2: Connecting to the database from DevBox
+
+Now you just need to follow the below steps to install the database clients and connect to DevBox:
 
 1. Go to the **DevBox**.
 2. To Setup Database client and connect to the instance, follow the steps:
@@ -143,3 +143,5 @@ psql -h <Endpoint> --username <Username> -d <Database Name> --password
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+![Azure database access](../../../.gitbook/assets/azure-db-access.png)
