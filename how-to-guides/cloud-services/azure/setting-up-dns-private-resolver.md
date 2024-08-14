@@ -19,7 +19,7 @@ To create a DNS Private Resolver, you need to ensure that you have no other DNS 
 If the above criteria are followed, then follow these steps:
 1. Go to **Home > DNS Private Resolvers** and click on **Create**.
 2. Enter Subscription and Resource Group name in the Project Details section.
-3. Then enter the instance name and region of choice. Remember to choose the region which houses your VNET.
+3. Then enter the instance name and region. Remember to choose the region which houses your VNET.
 4. Then select your Virtual Network (VNET).
 5. In the **Inbound Endpoint** page, click on **Add an endpoint** and then enter the endpoint name.
 6. While selecting the subnet for Inbound Endpoint, create a new subnet and then click on **Save**.
@@ -55,7 +55,7 @@ nameserver <ip-address>
 
 save the file and you will now be able to access the domains within the Azure DNS Private Zones.
 
-For Example, we have a DNS Private Zone named `privatelink.postgres.database.azure.com` and it houses a private domain endpoint named `test-db-devzero.postgres.database.azure.com`. you can check if your setup works by using `nslookup` to see if we are using the new dns server or not:
+For Example, we have a DNS Private Zone named `privatelink.postgres.database.azure.com` and it houses a private domain endpoint named `test-db-devzero.postgres.database.azure.com`. You can verify the setup by using `nslookup`:
 
 {% code lineNumbers="false" %}
 ```bash
