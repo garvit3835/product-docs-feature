@@ -6,7 +6,7 @@ You are connecting to a Virtual Machine running in the private subnet of Azure V
 
 ![Azure VM Architecture](../../../.gitbook/assets/azure-vm-architecture.png)
 
-Here, you will connect to a virtual machine running on a private subnet from your DevBox. This would be done by setting up a bastion host that advertises the VNET CIDR to your DevZero network so that you can access the private service through the network tunneling.
+Here, you will connect to a virtual machine running in a private subnet from your DevBox. This would be done by setting up a bastion host that advertises the VNET CIDR to your DevZero network so that you can access the private service through the network tunneling.
 
 ## Prerequisites
 
