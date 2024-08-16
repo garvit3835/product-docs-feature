@@ -1,7 +1,5 @@
 # Existing Network
 
-
-
 <table data-card-size="large" data-view="cards">
 	<thead>
 		<tr>
@@ -18,6 +16,15 @@
 			</td>
 			<td>
 				<a href="../../.gitbook/assets/aws-vpc.png">aws-vpc.png</a>
+			</td>
+		</tr>
+		<tr>
+			<td>Access Azure VPC</td>
+			<td>
+				<a href="connecting-to-azure.md">connecting-to-azure.md</a>
+			</td>
+			<td>
+				<a href="../../.gitbook/assets/azure.png">azure.png</a>
 			</td>
 		</tr>
 		<tr>

@@ -2,11 +2,11 @@
 
 Connecting to GCP Kubernetes Cluster running in the private subnet of GCP VPC from your DevBox.
 
-## Architecture Diagram:
+## Architecture Diagram
 
-![](../../../.gitbook/assets/gcp-gke-architecture.png)
+![GCP GKE Architecture](../../../.gitbook/assets/gcp-gke-architecture.png)
 
-## Prerequisites:
+## Prerequisites
 
 - Follow [Connecting to GCP](../../existing-network/connecting-to-gcp.md) guide.
 
@@ -64,8 +64,7 @@ kubectl get svc
 ```
 {% endcode %}
 
-![](../../../.gitbook/assets/gcp-gke-devbox-access.png)
-
+![GCP GKE -> Devbox](../../../.gitbook/assets/gcp-gke-devbox-access.png)
 
 ## New GKE Cluster
 
@@ -77,17 +76,17 @@ kubectl get svc
 4. Go to **Cluster > Networking** and select the Network VPC along with the **Private Subnet** for the cluster. Choose **Private cluster** in the **IPv4 network access** and uncheck the **Access control plane using its external IP address** checkbox.
 5. Enter a desired **Default pod address range** and **service address range**. Here we have taken **192.168.0.0/16** and **192.169.0.0/16** for **pod address range** and **service address range** repectively.
 
-![](../../../.gitbook/assets/gcp-gke-setup-1.png)
+![GCP GKE Setup](../../../.gitbook/assets/gcp-gke-setup-1.png)
 
 6. Enter the **Bastion Host's CIDR Range** in the **Authorized Networks** section.
 
-![](../../../.gitbook/assets/gcp-gke-setup-2.png)
+![GCP GKE Networking Setup](../../../.gitbook/assets/gcp-gke-setup-2.png)
 
 7. Click on **Create**.
 
-![](../../../.gitbook/assets/gcp-gke-setup-3.png)
+![GCP GKE Setup Overview](../../../.gitbook/assets/gcp-gke-setup-3.png)
 
-### Step 2: Installing the necessary tools:
+### Step 2: Installing the necessary tools
 
 1. Go to your **DevBox** and install Gcloud SDK:
 
@@ -123,7 +122,7 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
 {% endcode %}
 
-### Step 3: Accessing the GKE Cluster:
+### Step 3: Accessing the GKE Cluster
 
 1. Connect to the cluster:
 
@@ -141,4 +140,4 @@ kubectl get svc
 ```
 {% endcode %}
 
-![](../../../.gitbook/assets/gcp-gke-devbox-access.png)
+![GCP GKE -> Devbox](../../../.gitbook/assets/gcp-gke-devbox-access.png)

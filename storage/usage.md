@@ -9,7 +9,6 @@ $ dz workspace launch recipe-my-uuid --with-volume vol-123 --region us-west-1
 ```
 {% endcode %}
 
-
 {% code %}
 ```
 $ dz storage volume list

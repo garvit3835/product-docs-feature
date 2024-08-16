@@ -2,7 +2,7 @@
 
 You can access your DevBox interactively using Remote Desktop.
 
-### Installing Lightweight Desktop Environment
+## Installing Lightweight Desktop Environment
 
 1. Make sure the package repositories are up-to-date:
 
@@ -37,7 +37,7 @@ vncserver
 
 You will be prompted to create a password.
 
-### Connecting to remote desktop
+## Connecting to remote desktop
 
 You can connect to the remote desktop using VNC protocol.
 

@@ -1,7 +1,5 @@
 # Cloud Services
 
-
-
 <table data-card-size="large" data-view="cards">
     <thead>
         <tr>
@@ -18,6 +16,15 @@
             </td>
             <td>
                 <a href="../../.gitbook/assets/aws.png">aws.png</a>
+            </td>
+        </tr>
+        <tr>
+            <td>Azure</td>
+            <td>
+                <a href="azure/">azure</a>
+            </td>
+            <td>
+                <a href="../../.gitbook/assets/azure.png">azure.png</a>
             </td>
         </tr>
         <tr>

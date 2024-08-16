@@ -4,7 +4,7 @@
 Looking for a pre-made recipe template? See: [Bazel Buildfarm](../../references/starter-templates/ci-cd/bazel-buildfarm.md)
 {% endhint %}
 
-### Installation (using Helm)
+## Installation (using Helm)
 
 1. Make sure both kubectl and helm are installed.
 2. When creating a new workspace, take a look at the [Kubectl](../../references/starter-templates/infra/kubectl.md) recipe and the [Helm](../../references/starter-templates/infra/helm.md) recipe.
@@ -25,7 +25,7 @@ helm install \
 kubectl port-forward service/bazel-buildfarm-server -n bazel-buildfarm 8980:8980 --address 0.0.0.0
 ```
 
-### Example
+## Example
 
 Create the following bazel workspace file structure for testing:
 
@@ -55,13 +55,13 @@ Leave this file empty.
 
 Run `bazel run :main` to verify the build locally.
 
-**Remote execution**
+### Remote execution
 
 ```
 bazel build --remote_executor=grpc://<your-devbox>:8980 :main
 ```
 
-**Remote caching**
+### Remote caching
 
 ```
 bazel build --remote_cache=grpc://<your-devbox>:8980 :main

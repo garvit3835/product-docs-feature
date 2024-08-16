@@ -39,6 +39,4 @@ sudo dz auth login && sudo dz net connect
 {% endcode %}
 {% endhint %}
 
-
-
 If you run into any issues, please reach out to us at [support@devzero.io](mailto:support@devzero.io).
