@@ -16,6 +16,12 @@
             </td>
             <td>
                 <a href="../../../.gitbook/assets/azure-dns-private-resolver-logo.png">azure-dns-private-resolver-logo.png</a>
+            <td>Connecting to Virtual Machine</td>
+            <td>
+                <a href="connecting-to-vm.md">connecting-to-vm.md</a>
+            </td>
+            <td>
+                <a href="../../../.gitbook/assets/azure-vm-logo.png">azure-vm-logo.png</a>
             </td>
         </tr>
     </tbody>
