@@ -19,7 +19,7 @@ Basic knowledge of [Neon DB](https://neon.tech/docs) and [Neon DB branching](htt
 2. Click on **Branch** , create a new branch.
 3. Give it a name and select Current point to time to create the branch off the current state of your main database.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-08-06 at 14.03.47.png" alt=""><figcaption></figcaption></figure>
+![Neon Dashboard Branch Setting](../../.gitbook/assets/neon-dashboard.png)
 
 Once the branch is created, please copy the connection string and add it to your [user environment secrets](../../environment-variables/personal.md#saving-an-user-scoped-environment-variable). In this guide, it is saved as `DATABASE_URL`.
 
