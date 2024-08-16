@@ -10,6 +10,12 @@
     </thead>
     <tbody>
         <tr>
+            <td>Setting Up DNS Private Resolver</td>
+            <td>
+                <a href="setting-up-dns-private-resolver.md">setting-up-dns-private-resolver.md</a>
+            </td>
+            <td>
+                <a href="../../../.gitbook/assets/azure-dns-private-resolver-logo.png">azure-dns-private-resolver-logo.png</a>
             <td>Connecting to Virtual Machine</td>
             <td>
                 <a href="connecting-to-vm.md">connecting-to-vm.md</a>
