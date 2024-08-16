@@ -51,7 +51,7 @@
 				<a href="connecting-to-cloud-sql.md">connecting-to-cloud-sql.md</a>
 			</td>
 			<td>
-				<a href="../../../.gitbook/assets/gcp-cloudstorage-logo.png">gcp-cloudsql-logo.png</a>
+				<a href="../../../.gitbook/assets/gcp-cloud-sql.png">gcp-cloud-sql.png</a>
 			</td>
 		</tr>
 		<tr>
