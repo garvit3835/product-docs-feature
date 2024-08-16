@@ -7,7 +7,7 @@ description: >-
 
 ## Architecture Diagram
 
-<figure><img src="../../.gitbook/assets/neondb.drawio.png" alt=""><figcaption></figcaption></figure>
+![Neon DB Architecture](../../.gitbook/assets/neondb.drawio.png)
 
 ## Prerequisites
 
