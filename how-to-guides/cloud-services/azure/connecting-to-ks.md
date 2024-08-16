@@ -52,7 +52,7 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
 After your initial setup for Azure Cli (`az`) and Kubernetes Cli tool (`kubectl`) is done, your DevBox should be ready for accessing the cluster:
 
-1. Firstly you need to select your **Subscription ID** in Azure Cli with the following command:
+1. Firstly, you need to select your **Subscription ID** in Azure Cli with the following command:
 
 {% code lineNumbers="false" %}
 ```bash
@@ -86,17 +86,17 @@ If you need to make a new Azure Kubernetes Cluster running in a private subnet a
 
 1. Go to **Home > Kubernetes Services** or you can search for **Azure Kuberntes Service** in the search bar and click on **Create Kubernetes Cluster**.
 2. In the **Basics** section, select the resource group you previously selected for your VNET.
-3. Then enter your Cluster name, region and choose your desired node image.
+3. Enter your Cluster name and region and choose your desired node image.
 4. Select your desired **Node Pool** machine configuration in the **Node Pools** section.
-5. Go to the **Networking** section and check the `Enable private cluster` and `Bring your own Azure virtual network` option respectively.
-6. After checking these two options you will be asked to choose your VNET. Then create a new subnet dedicated for Kubernetes and choose that subnet.
-7. Enter a **Kubernetes service address range** which doesn't overlap with your VNET CIDR. For Example, if your VNET CIDR Range is 10.0.0.0/16 then it is recommended to make your Kubernetes service address range as 192.168.0.0/16.
+5. Go to the **Networking** section and check the `Enable private cluster` and `Bring your own Azure virtual network` options, respectively.
+6. After checking these two options, you will be asked to choose your VNET. Then, create a new subnet dedicated to Kubernetes and choose that subnet.
+7. Enter a **Kubernetes service address range** that doesn't overlap with your VNET CIDR. For Example, if your VNET CIDR Range is 10.0.0.0/16, then it is recommended that you make your Kubernetes service address range 192.168.0.0/16.
 8. Provide a Kubernetes DNS service IP Address and enter your **DNS name prefix**.
 9. Click on **Review + Create** and click on **Create** to create Kubernetes Cluster.
 
 ### Step 2: Setting up DevBox
 
-Now that you have created the cluster, you need authenticate your DevBox with `az` cli tool:
+Now that you have created the cluster, you need to authenticate your DevBox with the `az` cli tool:
 
 1. Go to your **DevBox** and install Azure CLI:
 
@@ -134,7 +134,7 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
 After your initial setup for Azure Cli (`az`) and Kubernetes Cli tool (`kubectl`) is done, your DevBox should be ready for accessing the cluster:
 
-1. Firstly you need to select your **Subscription ID** in Azure Cli with the following command:
+1. Firstly, you need to select your **Subscription ID** in Azure Cli with the following command:
 
 {% code lineNumbers="false" %}
 ```bash
