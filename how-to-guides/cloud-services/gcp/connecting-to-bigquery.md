@@ -6,7 +6,7 @@ Connecting to GCP BigQuery Service from your DevBox.
 
 ![GCP BigQuery Architecture](../../../.gitbook/assets/gcp-bigquery-architecture.png)
 
-## Devzero Workspace
+## DevZero Workspace
 
 ### Step 1: Generating Google Authentication Credentials for BigQuery
 
@@ -20,7 +20,7 @@ Connecting to GCP BigQuery Service from your DevBox.
 
 ### Step 2: Connecting to BigQuery through Python API
 
-1. Connect to your Devzero workspace.
+1. Connect to your DevZero workspace.
 2. Store the **Google Authentication Credentials** on the workspace.
 3. Install **Python** and **PIP**:
 

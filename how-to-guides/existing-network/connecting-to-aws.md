@@ -44,7 +44,7 @@ sudo sysctl -p /etc/sysctl.conf
 sudo dz net connect --ssh --advertise-routes=<VPC_CIDR>
 ```
 
-9. Verify that the machine was connected to your DevZero network:\
+9. Verify that the machine is connected to your DevZero network:
 
 ```
 dz net status
