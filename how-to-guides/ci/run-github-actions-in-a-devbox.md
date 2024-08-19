@@ -16,8 +16,10 @@ Pre-built recipe templates are available [here](../../references/starter-templat
 1. Launch a new workspace on DevZero
 2. Visit your **GitHub** organization/repo settings page.
 3. Go to **Actions > Runners**.
-  * For organization-wide runners: https://github.com/organizations/ORGANIZATION/settings/actions/runners
-  * For repository-wide runners: https://github.com/ORGANIZATION/REPO/settings/actions/runners
+<!-- markdown-link-check-disable -->
+* For organization-wide runners: https://github.com/organizations/ORGANIZATION/settings/actions/runners
+* For repository-wide runners: https://github.com/ORGANIZATION/REPO/settings/actions/runners
+<!-- markdown-link-check-enable-->
 4. Click on "New runner" and select "New self-hosted runner".
 5. Select "Linux" and set "x64" as architecture.
 6. Follow the instructions from GitHub provided on the page, which are similar to:
