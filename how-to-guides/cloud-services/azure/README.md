@@ -10,6 +10,31 @@
     </thead>
     <tbody>
         <tr>
+            <td>Connecting to Database</td>
+            <td>
+                <a href="connecting-to-db.md">connecting-to-db.md</a>
+            </td>
+            <td>
+                <a href="../../../.gitbook/assets/azure-db-logo.png">azure-db-logo.png</a>
+        </tr>
+        <tr>
+            <td>Setting Up DNS Private Resolver</td>
+            <td>
+                <a href="setting-up-dns-private-resolver.md">setting-up-dns-private-resolver.md</a>
+            </td>
+            <td>
+                <a href="../../../.gitbook/assets/azure-dns-private-resolver-logo.png">azure-dns-private-resolver-logo.png</a>
+        </tr>
+        <tr>
+            <td>Connecting to Virtual Machine</td>
+            <td>
+                <a href="connecting-to-vm.md">connecting-to-vm.md</a>
+            </td>
+            <td>
+                <a href="../../../.gitbook/assets/azure-vm-logo.png">azure-vm-logo.png</a>
+            </td>
+        </tr>
+        <tr>
             <td>Connecting to Azure Kubernetes Service</td>
             <td>
                 <a href="connecting-to-ks.md">connecting-to-ks.md</a>
