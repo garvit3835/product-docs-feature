@@ -24,17 +24,23 @@ Pre-built recipe templates are available [here](../../references/starter-templat
 
 ```
 # Create a folder
-$ mkdir actions-runner && cd actions-runner# Download the latest runner package
-$ curl -o actions-runner-linux-x64-2.319.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.319.0/actions-runner-linux-x64-2.319.0.tar.gz# Optional: Validate the hash
-$ echo "52b8f9c5abb1a47cc506185a1a20ecea19daf0d94bbf4ddde7e617e7be109b14  actions-runner-linux-x64-2.319.0.tar.gz" | shasum -a 256 -c# Extract the installer
-$ tar xzf ./actions-runner-linux-x64-2.319.0.tar.gz
+mkdir actions-runner && cd actions-runner# Download the latest runner package
+# download the binary
+curl -o actions-runner-linux-x64-2.319.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.319.0/actions-runner-linux-x64-2.319.0.tar.gz
+# Optional: Validate the hash
+echo "52b8f9c5abb1a47cc506185a1a20ecea19daf0d94bbf4ddde7e617e7be109b14  actions-runner-linux-x64-2.319.0.tar.gz" | shasum -a 256 -c
+# Extract the installer
+tar xzf ./actions-runner-linux-x64-2.319.0.tar.gz
 ```
 
 ### Configure
 
+The $TOKEN_FROM_GITHUB will be in the UI when you create the new runner.
+
 ```
 # Create the runner and start the configuration experience
-$ ./config.sh --url https://github.com/devzero-inc --token TOKEN_FROM_GITHUB
+TOKEN_FROM_GITHUB="" # insert token
+./config.sh --url https://github.com/devzero-inc --token $TOKEN_FROM_GITHUB
 ```
 {% hint style="info" %}
 The token from GitHub wll expire in about an hour and is unique for your instance.
@@ -51,7 +57,7 @@ curl \
 
 {% endhint %}
 
-### Configure and Start
+### Install and Start
 
 ```
 # Installs the actions service to run in background using systemd
@@ -78,6 +84,10 @@ jobs:
 ```
 
 ## Using Actions Runner Controller
+
+{% hint style="warning" %}
+The Actions Runner Controller setup is still in beta and some actions, like running Docker in tests, aren't yet supported.
+{% endhint %}
 
 You will need a Personal Access Token (PAT).
 
