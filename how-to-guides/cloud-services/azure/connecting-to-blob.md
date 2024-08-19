@@ -4,7 +4,7 @@ Connecting to a Blob Storage from your DevBox.
 
 ## Architecture Diagram
 
-![Azure Blob Storage Architecture](../../../.gitbook/assets/azure-storage-account-architecture.png)
+![Azure Blob Storage Architecture](../../../.gitbook/assets/azure-blob-architecture.png)
 
 Here, you will connect to a Blob Storage from your DevBox. This would be done by setting up a bastion host that advertises the private routes to your DevZero network so that you can access the private service through network tunneling. You would also need to set up a DNS Private Resolver to access the Blob Storage's Private Endpoint from your DevBox.
 
