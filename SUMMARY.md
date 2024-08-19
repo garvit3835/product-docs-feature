@@ -61,6 +61,7 @@
     * [ElastiCache](how-to-guides/cloud-services/aws/connect-to-elasticache.md)
     * [OpenSearch](how-to-guides/cloud-services/aws/connect-to-opensearch.md)
   * [Azure](how-to-guides/cloud-services/azure/README.md)
+    * [AKS](how-to-guides/cloud-services/azure/connecting-to-ks.md)
     * [Azure Databases](how-to-guides/cloud-services/azure/connecting-to-db.md)
     * [DNS Private Resolver](how-to-guides/cloud-services/azure/setting-up-dns-private-resolver.md)
     * [VM](how-to-guides/cloud-services/azure/connecting-to-vm.md)

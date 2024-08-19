@@ -34,5 +34,14 @@
                 <a href="../../../.gitbook/assets/azure-vm-logo.png">azure-vm-logo.png</a>
             </td>
         </tr>
+        <tr>
+            <td>Connecting to Azure Kubernetes Service</td>
+            <td>
+                <a href="connecting-to-ks.md">connecting-to-ks.md</a>
+            </td>
+            <td>
+                <a href="../../../.gitbook/assets/azure-ks-logo.png">azure-ks-logo.png</a>
+            </td>
+        </tr>
     </tbody>
 </table>
