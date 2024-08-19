@@ -12,7 +12,7 @@
         <tr>
             <td>Connecting to Azure Kubernetes Service</td>
             <td>
-                <a href="connecting-to-vm.md">connecting-to-ks.md</a>
+                <a href="connecting-to-ks.md">connecting-to-ks.md</a>
             </td>
             <td>
                 <a href="../../../.gitbook/assets/azure-ks-logo.png">azure-ks-logo.png</a>
