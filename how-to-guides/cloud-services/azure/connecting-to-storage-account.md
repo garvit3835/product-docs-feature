@@ -4,7 +4,7 @@ Connecting to a Storage Account from your DevBox.
 
 ## Architecture Diagram
 
-![Azure VM Architecture](../../../.gitbook/assets/azure-storage-account-architecture.png)
+![Azure Storage Account Architecture](../../../.gitbook/assets/azure-storage-account-architecture.png)
 
 Here, you will connect to a Storage Account from your DevBox. This would be done by setting up a bastion host that advertises the private routes to your DevZero network so that you can access the private service through network tunneling. You would also need to set up a DNS Private Resolver to access the Storage Account's Private Endpoint from your DevBox.
 
