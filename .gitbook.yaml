@@ -1,0 +1,4 @@
+root: ./
+
+redirects:
+  recipes/new-recipe: recipes/create-recipe.md
