@@ -43,5 +43,14 @@
                 <a href="../../../.gitbook/assets/azure-ks-logo.png">azure-ks-logo.png</a>
             </td>
         </tr>
+        <tr>
+            <td>Connecting to Azure Table Storage</td>
+            <td>
+                <a href="connecting-to-table-storage.md">connecting-to-table-storage.md</a>
+            </td>
+            <td>
+                <a href="../../../.gitbook/assets/azure-table-logo.png">azure-table-logo.png</a>
+            </td>
+        </tr>
     </tbody>
 </table>
