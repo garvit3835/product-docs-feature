@@ -105,9 +105,9 @@ az storage blob list \
 
 If you need to make a new Blob Storage and access it through DevBox, then follow the below steps:
 
-### Step 1: Creating a Storage Account
+### Step 1: Creating a Blob Storage
 
-Firstly, you must follow the [Connecting to Storage Account](./connecting-to-storage-account.md) guide to create and configure a new storage account. After the setup, you must also set up the DNS Private Resolver by following the [Setting up DNS Private Resolver](./setting-up-dns-private-resolver.md) guide.
+Firstly, you must follow the [Configuring Storage Account](./connecting-to-storage-account.md) guide to create and configure a new storage account. After the setup, you must also set up the DNS Private Resolver by following the [Setting up DNS Private Resolver](./setting-up-dns-private-resolver.md) guide.
 
 After the above mentioned steps are completed, you may go ahead and create a container for Blob Storage by following these steps:
 
