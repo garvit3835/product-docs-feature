@@ -1,6 +1,6 @@
 # Azure Blob Storage
 
-Connecting to an Azure Blob Storage (Container) from your DevBox.
+Connecting to an Azure Blob Storage from your DevBox.
 
 ## Architecture Diagram
 
