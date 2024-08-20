@@ -18,11 +18,11 @@ To configure a Storage Account, ensure it is within the same **Resource Group** 
 
 Following the above criteria, follow the [Setting up DNS Private Resolver](./setting-up-dns-private-resolver.md) guide to access the DNS Private Zones.
 
-### Step 1: Configuring a Storage Account
+### Step 1: Configuring a Priavate Endpoint
 
 Now follow the below steps to configure the Storage Account:
 
-1. Go to **Home > Storage Accounts** and click on the Storage Account to want to access through the private endpoint.
+1. Go to **Home > Storage Accounts** and click on the Storage Account you want to access through the private endpoint.
 2. Go to **Networking > Firewalls and virtual networks** tab in the **Security + Networking** section and under `Public network access` choose the `Disabled` option. Click on **Save**. This will make your storage account completely private.
 
 ![Azure Storage Account access](../../../.gitbook/assets/azure-storage-account-networking.png)
@@ -32,7 +32,7 @@ Now follow the below steps to configure the Storage Account:
 5. Click **Resource** and select your desired `Target sub-resource` for your private endpoint. Remember that if you have more than one sub-resource type, you need to create a separate endpoint for each one.
 6. Click on **Virtual Network** and select your Virtual Network (VNET), which houses the bastion host and DNS Private Resolver.
 7. Select a compatible subnet, then click on **Next**, and leave the rest of the settings as default.
-8. Click on **Create**, and Your Private Endpoint will be created.
+8. Click on **Create**, and your Private Endpoint will be created.
 
 ![Azure Storage Account Endpoint](../../../.gitbook/assets/azure-storage-account-endpoint.png)
 
@@ -50,7 +50,7 @@ nslookup <storage-account-name>.<sub-resource>.core.windows.net
 
 ## New Storage Account
 
-If you need to make a new Storage Account and access it through DevZero's network, then follow the below steps:
+If you need to make a new Storage Account and access it through DevBox, then follow the below steps:
 
 ### Step 1: Creating a Storage Account
 
