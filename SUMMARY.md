@@ -61,7 +61,7 @@
     * [ElastiCache](how-to-guides/cloud-services/aws/connect-to-elasticache.md)
     * [OpenSearch](how-to-guides/cloud-services/aws/connect-to-opensearch.md)
   * [Azure](how-to-guides/cloud-services/azure/README.md)
-    * [Compute Instance](how-to-guides/cloud-services/azure/connecting-to-storage-account.md)
+    * [Storage Account](how-to-guides/cloud-services/azure/configuring-storage-account.md)
   * [GCP](how-to-guides/cloud-services/gcp/README.md)
     * [Compute Instance](how-to-guides/cloud-services/gcp/connecting-to-compute-instance.md)
     * [BigQuery](how-to-guides/cloud-services/gcp/connecting-to-bigquery.md)
