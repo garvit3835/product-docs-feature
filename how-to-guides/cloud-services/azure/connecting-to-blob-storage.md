@@ -1,6 +1,6 @@
 # Azure Blob Storage
 
-Connecting to a Azure Blob Storage (Container) from your DevBox.
+Connecting to an Azure Blob Storage (Container) from your DevBox.
 
 ## Architecture Diagram
 
@@ -103,11 +103,11 @@ az storage blob list \
 
 ## New Blob Storage
 
-If you need to make a new Blob Storage and access it through DevZero's network, then follow the below steps:
+If you need to make a new Blob Storage and access it through DevBox, then follow the below steps:
 
 ### Step 1: Creating a Storage Account
 
-Firstly, you need to follow the [Connecting to Storage Account](./connecting-to-storage-account.md) guide to create a new storage account and configure it. After the setup is completed, you also need to set up the DNS Private Resolver by following the [Setting up DNS Private Resolver](./setting-up-dns-private-resolver.md) guide.
+Firstly, you must follow the [Connecting to Storage Account](./connecting-to-storage-account.md) guide to create and configure a new storage account. After the setup, you must also set up the DNS Private Resolver by following the [Setting up DNS Private Resolver](./setting-up-dns-private-resolver.md) guide.
 
 After the above mentioned steps are completed, you may go ahead and create a container for Blob Storage by following these steps:
 
