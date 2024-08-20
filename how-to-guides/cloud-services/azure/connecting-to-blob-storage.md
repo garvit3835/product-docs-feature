@@ -1,6 +1,6 @@
 # Azure Blob Storage
 
-Connecting to a Blob Storage from your DevBox.
+Connecting to a Azure Blob Storage (Container) from your DevBox.
 
 ## Architecture Diagram
 
@@ -10,15 +10,15 @@ Here, you will connect to a Blob Storage from your DevBox. This would be done by
 
 ## Prerequisites
 
-Before you begin, follow the [Connecting to Azure](../../existing-network/connecting-to-azure.md) guide to set up the Bastion Host to access your private Azure services.
+1. Before you begin, follow the [Connecting to Azure](../../existing-network/connecting-to-azure.md) guide to set up the Bastion Host to access your private Azure services.
+2. Following the above criteria, follow the [Setting up DNS Private Resolver](./setting-up-dns-private-resolver.md) guide to access the DNS Private Zones.
+3. After successfully setting up the DNS Private Resolver, follow the [Configuring Storage Account](./configuring-storage-account.md) guide to access the storage account endpoint.
 
 ## Existing Azure Blob Storage
 
 To connect to a Storage Account, ensure it is within the same **Resource Group** containing the Bastion Host.
 
-Following the above criteria, follow the [Setting up DNS Private Resolver](./setting-up-dns-private-resolver.md) guide to access the DNS Private Zones.
-
-After successfully setting up the DNS Private Resolver, follow the [Connecting to Storage Account](./connecting-to-storage-account.md) guide to configure the storage account.
+### Step 1: Accessing the Blob Storage
 
 Now follow the below steps to access the Blob Storage on your DevBox:
 
@@ -38,14 +38,14 @@ az login
 ```
 {% endcode %}
 
-3. After you have completed your authentication, go to Home > Storage Accounts and select your storage account.
-4. Then go to the Security + Networking > Access Keys section and note down either of the two access keys presented to you.
+3. After you have completed your authentication, go to **Home > Storage Accounts** and select your storage account.
+4. Then go to the **Security + Networking > Access Keys** section and note down either of the two access keys presented to you.
 5. After you have acquired the access key, you may use the following command to Upload, Download, or list thBlobob in the container:
 
 {% tabs %}
 {% tab title="Upload" %}
 
-To Upload a file aBlobob to the container, use the following command:
+To Upload a file as Blob to the container, use the following command:
 
 {% code %}
 ```bash
@@ -64,7 +64,7 @@ az storage blob upload \
 
 {% tab title="Download" %}
 
-To Download a file from the container, use the following command:
+To Download a Blob from the container, use the following command:
 
 {% code %}
 ```bash
@@ -136,7 +136,9 @@ az login
 ```
 {% endcode %}
 
-3. You may use the following command to Upload, Download, or list the Blob in the containerBlob% tabs %}
+3. You may use the following command to Upload, Download, or list the Blob in the container:
+
+{% tabs %}
 {% tab title="Upload" %}
 
 To Upload a file as Blob to the container, use the following command:
