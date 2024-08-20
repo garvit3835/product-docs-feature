@@ -40,7 +40,7 @@ az login
 
 3. After you have completed your authentication, go to **Home > Storage Accounts** and select your storage account.
 4. Then go to the **Security + Networking > Access Keys** section and note down either of the two access keys presented to you.
-5. After you have acquired the access key, you may use the following command to Upload, Download, or list thBlobob in the container:
+5. After you have acquired the access key, you may use the following command to Upload, Download, or list the blob in the container:
 
 {% tabs %}
 {% tab title="Upload" %}
