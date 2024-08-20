@@ -1,6 +1,6 @@
 # Azure Storage Account
 
-Configuring Azure Storage Account to access it's endpoint from DevBox.
+Configuring the Azure Storage Account to access its endpoint from DevBox.
 
 ## Architecture Diagram
 
@@ -18,7 +18,7 @@ To configure a Storage Account, ensure it is within the same **Resource Group** 
 
 Following the above criteria, follow the [Setting up DNS Private Resolver](./setting-up-dns-private-resolver.md) guide to access the DNS Private Zones.
 
-### Step 1: Configuring a Priavate Endpoint
+### Step 1: Configuring a Private Endpoint
 
 Now follow the below steps to configure the Storage Account:
 
@@ -63,7 +63,7 @@ If you need to make a new Storage Account and access it through DevBox, then fol
 7. Select a compatible subnet and then choose your private DNS zone.
 8. Click on **OK** and then click on **Review + Create**. Finally, click on **Create**.
 
-### Step 2: Accessing the Storage Account
+### Step 2: Accessing the new Storage Account
 
 If the above steps are completed, you must follow the [Setting up DNS Private Resolver](./setting-up-dns-private-resolver.md) guide to access the DNS Private Zones.
 
