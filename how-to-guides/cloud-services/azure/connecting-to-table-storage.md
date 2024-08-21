@@ -83,7 +83,7 @@ If you need to make a new Table Storage and access it through DevBox, then follo
 
 ### Step 1: Creating a Table Storage
 
-Firstly, you must follow the [Configuring Storage Account](./connecting-to-storage-account.md) guide to create and configure a new storage account. After the setup, you must also set up the DNS Private Resolver by following the [Setting up DNS Private Resolver](./setting-up-dns-private-resolver.md) guide.
+Firstly, you must follow the [Configuring Storage Account](./configuring-storage-account.md) guide to create and configure a new storage account. After the setup, you must also set up the DNS Private Resolver by following the [Setting up DNS Private Resolver](./setting-up-dns-private-resolver.md) guide.
 
 After the above mentioned steps are completed, you may go ahead and create a container for Blob Storage by following these steps:
 
