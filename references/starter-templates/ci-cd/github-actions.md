@@ -2,29 +2,22 @@
 
 ## Self-hosted runner
 
+These steps will allow you to create a workspace with all of the GitHub Actions required packages and binaries for a self-hosted runner
+
+See DevZero's [GitHub Actions docs](../../../how-to-guides/ci/run-github-actions-in-a-devbox.md) for usage.
+
 ```yaml
 version: "3"
 build:
   steps:
     - type: apt-get
-      packages: ["build-essential", "curl", "git", "nano", "software-properties-common", "ssh", "sudo", "tar", "unzip", "vim", "wget", "zip"]
+      packages: ["build-essential", "curl", "git", "nano", "software-properties-common", "ssh", "sudo", "tar", "unzip", "vim", "wget", "zip", "jq"]
     - type: command
       command: |
         mkdir actions-runner && cd actions-runner
         curl -o actions-runner-linux-x64-2.317.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.317.0/actions-runner-linux-x64-2.317.0.tar.gz
         tar xzf ./actions-runner-linux-x64-2.317.0.tar.gz
-        ./config.sh --unattended --url https://github.com/OWNER/REPO --token <token> --labels devzero
 
-# We have to specify a "launch" command that installs a systemd service
-# and starts it in the background after the workspace has been created
-launch:
-  steps:
-    - type: command
-      command: |
-        cd actions-runner
-        ./svc.sh install && ./svc.sh start
-      directory: /home/devzero
-      user: root
 ```
 
 {% hint style="info" %}
@@ -32,6 +25,11 @@ Tip: Make sure to pass the `--unattended` flag to `config.sh` script.
 {% endhint %}
 
 ## Actions Runner Controller
+
+{% hing style="warning" %}
+
+The Actions Runner Controller directions are in beta and running tests which require Docker aren't supported yet
+{% endhint %}
 
 {% hint style="info" %}
 Adjust the `INSTALLATION_NAME`, `NAMESPACE`, `GITHUB_CONFIG_URL`, and `GITHUB_PAT` variables as needed.

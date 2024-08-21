@@ -92,6 +92,12 @@ jobs:
     - run: echo "🎉 This job uses self-hosted runners!"
 ```
 
+### Video Walkthrough
+
+Here's a five minute video to see the process from end to end.
+
+{% embed url="https://devzero.b-cdn.net/Setting%20up%20Self-Hosted%20GitHub%20Actions%20on%20DevZero%20%F0%9F%9B%A0%EF%B8%8F.mp4" %}
+
 ## Using Actions Runner Controller
 
 {% hint style="warning" %}
