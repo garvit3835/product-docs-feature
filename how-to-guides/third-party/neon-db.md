@@ -1,6 +1,5 @@
 ---
-description: >-
-  Using a NeonDB database branch from a DevZero workspace.
+description: Using a NeonDB database branch from a DevZero workspace.
 ---
 
 # Neon DB
@@ -29,15 +28,15 @@ For the purpose of this guide, we will be using a [todo app](https://github.com/
 
 #### Build Steps
 
-- install linux helper packages
-- clone repo
-- install nodejs
-- run `npm install`
-- run `npm run build`: in this step, we need the database URL to be present so we can run some [prisma](https://www.prisma.io/) commands that are required for manipulating the database
+* install linux helper packages
+* clone repo
+* install nodejs
+* run `npm install`
+* run `npm run build`: in this step, we need the database URL to be present so we can run some [prisma](https://www.prisma.io/) commands that are required for manipulating the database
 
 #### Launch Steps
 
-- `npm start`: to start the application
+* `npm start`: to start the application
 
 ### Creating a Recipe for our ToDo App
 
@@ -45,35 +44,45 @@ When asked for repository, feel free to use [https://github.com/myestery/todo-ap
 
 We will be implementing the above steps using the recipe file below
 
+````yaml
 ```yaml
 version: "3"
-
-# Build-time steps are cached as container images and then layered to create a workspace.
+config:
+  volumes:
+    - sub_path: home
+      path: /home/devzero
+  code_clone_root: /home/devzero
+  code_clone_credentials: null
 build:
+  environment:
+  - name: DATABASE_URL
+    value: "{{secret:team.DATABASE_URL}}"
   steps:
-    # This step adds basic packages you're likely to need in every workspace, we recommend leaving it in most recipes
+    # Install base OS packages
     - type: apt-get
       packages:
-        [
-          "build-essential",
-          "curl",
-          "git",
-          "nano",
-          "software-properties-common",
-          "ssh",
-          "sudo",
-          "tar",
-          "unzip",
-          "vim",
-          "wget",
-          "zip",
-        ]
-    # Here is where you can add code repositories to be cloned into your workspace. Import multiple repositories by adding additional git-clone steps
+        - build-essential
+        - curl
+        - git
+        - nano
+        - software-properties-common
+        - ssh
+        - sudo
+        - tar
+        - unzip
+        - vim
+        - wget
+        - zip
+        - postgresql-client
+    # cloned to /home/devzero
     - type: git-clone
       url: https://github.com/Myestery/todo-app
+      branch: ""
+      credentials: null
+      directory: ""
+    # Download and install NVM, Rationale: File: package.json
+    # Install Node.js 21.0.0, Rationale: No Node.js version specified; using default
     - type: command
-      name: |
-        Download and install NVM; then install node.js 21
       command: |
         curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
         echo 'export NVM_DIR=$HOME/.nvm' | sudo tee -a /etc/profile.d/nvm-installation.sh
@@ -82,24 +91,35 @@ build:
         nvm install 21.0.0
       directory: /home/devzero
       user: devzero
+    # Install and build
     - type: command
-      name: |
-        Install dependencies
       command: |
         . /etc/profile.d/nvm-installation.sh
         npm install
         npm run build
       directory: todo-app
       user: devzero
-
-# Launch-time steps are run as part of a workspace launch stage
 launch:
+  environment:
+    - name: DATABASE_URL
+      value: "{{secret:team.DATABASE_URL}}"
   steps:
     - type: command
-      name: Start Application
-      command: echo Ready
+      command: |
+        # Test PostgreSQL connection
+        if psql "$DATABASE_URL" -c '\l'; then
+          echo "PostgreSQL connection successful!"
+        else
+          echo "Failed to connect to PostgreSQL"
+          exit 1
+        fi
       directory: todo-app
+      user: devzero
+runtime:
+  environment: []
+
 ```
+````
 
 The Recipe page has some helper snippet to guide you ingenerating such files
 
@@ -109,4 +129,4 @@ Now that we have a working recipe, we can create a workspace off it from the [re
 
 ### Video Walkthrough
 
-{% embed url="https://vimeo.com/995427315/a450ca646a?share=copy" %}
+{% embed url="https://youtu.be/2Zk-3P1zVuM" %}
