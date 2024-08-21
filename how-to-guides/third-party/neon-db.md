@@ -16,7 +16,7 @@ Basic knowledge of [Neon DB](https://neon.tech/docs) and [Neon DB branching](htt
 
 1. Go to **Your Project > Project Dashboard.**
 2. Click on **Branch** , create a new branch.
-3. Give it a name and select Current point to time to create the branch off the current state of your main database.
+3. Give it a name and select **Current point in time** to create the branch off the current state of your main database.
 
 ![Neon Dashboard Branch Setting](../../.gitbook/assets/neon-dashboard.png)
 
@@ -121,7 +121,7 @@ runtime:
 ```
 ````
 
-The Recipe page has some helper snippet to guide you ingenerating such files
+The Recipe page has some helper snippet to guide you in generating such files
 
 ### Creating a workspace
 
@@ -129,4 +129,4 @@ Now that we have a working recipe, we can create a workspace off it from the [re
 
 ### Video Walkthrough
 
-{% embed url="https://youtu.be/2Zk-3P1zVuM" %}
+{% embed url="https://vimeo.com/1001281574?share=copy" %}
