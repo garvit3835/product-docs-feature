@@ -22,7 +22,7 @@ To check and configure the same, follow the below steps:
 
 1. Go to **[MongoDB Atlas](https://cloud.mongodb.com/v2)**.
 2. Go to **Security > Network Access** and click on **Add IP Address**.
-3. In the **Access List Entry**, enter `0.0.0.0/0`.
+3. In the **Access List Entry**, enter `0.0.0.0/0` to allow inbound access from anywhere.
 
 ![MongoDB Network access](../../.gitbook/assets/mongodb-network.png)
 
@@ -105,86 +105,93 @@ mongosh "mongodb+srv://<cluster-name>.<cluster-id>.mongodb.net/" --apiVersion 1 
 
 ## New MongoDB Cluster
 
-If you need to make a new database running in a private subnet and access it through DevZero's network, then follow the below steps:
+If you need to make a new database cluster and access it through DevBox, then follow the below steps:
 
-### Step 1: Creating a Database
+### Step 1: Creating a Cluster
 
-{% tabs %}
-{% tab title="MySQL" %}
+1. Go to **[MongoDB Atlas](https://cloud.mongodb.com/v2)**.
+2. Go to **Database > Clusters** and click on **Create**.
+3. Choose the type of database cluster you want to deploy.
+4. Enter the **Instance name**, **Provider**, and **Region**.
+5. Click on **Create Deployment** and give it some time to deploy the infrastructure.
+6. Go to **Security > Network Access** and click on **Add IP Address**.
+7. In the **Access List Entry**, enter `0.0.0.0/0` to allow inbound access from anywhere.
 
-1. Go to **Home > Azure Database for MySQL servers** and click on **Create**.
-2. In the **Basics** section, select the **Resource group** you previously selected for your **VNET**.
-3. Then input your database **Server name**, **Region** and the desired **MySQL version**.
+![MongoDB Network access](../../.gitbook/assets/mongodb-network.png)
 
-*Remember to select the region where your VNET resides.*
+### Step 2: Installing dependencies in DevBox
 
-4. Under the **Authentication** section, Enter your **Admin Username** and **password**.
-5. Go to the **Networking** page and under **Network connectivity** choose **Private access (VNet Integration)** option as we need to make the instance private.
-6. In the **Virtual Network** section, select the **VNET** and **Private Subnet**.
-7. Click on Review + Create and click on Create to create the database.
+To connect with the cluster we need to install the `mongosh` shell tool.
 
-{% endtab %}
+Follow the below steps to do so:
 
-{% tab title="PostgreSQL" %}
-
-1. Go to **Home > Azure Database for PostgresSQL servers** and click on **Create**.
-2. In the **Basics** section, select the **Resource group** you previously selected for your **VNET**.
-3. Then input your database **Server name**, **Region** and the desired **PostgresSQL version**.
-
-*Remember to select the region where your VNET resides.*
-
-4. Under the **Authentication** section, Enter your **Admin Username** and **password**.
-5. Go to the **Networking** page and under **Network connectivity** choose **Private access (VNet Integration)** option as we need to make the instance private.
-6. In the **Virtual Network** section, select the **VNET** and **Private Subnet**.
-7. Click on **Review + Create** and click on **Create** to create the database.
-
-{% endtab %}
-{% endtabs %}
-
-![Azure database creation](../../../.gitbook/assets/azure-db-creation.png)
-
-After creating the database, you need to follow the [Setting up DNS Private Resolver](./setting-up-dns-private-resolver.md) guide to access the DNS Private Zones which houses your database's private domain endpoint for easy access.
-
-### Step 2: Connecting to the database from DevBox
-
-Now you just need to follow the below steps to install the database clients and connect to DevBox:
-
-1. Go to **DevBox**.
-2. To Setup Database client and connect to the instance, follow the steps:
-
-{% tabs %}
-{% tab title="MySQL" %}
-
-To install the mysql client cli:
-
-```
-sudo apt install mysql-client
-```
-
-To access the database:
+1. Install `gnupg` and `curl` if they are not already:
 
 {% code %}
-```
-mysql -h <Endpoint> -u <Username> --database <Database-Name> -p
+```bash
+sudo apt-get install gnupg curl
 ```
 {% endcode %}
-{% endtab %}
 
-{% tab title="PostgreSQL" %}
-To install the psql client cli:
-
-```
-sudo apt install postgresql-client
-```
-
-To access the database:
+2. Get the **MongoDB public GPG key**:
 
 {% code %}
-```
-psql -h <Endpoint> --username <Username> -d <Database-Name> --password
+```bash
+curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
+   sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
+   --dearmor
 ```
 {% endcode %}
-{% endtab %}
-{% endtabs %}
 
-![Azure database access](../../../.gitbook/assets/azure-db-access.png)
+3. Create a list file for MongoDB:
+
+{% code %}
+```bash
+echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+```
+{% endcode %}
+
+4. Install the MongoDB Package:
+
+{% code %}
+```bash
+sudo apt-get install -y mongodb-org
+```
+{% endcode %}
+
+5. Start the MongoDB Daemon (`mongod`):
+
+{% code %}
+```bash
+sudo systemctl start mongod
+sudo systemctl enable mongod
+sudo systemctl status mongod
+```
+{% endcode %}
+
+6. verify if `mongosh` is installed or not:
+
+{% code %}
+```bash
+mongosh
+```
+{% endcode %}
+
+### Step 3: Connecting with the Cluster
+
+To connect to the MongoDB cluster, follow the below steps:
+
+1. Go to **[MongoDB Atlas](https://cloud.mongodb.com/v2)**.
+2. Go to **Database > Clusters** and select the cluster you wanna connect to.
+3. Click on **Connect** and then click on **Shell**.
+4. Copy the connection string and paste it in your DevBox CLI:
+
+{% code %}
+```bash
+mongosh "mongodb+srv://<cluster-name>.<cluster-id>.mongodb.net/" --apiVersion 1 --username <user-name>
+```
+{% endcode %}
+
+5. Enter the password when prompted and you will see the mongosh shell if the connection is authenticated.
+
+![MongoDB Shell Access](../../.gitbook/assets/mongodb-access.png)
