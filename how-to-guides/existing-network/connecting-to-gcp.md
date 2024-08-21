@@ -42,7 +42,7 @@ curl -fsSL https://get.devzero.io | sh
 
 {% code lineNumbers="false" %}
 ```
-dz auth login
+sudo dz auth login && sudo dz net connect
 ```
 {% endcode %}
 
