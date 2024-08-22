@@ -43,6 +43,14 @@
                 <a href="../../../.gitbook/assets/azure-ks-logo.png">azure-ks-logo.png</a>
             </td>
         </tr>
+      <td>Configuring Azure Storage Account</td>
+            <td>
+                <a href="configuring-storage-account.md">configuring-storage-account.md</a>
+            </td>
+            <td>
+                <a href="../../../.gitbook/assets/azure-storage-account-logo.png">azure-storage-account-logo.png</a>
+              </td>
+        </tr>
         <tr>
             <td>Connecting to Azure Table Storage</td>
             <td>
@@ -51,6 +59,6 @@
             <td>
                 <a href="../../../.gitbook/assets/azure-table-logo.png">azure-table-logo.png</a>
             </td>
-        </tr>
+      <tr>
     </tbody>
 </table>
