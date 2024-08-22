@@ -62,6 +62,6 @@
             <td>
                 <a href="../../../.gitbook/assets/azure-table-logo.png">azure-table-logo.png</a>
             </td>
-      <tr>
+        </tr>
     </tbody>
 </table>
