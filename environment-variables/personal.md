@@ -16,7 +16,11 @@ User-scoped environment variables are automatically made available on each of yo
 
 Using an environment variable within your workspace is how you would normally use any environment variable (eg: `echo $NOT_SO_SECRET_KEY`).
 
-To use it in a build, you can reference it the same way. If your environment variable is called `MY_KEY`:
+{% hint style="info" %}
+Note: user secrets are not available during build time, they are only available during launch and runtime steps.
+{% endhint %}
+
+To use it in a recipe, you can reference it the same way. If your environment variable is called `MY_KEY`:
 
 <figure><img src="../.gitbook/assets/env-var-in-build.png" alt=""><figcaption><p>Environment Variables during build-stage</p></figcaption></figure>
 

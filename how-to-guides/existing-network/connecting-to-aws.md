@@ -27,7 +27,7 @@ curl -fsSL https://get.devzero.io | sh
 6. Log into your account by executing:
 
 ```
-dz auth login
+sudo dz auth login && sudo dz net connect
 ```
 
 7. Enable IP forwarding to access resources on private subnets:
@@ -44,7 +44,7 @@ sudo sysctl -p /etc/sysctl.conf
 sudo dz net connect --ssh --advertise-routes=<VPC_CIDR>
 ```
 
-9. Verify that the machine was connected to your DevZero network:\
+9. Verify that the machine is connected to your DevZero network:
 
 ```
 dz net status
