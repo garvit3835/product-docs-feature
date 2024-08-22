@@ -3,7 +3,7 @@
 ## ℹ️ Getting Started
 
 * [Welcome to DevZero](README.md)
-* [Platform Overview](<README (1).md>)
+* [Platform Overview](getting-started/readme-1.md)
 * [Quickstart](getting-started/quickstart.md)
 
 ## 📜 Recipes
@@ -84,6 +84,8 @@
 * [CI](how-to-guides/ci/README.md)
   * [GitHub Actions](how-to-guides/ci/run-github-actions-in-a-devbox.md)
 * [Remote Desktop](how-to-guides/remote-desktop.md)
+* [Third Party](how-to-guides/third-party/README.md)
+  * [Neon DB](how-to-guides/third-party/neon-db.md)
 
 ## 🛠️ Troubleshooting
 
@@ -139,7 +141,7 @@
     * [GitHub](references/starter-templates/third-party/github.md)
     * [GitLab](references/starter-templates/third-party/gitlab.md)
   * [CI/CD](references/starter-templates/ci-cd/README.md)
-    * [Argo CD](references/starter-templates/infra/argo.md)
+    * [Argo CD](references/starter-templates/ci-cd/argo.md)
     * [Bazel Buildfarm](references/starter-templates/ci-cd/bazel-buildfarm.md)
     * [GitHub Actions](references/starter-templates/ci-cd/github-actions.md)
 * [IDE Setup](references/ide-setup/README.md)
