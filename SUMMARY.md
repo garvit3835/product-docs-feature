@@ -67,6 +67,7 @@
     * [DNS Private Resolver](how-to-guides/cloud-services/azure/setting-up-dns-private-resolver.md)
     * [VM](how-to-guides/cloud-services/azure/connecting-to-vm.md)
     * [Storage Account](how-to-guides/cloud-services/azure/configuring-storage-account.md)
+    * [Table Storage](how-to-guides/cloud-services/azure/connecting-to-table-storage.md)
   * [GCP](how-to-guides/cloud-services/gcp/README.md)
     * [Compute Instance](how-to-guides/cloud-services/gcp/connecting-to-compute-instance.md)
     * [BigQuery](how-to-guides/cloud-services/gcp/connecting-to-bigquery.md)
