@@ -4,7 +4,7 @@ Connecting to EC2 running in the private subnet of AWS VPC from your DevBox.
 
 ## Walkthrough video
 
-{% embed url="https://www.tella.tv/video/connect-aws-ec2-instances-to-your-dev-box-ajgb" %}
+{% embed url="https://devzero.b-cdn.net/Connect%20AWS%20EC2%20Instances%20to%20Your%20Dev%20Box-inline-subtitles.mp4" %}
 
 ## Architecture Diagram
 
