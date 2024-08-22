@@ -15,6 +15,7 @@
 * [Recipe Base Images](recipes/custom-base.md)
 * [Sharing Recipes](recipes/saving-recipes.md)
 * [Recipe Syntax](recipes/syntax.md)
+* [Build Process](recipes/build-process.md)
 
 ## 🖥️ Workspaces
 
