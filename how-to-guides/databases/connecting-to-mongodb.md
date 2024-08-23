@@ -16,15 +16,26 @@ Before you begin, you should create your account with [MongoDB](https://account.
 
 ### Step 1: Configuring MongoDB Atlas
 
-To connect to a database cluster, ensure it is allowed inbound access from anywhere.
+To connect to a database cluster, you have to create a private endpoint with one of the 3 available cloud provider supported by MongoDB (AWS, GCP, Azure).
 
 To check and configure the same, follow the below steps:
 
 1. Go to **[MongoDB Atlas](https://cloud.mongodb.com/v2)**.
-2. Go to **Security > Network Access** and click on **Add IP Address**.
-3. In the **Access List Entry**, enter `0.0.0.0/0` to allow inbound access from anywhere.
+2. Go to **Security > Network Access** and open the **Priavte Endpoint** tab.
+3. Click on **Add Private Endpoint** and choose your cloud provider. For this tutorial we will be going with Azure.
 
-![MongoDB Network access](../../.gitbook/assets/mongodb-network.png)
+*You must provide the billing information in the Edit Payment Method form if you don't have payment method already configured for your organization.*
+
+4. Click on **Next** and the choose the region where you want to deploy your endpoint.
+5. Enter your **Resource Group Name**, **Virtual Network Name**, **Subnet Name** and the name you want to give to your endpoint.
+6. Copy the PrivateLink Endpoint Command and paste it in your Azure CLI. Remember that you can't copy the command until Atlas finishes creating VNet resources in the background.
+
+![MongoDB AZ CLI](../../.gitbook/assets/mongodb-endpoint-command.png)
+
+7. After creating the private endpoint, copy the **Private Endpoint Resource ID** and **Private Endpoint IP Address** and paste it in **MongoDB Private Endpoint** Dialog box.
+8. CLick on **Create** and your private endpoint will be created.
+
+![MongoDB endpoint list](../../.gitbook/assets/mongodb-endpoint-list.png)
 
 ### Step 2: Installing dependencies in DevBox
 
@@ -55,6 +66,7 @@ curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
 {% code %}
 ```bash
 echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+sudo apt-get update
 ```
 {% endcode %}
 
@@ -90,12 +102,12 @@ To connect to the MongoDB cluster, follow the below steps:
 
 1. Go to **[MongoDB Atlas](https://cloud.mongodb.com/v2)**.
 2. Go to **Database > Clusters** and select the cluster you wanna connect to.
-3. Click on **Connect** and then click on **Shell**.
-4. Copy the connection string and paste it in your DevBox CLI:
+3. Click on **Connect** and choose the private endpoint option.
+4. Then Click on **Shell** and copy the connection string and paste it in your DevBox CLI:
 
 {% code %}
 ```bash
-mongosh "mongodb+srv://<cluster-name>.<cluster-id>.mongodb.net/" --apiVersion 1 --username <user-name>
+mongosh "mongodb+srv://<cluster-name>.<cluster-id>.mongodb.net/" --apiVersion 1 --username <db_username>
 ```
 {% endcode %}
 
@@ -114,8 +126,19 @@ If you need to make a new database cluster and access it through DevBox, then fo
 3. Choose the type of database cluster you want to deploy.
 4. Enter the **Instance name**, **Provider**, and **Region**.
 5. Click on **Create Deployment** and give it some time to deploy the infrastructure.
-6. Go to **Security > Network Access** and click on **Add IP Address**.
-7. In the **Access List Entry**, enter `0.0.0.0/0` to allow inbound access from anywhere.
+6. Go to **Security > Network Access** and open the **Priavte Endpoint** tab.
+7. Click on **Add Private Endpoint** and choose your cloud provider. For this tutorial we will be going with Azure.
+
+*You must provide the billing information in the Edit Payment Method form if you don't have payment method already configured for your organization.*
+
+8. Click on **Next** and the choose the region where you want to deploy your endpoint.
+9. Enter your **Resource Group Name**, **Virtual Network Name**, **Subnet Name** and the name you want to give to your endpoint.
+10. Copy the PrivateLink Endpoint Command and paste it in your Azure CLI. Remember that you can't copy the command until Atlas finishes creating VNet resources in the background.
+
+![MongoDB AZ CLI](../../.gitbook/assets/mongodb-endpoint-command.png)
+
+11. After creating the private endpoint, copy the **Private Endpoint Resource ID** and **Private Endpoint IP Address** and paste it in **MongoDB Private Endpoint** Dialog box.
+12. CLick on **Create** and your private endpoint will be created.
 
 ![MongoDB Network access](../../.gitbook/assets/mongodb-network.png)
 
@@ -183,12 +206,12 @@ To connect to the MongoDB cluster, follow the below steps:
 
 1. Go to **[MongoDB Atlas](https://cloud.mongodb.com/v2)**.
 2. Go to **Database > Clusters** and select the cluster you wanna connect to.
-3. Click on **Connect** and then click on **Shell**.
-4. Copy the connection string and paste it in your DevBox CLI:
+3. Click on **Connect** and choose the private endpoint option.
+4. Then Click on **Shell** and copy the connection string and paste it in your DevBox CLI:
 
 {% code %}
 ```bash
-mongosh "mongodb+srv://<cluster-name>.<cluster-id>.mongodb.net/" --apiVersion 1 --username <user-name>
+mongosh "mongodb+srv://<cluster-name>.<cluster-id>.mongodb.net/" --apiVersion 1 --username <db_username>
 ```
 {% endcode %}
 
