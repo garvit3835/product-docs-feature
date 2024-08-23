@@ -16,6 +16,7 @@
             </td>
             <td>
                 <a href="../../../.gitbook/assets/azure-db-logo.png">azure-db-logo.png</a>
+            </td>
         </tr>
         <tr>
             <td>Setting Up DNS Private Resolver</td>
@@ -24,6 +25,7 @@
             </td>
             <td>
                 <a href="../../../.gitbook/assets/azure-dns-private-resolver-logo.png">azure-dns-private-resolver-logo.png</a>
+            </td>
         </tr>
         <tr>
             <td>Connecting to Virtual Machine</td>
@@ -41,6 +43,24 @@
             </td>
             <td>
                 <a href="../../../.gitbook/assets/azure-ks-logo.png">azure-ks-logo.png</a>
+            </td>
+        </tr>
+        <tr>
+            <td>Configuring Azure Storage Account</td>
+            <td>
+                <a href="configuring-storage-account.md">configuring-storage-account.md</a>
+            </td>
+            <td>
+                <a href="../../../.gitbook/assets/azure-storage-account-logo.png">azure-storage-account-logo.png</a>
+            </td>
+        </tr>
+        <tr>
+            <td>Connecting to Azure Table Storage</td>
+            <td>
+                <a href="connecting-to-table-storage.md">connecting-to-table-storage.md</a>
+            </td>
+            <td>
+                <a href="../../../.gitbook/assets/azure-table-logo.png">azure-table-logo.png</a>
             </td>
         </tr>
     </tbody>
