@@ -15,6 +15,7 @@
 * [Recipe Base Images](recipes/custom-base.md)
 * [Sharing Recipes](recipes/saving-recipes.md)
 * [Recipe Syntax](recipes/syntax.md)
+* [Build Process](recipes/build-process.md)
 
 ## 🖥️ Workspaces
 
@@ -66,6 +67,7 @@
     * [DNS Private Resolver](how-to-guides/cloud-services/azure/setting-up-dns-private-resolver.md)
     * [VM](how-to-guides/cloud-services/azure/connecting-to-vm.md)
     * [Storage Account](how-to-guides/cloud-services/azure/configuring-storage-account.md)
+    * [Table Storage](how-to-guides/cloud-services/azure/connecting-to-table-storage.md)
     * [Blob Storage](how-to-guides/cloud-services/azure/connecting-to-blob-storage.md)
   * [GCP](how-to-guides/cloud-services/gcp/README.md)
     * [Compute Instance](how-to-guides/cloud-services/gcp/connecting-to-compute-instance.md)
