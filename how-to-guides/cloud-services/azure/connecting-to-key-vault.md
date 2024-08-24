@@ -17,9 +17,9 @@ Here, you will connect to a Key Vault from your DevBox. This would be done by se
 
 To connect to an existing Key Vault, ensure it is within the same **Resource Group** that houses the Bastion Host.
 
-### Step 1: Configuring IAM role for Key Vault
+### Step 1: Configuring IAM Role and Secrets in Key Vault
 
-To carry out the connection, you need to configure the key vault and install dependencies in our DevBox.
+To make the connection, you need to set up the IAM role and install dependencies in your DevBox.
 
 1. Go to **Home > Key Vaults** and click on the key vault you want to access.
 2. Then go to **Access Control (IAM)** and click on **Add role assignment**.
@@ -27,11 +27,11 @@ To carry out the connection, you need to configure the key vault and install dep
 4. Click on **Select Members** and select the users you want to give access to the Key Vault. Click on **Select**.
 5. Then click on **Next** and then click on **Review + Assign** to assign the role.
 6. Now, you can read the **Secrets** in the key vault without error.
-7. If you get an error or cannot create the key, turn the access to **Public** in the **Settings > Networking** section and try again. After creating the key, you can again turn the network public access to **Disabled**.
+7. We are assuming the **Key Vault** is private, and in this case, you will not be able to see the value of the secret. For some reason, if you want to see the value of the secrets, then turn the access to **Public** in the **Settings > Networking** section. After viewing the value of the secret, **Disable** the **Public Access** again.
 
 ### Step 2: Setting up Service Principals
 
-Now, to add or retrieve the value from the secrets, you need to set **Service Principals** on the Azure Portal using the below steps:
+Now, to retrieve the value from the secrets using the API, you need to set **Service Principals** on the Azure Portal using the below steps:
 
 1. Go to **Microsoft Entra ID** and click on **App registrations**.
 2. Click on **New registration**, enter the app name as you like, and click on **Register**.
@@ -63,7 +63,7 @@ export AZURE_CLIENT_SECRET=<client-secret>
 
 ### Step 3: Setting up dependencies in DevBox
 
-Here we are using Python to show the key vault usage; you can also choose other programming languages. Now, you need to install the necessary packages in Python to write the script by following the below steps:
+Here we are using Python to show the key vault usage, you can choose other programming stack as well. Now, you need to install the necessary packages in Python to write the script by following the below steps:
 
 1. Install the required packages using the following command:
 
@@ -117,7 +117,7 @@ If you need to make a new Key Vault and access it through DevBox, then follow th
 2. In the **Basics** section, select the **Resource group** which houses your Bastion Host.
 3. Then input your **Key Vault name**, **Region** and the desired **Pricing Tier**.
 4. You can set the **Days to retain deleted vaults** duration as you like.
-5. Go to the **Networking** page and siabale the **Enable public access** and enable the **Private Endpoint section**.
+5. Go to the **Networking** page and disable the **Enable public access** and enable the **Private Endpoint section**.
 6. Click on **Create a private endpoint** and enter the **Resource group**, **Location**, **Name**, and **Target sub-resource** type of the endpoint.
 7. In the **Networking** section, select the virtual network (VNET) you used to set up the DNS resolver and Bastion Host.
 8. Choose a compatible subnet or create a new one, and a new private DNS zone will be created for you.
@@ -127,9 +127,9 @@ If you need to make a new Key Vault and access it through DevBox, then follow th
 ![Azure Key Vault creation](../../../.gitbook/assets/azure-key-vault-creation.png)
 
 
-### Step 2: Configuring IAM role for Key Vault
+### Step 2: Configuring IAM Role and Secrets in Key Vault
 
-Now that you have set up the Key Vault, you need to configure it and install dependencies in your DevBox to make the connection.
+To make the connection, you need to set up the IAM Role and install dependencies in your DevBox.
 
 1. Go to **Home > Key Vaults** and click on the key vault you just created.
 2. Then go to **Access Control (IAM)** and click on **Add role assignment**.
@@ -138,11 +138,11 @@ Now that you have set up the Key Vault, you need to configure it and install dep
 5. Then click on **Next** and then click on **Review + Assign** to assign the role.
 6. Now go to **Obejcts > Secrets** and click on **Generate/Import**.
 7. Enter the **Name** and **Secret Value** and click on **Create**.
-8. If you get an error or cannot, turn the access to **Public** in the **Settings > Networking** section and try again. After the creation, you can again turn the network public access to **Disabled**.
+8. In this case, the Key Vault is private, and you will not be able to see the value of the secret. For some reason, if you want to see the value of the secrets, then turn the access to **Public** in the **Settings > Networking** section. After viewing the value of the secret, **Disable** the **Public Access** again.
 
 ### Step 3: Setting up Service Principals
 
-Now, to add or retrieve the value from the secrets, you need to set **Service Principals** on the Azure Portal using the below steps:
+Now, to retrieve the value from the secrets using the API, you need to set **Service Principals** on the Azure Portal using the below steps:
 
 1. Go to **Microsoft Entra ID** and click on **App registrations**.
 2. Click on **New registration**, enter the app name as you like, and click on **Register**.
@@ -176,7 +176,7 @@ export AZURE_CLIENT_SECRET=<client-secret>
 
 ### Step 4: Setting up dependencies in DevBox
 
-Here we are using Python to show the key vault usage, you can choose other programming languages as well. Now, you need to install the necessary packages in Python to write the script by following the below steps:
+Here we are using Python to show the key vault usage, you can choose other programming stack as well. Now, you need to install the necessary packages in Python to write the script by following the below steps:
 
 1. Install the required packages using the following command:
 
