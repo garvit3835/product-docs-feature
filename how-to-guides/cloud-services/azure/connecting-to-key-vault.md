@@ -1,6 +1,6 @@
 # Azure Database
 
-You are connecting to a Azure Key Vault from your DevBox.
+You are connecting to an Azure Key Vault from your DevBox.
 
 ## Architecture Diagram
 
@@ -15,27 +15,27 @@ Here, you will connect to a Key Vault from your DevBox. This would be done by se
 
 ## Existing Key Vault
 
-To connect to an exisiting Key Vault, ensure it is within the same **Resource Group** that houses the Bastion Host.
+To connect to an existing Key Vault, ensure it is within the same **Resource Group** that houses the Bastion Host.
 
 ### Step 1: Configuring the Key Vault
 
-Now you need to configure the key vault and install dependencies in our DevBox to carry out the connection.
+To carry out the connection, you need to configure the key vault and install dependencies in our DevBox.
 
 1. Go to **Home > Key Vaults** and click on the key vault you just created.
 2. Then go to **Access Control (IAM)** and click on **Add role assignment**.
 3. Click on the **Key Vault Administrator** role and click on next.
-4. Click on **Select Members** and the select the users you want to give access to the Key Vault as an administrator. Click on **Select**.
+4. Click on **Select Members** and select the users you want to give access to the Key Vault as an administrator. Click on **Select**.
 5. Then click on **Next** and then click on **Review + Assign** to assign the role.
 6. Now go to **Obejcts > Secrets** and click on **Generate/Import**.
 7. Enter the **Name** and **Secret Value** and click on **Create**.
-8. If you get any error or if you are not able to create the key then turn the access to **Public** in the **Settings > Networking** section and try again. After the creation you can again turn the network public access to **Disabled**.
+8. If you get an error or are not able to create the key, turn the access to **Public** in the **Settings > Networking** section and try again. After the creation, you can again turn the network public access to **Disabled**.
 
 ### Step 2: Setting up Service Principals
 
-Now to add or retrieve the secrets through a client or script, you need to setup **Service Principals** on the Azure Portal using the below steps:
+Now, to add or retrieve the secrets through a client or script, you need to set **Service Principals** on the Azure Portal using the below steps:
 
 1. Go to **Microsoft Entra ID** and click on **App registrations**.
-2. Click on **New registration** and enter the app name as you like and click on **Register**.
+2. Click on **New registration**, enter the app name as you like, and click on **Register**.
 3. Go to **All applications** and click on the app you just created.
 4. Copy the **Client ID** and **Tenant ID** and add it to the DevBox environmental variables.
 
@@ -47,7 +47,7 @@ export AZURE_TENANT_ID=<tenant-id>
 {%endcode%}
 
 5. Click on **Client credentials** and click on **New client secret**.
-6. Enter the description if you want to and the click on **Add**.
+6. Enter the description if you want to, and click on **Add**.
 7. Copy the **Value** of the client secret you just created and add it to the environmental variables of your DevBox by using the following command.
 
 {%code%}
@@ -58,7 +58,7 @@ export AZURE_CLIENT_SECRET=<client-secret>
 
 ### Step 3: Setting up dependencies in DevBox
 
-After configuring the vault and setting up the service principal, you need to install the necessary packages in python to write the script by following the below steps:
+After configuring the vault and setting up the service principal, you need to install the necessary packages in Python to write the script by following the below steps:
 
 1. Install the required packages using the following command:
 
@@ -69,7 +69,7 @@ pip install azure-keyvault-secrets
 ```
 {%endcode%}
 
-2. Write the following python script to retreive the secret:
+2. Write the following Python script to retrieve the secret:
 
 {%code%}
 ```python
@@ -135,14 +135,14 @@ Now that you have setup the Key Vault, you need to configure it and install depe
 5. Then click on **Next** and then click on **Review + Assign** to assign the role.
 6. Now go to **Obejcts > Secrets** and click on **Generate/Import**.
 7. Enter the **Name** and **Secret Value** and click on **Create**.
-8. If you get any error or if you are not able to create the key then turn the access to **Public** in the **Settings > Networking** section and try again. After the creation you can again turn the network public access to **Disabled**.
+8. If you get any error or are unable, turn the access to **Public** in the **Settings > Networking** section and try again. After the creation, you can again turn the network public access to **Disabled**.
 
 ### Step 3: Setting up Service Principals
 
-Now to add or retrieve the secrets through a client or script, you need to setup **Service Principals** on the Azure Portal using the below steps:
+Now, to add or retrieve the secrets through a client or script, you need to set **Service Principals** on the Azure Portal using the below steps:
 
 1. Go to **Microsoft Entra ID** and click on **App registrations**.
-2. Click on **New registration** and enter the app name as you like and click on **Register**.
+2. Click on **New registration**, enter the app name as you like, and click on **Register**.
 3. Go to **All applications** and click on the app you just created.
 4. Copy the **Client ID** and **Tenant ID** and add it to the DevBox environmental variables.
 
@@ -154,7 +154,7 @@ export AZURE_TENANT_ID=<tenant-id>
 {%endcode%}
 
 5. Click on **Client credentials** and click on **New client secret**.
-6. Enter the description if you want to and the click on **Add**.
+6. Enter the description if you want to, and click on **Add**.
 7. Copy the **Value** of the client secret you just created and add it to the environmental variables of your DevBox by using the following command.
 
 {%code%}
@@ -168,18 +168,18 @@ export AZURE_CLIENT_SECRET=<client-secret>
 
 ### Step 4: Setting up dependencies in DevBox
 
-After configuring the vault and setting up the service principal, you need to install the necessary packages in python to write the script by following the below steps:
+After configuring the vault and setting up the service principal, you need to install the necessary packages in Python to write the script by following the below steps:
 
 1. Install the required packages using the following command:
 
 {%code%}
 ```bash
 pip install azure-identity
-pip install azure-keyvault-secrets
+pip install azure-key vault-secrets
 ```
 {%endcode%}
 
-2. Write the following python script to retreive the secret:
+2. Write the following Python script to retrieve the secret:
 
 {%code%}
 ```python
@@ -193,7 +193,7 @@ client_secret = os.environ['CLIENT_SECRET']
 vault_url = f"https://test-vault-devzero.vault.azure.net/"
 
 
-secret_name = "Devzero-key"
+secret_name = "devzero-key"
 
 credentials = ClientSecretCredential(
     client_id = client_id,
