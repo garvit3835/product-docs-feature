@@ -45,8 +45,6 @@
                 <a href="../../../.gitbook/assets/azure-ks-logo.png">azure-ks-logo.png</a>
             </td>
         </tr>
-      <tr>
-          <td>Configuring Azure Storage Account</td>
         <tr>
             <td>Configuring Azure Storage Account</td>
             <td>
