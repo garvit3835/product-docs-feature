@@ -1,4 +1,4 @@
-# Azure Database
+# Azure Key Vault
 
 You are connecting to an Azure Key Vault from your DevBox.
 
@@ -17,22 +17,21 @@ Here, you will connect to a Key Vault from your DevBox. This would be done by se
 
 To connect to an existing Key Vault, ensure it is within the same **Resource Group** that houses the Bastion Host.
 
-### Step 1: Configuring the Key Vault
+### Step 1: Configuring IAM role for Key Vault
 
 To carry out the connection, you need to configure the key vault and install dependencies in our DevBox.
 
-1. Go to **Home > Key Vaults** and click on the key vault you just created.
+1. Go to **Home > Key Vaults** and click on the key vault you want to access.
 2. Then go to **Access Control (IAM)** and click on **Add role assignment**.
-3. Click on the **Key Vault Administrator** role and click on next.
-4. Click on **Select Members** and select the users you want to give access to the Key Vault as an administrator. Click on **Select**.
+3. Click on the **Key Vault Reader** role and click on next.
+4. Click on **Select Members** and select the users you want to give access to the Key Vault. Click on **Select**.
 5. Then click on **Next** and then click on **Review + Assign** to assign the role.
-6. Now go to **Obejcts > Secrets** and click on **Generate/Import**.
-7. Enter the **Name** and **Secret Value** and click on **Create**.
-8. If you get an error or are not able to create the key, turn the access to **Public** in the **Settings > Networking** section and try again. After the creation, you can again turn the network public access to **Disabled**.
+6. Now, you can read the **Secrets** in the key vault without error.
+7. If you get an error or cannot create the key, turn the access to **Public** in the **Settings > Networking** section and try again. After creating the key, you can again turn the network public access to **Disabled**.
 
 ### Step 2: Setting up Service Principals
 
-Now, to add or retrieve the secrets through a client or script, you need to set **Service Principals** on the Azure Portal using the below steps:
+Now, to add or retrieve the value from the secrets, you need to set **Service Principals** on the Azure Portal using the below steps:
 
 1. Go to **Microsoft Entra ID** and click on **App registrations**.
 2. Click on **New registration**, enter the app name as you like, and click on **Register**.
@@ -56,9 +55,15 @@ export AZURE_CLIENT_SECRET=<client-secret>
 ```
 {%endcode%}
 
+8. Now, go to **Home > Key Vaults** and click on the key vault you want to access.
+9. Then go to **Access Control (IAM)** and click on **Add role assignment**.
+10. Click on the **Key Vault Reader** role and click on next.
+11. Click on **Select Members** and select the **App Name** you just registered in **Microsoft Entra ID**. Click on **Select**.
+12. Then click on **Next** and then click on **Review + Assign** to assign the role.
+
 ### Step 3: Setting up dependencies in DevBox
 
-After configuring the vault and setting up the service principal, you need to install the necessary packages in Python to write the script by following the below steps:
+Here we are using Python to show the key vault usage; you can also choose other programming languages. Now, you need to install the necessary packages in Python to write the script by following the below steps:
 
 1. Install the required packages using the following command:
 
@@ -102,44 +107,42 @@ print("The secret value is :" + secret.value)
 ![Azure Key Vault access](../../../.gitbook/assets/azure-key-vault-access.png)
 
 
-## New Azure Database
+## New Azure Key Vault
 
 If you need to make a new Key Vault and access it through DevBox, then follow the below steps:
 
-### Step 1: Creating a Key Vault
+### Step 1: Creating a new Key Vault
 
 1. Go to **Home > Key vaults** and click on **Create**.
-2. In the **Basics** section, select the **Resource group** you previously selected for your **VNET**.
-3. Then input your database **Key Vault name**, **Region** and the desired **Pricing Tier**.
-
-4. you can set the **Days to retain deleted vaults** duration as you like.
-5. Go to the **Networking** page and uncheck the **Enable public access** checkbox.
-6. Below the checkbox, you will find the **Private Endpoint section**.
-7. Click on **Create a private endpoint** and enter the **Resource group**, **Location**, **Name**, and **Target sub-resource** type of the endpoint.
-8. In the **Networking** part, choose the virtual network (VNET) you used for setting up the DNS resolver and Bastion Host.
-9. You choose a compatible subnet or can create a new one and a new private DNS zone will be created for you.
-10. Click on **Ok** and the click on **Review + Create**.
-11. Click on **Create** to initialize the deployment for the key vault.
+2. In the **Basics** section, select the **Resource group** which houses your Bastion Host.
+3. Then input your **Key Vault name**, **Region** and the desired **Pricing Tier**.
+4. You can set the **Days to retain deleted vaults** duration as you like.
+5. Go to the **Networking** page and siabale the **Enable public access** and enable the **Private Endpoint section**.
+6. Click on **Create a private endpoint** and enter the **Resource group**, **Location**, **Name**, and **Target sub-resource** type of the endpoint.
+7. In the **Networking** section, select the virtual network (VNET) you used to set up the DNS resolver and Bastion Host.
+8. Choose a compatible subnet or create a new one, and a new private DNS zone will be created for you.
+9. Click on **Ok**, then click on **Review + Create**.
+10. Click on **Create** to initialize the deployment for the key vault.
 
 ![Azure Key Vault creation](../../../.gitbook/assets/azure-key-vault-creation.png)
 
 
-### Step 2: Configuring the Key Vault
+### Step 2: Configuring IAM role for Key Vault
 
-Now that you have setup the Key Vault, you need to configure it and install dependencies in our DevBox to carry out the connection.
+Now that you have set up the Key Vault, you need to configure it and install dependencies in your DevBox to make the connection.
 
 1. Go to **Home > Key Vaults** and click on the key vault you just created.
 2. Then go to **Access Control (IAM)** and click on **Add role assignment**.
-3. Click on the **Key Vault Administrator** role and click on next.
-4. Click on **Select Members** and the select the users you want to give access to the Key Vault as an administrator. Click on **Select**.
+3. Click on the **Key Vault Reader** role and click on next.
+4. Click on **Select Members** and select the users you want to give access to the Key Vault. Click on **Select**.
 5. Then click on **Next** and then click on **Review + Assign** to assign the role.
 6. Now go to **Obejcts > Secrets** and click on **Generate/Import**.
 7. Enter the **Name** and **Secret Value** and click on **Create**.
-8. If you get any error or are unable, turn the access to **Public** in the **Settings > Networking** section and try again. After the creation, you can again turn the network public access to **Disabled**.
+8. If you get an error or cannot, turn the access to **Public** in the **Settings > Networking** section and try again. After the creation, you can again turn the network public access to **Disabled**.
 
 ### Step 3: Setting up Service Principals
 
-Now, to add or retrieve the secrets through a client or script, you need to set **Service Principals** on the Azure Portal using the below steps:
+Now, to add or retrieve the value from the secrets, you need to set **Service Principals** on the Azure Portal using the below steps:
 
 1. Go to **Microsoft Entra ID** and click on **App registrations**.
 2. Click on **New registration**, enter the app name as you like, and click on **Register**.
@@ -165,10 +168,15 @@ export AZURE_CLIENT_SECRET=<client-secret>
 
 ![Azure Key Vault service principals](../../../.gitbook/assets/azure-key-vault-principal.png)
 
+8. Now, go to **Home > Key Vaults** and click on the key vault you want to access.
+9. Then go to **Access Control (IAM)** and click on **Add role assignment**.
+10. Click on the **Key Vault Reader** role and click on next.
+11. Click on **Select Members** and select the **App Name** you just registered in **Microsoft Entra ID**. Click on **Select**.
+12. Then click on **Next** and then click on **Review + Assign** to assign the role.
 
 ### Step 4: Setting up dependencies in DevBox
 
-After configuring the vault and setting up the service principal, you need to install the necessary packages in Python to write the script by following the below steps:
+Here we are using Python to show the key vault usage, you can choose other programming languages as well. Now, you need to install the necessary packages in Python to write the script by following the below steps:
 
 1. Install the required packages using the following command:
 
