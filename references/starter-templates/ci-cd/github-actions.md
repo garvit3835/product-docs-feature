@@ -18,6 +18,19 @@ build:
         curl -o actions-runner-linux-x64-2.317.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.317.0/actions-runner-linux-x64-2.317.0.tar.gz
         tar xzf ./actions-runner-linux-x64-2.317.0.tar.gz
 
+launch:
+  steps:
+    - type: command
+      command: |
+        cd actions-runner && ./config.sh --url https://github.com/OWNER/REPO --token $(curl \
+        -X POST \
+        -H "Accept: application/vnd.github+json" \
+        -H "Authorization: Bearer "${{ GH_PAT }}"" \
+        https://api.github.com/repos/OWNER/REPO/actions/runners/registration-token | jq -r '.token')
+    - type: command
+      command: |
+        cd actions-runner && sudo ./svc.sh install
+        cd actions-runner && sudo ./svc.sh start
 ```
 
 {% hint style="info" %}
