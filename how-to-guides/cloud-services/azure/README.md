@@ -43,5 +43,14 @@
                 <a href="../../../.gitbook/assets/azure-ks-logo.png">azure-ks-logo.png</a>
             </td>
         </tr>
+        <tr>
+            <td>Connecting to Azure Key Vault</td>
+            <td>
+                <a href="connecting-to-key-vault.md">connecting-to-key-vault.md</a>
+            </td>
+            <td>
+                <a href="../../../.gitbook/assets/azure-ks-logo.png">azure-ks-logo.png</a>
+            </td>
+        </tr>
     </tbody>
 </table>
