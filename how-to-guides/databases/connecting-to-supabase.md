@@ -23,7 +23,7 @@ Follow the below steps to do so:
 1. Use the following command to reload the local package database:
 
 {% code %}
-```bash
+```
 sudo apt-get update
 ```
 {% endcode %}
@@ -31,7 +31,7 @@ sudo apt-get update
 2. Install the PostgresSQL :
 
 {% code %}
-```bash
+```
 sudo apt install postgresql-client
 ```
 {% endcode %}
@@ -74,7 +74,7 @@ Follow the below steps to do so:
 1. Use the following command to reload the local package database:
 
 {% code %}
-```bash
+```
 sudo apt-get update
 ```
 {% endcode %}
@@ -82,7 +82,7 @@ sudo apt-get update
 2. Install the PostgresSQL :
 
 {% code %}
-```bash
+```
 sudo apt install postgresql-client
 ```
 {% endcode %}

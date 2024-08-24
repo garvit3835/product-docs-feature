@@ -25,7 +25,7 @@ Now follow the below steps to access the Blob Storage on your DevBox:
 1. Go to DevBox and install the Azure CLI tool using the following command:
 
 {% code lineNumbers="false" %}
-```bash
+```
 sudo curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 ```
 {% endcode %}
@@ -33,7 +33,7 @@ sudo curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 2. Login into your Azure account using the `login` command:
 
 {% code lineNumbers="false" %}
-```bash
+```
 az login
 ```
 {% endcode %}
@@ -48,7 +48,7 @@ az login
 To Upload a file as Blob to the container, use the following command:
 
 {% code %}
-```bash
+```
 az storage blob upload \
     --account-name <storage-account> \
     --account-key <access-key> \
@@ -67,7 +67,7 @@ az storage blob upload \
 To Download a Blob from the container, use the following command:
 
 {% code %}
-```bash
+```
 az storage blob download \
     --account-name <storage-account> \
     --account-key <access-key> \
@@ -87,7 +87,7 @@ az storage blob download \
 To list all the blobs in the container, use the following command:
 
 {% code %}
-```bash
+```
 az storage blob list \
     --account-name <storage-account> \
     --account-key <access-key> \
@@ -123,7 +123,7 @@ After creating the container, you must install and authenticate your Azure CLI t
 1. Go to DevBox and install the Azure CLI tool using the following command:
 
 {% code lineNumbers="false" %}
-```bash
+```
 sudo curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 ```
 {% endcode %}
@@ -131,7 +131,7 @@ sudo curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 2. Login into your Azure account using the `login` command:
 
 {% code lineNumbers="false" %}
-```bash
+```
 az login
 ```
 {% endcode %}
@@ -144,7 +144,7 @@ az login
 To Upload a file as Blob to the container, use the following command:
 
 {% code %}
-```bash
+```
 az storage blob upload \
     --account-name <storage-account> \
     --account-key <access-key> \
@@ -163,7 +163,7 @@ az storage blob upload \
 To Download a file from the container, use the following command:
 
 {% code %}
-```bash
+```
 az storage blob download \
     --account-name <storage-account> \
     --account-key <access-key> \
@@ -183,7 +183,7 @@ az storage blob download \
 To list all the blobs in the container, use the following command:
 
 {% code %}
-```bash
+```
 az storage blob list \
     --account-name <storage-account> \
     --account-key <access-key> \
