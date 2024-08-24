@@ -22,7 +22,7 @@ launch:
   steps:
     - type: command
       command: |
-        cd actions-runner && ./config.sh --url https://github.com/OWNER/REPO --token $(curl \
+        cd actions-runner && ./config.sh --unattended --url https://github.com/OWNER/REPO --token $(curl \
         -X POST \
         -H "Accept: application/vnd.github+json" \
         -H "Authorization: Bearer "${{ GH_PAT }}"" \
@@ -32,10 +32,6 @@ launch:
         cd actions-runner && sudo ./svc.sh install
         cd actions-runner && sudo ./svc.sh start
 ```
-
-{% hint style="info" %}
-Tip: Make sure to pass the `--unattended` flag to `config.sh` script.
-{% endhint %}
 
 ## Actions Runner Controller
 
