@@ -10,7 +10,7 @@
     </thead>
     <tbody>
         <tr>
-			<td>Neon DB</td>
+			<td>Neon</td>
 			<td>
 				<a href="neon-db.md">neon-db.md</a>
 			</td>

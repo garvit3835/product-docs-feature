@@ -2,7 +2,7 @@
 description: Using a NeonDB database branch from a DevZero workspace.
 ---
 
-# Neon DB
+# Neon
 
 ## Architecture Diagram
 

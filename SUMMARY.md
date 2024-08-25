@@ -88,7 +88,7 @@
 * [CI](how-to-guides/ci/README.md)
   * [GitHub Actions](how-to-guides/ci/run-github-actions-in-a-devbox.md)
 * [Databases](how-to-guides/databases/README.md)
-  * [Neon DB](how-to-guides/databases/neon-db.md)
+  * [Neon](how-to-guides/databases/neon-db.md)
   * [Supabase](how-to-guides/databases/supabase.md)
 * [Remote Desktop](how-to-guides/remote-desktop.md)
 
