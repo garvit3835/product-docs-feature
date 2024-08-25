@@ -21,7 +21,7 @@ build:
 
         [Service]
         # Starting GoTTY in a mode to allow writing to the shell from the browser, and opening up /bin/bash as default
-        ExecStart=/usr/local/bin/gotty -w /bin/bash
+        ExecStart=/usr/local/bin/gotty -w /bin/bash -l
         # Making GoTTY bind to port 7101
         Environment="GOTTY_ADDRESS=0.0.0.0" "GOTTY_PORT=7101"
         Restart=always
