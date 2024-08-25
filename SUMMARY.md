@@ -153,3 +153,4 @@
   * [JetBrains](references/ide-setup/jetbrains.md)
   * [SSH](references/ide-setup/ssh.md)
   * [Visual Studio Code](references/ide-setup/vscode.md)
+  * [Web Shell (using GoTTY)](references/ide-setup/web-shell.md)
