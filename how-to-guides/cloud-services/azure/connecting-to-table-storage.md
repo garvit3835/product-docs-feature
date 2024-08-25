@@ -25,7 +25,7 @@ Now follow the below steps to access the Table Storage on your DevBox:
 1. Go to DevBox and install the Azure CLI tool using the following command:
 
 {% code lineNumbers="false" %}
-```bash
+```
 sudo curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 ```
 {% endcode %}
@@ -33,7 +33,7 @@ sudo curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 2. Login into your Azure account using the `login` command:
 
 {% code lineNumbers="false" %}
-```bash
+```
 az login
 ```
 {% endcode %}
@@ -48,7 +48,7 @@ az login
 To check the **Existence** of the table, use the following command:
 
 {% code %}
-```bash
+```
 az storage table exists \
     --account-name <storage-account> \
     --account-key <access-key> \
@@ -65,10 +65,10 @@ az storage table exists \
 To **List** all the available tables, use the following command:
 
 {% code %}
-```bash
+```
 az storage table list \
     --account-name <storage-account> \
-    --account-key <access-key> 
+    --account-key <access-key>
 ```
 {% endcode %}
 
@@ -99,7 +99,7 @@ After creating the table, you must install and authenticate your Azure CLI to ea
 1. Go to DevBox and install the Azure CLI tool using the following command:
 
 {% code lineNumbers="false" %}
-```bash
+```
 sudo curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 ```
 {% endcode %}
@@ -107,7 +107,7 @@ sudo curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 2. Login into your Azure account using the `login` command:
 
 {% code lineNumbers="false" %}
-```bash
+```
 az login
 ```
 {% endcode %}
@@ -120,7 +120,7 @@ az login
 To check the **Existence** of the table, use the following command:
 
 {% code %}
-```bash
+```
 az storage table exists \
     --account-name <storage-account> \
     --account-key <access-key> \
@@ -137,10 +137,10 @@ az storage table exists \
 To **List** all the available tables, use the following command:
 
 {% code %}
-```bash
+```
 az storage table list \
     --account-name <storage-account> \
-    --account-key <access-key> 
+    --account-key <access-key>
 ```
 {% endcode %}
 

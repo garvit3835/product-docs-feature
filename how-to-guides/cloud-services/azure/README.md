@@ -63,5 +63,14 @@
                 <a href="../../../.gitbook/assets/azure-table-logo.png">azure-table-logo.png</a>
             </td>
         </tr>
+        <tr>
+            <td>Connecting to Azure Blob Storage</td>
+            <td>
+                <a href="connecting-to-blob-storage.md">connecting-to-blob-storage.md</a>
+            </td>
+            <td>
+                <a href="../../../.gitbook/assets/azure-blob-logo.png">azure-blob-logo.png</a>
+            </td>
+        </tr>
     </tbody>
 </table>
