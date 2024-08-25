@@ -19,7 +19,7 @@
 			</td>
 		</tr>
         <tr>
-            <td>Connecting to Supabase</td>
+            <td>Supabase</td>
             <td>
                 <a href="supabase.md">supabase.md</a>
             </td>
