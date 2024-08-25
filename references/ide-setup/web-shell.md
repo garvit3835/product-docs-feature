@@ -1,5 +1,7 @@
 # Web Shell (using GoTTY)
 
+There's a [walkthrough video](#walkthrough-video) at the bottom of this page if you want to see how everything looks!
+
 {% code lineNumbers="true" %}
 ```
 version: "3"
@@ -21,9 +23,9 @@ build:
 
         [Service]
         # Starting GoTTY in a mode to allow writing to the shell from the browser, and opening up /bin/bash as default
-        ExecStart=/usr/local/bin/gotty -w /bin/bash -l
+        ExecStart=/usr/local/bin/gotty -w bash -l
         # Making GoTTY bind to port 7101
-        Environment="GOTTY_ADDRESS=0.0.0.0" "GOTTY_PORT=7101"
+        Environment="GOTTY_ADDRESS=0.0.0.0" "GOTTY_PORT=7101" "TERM=xterm-256color"
         Restart=always
         # Making GoTTY session be for the devzero user (instead of `root`)
         User=devzero
@@ -40,3 +42,7 @@ build:
       user: root
 ```
 {% endcode %}
+
+## Walkthrough Video
+
+{% embed url="https://devzero.b-cdn.net/Web%20shell.mp4" %}
