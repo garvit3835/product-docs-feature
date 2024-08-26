@@ -11,7 +11,7 @@ To store a secret, navigate to the environment variables page and add a new key-
 Once a secret is saved, its value cannot be viewed or modified. You can only replace or delete the value. Otherwise, secrets work just like other environment variables.
 
 {% hint style="info" %}
-Note: user secrets are not available during build time, they are only available during launch and runtime steps.
+Note: User secrets are not available during build time, they are only available during launch and runtime steps. However, all user secrets are automatically available as environment variables within each user's workspace.
 {% endhint %}
 
 You can access secrets within builds or at build or launch time, just like you would access any environment variable. If your secret is called `MY_SECRET_KEY`, to access its value anywhere, use `$MY_SECRET_KEY`. At runtime, you can use the `env` binary to verify that the secrets are present within that context.
