@@ -49,7 +49,7 @@
                 <a href="connecting-to-key-vault.md">connecting-to-key-vault.md</a>
             </td>
             <td>
-                <a href="../../../.gitbook/assets/azure-ks-logo.png">azure-ks-logo.png</a>
+                <a href="../../../.gitbook/assets/azure-key-vault-logo.png">azure-key-vault-logo.png</a>
             </td>
         </tr>
     </tbody>
