@@ -11,7 +11,7 @@
 	<tbody>
 		<tr>
 			<td>
-				<strong>Browser IDE (using GoTTY)</strong>
+				<strong>Browser IDE (using code-server)</strong>
 			</td>
 			<td>
 				<a href="browser-ide.md">browser-ide.md</a>
