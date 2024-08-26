@@ -39,7 +39,7 @@ Now, to retrieve the value from the secrets using the API, you need to set **Ser
 4. Copy the **Client ID** and **Tenant ID** and add it to the DevBox environmental variables.
 
 {%code%}
-```bash
+```
 export AZURE_CLIENT_ID=<client-id>
 export AZURE_TENANT_ID=<tenant-id>
 ```
@@ -50,7 +50,7 @@ export AZURE_TENANT_ID=<tenant-id>
 7. Copy the **Value** of the client secret you just created and add it to the environmental variables of your DevBox by using the following command.
 
 {%code%}
-```bash
+```
 export AZURE_CLIENT_SECRET=<client-secret>
 ```
 {%endcode%}
@@ -68,7 +68,7 @@ Here we are using Python to show the key vault usage, you can choose other progr
 1. Install the required packages using the following command:
 
 {%code%}
-```bash
+```
 pip install azure-identity
 pip install azure-keyvault-secrets
 ```
@@ -77,7 +77,7 @@ pip install azure-keyvault-secrets
 2. Write the following Python script to retrieve the secret:
 
 {%code%}
-```python
+```
 from azure.identity import ClientSecretCredential
 from azure.keyvault.secrets import SecretClient
 import os
@@ -150,7 +150,7 @@ Now, to retrieve the value from the secrets using the API, you need to set **Ser
 4. Copy the **Client ID** and **Tenant ID** and add it to the DevBox environmental variables.
 
 {%code%}
-```bash
+```
 export AZURE_CLIENT_ID=<client-id>
 export AZURE_TENANT_ID=<tenant-id>
 ```
@@ -161,7 +161,7 @@ export AZURE_TENANT_ID=<tenant-id>
 7. Copy the **Value** of the client secret you just created and add it to the environmental variables of your DevBox by using the following command.
 
 {%code%}
-```bash
+```
 export AZURE_CLIENT_SECRET=<client-secret>
 ```
 {%endcode%}
@@ -181,7 +181,7 @@ Here we are using Python to show the key vault usage, you can choose other progr
 1. Install the required packages using the following command:
 
 {%code%}
-```bash
+```
 pip install azure-identity
 pip install azure-key vault-secrets
 ```
@@ -190,7 +190,7 @@ pip install azure-key vault-secrets
 2. Write the following Python script to retrieve the secret:
 
 {%code%}
-```python
+```
 from azure.identity import ClientSecretCredential
 from azure.keyvault.secrets import SecretClient
 import os
