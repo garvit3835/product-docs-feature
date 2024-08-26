@@ -19,7 +19,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td>Access Azure VPC</td>
+			<td>Access Azure VNET</td>
 			<td>
 				<a href="connecting-to-azure.md">connecting-to-azure.md</a>
 			</td>

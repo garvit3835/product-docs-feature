@@ -3,7 +3,7 @@
 ## ℹ️ Getting Started
 
 * [Welcome to DevZero](README.md)
-* [Platform Overview](<README (1).md>)
+* [Platform Overview](getting-started/readme-1.md)
 * [Quickstart](getting-started/quickstart.md)
 
 ## 📜 Recipes
@@ -15,6 +15,7 @@
 * [Recipe Base Images](recipes/custom-base.md)
 * [Sharing Recipes](recipes/saving-recipes.md)
 * [Recipe Syntax](recipes/syntax.md)
+* [Build Process](recipes/build-process.md)
 
 ## 🖥️ Workspaces
 
@@ -65,7 +66,10 @@
     * [Azure Databases](how-to-guides/cloud-services/azure/connecting-to-db.md)
     * [DNS Private Resolver](how-to-guides/cloud-services/azure/setting-up-dns-private-resolver.md)
     * [VM](how-to-guides/cloud-services/azure/connecting-to-vm.md)
-    * [Key Vault](how-to-guides/cloud-services/azure/connecting-to-key-vault.md)
+    * [Storage Account](how-to-guides/cloud-services/azure/configuring-storage-account.md)
+    * [Table Storage](how-to-guides/cloud-services/azure/connecting-to-table-storage.md)
+    * [Blob Storage](how-to-guides/cloud-services/azure/connecting-to-blob-storage.md)
+    * [Key Vault](how-to-guides/cloud-services/azure/connecting-to-key-vault.md)  
   * [GCP](how-to-guides/cloud-services/gcp/README.md)
     * [Compute Instance](how-to-guides/cloud-services/gcp/connecting-to-compute-instance.md)
     * [BigQuery](how-to-guides/cloud-services/gcp/connecting-to-bigquery.md)
@@ -77,13 +81,16 @@
     * [Memorystore](how-to-guides/cloud-services/gcp/connecting-to-memorystore.md)
 * [Existing Network](how-to-guides/existing-network/README.md)
   * [AWS VPC](how-to-guides/existing-network/connecting-to-aws.md)
-  * [Azure VPC](how-to-guides/existing-network/connecting-to-azure.md)
+  * [Azure VNET](how-to-guides/existing-network/connecting-to-azure.md)
   * [GCP VPC](how-to-guides/existing-network/connecting-to-gcp.md)
 * [Build Cache + Remote Execution](how-to-guides/build-cache/README.md)
   * [Bazel](how-to-guides/build-cache/bazel-remote-execution-cache.md)
   * [Docker](how-to-guides/build-cache/docker-remote-build-cache.md)
 * [CI](how-to-guides/ci/README.md)
   * [GitHub Actions](how-to-guides/ci/run-github-actions-in-a-devbox.md)
+* [Databases](how-to-guides/databases/README.md)
+  * [Neon](how-to-guides/databases/neon-db.md)
+  * [Supabase](how-to-guides/databases/supabase.md)
 * [Remote Desktop](how-to-guides/remote-desktop.md)
 
 ## 🛠️ Troubleshooting
@@ -140,7 +147,7 @@
     * [GitHub](references/starter-templates/third-party/github.md)
     * [GitLab](references/starter-templates/third-party/gitlab.md)
   * [CI/CD](references/starter-templates/ci-cd/README.md)
-    * [Argo CD](references/starter-templates/infra/argo.md)
+    * [Argo CD](references/starter-templates/ci-cd/argo.md)
     * [Bazel Buildfarm](references/starter-templates/ci-cd/bazel-buildfarm.md)
     * [GitHub Actions](references/starter-templates/ci-cd/github-actions.md)
 * [IDE Setup](references/ide-setup/README.md)
@@ -148,3 +155,4 @@
   * [JetBrains](references/ide-setup/jetbrains.md)
   * [SSH](references/ide-setup/ssh.md)
   * [Visual Studio Code](references/ide-setup/vscode.md)
+  * [Web Shell (using GoTTY)](references/ide-setup/web-shell.md)

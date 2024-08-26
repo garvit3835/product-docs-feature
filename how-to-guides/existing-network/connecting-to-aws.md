@@ -27,7 +27,7 @@ curl -fsSL https://get.devzero.io | sh
 6. Log into your account by executing:
 
 ```
-dz auth login
+sudo dz auth login && sudo dz net connect
 ```
 
 7. Enable IP forwarding to access resources on private subnets:
