@@ -106,7 +106,6 @@ print("The secret value is :" + secret.value)
 
 ![Azure Key Vault access](../../../.gitbook/assets/azure-key-vault-access.png)
 
-
 ## New Azure Key Vault
 
 If you need to make a new Key Vault and access it through DevBox, then follow the below steps:
@@ -125,7 +124,6 @@ If you need to make a new Key Vault and access it through DevBox, then follow th
 10. Click on **Create** to initialize the deployment for the key vault.
 
 ![Azure Key Vault creation](../../../.gitbook/assets/azure-key-vault-creation.png)
-
 
 ### Step 2: Configuring IAM Role and Secrets in Key Vault
 
