@@ -192,24 +192,35 @@ mongosh
 ```
 {% endcode %}
 
-### Step 3: Connecting with the Cluster
+### Step 3: Creating the X.509 Certificate
+
+To add an additional layer of security we will be authenticating with X.509 certificate. You may follow the below steps to do so:
+
+1. Go to **Database Access** and click on **Add new database user**.
+2. Select **Certificate** and enter the username.
+3. Check the **Download certificate when user is added** and then choose the certificate expiration duration.
+4. Click on **Add user** and save the certificate to your DevBox.
+
+![MongoDB Certificate Creation](../../.gitbook/assets/mongodb-cert.png)
+
+### Step 4: Connecting with the Cluster
 
 To connect to the MongoDB cluster, follow the below steps:
 
 1. Go to **[MongoDB Atlas](https://cloud.mongodb.com/v2)**.
 2. Go to **Database > Clusters** and select the cluster you wanna connect to.
-3. Click on **Connect** and then click on **Shell**.
-4. Copy the connection string and paste it in your DevBox CLI:
+3. Click on **Connect** and then choose the **Standard connection** and click on **Shell**.
+4. Choose the **X.509** Certificate option and copy the connection string and paste it in your DevBox CLI:
 
 {% code %}
 ```bash
-mongosh "mongodb+srv://<cluster-name>.<cluster-id>.mongodb.net/" --apiVersion 1 --username <user-name>
+mongosh "mongodb+srv://<cluster-name>.<cluster-id>.mongodb.net/?authSource=%24external&authMechanism=MONGODB-X509" --apiVersion 1 --tls --tlsCertificateKeyFile /path/to/certificate.pem
 ```
 {% endcode %}
 
-5. Enter the password when prompted and you will see the mongosh shell if the connection is authenticated.
+5. You will see the mongosh shell if the connection is authenticated.
 
-![MongoDB Shell Access](../../.gitbook/assets/mongodb-access.png)
+![MongoDB Shell Access](../../.gitbook/assets/mongodb-shared-access.png)
 
 {% endtab %}
 {% endtabs %}
@@ -217,6 +228,9 @@ mongosh "mongodb+srv://<cluster-name>.<cluster-id>.mongodb.net/" --apiVersion 1 
 ## New MongoDB Cluster
 
 If you need to make a new database cluster and access it through DevBox, then follow the below steps:
+
+{% tabs %}
+{% tab title="Dedicated or Serverless" %}
 
 ### Step 1: Creating a Cluster
 
@@ -317,3 +331,110 @@ mongosh "mongodb+srv://<cluster-name>.<cluster-id>.mongodb.net/" --apiVersion 1 
 5. Enter the password when prompted and you will see the mongosh shell if the connection is authenticated.
 
 ![MongoDB Shell Access](../../.gitbook/assets/mongodb-access.png)
+
+{% endtab %}
+
+{% tab title="Shared" %}
+
+### Step 1: Creating a Cluster
+
+1. Go to **[MongoDB Atlas](https://cloud.mongodb.com/v2)**.
+2. Go to **Database > Clusters** and click on **Create**.
+3. Choose the type of database cluster you want to deploy.
+4. Enter the **Instance name**, **Provider**, and **Region**.
+5. Click on **Create Deployment** and give it some time to deploy the infrastructure.
+6. Go to **Security > Network Access** and open the **IP Access List** tab.
+7. In the **Access List Entry**, enter `0.0.0.0/0` to allow inbound access from anywhere.
+
+![MongoDB Network access](../../.gitbook/assets/mongodb-network.png)
+
+### Step 2: Installing dependencies in DevBox
+
+To connect with the cluster we need to install the `mongosh` shell tool.
+
+Follow the below steps to do so:
+
+1. Install `gnupg` and `curl` if they are not already:
+
+{% code %}
+```bash
+sudo apt-get install gnupg curl
+```
+{% endcode %}
+
+2. Get the **MongoDB public GPG key**:
+
+{% code %}
+```bash
+curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
+   sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
+   --dearmor
+```
+{% endcode %}
+
+3. Create a list file for MongoDB:
+
+{% code %}
+```bash
+echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+```
+{% endcode %}
+
+4. Install the MongoDB Package:
+
+{% code %}
+```bash
+sudo apt-get install -y mongodb-org
+```
+{% endcode %}
+
+5. Start the MongoDB Daemon (`mongod`):
+
+{% code %}
+```bash
+sudo systemctl start mongod
+sudo systemctl enable mongod
+sudo systemctl status mongod
+```
+{% endcode %}
+
+6. verify if `mongosh` is installed or not:
+
+{% code %}
+```bash
+mongosh
+```
+{% endcode %}
+
+### Step 3: Creating the X.509 Certificate
+
+To add an additional layer of security we will be authenticating with X.509 certificate. You may follow the below steps to do so:
+
+1. Go to **Database Access** and click on **Add new database user**.
+2. Select **Certificate** and enter the username.
+3. Check the **Download certificate when user is added** and then choose the certificate expiration duration.
+4. Click on **Add user** and save the certificate to your DevBox.
+
+![MongoDB Certificate Creation](../../.gitbook/assets/mongodb-cert.png)
+
+### Step 4: Connecting with the Cluster
+
+To connect to the MongoDB cluster, follow the below steps:
+
+1. Go to **[MongoDB Atlas](https://cloud.mongodb.com/v2)**.
+2. Go to **Database > Clusters** and select the cluster you wanna connect to.
+3. Click on **Connect** and then choose the **Standard connection** and click on **Shell**.
+4. Choose the **X.509** Certificate option and copy the connection string and paste it in your DevBox CLI:
+
+{% code %}
+```bash
+mongosh "mongodb+srv://<cluster-name>.<cluster-id>.mongodb.net/?authSource=%24external&authMechanism=MONGODB-X509" --apiVersion 1 --tls --tlsCertificateKeyFile /path/to/certificate.pem
+```
+{% endcode %}
+
+5. You will see the mongosh shell if the connection is authenticated.
+
+![MongoDB Shell Access](../../.gitbook/assets/mongodb-shared-access.png)
+
+{% endtab %}
+{% endtabs %}
