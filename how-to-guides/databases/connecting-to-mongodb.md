@@ -6,7 +6,7 @@ Comprehensive guide for connecting to a MongoDB Cluster from your DevBox.
 
 ![MongoDB Cluster Architecture](../../.gitbook/assets/mongodb-architecture.png)
 
-This would be done by setting up the cluster in your Atlas dashboard through one of 3 available cloud providers (AWS, Azure, or GCP) and accessing it through `mongosh` shell tool.
+This would be done by setting up the cluster in your Atlas dashboard through one of 3 available cloud providers (AWS, Azure, or GCP) and accessing it through DevBox.
 
 ## Prerequisites
 
@@ -51,7 +51,7 @@ Follow the below steps to do so:
 1. Install `gnupg` and `curl` if they are not already:
 
 {% code %}
-```bash
+```
 sudo apt-get install gnupg curl
 ```
 {% endcode %}
@@ -59,7 +59,7 @@ sudo apt-get install gnupg curl
 2. Get the **MongoDB public GPG key**:
 
 {% code %}
-```bash
+```
 curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
    sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
    --dearmor
@@ -69,7 +69,7 @@ curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
 3. Create a list file for MongoDB:
 
 {% code %}
-```bash
+```
 echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
 sudo apt-get update
 ```
@@ -101,14 +101,14 @@ mongosh
 ```
 {% endcode %}
 
-### Step 3: Connecting with the Cluster
+### Step 3: Connecting to the Cluster
 
 To connect to the MongoDB cluster, follow the below steps:
 
 1. Go to **[MongoDB Atlas](https://cloud.mongodb.com/v2)**.
 2. Go to **Database > Clusters** and select the Cluster you want to access.
 3. Click on **Connect** and choose the private endpoint option.
-4. Then Click on **Shell**, copy the connection string, and paste it into your DevBox CLI:
+4. Then Click on **Shell**, copy the connection string, and paste it into your DevBox:
 
 {% code %}
 ```bash
@@ -194,9 +194,9 @@ mongosh
 ```
 {% endcode %}
 
-**_NOTE:_**  Feel free to skip this optional step if you prefer to use normal password authentication. Using an X.509 Certificate can add an extra layer of security to the authentication process, but it might also make your driver code more complex.
+### Step 3: Creating a X.509 Certificate (OPTIONAL)
 
-### (OPTIONAL) Step 3: Creating the X.509 Certificate
+**_NOTE:_** You can skip this step if you prefer to use password-based authentication. We are using an X.509 certificate authentication to add an extra layer of security because a shared type cluster allows all internet traffic, which also requires code changes.
 
 To add a layer of security, we will authenticate it with an X.509 certificate. You may follow the below steps to do so:
 
@@ -217,7 +217,7 @@ To connect to the MongoDB cluster, follow the below steps:
 
 {% tabs %}
 {% tab title="Password" %}
-5. Choose the **Password (SCRAM)** option and copy the connection string and paste it into your DevBox CLI:
+4. Choose the **Password (SCRAM)** option and copy the connection string and paste it into your DevBox CLI:
 
 {% code %}
 ```bash
@@ -255,7 +255,7 @@ If you need to make a new database cluster and access it through DevBox, then fo
 
 1. Go to **[MongoDB Atlas](https://cloud.mongodb.com/v2)**.
 2. Go to **Database > Clusters** and click on **Create**.
-3. Choose the type of database cluster you want to deploy.
+3. Choose between **Dedicated** or **Serverless** database cluster type.
 4. Enter the **Instance name**, **Provider**, and **Region**.
 5. Click on **Create Deployment** and give it time to deploy the infrastructure.
 6. Go to **Security > Network Access** and open the **Private Endpoint** tab.
@@ -269,7 +269,7 @@ If you need to make a new database cluster and access it through DevBox, then fo
 
 ![MongoDB AZ CLI](../../.gitbook/assets/mongodb-endpoint-command.png)
 
-11. copy the **Private Endpoint Resource ID** and **Private Endpoint IP Address** and paste them into the **MongoDB Private Endpoint** Dialog box after creating the private endpoint.
+11. Copy the **Private Endpoint Resource ID** and **Private Endpoint IP Address** and paste them into the **MongoDB Private Endpoint** Dialog box after creating the private endpoint.
 12. Click on **Create**, and your private endpoint will be created.
 
 ![MongoDB endpoint list](../../.gitbook/assets/mongodb-endpoint-list.png)
@@ -359,7 +359,7 @@ mongosh "mongodb+srv://<cluster-name>.<cluster-id>.mongodb.net/" --apiVersion 1 
 
 1. Go to **[MongoDB Atlas](https://cloud.mongodb.com/v2)**.
 2. Go to **Database > Clusters** and click on **Create**.
-3. Choose the type of database cluster you want to deploy.
+3. Choose **Shared** database cluster type.
 4. Enter the **Instance name**, **Provider**, and **Region**.
 5. Click on **Create Deployment** and give it time to deploy the infrastructure.
 6. Go to **Security > Network Access** and open the **IP Access List** tab.
@@ -425,9 +425,9 @@ mongosh
 ```
 {% endcode %}
 
-**_NOTE:_**  Feel free to skip this optional step if you prefer to use normal password authentication. Using an X.509 Certificate can add an extra layer of security to the authentication process, but it might also make your driver code more complex.
+### Step 3: Creating a X.509 Certificate (OPTIONAL)
 
-### (OPTIONAL) Step 3: Creating the X.509 Certificate
+**_NOTE:_** You can skip this step if you prefer to use password-based authentication. We are using an X.509 certificate authentication to add an extra layer of security because a shared type cluster allows all internet traffic, which also requires code changes.
 
 To add a layer of security, we will authenticate it with an X.509 certificate. You may follow the below steps to do so:
 
