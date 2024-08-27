@@ -39,7 +39,7 @@ After you are done with creating the DNS Private Resolver, you need to add the D
 3. Go to **DevBox** and enter the following command:
 
 {% code lineNumbers="false" %}
-```bash
+```
 sudo nano /etc/resolv.conf
 ```
 {% endcode %}
@@ -49,7 +49,7 @@ we need to add the IP address to this configuration file so that the DevZero Net
 4. Enter the following line to the `resolv.conf` file:
 
 {% code lineNumbers="false" %}
-```bash
+```
 nameserver <ip-address>
 ```
 {% endcode %}
@@ -59,7 +59,7 @@ save the file and you will now be able to access the domains within the Azure DN
 For Example, we have a DNS Private Zone named `privatelink.postgres.database.azure.com` and it houses a private domain endpoint named `test-db-devzero.postgres.database.azure.com`. You can verify the setup by using `nslookup`:
 
 {% code lineNumbers="false" %}
-```bash
+```
 nslookup <private-domain-endpoint>
 ```
 {% endcode %}

@@ -17,7 +17,7 @@ User-scoped environment variables are automatically made available on each of yo
 Using an environment variable within your workspace is how you would normally use any environment variable (eg: `echo $NOT_SO_SECRET_KEY`).
 
 {% hint style="info" %}
-Note: user secrets are not available during build time, they are only available during launch and runtime steps.
+Note: User secrets are not available during build time, they are only available during launch and runtime steps. However, all user secrets are automatically available as environment variables within each user's workspace.
 {% endhint %}
 
 To use it in a recipe, you can reference it the same way. If your environment variable is called `MY_KEY`:
