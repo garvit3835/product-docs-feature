@@ -29,7 +29,7 @@ To check and configure the same, follow the below steps:
 2. Go to **Security > Network Access** and open the **Private Endpoint** tab.
 3. Click on **Add Private Endpoint** and choose your cloud provider. For this tutorial, we will be using Azure.
 
-*You must provide the billing information in the Edit Payment Method form if you still need to get the payment method configured for your organization.*
+**_NOTE:_** You must provide the billing information in the Edit Payment Method form if you still need to get the payment method configured for your organization.
 
 4. Click on **Next** and choose the **Region** where you want to deploy your endpoint.
 5. Enter your **Resource Group Name**, **Virtual Network Name**, **Subnet Name**, and the name you want to give to your endpoint.
@@ -136,7 +136,7 @@ To check and configure the same, follow the below steps:
 
 ![MongoDB Network access](../../.gitbook/assets/mongodb-network.png)
 
-### Step 2: Installing dependencies in DevBox
+### Step 2: Installing MongoDB Shell in DevBox
 
 To connect with the Cluster, we need to install the `mongosh` shell tool.
 
@@ -261,7 +261,7 @@ If you need to make a new database cluster and access it through DevBox, then fo
 6. Go to **Security > Network Access** and open the **Private Endpoint** tab.
 7. Click on **Add Private Endpoint** and choose your cloud provider. For this tutorial, we will be using Azure.
 
-*You must provide the billing information in the Edit Payment Method form if you don't have a payment method already configured for your organization.*
+**_NOTE:_** You must provide the billing information in the Edit Payment Method form if you don't have a payment method already configured for your organization.
 
 8. Click on **Next** and choose the **Region** where you want to deploy your endpoint.
 9. Enter your **Resource Group Name**, **Virtual Network Name**, **Subnet Name**, and the name you want to give to your endpoint.
@@ -274,7 +274,7 @@ If you need to make a new database cluster and access it through DevBox, then fo
 
 ![MongoDB endpoint list](../../.gitbook/assets/mongodb-endpoint-list.png)
 
-### Step 2: Installing dependencies in DevBox
+### Step 2: Installing MongoDB Shell tool in DevBox
 
 To connect with the cluster, we need to install the `mongosh` shell tool.
 
@@ -355,7 +355,7 @@ mongosh "mongodb+srv://<cluster-name>.<cluster-id>.mongodb.net/" --apiVersion 1 
 
 {% tab title="Shared" %}
 
-### Step 1: Creating a Cluster
+### Step 1: Creating a Shared Cluster
 
 1. Go to **[MongoDB Atlas](https://cloud.mongodb.com/v2)**.
 2. Go to **Database > Clusters** and click on **Create**.
@@ -367,7 +367,7 @@ mongosh "mongodb+srv://<cluster-name>.<cluster-id>.mongodb.net/" --apiVersion 1 
 
 ![MongoDB Network access](../../.gitbook/assets/mongodb-network.png)
 
-### Step 2: Installing dependencies in DevBox
+### Step 2: Installing packages in DevBox
 
 To connect with the cluster, we need to install the `mongosh` shell tool.
 
@@ -425,7 +425,7 @@ mongosh
 ```
 {% endcode %}
 
-### Step 3: Creating a X.509 Certificate (OPTIONAL)
+### Step 3: Creating an X.509 Certificate (OPTIONAL)
 
 **_NOTE:_** You can skip this step if you prefer to use password-based authentication. We are using an X.509 certificate authentication to add an extra layer of security because a shared type cluster allows all internet traffic, which also requires code changes.
 
@@ -438,7 +438,7 @@ To add a layer of security, we will authenticate it with an X.509 certificate. Y
 
 ![MongoDB Certificate Creation](../../.gitbook/assets/mongodb-cert.png)
 
-### Step 4: Connecting with the Cluster
+### Step 4: Connecting with the Shared Cluster
 
 To connect to the MongoDB cluster, follow the below steps:
 
