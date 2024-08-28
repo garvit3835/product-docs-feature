@@ -83,17 +83,7 @@ sudo apt-get install -y mongodb-org
 ```
 {% endcode %}
 
-5. Start the MongoDB Daemon (`mongod`):
-
-{% code %}
-```bash
-sudo systemctl start mongod
-sudo systemctl enable mongod
-sudo systemctl status mongod
-```
-{% endcode %}
-
-6. verify if `mongosh` is installed or not:
+5. verify if `mongosh` is installed or not:
 
 {% code %}
 ```bash
@@ -176,17 +166,7 @@ sudo apt-get install -y mongodb-org
 ```
 {% endcode %}
 
-5. Start the MongoDB Daemon (`mongod`):
-
-{% code %}
-```bash
-sudo systemctl start mongod
-sudo systemctl enable mongod
-sudo systemctl status mongod
-```
-{% endcode %}
-
-6. verify if `mongosh` is installed or not:
+5. verify if `mongosh` is installed or not:
 
 {% code %}
 ```bash
@@ -314,17 +294,7 @@ sudo apt-get install -y mongodb-org
 ```
 {% endcode %}
 
-5. Start the MongoDB Daemon (`mongod`):
-
-{% code %}
-```bash
-sudo systemctl start mongod
-sudo systemctl enable mongod
-sudo systemctl status mongod
-```
-{% endcode %}
-
-6. verify if `mongosh` is installed or not:
+5. verify if `mongosh` is installed or not:
 
 {% code %}
 ```bash
@@ -407,17 +377,7 @@ sudo apt-get install -y mongodb-org
 ```
 {% endcode %}
 
-5. Start the MongoDB Daemon (`mongod`):
-
-{% code %}
-```bash
-sudo systemctl start mongod
-sudo systemctl enable mongod
-sudo systemctl status mongod
-```
-{% endcode %}
-
-6. verify if `mongosh` is installed or not:
+5. verify if `mongosh` is installed or not:
 
 {% code %}
 ```bash
