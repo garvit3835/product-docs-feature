@@ -30,7 +30,7 @@
 	<tr>
             <td>MongoDB</td>
             <td>
-                <a href="connecting-to-mongodb.md">connecting-to-mongodb.md</a>
+                <a href="mongodb.md">mongodb.md</a>
             </td>
             <td>
                 <a href="../../.gitbook/assets/mongodb.png">mongodb.png</a>
