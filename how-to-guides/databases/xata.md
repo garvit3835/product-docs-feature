@@ -1,6 +1,6 @@
 # Xata
 
-Comprehensive guide for connecting to a Xata Project from your DevBox.
+Comprehensive guide for connecting to a Xata Workspace from your DevBox.
 
 ## Architecture Diagram
 
@@ -17,54 +17,62 @@ Before you begin, you should create your account with [Xata](https://app.xata.io
 
 ## Existing Xata Project
 
-### Step 1: Installing dependencies in DevBox
+### Step 1: Creating the API Key
 
-Now we need to install the Postgres `psql` client tool.
-
-Follow the below steps to do so:
-
-1. Use the following command to reload the local package database:
-
-{% code %}
-```bash
-sudo apt-get update
-```
-{% endcode %}
-
-2. Install the PostgresSQL :
-
-{% code %}
-```bash
-sudo apt install postgresql-client
-```
-{% endcode %}
-
-![Postgres client install](../../.gitbook/assets/supabase-install.png)
-
-### Step 2: Connecting with the Project
-
-To make the connection, follow the below steps:
+First you need to get the API access key so that we can connect to the database:
 
 1. Go to **[Xata Account Settings](https://app.xata.io/settings)**.
 2. In the **Personal API keys** section, click on **Add a key** and enter the name of the key.
-3. Copy the secret API key and export it to your DevBox Evironmental variables:
+3. Note down the secret API key.
+
+### Step 2: Creating the Recipe for Workspace
+
+You will need to create a **Recipe** in DevZero equiped with the neccesary tools like `psql` and store your API keys as well:
+
+1. Go to **DevZero** Dashboard and open the **Recipes** tab.
+2. Click on **New Recipe** and enter the name of recipe.
+3. Click on **Create a recipe** and your recipe will be created.
+4. Replace the recipe `yaml` file with the below provided snippet. Remember to replace the placeholder API key with the Key you noted down in the above steps:
 
 {% code %}
 ```
-export XATA_API_KEY=<api-key>
+version: "3"
+
+build:
+  steps:
+    - type: apt-get
+      packages: ["build-essential", "curl", "git", "nano", "software-properties-common", "ssh", "sudo", "tar", "unzip", "vim", "wget", "zip", "postgresql-client"]
+      
+runtime:
+  environment:
+    - name: XATA_API_KEY
+      value: <api-key>
 ```
 {% endcode %}
 
-4. Go to **[Xata Dashboard](https://app.xata.io/workspaces)**.
-5. Open the database which you want to access through the DevBox.
+![DevZero Recipe](../../.gitbook/assets/devzero-recipe-yaml.png)
+
+5. After editing the recipe, click on **Save and Build**.
+6. When the build is successful, click on **Publish**.
+7. After the recipe is published, click on **Launch** and create a new workspace by providing a **Workspace Name**.
+8. Click on **Launch** and your workspace will be created.
+
+![DevZero Workspace Creation](../../.gitbook/assets/devzero-workspace-creation.png)
+
+### Step 3: Connecting to the Database
+
+Follow the below steps to connect to the database instance:
+
+1. Go to **[Xata Dashboard](https://app.xata.io/workspaces)**.
+2. Open the database which you want to access through the DevBox.
 
 ![Xata Database Connection](../../.gitbook/assets/xata-db-string.png)
 
-6. Copy the connection  string for **PostgreSQL endpoint** and then use the following command to connect to the database:
+3. Copy the connection  string for **PostgreSQL endpoint** and then use the following command to connect to the database:
 
 {% code %}
 ```
-psql postgresql://<workspace-id>:<YOUR_API_KEY>@<region>.sql.xata.sh/<database-name>:<branch>?sslmode=require
+psql postgresql://<workspace-id>:$XATA_API_KEY@<region>.sql.xata.sh/<database-name>:<branch>?sslmode=require
 ```
 {% endcode %}
 
@@ -83,54 +91,62 @@ If you need to make a new Xata database and access it through DevBox, then follo
 
 ![Xata Database creation](../../.gitbook/assets/xata-db-creation.png)
 
-### Step 2: Installing dependencies in DevBox
+### Step 2: Creating the API Key
 
-Now we need to install the Postgres `psql` client tool.
-
-Follow the below steps to do so:
-
-1. Use the following command to reload the local package database:
-
-{% code %}
-```bash
-sudo apt-get update
-```
-{% endcode %}
-
-2. Install the PostgresSQL :
-
-{% code %}
-```bash
-sudo apt install postgresql-client
-```
-{% endcode %}
-
-![Postgres client install](../../.gitbook/assets/supabase-install.png)
-
-### Step 3: Connecting with the Project
-
-To make the connection, follow the below steps:
+First you need to get the API access key so that we can connect to the database:
 
 1. Go to **[Xata Account Settings](https://app.xata.io/settings)**.
 2. In the **Personal API keys** section, click on **Add a key** and enter the name of the key.
-3. Copy the secret API key and export it to your DevBox Evironmental variables:
+3. Note down the secret API key.
+
+### Step 3: Creating the Recipe for Workspace
+
+You will need to create a **Recipe** in DevZero equiped with the neccesary tools like `psql` and store your API keys as well:
+
+1. Go to **DevZero** Dashboard and open the **Recipes** tab.
+2. Click on **New Recipe** and enter the name of recipe.
+3. Click on **Create a recipe** and your recipe will be created.
+4. Replace the recipe `yaml` file with the below provided snippet. Remember to replace the placeholder API key with the Key you noted down in the above steps:
 
 {% code %}
 ```
-export XATA_API_KEY=<api-key>
+version: "3"
+
+build:
+  steps:
+    - type: apt-get
+      packages: ["build-essential", "curl", "git", "nano", "software-properties-common", "ssh", "sudo", "tar", "unzip", "vim", "wget", "zip", "postgresql-client"]
+      
+runtime:
+  environment:
+    - name: XATA_API_KEY
+      value: <api-key>
 ```
 {% endcode %}
 
-4. Go to **[Xata Dashboard](https://app.xata.io/workspaces)**.
-5. Open the database which you want to access through the DevBox.
+![DevZero Recipe](../../.gitbook/assets/devzero-recipe-yaml.png)
+
+5. After editing the recipe, click on **Save and Build**.
+6. When the build is successful, click on **Publish**.
+7. After the recipe is published, click on **Launch** and create a new workspace by providing a **Workspace Name**.
+8. Click on **Launch** and your workspace will be created.
+
+![DevZero Workspace Creation](../../.gitbook/assets/devzero-workspace-creation.png)
+
+### Step 4: Connecting to the Database
+
+Follow the below steps to connect to the database instance:
+
+1. Go to **[Xata Dashboard](https://app.xata.io/workspaces)**.
+2. Open the database which you want to access through the DevBox.
 
 ![Xata Database Connection](../../.gitbook/assets/xata-db-string.png)
 
-6. Copy the connection  string for **PostgreSQL endpoint** and then use the following command to connect to the database:
+3. Copy the connection  string for **PostgreSQL endpoint** and then use the following command to connect to the database:
 
 {% code %}
 ```
-psql postgresql://<workspace-id>:<YOUR_API_KEY>@<region>.sql.xata.sh/<database-name>:<branch>?sslmode=require
+psql postgresql://<workspace-id>:$XATA_API_KEY@<region>.sql.xata.sh/<database-name>:<branch>?sslmode=require
 ```
 {% endcode %}
 
@@ -142,47 +158,59 @@ psql postgresql://<workspace-id>:<YOUR_API_KEY>@<region>.sql.xata.sh/<database-n
 
 ## Existing Xata Project
 
-### Step 1: Installing dependencies in DevBox
+### Step 1: Creating the API Key
 
-Now we need to install the Xata client tool.
-
-Follow the below steps to do so:
-
-1. Use the following command to reload the local package database:
-
-{% code %}
-```
-sudo apt-get update
-```
-{% endcode %}
-
-2. Install Node.js and `npm` using **Fast Node Manager**:
-
-{% code %}
-```
-curl -fsSL https://fnm.vercel.app/install | bash
-source ~/.bashrc
-fnm use --install-if-missing 20
-node -v
-npm -v
-```
-{% endcode %}
-
-3. Install the Xata CLI:
-
-{% code %}
-```
-npm install -g @xata.io/cli
-```
-{% endcode %}
-
-### Step 2: Connecting with the Workspace
-
-To make the connection, follow the below steps:
+First you need to get the API access key so that we can connect to the database:
 
 1. Go to **[Xata Account Settings](https://app.xata.io/settings)**.
-2. In the **Personal API keys** section, click on **Add a key** and enter the name of the key. Copy the secret API key when it is displayed.
-3. Go to DevBox and use the following command to authenticate your xata account:
+2. In the **Personal API keys** section, click on **Add a key** and enter the name of the key.
+3. Note down the secret API key.
+
+### Step 2: Creating the Recipe for Workspace
+
+You will need to create a **Recipe** in DevZero equiped with the neccesary tools like `node`, `xata` and store your API keys as well:
+
+1. Go to **DevZero** Dashboard and open the **Recipes** tab.
+2. Click on **New Recipe** and enter the name of recipe.
+3. Click on **Create a recipe** and your recipe will be created.
+4. Replace the recipe `yaml` file with the below provided snippet. Remember to replace the placeholder API key with the Key you noted down in the above steps:
+
+{% code %}
+```
+version: "3"
+
+build:
+  steps:
+    - type: apt-get
+      packages: ["build-essential", "curl", "git", "nano", "software-properties-common", "ssh", "sudo", "tar", "unzip", "vim", "wget", "zip"]
+    - type: command
+      command: |
+        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+        echo 'export NVM_DIR=$HOME/.nvm' | sudo tee -a /etc/profile.d/nvm-installation.sh
+        echo '[ -s $NVM_DIR/nvm.sh ] && \. $NVM_DIR/nvm.sh' | sudo tee -a /etc/profile.d/nvm-installation.sh
+        . /etc/profile.d/nvm-installation.sh
+        nvm install 21.0.0
+        npm install -g @xata.io/cli
+      
+runtime:
+  environment:
+    - name: XATA_API_KEY
+      value: <api-key>
+```
+{% endcode %}
+
+![DevZero Recipe](../../.gitbook/assets/devzero-recipe-yaml.png)
+
+5. After editing the recipe, click on **Save and Build**.
+6. When the build is successful, click on **Publish**.
+7. After the recipe is published, click on **Launch** and create a new workspace by providing a **Workspace Name**.
+8. Click on **Launch** and your workspace will be created.
+
+### Step 3: Connecting to the Database
+
+Follow the below steps to connect to the database instance:
+
+1. Go to DevBox and use the following command to authenticate your xata account:
 
 {% code %}
 ```
@@ -190,8 +218,8 @@ xata auth login
 ```
 {% endcode %}
 
-4. Choose `Use an existing API key` while authenticating and then paste in the API key you just copied.
-5. Use the following command for access the database through Xata shell:
+2. Choose `Use an existing API key` option while authenticating and then hit **Enter/Return** without entering the API Key when prompted.
+3. Use the following command for access the database through Xata shell:
 
 {% code %}
 ```
@@ -199,7 +227,7 @@ xata shell
 ```
 {% endcode %}
 
-6. Select the **Workspace**, **Database** and **Branch** when prompted.
+4. Select the **Workspace**, **Database** and **Branch** when prompted.
 
 ![Xata Database Shell Access](../../.gitbook/assets/xata-db-shell-access.png)
 
@@ -216,49 +244,59 @@ If you need to make a new Xata database and access it through DevBox, then follo
 
 ![Xata Database creation](../../.gitbook/assets/xata-db-creation.png)
 
-### Step 2: Installing dependencies in DevBox
+### Step 2: Creating the API Key
 
-Now we need to install the Xata client tool.
-
-Follow the below steps to do so:
-
-1. Use the following command to reload the local package database:
-
-{% code %}
-```
-sudo apt-get update
-```
-{% endcode %}
-
-2. Install Node.js and `npm` using **Fast Node Manager**:
-
-{% code %}
-```
-curl -fsSL https://fnm.vercel.app/install | bash
-source ~/.bashrc
-fnm use --install-if-missing 20
-node -v
-npm -v
-```
-{% endcode %}
-
-3. Install the Xata CLI:
-
-{% code %}
-```
-npm install -g @xata.io/cli
-```
-{% endcode %}
-
-![Postgres client install](../../.gitbook/assets/supabase-install.png)
-
-### Step 3: Connecting with the Project
-
-To make the connection, follow the below steps:
+First you need to get the API access key so that we can connect to the database:
 
 1. Go to **[Xata Account Settings](https://app.xata.io/settings)**.
-2. In the **Personal API keys** section, click on **Add a key** and enter the name of the key. Copy the secret API key when it is displayed.
-3. Go to DevBox and use the following command to authenticate your xata account:
+2. In the **Personal API keys** section, click on **Add a key** and enter the name of the key.
+3. Note down the secret API key.
+
+### Step 3: Creating the Recipe for Workspace
+
+You will need to create a **Recipe** in DevZero equiped with the neccesary tools like `node`, `xata` and store your API keys as well:
+
+1. Go to **DevZero** Dashboard and open the **Recipes** tab.
+2. Click on **New Recipe** and enter the name of recipe.
+3. Click on **Create a recipe** and your recipe will be created.
+4. Replace the recipe `yaml` file with the below provided snippet. Remember to replace the placeholder API key with the Key you noted down in the above steps:
+
+{% code %}
+```
+version: "3"
+
+build:
+  steps:
+    - type: apt-get
+      packages: ["build-essential", "curl", "git", "nano", "software-properties-common", "ssh", "sudo", "tar", "unzip", "vim", "wget", "zip"]
+    - type: command
+      command: |
+        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+        echo 'export NVM_DIR=$HOME/.nvm' | sudo tee -a /etc/profile.d/nvm-installation.sh
+        echo '[ -s $NVM_DIR/nvm.sh ] && \. $NVM_DIR/nvm.sh' | sudo tee -a /etc/profile.d/nvm-installation.sh
+        . /etc/profile.d/nvm-installation.sh
+        nvm install 21.0.0
+        npm install -g @xata.io/cli
+      
+runtime:
+  environment:
+    - name: XATA_API_KEY
+      value: <api-key>
+```
+{% endcode %}
+
+![DevZero Recipe](../../.gitbook/assets/devzero-recipe-yaml.png)
+
+5. After editing the recipe, click on **Save and Build**.
+6. When the build is successful, click on **Publish**.
+7. After the recipe is published, click on **Launch** and create a new workspace by providing a **Workspace Name**.
+8. Click on **Launch** and your workspace will be created.
+
+### Step 4: Connecting to the Database
+
+Follow the below steps to connect to the database instance:
+
+1. Go to DevBox and use the following command to authenticate your xata account:
 
 {% code %}
 ```
@@ -266,8 +304,8 @@ xata auth login
 ```
 {% endcode %}
 
-4. Choose `Use an existing API key` while authenticating and then paste in the API key you just copied.
-5. Use the following command for access the database through Xata shell:
+2. Choose `Use an existing API key` option while authenticating and then hit **Enter/Return** without entering the API Key when prompted.
+3. Use the following command for access the database through Xata shell:
 
 {% code %}
 ```
@@ -275,7 +313,7 @@ xata shell
 ```
 {% endcode %}
 
-6. Select the **Workspace**, **Database** and **Branch** when prompted.
+4. Select the **Workspace**, **Database** and **Branch** when prompted.
 
 ![Xata Database Shell Access](../../.gitbook/assets/xata-db-shell-access.png)
 
