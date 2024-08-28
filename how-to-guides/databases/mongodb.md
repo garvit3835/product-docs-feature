@@ -12,7 +12,9 @@ This would be done by setting up the cluster in your Atlas dashboard through one
 
 Before you begin, create your account with [MongoDB](https://account.mongodb.com/account/login).
 
-**_NOTE:_**  MongoDB only supports Private Endpoint access for **Dedicated** or **Serverless** clusters. Private Endpoint access for the **Shared** cluster is not yet supported.  
+{% hint style="info" %}
+MongoDB only supports Private Endpoint access for **Dedicated** or **Serverless** clusters. Private Endpoint access for the **Shared** cluster is not yet supported.
+{% endhint %}
 
 ## Existing MongoDB Cluster
 
@@ -29,7 +31,9 @@ To check and configure the same, follow the below steps:
 2. Go to **Security > Network Access** and open the **Private Endpoint** tab.
 3. Click on **Add Private Endpoint** and choose your cloud provider. For this tutorial, we will be using Azure.
 
-**_NOTE:_** You must provide the billing information in the Edit Payment Method form if you still need to get the payment method configured for your organization.
+{% hint style="info" %}
+You must provide the billing information in the Edit Payment Method form if you still need to get the payment method configured for your organization.
+{% endhint %}
 
 4. Click on **Next** and choose the **Region** where you want to deploy your endpoint.
 5. Enter your **Resource Group Name**, **Virtual Network Name**, **Subnet Name**, and the name you want to give to your endpoint.
@@ -78,7 +82,7 @@ sudo apt-get update
 4. Install the MongoDB Package:
 
 {% code %}
-```bash
+```
 sudo apt-get install -y mongodb-org
 ```
 {% endcode %}
@@ -86,7 +90,7 @@ sudo apt-get install -y mongodb-org
 5. verify if `mongosh` is installed or not:
 
 {% code %}
-```bash
+```
 mongosh
 ```
 {% endcode %}
@@ -101,7 +105,7 @@ To connect to the MongoDB cluster, follow the below steps:
 4. Then Click on **Shell**, copy the connection string, and paste it into your DevBox:
 
 {% code %}
-```bash
+```
 mongosh "mongodb+srv://<cluster-name>.<cluster-id>.mongodb.net/" --apiVersion 1 --username <db_username>
 ```
 {% endcode %}
@@ -135,7 +139,7 @@ Follow the below steps to do so:
 1. Install `gnupg` and `curl` if they are not already:
 
 {% code %}
-```bash
+```
 sudo apt-get install gnupg curl
 ```
 {% endcode %}
@@ -143,7 +147,7 @@ sudo apt-get install gnupg curl
 2. Get the **MongoDB public GPG key**:
 
 {% code %}
-```bash
+```
 curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
    sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
    --dearmor
@@ -153,7 +157,7 @@ curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
 3. Create a list file for MongoDB:
 
 {% code %}
-```bash
+```
 echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
 ```
 {% endcode %}
@@ -161,7 +165,7 @@ echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gp
 4. Install the MongoDB Package:
 
 {% code %}
-```bash
+```
 sudo apt-get install -y mongodb-org
 ```
 {% endcode %}
@@ -169,14 +173,16 @@ sudo apt-get install -y mongodb-org
 5. verify if `mongosh` is installed or not:
 
 {% code %}
-```bash
+```
 mongosh
 ```
 {% endcode %}
 
 ### Step 3: Creating a X.509 Certificate (OPTIONAL)
 
-**_NOTE:_** You can skip this step if you prefer to use password-based authentication. We are using an X.509 certificate authentication to add an extra layer of security because a shared type cluster allows all internet traffic, which also requires code changes.
+{% hint style="info" %}
+You can skip this step if you prefer to use password-based authentication. We are using an X.509 certificate authentication to add an extra layer of security because a shared type cluster allows all internet traffic, which also requires code changes.
+{% endhint %}
 
 To add a layer of security, we will authenticate it with an X.509 certificate. You may follow the below steps to do so:
 
@@ -200,7 +206,7 @@ To connect to the MongoDB cluster, follow the below steps:
 4. Choose the **Password (SCRAM)** option and copy the connection string and paste it into your DevBox CLI:
 
 {% code %}
-```bash
+```
 mongosh "mongodb+srv://<cluster-name>.<cluster-id>.mongodb.net/" --apiVersion 1 --username <db_username>
 ```
 {% endcode %}
@@ -210,7 +216,7 @@ mongosh "mongodb+srv://<cluster-name>.<cluster-id>.mongodb.net/" --apiVersion 1 
 4. Choose the **X.509** Certificate option and copy the connection string and paste it into your DevBox CLI:
 
 {% code %}
-```bash
+```
 mongosh "mongodb+srv://<cluster-name>.<cluster-id>.mongodb.net/?authSource=%24external&authMechanism=MONGODB-X509" --apiVersion 1 --tls --tlsCertificateKeyFile /path/to/certificate.pem
 ```
 {% endcode %}
@@ -241,7 +247,9 @@ If you need to make a new database cluster and access it through DevBox, then fo
 6. Go to **Security > Network Access** and open the **Private Endpoint** tab.
 7. Click on **Add Private Endpoint** and choose your cloud provider. For this tutorial, we will be using Azure.
 
-**_NOTE:_** You must provide the billing information in the Edit Payment Method form if you don't have a payment method already configured for your organization.
+{% hint style="info" %}
+You must provide the billing information in the Edit Payment Method form if you don't have a payment method already configured for your organization.
+{% endhint %}
 
 8. Click on **Next** and choose the **Region** where you want to deploy your endpoint.
 9. Enter your **Resource Group Name**, **Virtual Network Name**, **Subnet Name**, and the name you want to give to your endpoint.
@@ -263,7 +271,7 @@ Follow the below steps to do so:
 1. Install `gnupg` and `curl` if they are not already:
 
 {% code %}
-```bash
+```
 sudo apt-get install gnupg curl
 ```
 {% endcode %}
@@ -271,7 +279,7 @@ sudo apt-get install gnupg curl
 2. Get the **MongoDB public GPG key**:
 
 {% code %}
-```bash
+```
 curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
    sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
    --dearmor
@@ -281,7 +289,7 @@ curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
 3. Create a list file for MongoDB:
 
 {% code %}
-```bash
+```
 echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
 ```
 {% endcode %}
@@ -289,7 +297,7 @@ echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gp
 4. Install the MongoDB Package:
 
 {% code %}
-```bash
+```
 sudo apt-get install -y mongodb-org
 ```
 {% endcode %}
@@ -346,7 +354,7 @@ Follow the below steps to do so:
 1. Install `gnupg` and `curl` if they are not already:
 
 {% code %}
-```bash
+```
 sudo apt-get install gnupg curl
 ```
 {% endcode %}
@@ -354,7 +362,7 @@ sudo apt-get install gnupg curl
 2. Get the **MongoDB public GPG key**:
 
 {% code %}
-```bash
+```
 curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
    sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
    --dearmor
@@ -364,7 +372,7 @@ curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
 3. Create a list file for MongoDB:
 
 {% code %}
-```bash
+```
 echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
 ```
 {% endcode %}
@@ -372,7 +380,7 @@ echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gp
 4. Install the MongoDB Package:
 
 {% code %}
-```bash
+```
 sudo apt-get install -y mongodb-org
 ```
 {% endcode %}
@@ -380,14 +388,16 @@ sudo apt-get install -y mongodb-org
 5. verify if `mongosh` is installed or not:
 
 {% code %}
-```bash
+```
 mongosh
 ```
 {% endcode %}
 
 ### Step 3: Creating an X.509 Certificate (OPTIONAL)
 
-**_NOTE:_** You can skip this step if you prefer to use password-based authentication. We are using an X.509 certificate authentication to add an extra layer of security because a shared type cluster allows all internet traffic, which also requires code changes.
+{% hint style="info" %}
+You can skip this step if you prefer to use password-based authentication. We are using an X.509 certificate authentication to add an extra layer of security because a shared type cluster allows all internet traffic, which also requires code changes.
+{% endhint %}
 
 To add a layer of security, we will authenticate it with an X.509 certificate. You may follow the below steps to do so:
 
@@ -411,7 +421,7 @@ To connect to the MongoDB cluster, follow the below steps:
 4. Choose the **Password (SCRAM)** option and copy the connection string and paste it into your DevBox CLI:
 
 {% code %}
-```bash
+```
 mongosh "mongodb+srv://<cluster-name>.<cluster-id>.mongodb.net/" --apiVersion 1 --username <db_username>
 ```
 {% endcode %}
@@ -421,7 +431,7 @@ mongosh "mongodb+srv://<cluster-name>.<cluster-id>.mongodb.net/" --apiVersion 1 
 4. Choose the **X.509** Certificate option and copy the connection string and paste it into your DevBox CLI:
 
 {% code %}
-```bash
+```
 mongosh "mongodb+srv://<cluster-name>.<cluster-id>.mongodb.net/?authSource=%24external&authMechanism=MONGODB-X509" --apiVersion 1 --tls --tlsCertificateKeyFile /path/to/certificate.pem
 ```
 {% endcode %}
