@@ -332,5 +332,5 @@ build:
 ```
 
 {% hint style="info" %}
-Note: user secrets are not available during build time.
+Note: User secrets cannot be accessed during build time. However, all user secrets are automatically available as environment variables within each user's workspace.
 {% endhint %}

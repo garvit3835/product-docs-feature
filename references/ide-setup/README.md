@@ -11,6 +11,17 @@
 	<tbody>
 		<tr>
 			<td>
+				<strong>Browser IDE (using code-server)</strong>
+			</td>
+			<td>
+				<a href="browser-ide.md">browser-ide.md</a>
+			</td>
+			<td>
+				<a href="./../../.gitbook/assets/code-server.png">code-server.png</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
 				<strong>Cursor</strong>
 			</td>
 			<td>
