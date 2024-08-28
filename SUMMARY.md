@@ -79,6 +79,7 @@
     * [Firestore (Datastore Mode)](how-to-guides/cloud-services/gcp/connecting-to-firestore-datastore.md)
     * [Firestore (Native Mode)](how-to-guides/cloud-services/gcp/connecting-to-firestore-native.md)
     * [Memorystore](how-to-guides/cloud-services/gcp/connecting-to-memorystore.md)
+    * [Secret Manager](how-to-guides/cloud-services/gcp/connecting-to-secret-manager.md)
 * [Existing Network](how-to-guides/existing-network/README.md)
   * [AWS VPC](how-to-guides/existing-network/connecting-to-aws.md)
   * [Azure VNET](how-to-guides/existing-network/connecting-to-azure.md)
