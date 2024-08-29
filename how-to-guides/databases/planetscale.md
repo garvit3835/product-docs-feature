@@ -6,7 +6,7 @@ Comprehensive guide for connecting to a PlanetScale Database from your DevBox.
 
 ![PlanetScale Database Architecture](../../.gitbook/assets/planetscale-architecture.png)
 
-[PlanetScale](https://www.timescale.com/products) is a MySQL based database service which is built on Vitess and unlocks performance, scalability, and cost optimization for hyperscale databases through horizontal sharding. In this guide, we will walk you through the entire process of connecting your PlanetScale Database to your DevBox step by step.
+[PlanetScale](https://www.timescale.com/products) is a MySQL based database service which is built on Vitess and unlocks performance, scalability, and cost optimization for hyperscale databases through horizontal sharding. In this guide, we will walk you through the entire process of connecting your PlanetScale Database to your DevBox.
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ You will need to create a Recipe in DevZero equipped with the necessary tools li
 1. Go to **DevZero** Dashboard and open the **Recipes** tab.
 2. Click on New Recipe and enter the recipe's name.
 3. Click on **Create a recipe**, and your recipe will be created.
-4. Replace the recipe yaml file with the snippet below. Remember to replace the placeholder username and passworr with the value you noted down in the above steps:
+4. Replace the recipe yaml file with the snippet below. Remember to replace the placeholder username and password with the value you noted down in the above steps:
 
 {% code %}
 ```
@@ -100,7 +100,7 @@ You will need to create a Recipe in DevZero equipped with the necessary tools li
 1. Go to **DevZero** Dashboard and open the **Recipes** tab.
 2. Click on New Recipe and enter the recipe's name.
 3. Click on **Create a recipe**, and your recipe will be created.
-4. Replace the recipe yaml file with the snippet below. Remember to replace the placeholder username and passworr with the value you noted down in the above steps:
+4. Replace the recipe yaml file with the snippet below. Remember to replace the placeholder username and password with the value you noted down in the above steps:
 
 {% code %}
 ```
