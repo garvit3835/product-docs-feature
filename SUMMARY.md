@@ -91,6 +91,7 @@
 * [Databases](how-to-guides/databases/README.md)
   * [Neon](how-to-guides/databases/neon-db.md)
   * [Supabase](how-to-guides/databases/supabase.md)
+  * [Xata](how-to-guides/databases/xata.md)
 * [Remote Desktop](how-to-guides/remote-desktop.md)
 
 ## 🛠️ Troubleshooting
