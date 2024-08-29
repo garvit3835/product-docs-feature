@@ -26,5 +26,13 @@
             <td>
                 <a href="../../.gitbook/assets/supabase-logo.png">supabase-logo.png</a>
         </tr>
+        <tr>
+            <td>Timescale</td>
+            <td>
+                <a href="timescale.md">timescale.md</a>
+            </td>
+            <td>
+                <a href="../../.gitbook/assets/timescale-logo.png">timescale-logo.png</a>
+        </tr>
     </tbody>
 </table>

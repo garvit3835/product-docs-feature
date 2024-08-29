@@ -4,7 +4,7 @@ Comprehensive guide for connecting to a Timescale Service from your DevBox.
 
 ## Architecture Diagram
 
-![Timescale Project Architecture](../../.gitbook/assets/supabase-architecture.png)
+![Timescale Service Database Architecture](../../.gitbook/assets/timescale-architecture.png)
 
 This would be done by setting up the cluster in your Project dashboard and accessing it through `psql` client tool.
 
