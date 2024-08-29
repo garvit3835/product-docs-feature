@@ -27,7 +27,7 @@ First, you need to get the API access key so that we can connect to the Database
 
 ### Step 2: Creating the Recipe for Workspace
 
-You will need to create a **Recipe** in DevZDatabasepped with the necessary tools like `psql` and store your API keys as well:
+You will need to create a Recipe in DevZero equipped with the necessary tools like psql and store your API keys as well:
 
 1. Go to **DevZero** Dashboard and open the **Recipes** tab.
 2Databaseon **New Recipe** and enter the recipe's name.
