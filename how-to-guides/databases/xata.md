@@ -59,7 +59,7 @@ runtime:
 
 ![DevZero Workspace Creation](../../.gitbook/assets/devzero-workspace-creation.png)
 
-### Step 3: Connecting Databaseatabase
+### Step 3: Connecting to the Database
 
 Follow the below steps to connect to the database instance:
 
@@ -218,7 +218,7 @@ xata auth login
 ```
 {% endcode %}
 
-2. Choose `Use an existing API key` option while authenticating and then hit **Enter/Return** without entering the API Key when prompted.
+2. Choose `Use an existing API key` option while authenticating a,nd then hit **Enter/Return** witshowng the API Key when prompted.
 3. Use the following command for access the database through Xata shell:
 
 {% code %}
@@ -296,7 +296,7 @@ runtime:
 
 Follow the below steps to connect to the database instance:
 
-1. Go to DevBox and use the following command to authenticate your xata account:
+1. Go to DevBox and use the following command to authenticate your Xata account:
 
 {% code %}
 ```
