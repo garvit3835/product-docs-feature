@@ -4,7 +4,7 @@ Comprehensive guide for connecting to a PlanetScale Database from your DevBox.
 
 ## Architecture Diagram
 
-![PlanetScale Service Database Architecture](../../.gitbook/assets/timescale-architecture.png)
+![PlanetScale Database Architecture](../../.gitbook/assets/planetscale-architecture.png)
 
 [PlanetScale](https://www.timescale.com/products) is a MySQL based database service which is built on Vitess and unlocks performance, scalability, and cost optimization for hyperscale databases through horizontal sharding. In this guide, we will walk you through the entire process of connecting your PlanetScale Database to your DevBox step by step.
 
