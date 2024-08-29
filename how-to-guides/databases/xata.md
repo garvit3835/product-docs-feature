@@ -16,7 +16,7 @@ Before you begin, create your account with [Xata](https://app.xata.io/signin) an
 {% tabs %}
 {% tab title="PostgreSQL" %}
 
-## Existing Xata Project
+## Existing Xata Workspace
 
 ### Step 1: Creating the API Key
 
