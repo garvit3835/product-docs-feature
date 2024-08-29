@@ -22,7 +22,7 @@ You will need to create a Recipe in DevZero equipped with the necessary tools li
 1. Go to **DevZero** Dashboard and open the **Recipes** tab.
 2. Click on New Recipe and enter the recipe's name.
 3. Click on **Create a recipe**, and your recipe will be created.
-4. Replace the recipe yaml file with the snippet below. Remember to replace the placeholder API key with the key you noted down in the above steps:
+4. Replace the recipe yaml file with the snippet below:
 
 {% code %}
 ```
@@ -117,7 +117,7 @@ You will need to create a Recipe in DevZero equipped with the necessary tools li
 1. Go to **DevZero** Dashboard and open the **Recipes** tab.
 2. Click on New Recipe and enter the recipe's name.
 3. Click on **Create a recipe**, and your recipe will be created.
-4. Replace the recipe yaml file with the snippet below. Remember to replace the placeholder API key with the key you noted down in the above steps:
+4. Replace the recipe yaml file with the snippet below:
 
 {% code %}
 ```
