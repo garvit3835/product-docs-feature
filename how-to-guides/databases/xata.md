@@ -6,7 +6,8 @@ Comprehensive guide for connecting to Xata Workspace Database from your DevBox.
 
 ![Xata Project Architecture](../../.gitbook/assets/xata-architecture.png)
 
-This would be done by setting up the Database in your Workspace dashboard and accessing it through `psql` client tool.
+[Xata](https://xata.io/docs/concepts/serverless-data-platform) is a serverless data platform for PostgreSQL that optimizes reliability, scalability, and developer experience. Xata provides features that make it easier to build modern applications, such as **Branching**, **Zero-downtime schema migrations**, **File attachments**, and more.
+In this guide, we will walk you through the entire process of connecting your Xata Database to your DevBox step by step.
 
 ## Prerequisites
 
@@ -30,9 +31,9 @@ First, you need to get the API access key so that we can connect to the Database
 You will need to create a Recipe in DevZero equipped with the necessary tools like psql and store your API keys as well:
 
 1. Go to **DevZero** Dashboard and open the **Recipes** tab.
-2Databaseon **New Recipe** and enter the recipe's name.
+2. Click on **New Recipe** and enter the recipe's name.
 3. Click on **Create a recipe**, and your recipe will be created.
-4. Replace the recipe `yaml` file with the snippet below. Remember to replace the placeholder API key with the Databasenoted down in the above steps:
+4. Replace the recipe `yaml` file with the snippet below. Remember to replace the placeholder API key with the key you noted down in the above steps:
 
 {% code %}
 ```
@@ -66,7 +67,7 @@ Follow the below steps to connect to the database instance:
 1. Go to **[Xata Dashboard](https://app.xata.io/workspaces)**.
 2. Open the Database that you want to access through DevBox.
 
-![Xata Database Connection](Databaseitbook/assets/xata-db-string.png)
+![Xata Database Connection](../../.gitbook/assets/xata-db-string.png)
 
 3. Copy the connection  string for **PostgreSQL endpoint** and then use the following command to connect to the Database:
 
@@ -173,7 +174,7 @@ You will need to create a **Recipe** in DevZero equiped with the neccesary tools
 1. Go to **DevZero** Dashboard and open the **Recipes** tab.
 2. Click on **New Recipe** and enter the name of recipe.
 3. Click on **Create a recipe** and your recipe will be created.
-4. Replace the recipe `yaml` file with the below provided snippet. Remember to replace the placeholder API key with the Key you noted down in the above steps:
+4. Replace the recipe `yaml` file with the snippet below. Remember to replace the placeholder API key with the Key you noted down in the above steps:
 
 {% code %}
 ```
@@ -218,7 +219,7 @@ xata auth login
 ```
 {% endcode %}
 
-2. Choose `Use an existing API key` option while authenticating a,nd then hit **Enter/Return** witshowng the API Key when prompted.
+2. Choose the `Use an existing API key` option while authenticating, and then hit **Enter/Return** with the API Key shown when prompted.
 3. Use the following command for access the database through Xata shell:
 
 {% code %}
@@ -238,7 +239,7 @@ If you need to make a new Xata database and access it through DevBox, then follo
 ### Step 1: Creating a Workspace Database
 
 1. Go to **[Xata Dashboard](https://app.xata.io/workspaces)**.
-2. If you havn't created any database then the dashbaord will automatically prompt you make a new database, but if you have completed the initial setup then you just need to click on **Add database**.
+2. If you haven't created a database, the dashboard will automatically prompt you to create one, but if you have completed the initial setup, you just need to click on **Add database**.
 3. Enter the database **Name**, and choose the **Region**.
 4. Click on **Create** and your Database will be created and will show up on your dashboard.
 
