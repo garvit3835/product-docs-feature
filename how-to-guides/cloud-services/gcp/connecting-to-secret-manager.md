@@ -6,7 +6,7 @@ You are connecting to a GCP Secret Manager from your DevBox.
 
 ![GCP Key Vault Architecture](../../../.gitbook/assets/gcp-secret-manager-architecture.png)
 
-Here, you will connect to a GCP Secret Manager from your DevBox. This can be done using any programming language API, but for this demo, we will use Python.
+Here, you will connect to a GCP Secret Manager from your DevBox. This can be done using any programming language API, but for the scope of this document, we will use Python.
 
 ## Existing Key Vault
 
