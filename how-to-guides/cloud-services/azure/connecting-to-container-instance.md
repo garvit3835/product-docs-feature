@@ -18,7 +18,7 @@ Before you begin, follow the [Connecting to Azure](../../existing-network/connec
 
 ## New Azure Container Instance
 
-If you need to make a new virtual machine running in a private subnet and access it through DevZero's network, then follow the below steps:
+If you need to make a new container running in a private subnet and access it through DevZero's network, then follow the below steps:
 
 ### Step 1: Creating a Container Instance
 
