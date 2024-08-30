@@ -79,5 +79,14 @@
 				<a href="../../../.gitbook/assets/gcp-firestore-logo.png">gcp-firestore-logo.png</a>
 			</td>
 		</tr>
+		<tr>
+			<td>Connecting to GCP Secret Manager</td>
+			<td>
+				<a href="connecting-to-secret-manager.md">connecting-to-secret-manager.md</a>
+			</td>
+			<td>
+				<a href="../../../.gitbook/assets/gcp-secret-manager-logo.png">gcp-secret-manager-logo.png</a>
+			</td>
+		</tr>
 	</tbody>
 </table>
