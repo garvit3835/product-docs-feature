@@ -24,13 +24,15 @@ launch:
       value: "INSERT-YOUR-GITHUB-ORG-NAME"
     - name: REPO
       value: "INSERT-YOUR-REPO-NAME"
+    - name: GITHUB_PAT
+      value: '***'
   steps:
     - type: command
       command: |
         cd actions-runner && ./config.sh --unattended --url https://github.com/${OWNER}/${REPO} --token $(curl \
         -X POST \
         -H "Accept: application/vnd.github+json" \
-        -H "Authorization: Bearer "${{ GH_PAT }}"" \
+        -H "Authorization: Bearer "${GITHUB_PAT}"" \
         https://api.github.com/repos/${OWNER}/${REPO}/actions/runners/registration-token | jq -r '.token')
     - type: command
       command: |
@@ -69,8 +71,14 @@ build:
 
 launch:
   environment:
+    - name: INSTALLATION_NAME
+      value: "dz-arc-controller"
     - name: NAMESPACE
       value: "dz-arc-systems"
+    - name: GITHUB_CONFIG_URL
+      value: "org/repo"
+    - name: GITHUB_PAT
+      value: '***'
   steps:
     - type: command
       command: |
