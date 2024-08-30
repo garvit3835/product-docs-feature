@@ -92,6 +92,7 @@
 * [Databases](how-to-guides/databases/README.md)
   * [Neon](how-to-guides/databases/neon-db.md)
   * [Supabase](how-to-guides/databases/supabase.md)
+  * [MongoDB](how-to-guides/databases/mongodb.md)
 * [Remote Desktop](how-to-guides/remote-desktop.md)
 
 ## 🛠️ Troubleshooting
