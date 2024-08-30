@@ -2,7 +2,7 @@
 
 You can access your DevBox interactively using Remote Desktop.
 
-### Using Docker (recommended)
+## Using Docker (recommended)
 
 1. Create a new workspace with Docker installed ([How-to](../references/starter-templates/build-tools/docker.md)).
 2. Launch the headless VNC docker environment:
@@ -15,9 +15,9 @@ See how to connect below.
 
 More information about the Docker image [here](https://github.com/ConSol/docker-headless-vnc-container/tree/master).
 
-### Self-hosted install (experimental)
+## Self-hosted install (experimental)
 
-#### Installing Lightweight Desktop Environment
+### Installing Lightweight Desktop Environment
 
 1. Make sure the package repositories are up-to-date:
 
