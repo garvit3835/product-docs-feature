@@ -4,17 +4,34 @@ You are connecting to a Container Instance running in the private subnet of Azur
 
 ## Architecture Diagram
 
-![Azure VM Architecture](../../../.gitbook/assets/azure-container-architecture.png)
+![Azure Container Instance Architecture](../../../.gitbook/assets/azure-container-architecture.png)
 
-This would take place by setting up a bastion host that advertises the VNET CIDR to your DevZero network so that you can access the private service through the network tunneling.
+[Azure Container Instances (ACI)](https://azure.microsoft.com/en-us/products/container-instances) is a serverless container service that allows you to run isolated containers in Azure without managing underlying infrastructure or orchestrating container deployments. This would take place by setting up a bastion host that advertises the VNET CIDR to your DevZero network so that you can access the private service through the network tunneling.
 
 ## Prerequisites
 
 Before you begin, follow the [Connecting to Azure](../../existing-network/connecting-to-azure.md) guide to set up the Bastion Host to access your private Azure services.
 
-{% hint="info" %}
+## Existing Azure Container Instance
 
+{% hint="info" %}
+Ensure that your container has a **Private IP Address** and also check if the container is housed in the same **Virtual Network** as the **Bastion Host**.
 {% endhint %}
+
+### Accessing container from DevBox
+
+Follow the Below steps to access your container contents from your DevBox :
+
+1. Go to **DevBox**.
+2. You can access the contents of the container using the `curl` command:
+
+{% code lineNumbers="false" %}
+```
+curl -X GET <private-ip>
+```
+{% endcode %}
+
+![Azure Container Access](../../../.gitbook/assets/azure-container-access.png)
 
 ## New Azure Container Instance
 
