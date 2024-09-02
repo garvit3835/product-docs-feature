@@ -40,6 +40,11 @@
 * [Adding Resources to your Network](devzero-network/connecting.md)
 * [Access Running Applications](devzero-network/access-own-workspace.md)
 
+## 💽 DevZero Storage
+
+* [Overview](devzero-storage/overview.md)
+* [Volume](devzero-storage/volume-elastic-nfs.md)
+
 ## 🔑 Admin
 
 * [User Management](admin/user-management.md)
