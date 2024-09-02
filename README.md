@@ -168,8 +168,7 @@ _Use your existing tech stack, databases, services, and more by following our se
 				<strong>Starter Templates</strong>
 			</td>
 			<td></td>
-			<td>Prebuilt 
-				<a href="references/terminology.md#recipe">recipe templates</a> for your tools and services
+			<td>Prebuilt <a href="references/terminology.md#recipe">recipe templates</a> for your tools and services
 			</td>
 			<td></td>
 			<td></td>
