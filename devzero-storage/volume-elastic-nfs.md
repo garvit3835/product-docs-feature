@@ -3,9 +3,9 @@
 DevZero's volumes are multi-attach multi-read-write capable volumes (similar to AWS EFS).
 Volumes are regional in nature and can be attached to any workspace in that region.
 
-# Creating a volume
+## Creating a volume
 
-## In your default region
+### In your default region
 {% code %}
 ```
 $ dz storage volume create --name=my-fancy-volume --size=50
@@ -14,7 +14,7 @@ ID                                    Name             Total size (GB)  Region
 ```
 {% endcode %}
 
-## In an arbitrary region
+### In an arbitrary region
 {% code %}
 ```
 $ dz storage volume create --name=other-fancy-volume --size=50 --region=eu-north-1
@@ -23,7 +23,7 @@ e71e024e-ba0a-443a-b452-c931e8ce39a5  other-fancy-volume          50            
 ```
 {% endcode %}
 
-# Listing your volumes
+## Listing your volumes
 {% code %}
 ```
 $ dz storage volume list
@@ -33,7 +33,7 @@ e71e024e-ba0a-443a-b452-c931e8ce39a5  other-fancy-volume          50            
 ```
 {% endcode %}
 
-# Launching a workspace with a volume
+## Launching a workspace with a volume
 
 The volume is mounted at the path specified by the `--mount` flag.
 
@@ -57,7 +57,7 @@ dz workspace connect abominal-monkey-ytui
 ```
 {% endcode %}
 
-## Verifying mounted volumes inside a workspace
+### Verifying mounted volumes inside a workspace
 
 {% code %}
 ```
