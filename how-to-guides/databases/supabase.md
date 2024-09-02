@@ -2,6 +2,8 @@
 
 Comprehensive guide for connecting to a Supabase Project from your DevBox.
 
+If you're more of a visual learner, check out the [video tutorial](#video-walkthrough)!
+
 ## Architecture Diagram
 
 ![Supabase Project Architecture](../../.gitbook/assets/supabase-architecture.png)
@@ -102,3 +104,8 @@ To make the connection, follow the below steps:
 4. Now in your DevBox, simply paste the connection string and enter the password when prompted.
 
 ![Postgres Access](../../.gitbook/assets/supabase-access.png)
+
+
+## Video Walkthrough
+
+{% embed url="https://devzero.b-cdn.net/How%20to%20Connect%20Supabase%20to%20Your%20Dev%20Box-inline-subtitles.mp4" %}
