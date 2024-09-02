@@ -6,6 +6,7 @@ Volumes are regional in nature and can be attached to any workspace in that regi
 ## Creating a volume
 
 ### In your default region
+
 {% code %}
 ```
 $ dz storage volume create --name=my-fancy-volume --size=50
@@ -15,6 +16,7 @@ ID                                    Name             Total size (GB)  Region
 {% endcode %}
 
 ### In an arbitrary region
+
 {% code %}
 ```
 $ dz storage volume create --name=other-fancy-volume --size=50 --region=eu-north-1
@@ -24,6 +26,7 @@ e71e024e-ba0a-443a-b452-c931e8ce39a5  other-fancy-volume          50            
 {% endcode %}
 
 ## Listing your volumes
+
 {% code %}
 ```
 $ dz storage volume list
