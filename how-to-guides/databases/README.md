@@ -60,7 +60,7 @@
             </td>
             <td>
                 <a href="../../.gitbook/assets/planetscale-logo.png">planetscale-logo.png</a>
-	          </td>
+	    </td>
       </tr>
     </tbody>
 </table>
