@@ -64,7 +64,7 @@ If you need to make a new container running in a private subnet and access it th
 6. Select or input the **Image** and choose the desired size configuration for your container.
 7. On the networking page, choose the **Private** option and select your VNET and desired subnet.
 7. Click on **Review + Create** and click on **Create** to create container.
-   
+
 ### Step 2: Creating a Workspace
 
 Follow the steps to create a workspace:
