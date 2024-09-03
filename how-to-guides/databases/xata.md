@@ -16,7 +16,7 @@ Before you begin, create your account with [Xata](https://app.xata.io/signin) an
 {% tabs %}
 {% tab title="PostgreSQL" %}
 
-## Existing Xata Workspace
+## Existing Xata Database - PostgreSQL
 
 ### Step 1: Creating the API Key
 
@@ -79,7 +79,7 @@ psql postgresql://<workspace-id>:$XATA_API_KEY@<region>.sql.xata.sh/<database-na
 
 ![Xata Database Access](../../.gitbook/assets/xata-db-access.png)
 
-## New Xata Workspace
+## New Xata Database - PostgreSQL
 
 If you need to make a new Xata database and access it through DevBox, then follow the below steps:
 
@@ -157,7 +157,7 @@ psql postgresql://<workspace-id>:$XATA_API_KEY@<region>.sql.xata.sh/<database-na
 
 {% tab title="Xata Shell" %}
 
-## Existing Xata Project
+## Existing Xata Database - Xata
 
 ### Step 1: Creating the API Key
 
@@ -232,7 +232,7 @@ xata shell
 
 ![Xata Database Shell Access](../../.gitbook/assets/xata-db-shell-access.png)
 
-## New Xata Workspace
+## New Xata Database - Xata
 
 If you need to make a new Xata database and access it through DevBox, then follow the below steps:
 
