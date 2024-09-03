@@ -15,15 +15,15 @@ Before you begin, follow the [Connecting to Azure](../../existing-network/connec
 ## Existing Azure Container Instance
 
 {% hint="info" %}
-Ensure that your container has a **Private IP Address** and also check if the container is housed in the same **Virtual Network** as the **Bastion Host**.
+Ensure your container has a **Private IP Address** and check if the container is housed in the same **Virtual Network** as the **Bastion Host**.
 {% endhint %}
 
 ### Accessing container from DevBox
 
-Follow the Below steps to access your container contents from your DevBox :
+Follow the Below steps to access your container application from your DevBox :
 
 1. Go to **DevBox**.
-2. You can access the contents of the container using the `curl` command:
+2. You can access the application running in the container using the `curl` command:
 
 {% code lineNumbers="false" %}
 ```
@@ -43,15 +43,15 @@ If you need to make a new container running in a private subnet and access it th
 2. In the **Basics** section, select the **Resource group** you previously selected for your VNET.
 3. Then input your **Container name** and **Region** and choose your desired **SKU**.
 4. Choose your desired **Image source** between `Quickstart images`, `Azure Container Registry`, and `Other registry`.
-5. For this guide, we will be working with `Quickstart images`.
+5. For this guide, we will work with `Quickstart images`.
 6. Select or input the **Image** and choose the desired size configuration for your container.
-7. In the Networking page, choose the **Private** option, select your VNET and desired subnet.
+7. On the networking page, choose the **Private** option and select your VNET and desired subnet.
 7. Click on **Review + Create** and click on **Create** to create container.
 
 ### Step 2: Accessing container from DevBox
 
 1. Go to **DevBox**.
-2. You can access the contents of the container using the `curl` command:
+2. You can access the application running in the container using the `curl` command:
 
 {% code lineNumbers="false" %}
 ```
