@@ -81,5 +81,14 @@
                 <a href="../../../.gitbook/assets/azure-key-vault-logo.png">azure-key-vault-logo.png</a>
             </td>
         </tr>
+        <tr>
+            <td>Connecting to Azure Container Instance</td>
+            <td>
+                <a href="connecting-to-container-instance.md">connecting-to-container-instance.md</a>
+            </td>
+            <td>
+                <a href="../../../.gitbook/assets/azure-container-logo.png">azure-container-logo.png</a>
+            </td>
+        </tr>
     </tbody>
 </table>

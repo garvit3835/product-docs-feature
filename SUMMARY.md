@@ -75,6 +75,7 @@
     * [Table Storage](how-to-guides/cloud-services/azure/connecting-to-table-storage.md)
     * [Blob Storage](how-to-guides/cloud-services/azure/connecting-to-blob-storage.md)
     * [Key Vault](how-to-guides/cloud-services/azure/connecting-to-key-vault.md)  
+    * [Container Instance](how-to-guides/cloud-services/azure/connecting-to-container-instance.md)  
   * [GCP](how-to-guides/cloud-services/gcp/README.md)
     * [Compute Instance](how-to-guides/cloud-services/gcp/connecting-to-compute-instance.md)
     * [BigQuery](how-to-guides/cloud-services/gcp/connecting-to-bigquery.md)
