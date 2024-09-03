@@ -36,5 +36,13 @@
                 <a href="../../.gitbook/assets/mongodb.png">mongodb.png</a>
 	    </td>
         </tr>
+        <tr>
+            <td>Xata</td>
+            <td>
+                <a href="xata.md">xata.md</a>
+            </td>
+            <td>
+                <a href="../../.gitbook/assets/xata-logo.png">xata-logo.png</a>
+        </tr>
     </tbody>
 </table>
