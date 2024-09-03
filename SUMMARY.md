@@ -40,6 +40,11 @@
 * [Adding Resources to your Network](devzero-network/connecting.md)
 * [Access Running Applications](devzero-network/access-own-workspace.md)
 
+## 💽 DevZero Storage
+
+* [Overview](devzero-storage/overview.md)
+* [Volume](devzero-storage/volume-elastic-nfs.md)
+
 ## 🔑 Admin
 
 * [User Management](admin/user-management.md)
@@ -92,6 +97,7 @@
 * [Databases](how-to-guides/databases/README.md)
   * [Neon](how-to-guides/databases/neon-db.md)
   * [Supabase](how-to-guides/databases/supabase.md)
+  * [Xata](how-to-guides/databases/xata.md)
   * [MongoDB](how-to-guides/databases/mongodb.md)
   * [Timescale](how-to-guides/databases/timescale.md)
 * [Remote Desktop](how-to-guides/remote-desktop.md)
