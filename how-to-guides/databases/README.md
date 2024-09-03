@@ -36,14 +36,31 @@
                 <a href="../../.gitbook/assets/mongodb.png">mongodb.png</a>
 	    </td>
         </tr>
-	<tr>
+        <tr>
+            <td>Xata</td>
+            <td>
+                <a href="xata.md">xata.md</a>
+            </td>
+            <td>
+                <a href="../../.gitbook/assets/xata-logo.png">xata-logo.png</a>
+        </tr>
+      <tr>
+        <td>Timescale</td>
+            <td>
+                <a href="timescale.md">timescale.md</a>
+            </td>
+            <td>
+                <a href="../../.gitbook/assets/timescale-logo.png">timescale-logo.png</a>
+            </td>
+      </tr>
+      <tr>
             <td>PlanetScale</td>
             <td>
                 <a href="planetscale.md">planetscale.md</a>
             </td>
             <td>
                 <a href="../../.gitbook/assets/planetscale-logo.png">planetscale-logo.png</a>
-	    </td>
-        </tr>
+	          </td>
+      </tr>
     </tbody>
 </table>
