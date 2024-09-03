@@ -1,12 +1,12 @@
 # Azure App Services
 
-You are connecting to a App Service running on your Azure infrastructure from your DevBox.
+You are connecting to an App Service running on your Azure infrastructure from your DevBox.
 
 ## Architecture Diagram
 
 ![Azure App Service Architecture](../../../.gitbook/assets/azure-app-service-architecture.png)
 
-[Azure App Service](https://azure.microsoft.com/en-us/products/app-service) enables you to build and host web apps, mobile back ends, and RESTful APIs in the programming language of your choice without managing infrastructure. This connection between the app service and workspace would take place by setting up a bastion host that advertises the private routes to your DevZero network so that you can access the private service through network tunneling. You must also set up a DNS Private Resolver to access the Blob Storage's Private Endpoint from your DevBox.
+[Azure App Service](https://azure.microsoft.com/en-us/products/app-service) enables you to build and host web apps, mobile backends, and RESTful APIs in the programming language of your choice without managing infrastructure. This connection between the app service and workspace would occur by setting up a bastion host that advertises the private routes to your DevZero network so you can access the private service through network tunneling. You must also set up a DNS Private Resolver to access the Blob Storage's Private Endpoint from your DevBox.
 
 ## Prerequisites
 
@@ -15,20 +15,39 @@ You are connecting to a App Service running on your Azure infrastructure from yo
 
 ## Existing Azure App Services
 
-To connect to a App Service running in the private subnet, ensure it is within the same **Resource Group** and **VNET** containing the Bastion Host.
+To connect to an App Service running in the private subnet, please ensure it is within the same **Resource Group** and **VNET** containing the Bastion Host.
 
-### Step 1: Creating a Private Endpoint
+### Step 1: Creating a Workspace
+
+It would be best if you created a workspace so you can access the app service:
+
+1. To to [DevZero Dashboard](https://www.devzero.io/dashboard).
+2. Navigate to the **Workspaces** tab and click on **New workspace**.
+3. Enter the workspace name and click on **Select from recipe library**.
+4. Select an Existing recipe or create a new recipe with the default packages.
+5. Select a workspace region and click on **Launch**.
+
+### Step 2: Creating a Private Endpoint
 
 1. Navigate to **Networking** and open **Private Endpoints** page.
 2. Click on **Add > Express** and then enter the name of your private endpoint.
 3. Then select the VNET and a compatible subnet. Turn on the **Integrate with private DNS zone** option.
-4. Click on **Ok** and your private connection for your private web app will be deployed.
+4. Click on **Ok** and your private connection for your web app will be successfully deployed.
 
 ![Azure App Service Private Endpoint](../../../.gitbook/assets/azure-app-service-endpoint.png)
 
-### Step 2: Accessing virtual machine from DevBox
+### Step 3: Accessing App Service from DevBox
 
-1. Go to **DevBox**.
+Follow the Below steps to access your Web App from your DevBox :
+
+1. Connect to the workspace using the following command:
+
+{% code lineNumbers="false" %}
+```
+sudo dz workspace connect <workspace-name>
+```
+{% endcode %}
+
 2. Copy the **Default domain** of the **App Service** you want to access.
 3. Connect to the **App Service**:
 
@@ -57,29 +76,29 @@ If you need to make a new App Service running in a private subnet and access it 
 {% tab title="Code" %}
 
 4. Select your **Runtime Stack**, **Operating System**, **Region** and then configure your **Pricing Plans** accordingly.
-5. In the **Container** page, choose Choose your desired Image source between Quickstart images, Azure Container Registry, and Other registry.
+5. On the **Container** page, select your desired Image source from Quickstart images, Azure Container Registry, or Another registry.
 5. For this guide, we will be working with Quickstart images. Then select or input the Image for your container.
 6. In the **Networking** section, choose the **off** option under the **Enable public access** section.
 7. Click on **Review + Create** and then click on **Create**.
-8. After the app is deployed, open to the app service you just created, then navigate to **Deployment > Deployment Center**.
+8. After the app is deployed, open the app service you just created and navigate to Deployment > Deployment Center.
 9. Select a **Code Source** and then enter the **Organisation**, **Repository**, and **branch** name. After you are done with your configuration, click on **Save**.
 10. Navigate to **Networking** and open **Private Endpoints** page.
 11. Click on **Add > Express** and then enter the name of your private endpoint.
 12. Then select the VNET and a compatible subnet. Turn on the **Integrate with private DNS zone** option.
-13. Click on **Ok** and your private connection for your private web app will be deployed.
+13. Click on **Ok**, and your private connection for your web app will be successfully deployed.
 
 {% endtab %}
 
 {% tab title="Container" %}
 
 4. Select your **Operating System**, **Region** and then configure your **Pricing Plans** accordingly.
-5. In the **Deployment** page, choose whether you want to enable **Continuous deployment** or not. If enabled, Enter your GitHub Repository details for your source code such as **Organization** name, **Repository** name, and **Branch**.
+5. On the ** Deployment ** page, choose whether you want to enable ** Continuous deployment ** or not. If enabled, Enter your GitHub Repository details for your source code, such as **Organization** name, **Repository** name, and **Branch**.
 6. In the **Networking** section, choose the **off** option under the **Enable public access** section.
 7. Click on **Review + Create** and then click on **Create**.
-8. After the web app is created, navigate to **Networking** and open **Private Endpoints** page.
+8. After the web app is created, navigate to Networking and open the Private Endpoints page.
 9. Click on **Add > Express** and then enter the name of your private endpoint.
 10. Then select the VNET and a compatible subnet. Turn on the **Integrate with private DNS zone** option.
-11. Click on **Ok** and your private connection for your private web app will be deployed.
+11. Click on **Ok**, and your private connection for your web app will be successfully deployed.
 
 {% endtab %}
 {% endtabs %}
@@ -105,7 +124,7 @@ If you need to make a new static web App Service, then follow the below steps:
 7. Navigate to **Networking** and open **Private Endpoints** page.
 8. Click on **Add > Express** and then enter the name of your private endpoint.
 9. Then select the VNET and a compatible subnet. Turn on the **Integrate with private DNS zone** option.
-10. Click on **Ok** and your private connection for your private web app will be deployed.
+10. Click on **Ok**, and your private connection for your web app will be successfully deployed.
 
 {% endtab %}
 
@@ -116,7 +135,7 @@ If you need to make a new static web App Service, then follow the below steps:
 7. Navigate to **Networking** and open **Private Endpoints** page.
 8. Click on **Add > Express** and then enter the name of your private endpoint.
 9. Then select the VNET and a compatible subnet. Turn on the **Integrate with private DNS zone** option.
-10. Click on **Ok** and your private connection for your private web app will be deployed.
+10. Click on **Ok**, and your private connection for your web app will be successfully deployed.
 
 {% endtab %}
 {% endtabs %}
@@ -133,21 +152,40 @@ If you need to make a new App Service with database integration, then follow the
 2. In the **Basics** section, select the resource group you previously selected for your VNET.
 3. Enter the **Web App** name, and **Runtime** stack.
 4. After this, select the database **Engine**, **Server name**, and **Database name**.
-5. Select the **Azure Cache for Redis** option if you want to and then choose your **Hosting plan**.
+5. If you want to, select the Azure Cache for Redis option and then choose your Hosting plan.
 6. Click on **Review + Create** and click on **Create**. 
-7. After the app is deployed, open to the app service you just created, then navigate to **Deployment > Deployment Center**.
+7. After the app is deployed, open the app service you just created and navigate to Deployment > Deployment Center.
 8. Select a **Code Source** and then enter the **Organisation**, **Repository**, and **branch** name. After you are done with your configuration, click on **Save**.
 9. Navigate to **Networking** and open **Private Endpoints** page.
 10. Click on **Add > Express** and then enter the name of your private endpoint.
 11. Then select the VNET and a compatible subnet. Turn on the **Integrate with private DNS zone** option.
-12. Click on **Ok** and your private connection for your private web app will be deployed.
+12. Click on **Ok**, and your private connection for your web app will be successfully deployed.
 
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Accessing virtual machine from DevBox
+### Step 2: Creating a Workspace
 
-1. Go to **DevBox**.
+It would be best if you created a workspace so you can access the app service:
+
+1. To to [DevZero Dashboard](https://www.devzero.io/dashboard).
+2. Navigate to the **Workspaces** tab and click on **New workspace**.
+3. Enter the workspace name and click on **Select from recipe library**.
+4. Select an Existing recipe or create a new recipe with the default packages.
+5. Select a workspace region and click on **Launch**.
+
+### Step 3: Accessing App Service from DevBox
+
+Follow the Below steps to access your Web App from your DevBox :
+
+1. Connect to the workspace using the following command:
+
+{% code lineNumbers="false" %}
+```
+sudo dz workspace connect <workspace-name>
+```
+{% endcode %}
+
 2. Copy the **Default domain** of the **App Service** you want to access.
 3. Connect to the **App Service**:
 
