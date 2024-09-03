@@ -4,9 +4,9 @@ You are connecting to a App Service running on your Azure infrastructure from yo
 
 ## Architecture Diagram
 
-![Azure App Service Architecture](../../../.gitbook/assets/azure-vm-architecture.png)
+![Azure App Service Architecture](../../../.gitbook/assets/azure-app-service-architecture.png)
 
-Here, you will connect to a virtual machine running in a private subnet from your DevBox. This would be done by setting up a bastion host that advertises the VNET CIDR to your DevZero network so that you can access the private service through the network tunneling.
+[Azure App Service](https://azure.microsoft.com/en-us/products/app-service) enables you to build and host web apps, mobile back ends, and RESTful APIs in the programming language of your choice without managing infrastructure. This connection between the app service and workspace would take place by setting up a bastion host that advertises the private routes to your DevZero network so that you can access the private service through network tunneling. You must also set up a DNS Private Resolver to access the Blob Storage's Private Endpoint from your DevBox.
 
 ## Prerequisites
 
@@ -80,6 +80,43 @@ If you need to make a new App Service running in a private subnet and access it 
 9. Click on **Add > Express** and then enter the name of your private endpoint.
 10. Then select the VNET and a compatible subnet. Turn on the **Integrate with private DNS zone** option.
 11. Click on **Ok** and your private connection for your private web app will be deployed.
+
+{% endtab %}
+{% endtabs %}
+
+{% endtab %}
+
+{% tab title="Static Web App" %}
+
+If you need to make a new static web App Service, then follow the below steps:
+
+### Step 1: Creating a Static Web App Service
+
+1. Go to **Home > App Services** and click on **Create > Static Web App**.
+2. In the **Basics** section, select the resource group you previously selected for your VNET.
+3. Enter the **Web App** name, and **Hosting plan**.
+4. After this, choose the **Source Model** between **GitHub**, **Azure Devops** or **Other**.
+
+{% tabs %}
+{% tab title="Github" %}
+
+5. Enter the **Organisation**, **Repository**, and **branch** name.
+6. Click on **Review + Create** and click on **Create**.
+7. Navigate to **Networking** and open **Private Endpoints** page.
+8. Click on **Add > Express** and then enter the name of your private endpoint.
+9. Then select the VNET and a compatible subnet. Turn on the **Integrate with private DNS zone** option.
+10. Click on **Ok** and your private connection for your private web app will be deployed.
+
+{% endtab %}
+
+{% tab title="Azure DevOps" %}
+
+5. Enter the **Organisation**, **Project**, **Repository**, and **branch** name.
+6. Click on **Review + Create** and click on **Create**.
+7. Navigate to **Networking** and open **Private Endpoints** page.
+8. Click on **Add > Express** and then enter the name of your private endpoint.
+9. Then select the VNET and a compatible subnet. Turn on the **Integrate with private DNS zone** option.
+10. Click on **Ok** and your private connection for your private web app will be deployed.
 
 {% endtab %}
 {% endtabs %}
