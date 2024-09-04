@@ -81,5 +81,14 @@
                 <a href="../../../.gitbook/assets/azure-key-vault-logo.png">azure-key-vault-logo.png</a>
             </td>
         </tr>
+        <tr>
+            <td>Connecting to Azure App Services</td>
+            <td>
+                <a href="connecting-to-app-service.md">connecting-to-pp-service.md</a>
+            </td>
+            <td>
+                <a href="../../../.gitbook/assets/azure-app-service-logo.png">azure-app-service-logo.png</a>
+            </td>
+        </tr>
     </tbody>
 </table>
