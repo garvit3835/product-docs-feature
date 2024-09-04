@@ -6,6 +6,7 @@ You are connecting to a Container Instance running in the private subnet of Azur
 
 ![Azure Container Instance Architecture](../../../.gitbook/assets/azure-container-architecture.png)
 
+<!-- markdown-link-check-disable-next-line -->
 [Azure Container Instances (ACI)](https://azure.microsoft.com/en-us/products/container-instances) is a serverless container service that allows you to run isolated containers in Azure without managing underlying infrastructure or orchestrating container deployments. This would occur by setting up a bastion host that advertises the VNET CIDR to your DevZero network so you can access the private service through the network tunneling.
 
 ## Prerequisites
