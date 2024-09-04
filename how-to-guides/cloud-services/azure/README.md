@@ -81,5 +81,14 @@
                 <a href="../../../.gitbook/assets/azure-key-vault-logo.png">azure-key-vault-logo.png</a>
             </td>
         </tr>
+        <tr>
+            <td>Connecting to Azure Elastic SAN</td>
+            <td>
+                <a href="connecting-to-elastic-san.md">connecting-to-elastic-san.md</a>
+            </td>
+            <td>
+                <a href="../../../.gitbook/assets/azure-key-vault-logo.png">azure-key-vault-logo.png</a>
+            </td>
+        </tr>
     </tbody>
 </table>
