@@ -22,10 +22,10 @@ Please make sure your container has a **Private IP Address** and check if the co
 
 First of all, we need to create a workspace:
 
-1. To to [DevZero Dashboard](https://www.devzero.io/dashboard).
+1. Go to [DevZero Dashboard](https://www.devzero.io/dashboard).
 2. Navigate to the **Workspaces** tab and click on **New workspace**.
 3. Enter the workspace name and click on **Select from recipe library**.
-4. Select an Existing recipe or create a new recipe with the default packages.
+4. Click on **New Recipe** and enter the recipe name and click on **Create a recipe**.
 5. Select a workspace region and click on **Launch**.
 
 ### Step 2: Accessing container from DevBox
@@ -72,7 +72,7 @@ Follow the steps to create a workspace:
 1. To to [DevZero Dashboard](https://www.devzero.io/dashboard).
 2. Navigate to the **Workspaces** tab and click on **New workspace**.
 3. Enter the workspace name and click on **Select from recipe library**.
-4. Select an Existing recipe or create a new recipe with the default packages.
+4. Click on **New Recipe** and enter the recipe name and click on **Create a recipe**.
 5. Select a workspace region and click on **Launch**.
 
 ### Step 3: Accessing container from DevBox
