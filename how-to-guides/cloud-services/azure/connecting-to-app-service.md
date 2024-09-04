@@ -153,7 +153,7 @@ If you need to make a new App Service with database integration, then follow the
 3. Enter the **Web App** name, and **Runtime** stack.
 4. After this, select the database **Engine**, **Server name**, and **Database name**.
 5. If you want to, select the Azure Cache for Redis option and choose your Hosting plan.
-6. Click on **Review + Create** and click on **Create**. 
+6. Click on **Review + Create** and click on **Create**.
 7. After deploying the app, open your created service and navigate to **Deployment > Deployment Center**.
 8. Select a **Code Source** and then enter the **Organisation**, **Repository**, and **branch** name. After you are done with your configuration, click on **Save**.
 9. Navigate to **Networking** and open **Private Endpoints** page.
