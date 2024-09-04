@@ -19,14 +19,21 @@ build:
         tar xzf ./actions-runner-linux-x64-2.317.0.tar.gz
 
 launch:
+  environment:
+    - name: OWNER
+      value: "INSERT-YOUR-GITHUB-ORG-NAME"
+    - name: REPO
+      value: "INSERT-YOUR-REPO-NAME"
+    - name: GITHUB_PAT
+      value: '***'
   steps:
     - type: command
       command: |
-        cd actions-runner && ./config.sh --unattended --url https://github.com/OWNER/REPO --token $(curl \
+        cd actions-runner && ./config.sh --unattended --url https://github.com/${OWNER}/${REPO} --token $(curl \
         -X POST \
         -H "Accept: application/vnd.github+json" \
-        -H "Authorization: Bearer "${{ GH_PAT }}"" \
-        https://api.github.com/repos/OWNER/REPO/actions/runners/registration-token | jq -r '.token')
+        -H "Authorization: Bearer "${GITHUB_PAT}"" \
+        https://api.github.com/repos/${OWNER}/${REPO}/actions/runners/registration-token | jq -r '.token')
     - type: command
       command: |
         cd actions-runner && sudo ./svc.sh install
@@ -63,10 +70,18 @@ build:
         ./get_helm.sh
 
 launch:
+  environment:
+    - name: INSTALLATION_NAME
+      value: "dz-arc-controller"
+    - name: NAMESPACE
+      value: "dz-arc-systems"
+    - name: GITHUB_CONFIG_URL
+      value: "org/repo"
+    - name: GITHUB_PAT
+      value: '***'
   steps:
     - type: command
       command: |
-        NAMESPACE=dz-arc-systems
         helm install arc \
           --namespace "${NAMESPACE}" \
           --create-namespace \
@@ -84,5 +99,4 @@ launch:
           --set containerMode.kubernetesModeWorkVolumeClaim.resources.requests.storage=1Gi \
           --set template.spec.securityContext.fsGroup=1001 \
           oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set
-
 ```
