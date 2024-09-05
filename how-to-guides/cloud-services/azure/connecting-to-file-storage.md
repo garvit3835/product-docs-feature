@@ -71,7 +71,7 @@ az login
 {% tabs %}
 {% tab title="Upload" %}
 
-To Upload a file as File to the file share, use the following command:
+To Upload a file to the file share, use the following command:
 
 {% code %}
 ```
@@ -141,7 +141,7 @@ If you need to make a new File Storage and access it through DevBox, then follow
 
 Firstly, you must follow the [Configuring Storage Account](./configuring-storage-account.md) guide to create and configure a new storage account. After the setup, you must also set up the DNS Private Resolver by following the [Setting up DNS Private Resolver](./setting-up-dns-private-resolver.md) guide.
 
-After the above-mentioned steps are completed, you may go ahead and create a file share for File Storage by following these steps:
+After the steps mentioned earlier are completed, you may go ahead and create a file share for File Storage by following these steps:
 
 1. Go to **Home > Storage Accounts** and click on your storage account.
 2. Go to the **Data Storage** tab and click on **File Shares**.
@@ -211,7 +211,7 @@ az storage directory create \
 {% tabs %}
 {% tab title="Upload" %}
 
-To Upload a file as File to the file share, use the following command:
+To Upload a file to the file share, use the following command:
 
 {% code %}
 ```
