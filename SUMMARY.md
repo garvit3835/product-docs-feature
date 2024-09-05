@@ -118,7 +118,7 @@
   * [Updating the CLI](references/cli-man-page/update.md)
   * [Uninstall the CLI](references/cli-man-page/uninstall.md)
   * [Supported OSs](references/cli-man-page/supported-os.md)
-  * [Alternative Install](alternative-install.md)
+  * [Alternative Install](references/cli-man-page/alternative-install.md)
   * [Help Commands](references/cli-man-page/help-commands.md)
 * [Recipe Syntax](recipes/syntax.md)
 * [Starter Templates](references/starter-templates/README.md)
