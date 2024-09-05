@@ -29,15 +29,15 @@ If you're feeling adventurous, these links are for the `latest` release track, w
 {% tab title="macOS" %}
 For the `stable` release track (this is most likely what you want), click the respective link for your CPU architecture.
 
-* [Intel](https://get.devzero.io/stable/darwin-amd64/dz.tar.gz) - more common
+* [Intel](https://get.devzero.io/stable/darwin-amd64/dz.tar.gz) - older
 
-* [Apple Silicon](https://get.devzero.io/stable/darwin-arm64/dz.tar.gz) - less common (Raspberry Pi, etc)
+* [Apple Silicon](https://get.devzero.io/stable/darwin-arm64/dz.tar.gz) - newer
 
 If you're feeling adventurous, these links are for the `latest` release track, which has potentially unstable updates that are pushed more frequently.
 
-* [Intel](https://get.devzero.io/latest/darwin-amd64/dz.tar.gz) - more common
+* [Intel](https://get.devzero.io/latest/darwin-amd64/dz.tar.gz) - older
 
-* [Apple Silicon](https://get.devzero.io/latest/darwin-arm64/dz.tar.gz) - less common (Raspberry Pi, etc)
+* [Apple Silicon](https://get.devzero.io/latest/darwin-arm64/dz.tar.gz) - newer
 
 {% endtab %}
 {% endtabs %}
