@@ -53,5 +53,14 @@
                 <a href="../../.gitbook/assets/timescale-logo.png">timescale-logo.png</a>
             </td>
       </tr>
+      <tr>
+            <td>PlanetScale</td>
+            <td>
+                <a href="planetscale.md">planetscale.md</a>
+            </td>
+            <td>
+                <a href="../../.gitbook/assets/planetscale-logo.png">planetscale-logo.png</a>
+	          </td>
+      </tr>
     </tbody>
 </table>
