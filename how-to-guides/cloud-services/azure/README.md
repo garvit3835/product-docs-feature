@@ -73,6 +73,15 @@
             </td>
         </tr>
         <tr>
+            <td>Connecting to Azure File Storage</td>
+            <td>
+                <a href="connecting-to-file-storage.md">connecting-to-file-storage.md</a>
+            </td>
+            <td>
+                <a href="../../../.gitbook/assets/azure-file-logo.png">azure-file-logo.png</a>
+            </td>
+        </tr>
+        <tr>
             <td>Connecting to Azure Key Vault</td>
             <td>
                 <a href="connecting-to-key-vault.md">connecting-to-key-vault.md</a>

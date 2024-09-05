@@ -69,6 +69,7 @@
     * [Storage Account](how-to-guides/cloud-services/azure/configuring-storage-account.md)
     * [Table Storage](how-to-guides/cloud-services/azure/connecting-to-table-storage.md)
     * [Blob Storage](how-to-guides/cloud-services/azure/connecting-to-blob-storage.md)
+    * [File Storage](how-to-guides/cloud-services/azure/connecting-to-file-storage.md)
     * [Key Vault](how-to-guides/cloud-services/azure/connecting-to-key-vault.md)  
   * [GCP](how-to-guides/cloud-services/gcp/README.md)
     * [Compute Instance](how-to-guides/cloud-services/gcp/connecting-to-compute-instance.md)
