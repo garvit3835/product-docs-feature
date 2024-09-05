@@ -6,6 +6,7 @@ Connecting to an Azure File Storage from your DevBox.
 
 ![Azure File Storage Architecture](../../../.gitbook/assets/azure-file-architecture.png)
 
+<!-- markdown-link-check-disable-next-line -->
 [Azure File Storage](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-introduction) is a fully managed file shares in the cloud that are accessible via the industry standard Server Message Block (SMB) protocol, Network File System (NFS) protocol, and Azure Files REST API. Azure file shares can be mounted concurrently by cloud or on-premises deployments. SMB Azure file shares are accessible from Windows, Linux, and macOS clients.
 
 This connection between the Azure File Share and your DevBox would take place by setting up a bastion host that advertises the private routes to your DevZero network so that you can access the private service through network tunneling. You must also set up a DNS Private Resolver to access the File Storage's Private Endpoint from your DevBox.
