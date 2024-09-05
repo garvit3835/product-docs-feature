@@ -2,29 +2,32 @@
 
 ## Access Your Running Application(s)
 
-First, find the workspace you care about by running
+Make sure you're connected to the DevZero network by running:
 
-{% code %}
+```
+dz network connect
+```
+
+The, find the desired workspace by running:
+
 ```
 dz network status
 ```
-{% endcode %}
 
-You will see an output that looks like this
+You will see an output that looks like this:
 
 <figure><img src="../.gitbook/assets/net-status.png" alt=""><figcaption><p>dz network status</p></figcaption></figure>
 
-The next steps will show you a few ways to interact with your workspace...
+You can use either the hostname or the IP to make network requests when accessing running applications inside the DevBox.
 
-{% hint style="info" %}
-Within the context of this page, let's focus on `popular-bluejay-yzrt` (the MagicDNS hostname) which has an IP address of `100.64.0.202`.
-{% endhint %}
+### Sending network requests to an application inside the DevBox
 
-### cURL
+#### Using cURL
 
-Say you're running a server on port 8080. To access that server from any machine that's running an authenticated `dz` CLI, just run
+To access an application running inside a DevBox using the **cURL** command, you can send requests to the desired DevBox using the following URL scheme: \<protocol>://\<devbox hostname>:\<port> or the DevBox IP
 
-{% code %}
+Example:
+
 ```
 curl popular-bluejay-yzrt:8080
 
@@ -32,40 +35,45 @@ curl popular-bluejay-yzrt:8080
 
 curl 100.64.0.202:8080
 ```
-{% endcode %}
 
-### Browser
+#### In the Browser
 
-To see a webapp running on port 8000, visit `popular-bluejay-yzrt:8000` or `100.64.0.202:8000` in your browser
+To access an application running inside a DevBox in the **Browser**, you can open a URL that follows the scheme: \<protocol>://\<devbox hostname>:\<port> or \<devbox IP>:\<port>
 
-### SSH
+#### Using SSH
 
-To access your workspace from any machine that's running an authenticated `dz` CLI, just run
+To access your DevBox using **ssh**, connect to your DevBox with devzero@\<devbox hostname> or devzero@\<devbox ip> as a credential:
+
+Example:
 
 ```
 ssh devzero@popular-bluejay-yzrt
 
-# or if you want to forward your SSH agent
-ssh -A devzero@popular-bluejay-yzrt
+## OR
 
-# or you wish to use the niceties of the CLI
-dz ws connect popular-bluejay-yzrt
+ssh devzero@100.64.0.202
 ```
 
-### Other Methods
+### Port forwarding
 
-You can access the workspace using either the MagicDNS hostname (`popular-bluejay-yzrt`) or its private IP address (`100.64.0.202`) just like you would any application. You don't need to forward any ports etc since the `0.0.0.0` network interface of the workspace is available via either of those 2 approaches.
+As long as you're connected to the DevZero network, all the ports available are exposed to your machine **automatically**.
 
-## Access Your Team's Running Application(s)
+If you're running applications inside Kubernetes, you might need to use the [kubectl](../references/starter-templates/infra/kubectl.md) port-forward command fo forwards to port of the application to your DevBox.
 
-The flow for this is exactly the same as above.
+Example:
 
-The only difference is, in order to see your teammate's workspace, add  the `--team` flag to the command.
+```
+kubectl port-forward <pod> <port>:<target port>
+```
 
-{% code %}
+### Access Your Team's Running Application(s)
+
+The flow for this is exactly the same as all above.
+
+The only difference is, in order to see your teammate's workspace, add the `--team` flag to the command.
+
 ```
 dz network status --team
 ```
-{% endcode %}
 
 The rest of the steps are exactly the same!
