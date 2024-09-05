@@ -11,7 +11,7 @@ We generally support most ARM64 / AMD64 Linux systems. If you're running - say, 
 For the `stable` release track (this is most likely what you want), click the respective link for your CPU architecture.
 
 * [ARM64](https://get.devzero.io/stable/linux-arm64/dz.tar.gz) - less common (Raspberry Pi, etc)
-* [AMD64](https://get.devzero.io/stable/linux-amd64/dz.tar.gz) - more common 
+* [AMD64](https://get.devzero.io/stable/linux-amd64/dz.tar.gz) - more common
 
 If you're feeling adventurous, these links are for the `latest` release track, which has potentially unstable updates that are pushed more frequently.
 
@@ -43,6 +43,7 @@ sudo ./dznetd
 ```
 sudo ./dz net connect
 ```
-## 6. Success!
+
+## 6. Success
 
 You're connected! You can now connect to your workspaces via `dz workspace connect`. Have fun!
