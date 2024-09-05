@@ -79,4 +79,4 @@ sudo ./dz net connect
 
 ## 6. Success
 
-You're connected! You can now connect to your workspaces via `dz workspace connect`. Have fun!
+You're connected! You can now connect to your workspaces via `./dz workspace connect`. Have fun!
