@@ -105,6 +105,8 @@
   * [Supabase](how-to-guides/databases/supabase.md)
   * [Xata](how-to-guides/databases/xata.md)
   * [MongoDB](how-to-guides/databases/mongodb.md)
+  * [Timescale](how-to-guides/databases/timescale.md)
+* [Remote Desktop](how-to-guides/remote-desktop.md)
 * [Adding a Remote Desktop](how-to-guides/remote-desktop.md)
 
 ## 🛠️ Troubleshooting
