@@ -73,6 +73,15 @@
             </td>
         </tr>
         <tr>
+            <td>Connecting to Azure File Storage</td>
+            <td>
+                <a href="connecting-to-file-storage.md">connecting-to-file-storage.md</a>
+            </td>
+            <td>
+                <a href="../../../.gitbook/assets/azure-file-logo.png">azure-file-logo.png</a>
+            </td>
+        </tr>
+        <tr>
             <td>Connecting to Azure Key Vault</td>
             <td>
                 <a href="connecting-to-key-vault.md">connecting-to-key-vault.md</a>
@@ -82,13 +91,22 @@
             </td>
         </tr>
         <tr>
-            <td>Connecting to Azure App Services</td>
+          <td>Connecting to Azure Container Instance</td>
+            <td>
+                <a href="connecting-to-container-instance.md">connecting-to-container-instance.md</a>
+            </td>
+            <td>
+                <a href="../../../.gitbook/assets/azure-container-logo.png">azure-container-logo.png</a>
+            </td>
+        </tr>
+      <tr>
+        <td>Connecting to Azure App Services</td>
             <td>
                 <a href="connecting-to-app-service.md">connecting-to-pp-service.md</a>
             </td>
             <td>
                 <a href="../../../.gitbook/assets/azure-app-service-logo.png">azure-app-service-logo.png</a>
             </td>
-        </tr>
+      </tr>
     </tbody>
 </table>
