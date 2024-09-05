@@ -132,7 +132,6 @@ az storage file list \
 {% endtab %}
 {% endtabs %}
 
-
 ## New File Storage
 
 If you need to make a new File Storage and access it through DevBox, then follow the below steps:
