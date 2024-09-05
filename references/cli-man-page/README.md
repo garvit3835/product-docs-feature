@@ -16,8 +16,8 @@
 [supported-os.md](supported-os.md)
 {% endcontent-ref %}
 
-{% content-ref url="unsupported-os.md" %}
-[unsupported-os.md](unsupported-os.md)
+{% content-ref url="alternative-install.md" %}
+[alternative-install.md](alternative-install.md)
 {% endcontent-ref %}
 
 {% content-ref url="help-commands.md" %}
