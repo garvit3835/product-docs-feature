@@ -6,6 +6,7 @@ You connect to an Azure Elastic SAN Service running on Azure infrastructure from
 
 ![Azure Ealstic SAN Architecture](../../../.gitbook/assets/azure-elastic-san-architecture.png)
 
+<!-- markdown-link-check-disable-next-line -->
 [Azure Elastic SAN](https://learn.microsoft.com/en-us/azure/storage/elastic-san/elastic-san-introduction) is a fully integrated solution that simplifies deploying, scaling, managing, and configuring a SAN while also offering built-in cloud capabilities like high availability. This connection will occur by setting up a bastion host that advertises the private routes to your DevZero network so you can access the private service through network tunneling. You must also set up a DNS Private Resolver to access the Elastic SAN's Private Endpoint from your DevBox.
 
 ## Prerequisites
