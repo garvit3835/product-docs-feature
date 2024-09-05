@@ -7,9 +7,9 @@ Connecting to an Azure File Storage from your DevBox.
 ![Azure File Storage Architecture](../../../.gitbook/assets/azure-file-architecture.png)
 
 <!-- markdown-link-check-disable-next-line -->
-[Azure File Storage](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-introduction) is a fully managed file shares in the cloud that are accessible via the industry standard Server Message Block (SMB) protocol, Network File System (NFS) protocol, and Azure Files REST API. Azure file shares can be mounted concurrently by cloud or on-premises deployments. SMB Azure file shares are accessible from Windows, Linux, and macOS clients.
+[Azure File Storage](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-introduction) is a fully managed file share in the cloud that is accessible via the industry-standard Server Message Block (SMB) protocol, Network File System (NFS) protocol, and Azure Files REST API. Azure file shares can be mounted concurrently by cloud or on-premises deployments. SMB Azure file shares are accessible from Windows, Linux, and macOS clients.
 
-This connection between the Azure File Share and your DevBox would take place by setting up a bastion host that advertises the private routes to your DevZero network so that you can access the private service through network tunneling. You must also set up a DNS Private Resolver to access the File Storage's Private Endpoint from your DevBox.
+This connection between the Azure File Share and your DevBox would occur by setting up a bastion host that advertises the private routes to your DevZero network so you can access the private service through network tunneling. You must also set up a DNS Private Resolver to access the File Storage's Private Endpoint from your DevBox.
 
 ## Prerequisites
 
@@ -23,11 +23,11 @@ To connect to a Storage Account, ensure it is within the same **Resource Group**
 
 ### Step 1: Creating a Recipe
 
-First we need to create a recipe for the workspace:
+First, we need to create a recipe for the workspace:
 
 1. Go to the [DevZero Dashboard > Recipes](https://www.devzero.io/dashboard/recipes) and click on **New recipe**.
 2. Enter the recipe name and click on **Create a recipe**.
-3. Now use the below provided snippet to create a recipe for your workspace:
+3. Now use the below-provided snippet to create a recipe for your workspace:
 
 {% code lineNumbers="false" %}
 ```
@@ -50,7 +50,7 @@ build:
 1. Go to the [Devzero Dashboard > Workspaces](https://www.devzero.io/dashboard/workspaces) and click on **New workspace**.
 2. Enter the workspace name and click on **Select from recipe library**.
 3. Select the recipe you just created and click on **Select**.
-4. Click on **Launch** and your workspace will be ready in a few minutes.
+4. Click on **Launch**, and your workspace will be ready shortly.
 
 ### Step 3: Accessing the File Storage
 
@@ -84,7 +84,7 @@ az storage file upload \
 ```
 {% endcode %}
 
-Here `--source` tag refers to the file you want to upload and `--path` tag refers to where you want to upload the file by specifying a directory and output file name.
+Here, the `--source` tag refers to the File you want to upload, and the `--path` tag specifies where you want to upload the File, specifying a directory and output file name.
 
 ![Azure File Storage Upload](../../../.gitbook/assets/azure-file-upload.png)
 
@@ -106,7 +106,7 @@ az storage file upload \
 ```
 {% endcode %}
 
-Here `--path` tag refers to terminal path of the file you want to download from your file share and `--dest` tag refers to how and where you want to save your file by specifying a directory and output file name.
+Here, the `--path` tag refers to the terminal path of the File you want to download from your file share and the `--dest` tag specifies how and where you want to save your File by specifying a directory and output file name.
 
 ![Azure File Storage Download](../../../.gitbook/assets/azure-file-download.png)
 
@@ -141,7 +141,7 @@ If you need to make a new File Storage and access it through DevBox, then follow
 
 Firstly, you must follow the [Configuring Storage Account](./configuring-storage-account.md) guide to create and configure a new storage account. After the setup, you must also set up the DNS Private Resolver by following the [Setting up DNS Private Resolver](./setting-up-dns-private-resolver.md) guide.
 
-After the above mentioned steps are completed, you may go ahead and create a file share for File Storage by following these steps:
+After the above-mentioned steps are completed, you may go ahead and create a file share for File Storage by following these steps:
 
 1. Go to **Home > Storage Accounts** and click on your storage account.
 2. Go to the **Data Storage** tab and click on **File Shares**.
@@ -150,11 +150,11 @@ After the above mentioned steps are completed, you may go ahead and create a fil
 
 ### Step 2: Creating a Recipe
 
-First we need to create a recipe for the workspace:
+First, we need to create a recipe for the workspace:
 
 1. Go to the [DevZero Dashboard > Recipes](https://www.devzero.io/dashboard/recipes) and click on **New recipe**.
 2. Enter the recipe name and click on **Create a recipe**.
-3. Now use the below provided snippet to create a recipe for your workspace:
+3. Now use the below-provided snippet to create a recipe for your workspace:
 
 {% code lineNumbers="false" %}
 ```
@@ -177,7 +177,7 @@ build:
 1. Go to the [Devzero Dashboard > Workspaces](https://www.devzero.io/dashboard/workspaces) and click on **New workspace**.
 2. Enter the workspace name and click on **Select from recipe library**.
 3. Select the recipe you just created and click on **Select**.
-4. Click on **Launch** and your workspace will be ready in a few minutes.
+4. Click on **Launch**, and your workspace will be ready shortly.
 
 ### Step 4: Accessing the File Storage
 
@@ -224,7 +224,7 @@ az storage file upload \
 ```
 {% endcode %}
 
-Here `--source` tag refers to the file you want to upload and `--path` tag refers to where you want to upload the file by specifying a directory and output file name.
+Here, the `--source` tag refers to the file you want to upload, and the `--path` tag refers to where you want to upload the file by specifying a Filectory and output file name.
 
 ![Azure File Storage Upload](../../../.gitbook/assets/azure-file-upload.png)
 
@@ -246,7 +246,7 @@ az storage file upload \
 ```
 {% endcode %}
 
-Here `--path` tag refers to terminal path of the file you want to download from your file share and `--dest` tag refers to how and where you want to save your file by specifying a directory and output file name.
+Here, the `--path` tag refers to the terminal path of the file you want to downfile from your file share, and `--dest` tag refers to how and where you want to save your File by specifying a directory and output file name.
 
 ![Azure File Storage Download](../../../.gitbook/assets/azure-file-download.png)
 
