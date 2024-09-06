@@ -12,7 +12,7 @@ Deleting a token is performed in the same section.
 
 ## Using a personal access token
 
-A personal access token can be used to authenticate the devzero cli. Simply log in passing the token contents via the `--token` flag. Upon token expiry, the cli will prompt to re-authenticate.
+A personal access token can be used to authenticate the `dz` cli. Simply log in by passing the token contents via the `--token` flag. Upon token expiry, the cli will prompt to re-authenticate.
 
 {% code lineNumbers="false" %}
 ```
