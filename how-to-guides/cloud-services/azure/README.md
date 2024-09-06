@@ -87,7 +87,7 @@
                 <a href="connecting-to-elastic-san.md">connecting-to-elastic-san.md</a>
             </td>
             <td>
-                <a href="../../../.gitbook/assets/azure-key-vault-logo.png">azure-key-vault-logo.png</a>
+                <a href="../../../.gitbook/assets/azure-elastic-san-logo.png">azure-elastic-san-logo.png</a>
             </td>
         </tr>
     </tbody>
