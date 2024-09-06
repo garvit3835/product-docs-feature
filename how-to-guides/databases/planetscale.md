@@ -2,6 +2,8 @@
 
 Comprehensive guide for connecting to a PlanetScale Database from your DevBox.
 
+If you're more of a visual learner, check out the [video tutorial](#video-walkthrough)!
+
 ## Architecture Diagram
 
 ![PlanetScale Database Architecture](../../.gitbook/assets/planetscale-architecture.png)
@@ -144,3 +146,7 @@ mysql -h aws.connect.psdb.cloud -D <database-name> -u $DATABASE_USERNAME -p$DATA
 {% endcode %}
 
 ![PlanetScale database access](../../.gitbook/assets/planetscale-access.png)
+
+## Video Walkthrough
+
+{% embed url="https://devzero.b-cdn.net/how%20to%20guide%20Planetscale%20Database.mov" %}
