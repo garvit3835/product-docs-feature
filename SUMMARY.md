@@ -51,6 +51,7 @@
 * [ACLs](admin/acls.md)
 * [Hosting](admin/hosting.md)
 * [Single-Sign On (SSO)](admin/sso.md)
+* [Personal Access Tokens](admin/personal-access-tokens.md)
 
 ## 📚 How-to Guides
 
