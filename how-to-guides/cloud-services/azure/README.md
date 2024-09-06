@@ -108,5 +108,14 @@
                 <a href="../../../.gitbook/assets/azure-app-service-logo.png">azure-app-service-logo.png</a>
             </td>
       </tr>
+      <tr>
+        <td>Connecting to Azure Elastic SAN</td>
+            <td>
+                <a href="connecting-to-elastic-san.md">connecting-to-elastic-san.md</a>
+            </td>
+            <td>
+                <a href="../../../.gitbook/assets/azure-elastic-san-logo.png">azure-elastic-san-logo.png</a>
+         </td>
+      </tr>
     </tbody>
 </table>
