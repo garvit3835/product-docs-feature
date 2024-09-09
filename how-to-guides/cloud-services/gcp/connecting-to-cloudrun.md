@@ -1,10 +1,8 @@
 # Cloud Run
 
-### Connecting to GCP Cloud Run Service from your DevBox's Project Directory.
+Connecting to GCP Cloud Run Service from your DevBox's Project Directory.
 
-Cloud Run provides a fully managed container platform that enables you to deploy your project directly on GCP's infrastructure. 
-
-## Architecture Diagram:
+## Architecture Diagram
 
 ![image](../../../.gitbook/assets/gcp-cloudrun-architecture.png)
 
@@ -53,10 +51,10 @@ build:
 
 ### Step 3: Setting up cloud SDK
 
-Now, this is where the real task begins. After downloading the `gcloud` package, we will need to authenticate with our Google Cloud account. To do this, we need to run the simple command.
+Now, this is where the real task begins. After downloading the `gcloud` package, we must authenticate with our Google Cloud account. To do this, we need to run the simple command.
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 gcloud init
 ```
 {% endcode %}
@@ -72,7 +70,7 @@ Follow the below steps to generate the Authentication token and access the Cloud
 1. Use the below command to get the token:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 gcloud auth print-identity-token
 ```
 {% endcode %}
@@ -80,7 +78,7 @@ gcloud auth print-identity-token
 2. Export the token to an environmental variable:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 export TOKEN=$(gcloud auth print-identity-token)
 ```
 {% endcode %}
@@ -88,7 +86,7 @@ export TOKEN=$(gcloud auth print-identity-token)
 3. Now that everything is set, we can finally finish this all off by accessing the applications with the `curl` command:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 curl -H "Authorization: Bearer ${TOKEN}" <cloud-run-application-endpoint-url>
 ```
 {% endcode %}
@@ -97,7 +95,7 @@ curl -H "Authorization: Bearer ${TOKEN}" <cloud-run-application-endpoint-url>
 
 ## New Cloud Run Application
 
-If you want to create a new Cloud Run Container, follow the steps below to access its content from the DevBox.
+If you want to create a new Cloud Run Container, you can just follow the steps below to access its content from the DevBox.
 
 ### Step 1: Creating the Container
 
@@ -164,7 +162,7 @@ build:
 Now, this is where the real task begins. After downloading the `gcloud` package, we must authenticate with our Google Cloud account. To do this, we need to run the simple command.
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 gcloud init
 ```
 {% endcode %}
@@ -180,7 +178,7 @@ Follow the below steps to generate the Authentication token and access the Cloud
 1. Use the below command to get the token:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 gcloud auth print-identity-token
 ```
 {% endcode %}
@@ -188,7 +186,7 @@ gcloud auth print-identity-token
 2. Export the token to an environmental variable:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 export TOKEN=$(gcloud auth print-identity-token)
 ```
 {% endcode %}
@@ -196,7 +194,7 @@ export TOKEN=$(gcloud auth print-identity-token)
 3. Now that everything is set, we can finally finish this all off by accessing the applications with the `curl` command:
 
 {% code overflow="wrap" lineNumbers="false" %}
-```bash
+```
 curl -H "Authorization: Bearer ${TOKEN}" <cloud-run-application-endpoint-url>
 ```
 {% endcode %}
