@@ -53,7 +53,7 @@ build:
 
 ### Step 3: Setting up cloud SDK
 
-Now, this is where the real task begins. After downloading the' cloud' package, we will need to authenticate with our Google Cloud account. To do this, we need to run the simple command.
+Now, this is where the real task begins. After downloading the `gcloud` package, we will need to authenticate with our Google Cloud account. To do this, we need to run the simple command.
 
 {% code overflow="wrap" lineNumbers="false" %}
 ```bash
@@ -97,7 +97,7 @@ curl -H "Authorization: Bearer ${TOKEN}" <cloud-run-application-endpoint-url>
 
 ## New Cloud Run Application
 
-If you want to create a new Cloud Run Container, just follow the steps below to access its content from the DevBox.
+If you want to create a new Cloud Run Container, follow the steps below to access its content from the DevBox.
 
 ### Step 1: Creating the Container
 
@@ -105,7 +105,7 @@ If you want to create a new Cloud Run Container, just follow the steps below to 
 2. Choose a deployment method between **Deploy one revision from an existing container image**, **Continuously deploy from a repository (source or function)**.
 
 {% hint style="info" %}
-We are creating a container with an existing demo container image for this guide.
+We are creating a container with an existing demo image for this guide.
 {% endhint %}
 
 {% tabs %}
@@ -161,7 +161,7 @@ build:
 
 ### Step 4: Setting up cloud SDK
 
-Now, this is where the real task begins. After downloading the' cloud' package, we will need to authenticate with our Google Cloud account. To do this, we need to run the simple command.
+Now, this is where the real task begins. After downloading the `gcloud` package, we must authenticate with our Google Cloud account. To do this, we need to run the simple command.
 
 {% code overflow="wrap" lineNumbers="false" %}
 ```bash
@@ -173,7 +173,7 @@ After running the command, you will be given various options for choosing your *
 
 ### Step 5: Accessing the Container
 
-To access your Cloud Run container privately, you need to send a `GET` request with an authentication token.
+To access your Cloud Run container privately, you must send a `GET` request with an authentication token.
 
 Follow the below steps to generate the Authentication token and access the Cloud Run application:
 
