@@ -53,17 +53,7 @@ build:
 
 ### Step 3: Setting up cloud SDK
 
-Now, this is where the real task begins. We will first need to download and install the `gcloud` SDK package to access the build tools for **Artifact Repository**.
-
-{% code overflow="wrap" lineNumbers="false" %}
-```bash
-sudo apt-get update
-sudo apt-get install apt-transport-https ca-certificates gnupg curl
-sudo apt-get update && sudo apt-get install google-cloud-cli
-```
-{% endcode %}
-
-After downloading the' cloud' package, we will need to authenticate with our Google Cloud account. To do this, we just need to run the simple command.
+Now, this is where the real task begins. After downloading the' cloud' package, we will need to authenticate with our Google Cloud account. To do this, we need to run the simple command.
 
 {% code overflow="wrap" lineNumbers="false" %}
 ```bash
@@ -71,7 +61,7 @@ gcloud init
 ```
 {% endcode %}
 
-After running the command, you will be given various options for choosing your **Google account**, default **Project**, and default **Compute Region and Zone**. You can choose according to your preference.
+After running the command, you will be given various options for choosing your **Google account**, default **Project**, and default **Compute Region and Zone**. You can choose what you prefer.
 
 ### Step 4: Accessing the Container
 
@@ -171,17 +161,7 @@ build:
 
 ### Step 4: Setting up cloud SDK
 
-Now, this is where the real task begins. We will first need to download and install the `gcloud` SDK package to access the build tools for the Artifact Repository.
-
-{% code overflow="wrap" lineNumbers="false" %}
-```bash
-sudo apt-get update
-sudo apt-get install apt-transport-https ca-certificates gnupg curl
-sudo apt-get update && sudo apt-get install google-cloud-cli
-```
-{% endcode %}
-
-After downloading the' cloud' package, we must authenticate with our Google Cloud account. To do this, we just need to run the simple command.
+Now, this is where the real task begins. After downloading the' cloud' package, we will need to authenticate with our Google Cloud account. To do this, we need to run the simple command.
 
 {% code overflow="wrap" lineNumbers="false" %}
 ```bash
@@ -189,7 +169,7 @@ gcloud init
 ```
 {% endcode %}
 
-After running the command, you will be given various options for choosing your **Google account**, default **Project**, and default **Compute Region and Zone**. You can choose according to your preference.
+After running the command, you will be given various options for choosing your **Google account**, default **Project**, and default **Compute Region and Zone**. You can choose what you prefer.
 
 ### Step 5: Accessing the Container
 
