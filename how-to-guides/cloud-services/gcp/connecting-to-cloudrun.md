@@ -1,6 +1,6 @@
 # Cloud Run
 
-Connecting to GCP Cloud Run Service from your DevBox's Project Directory.
+Connecting to GCP Cloud Run Service from your DevBox.
 
 ## Architecture Diagram
 
@@ -95,7 +95,7 @@ curl -H "Authorization: Bearer ${TOKEN}" <cloud-run-application-endpoint-url>
 
 ## New Cloud Run Application
 
-If you want to create a new Cloud Run Container, you can just follow the steps below to access its content from the DevBox.
+If you want to create a new Cloud Run Container, you can follow the below steps.
 
 ### Step 1: Creating the Container
 
