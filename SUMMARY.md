@@ -96,6 +96,7 @@
     * [Using Firestore (Native Mode)](how-to-guides/cloud-services/gcp/connecting-to-firestore-native.md)
     * [Using Memorystore](how-to-guides/cloud-services/gcp/connecting-to-memorystore.md)
     * [Storing secrets in Secret Manager](how-to-guides/cloud-services/gcp/connecting-to-secret-manager.md)
+    * [Accessing Cloud Run Application](how-to-guides/cloud-services/gcp/connecting-to-cloudrun.md)
 * [Existing Network](how-to-guides/existing-network/README.md)
   * [Connecting to AWS VPC](how-to-guides/existing-network/connecting-to-aws.md)
   * [Connecting to Azure VNET](how-to-guides/existing-network/connecting-to-azure.md)
