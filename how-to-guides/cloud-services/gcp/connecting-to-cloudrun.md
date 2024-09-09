@@ -9,12 +9,12 @@ Cloud Run provides a fully managed container platform that enables you to deploy
 ![image](../../../.gitbook/assets/gcp-cloudrun-architecture.png)
 
 <!-- markdown-link-check-disable-next-line -->
-[GCP Cloud Run](https://cloud.google.com/run/docs) is a serverless service offered by GCP to manage compute platform that enables you to run containers that are invocable via requests or events.
-In this we will be setting up a pipeline for our project within DevBox, it will be routed through Cloud Run and and then depending on the type of project, we can either access it through the web or can access it through the internal VPC of Google Cloud Infrastructure.
+[GCP Cloud Run](https://cloud.google.com/run/docs) is a serverless service offered by GCP to manage a computing platform that enables you to run invocable containers via requests or events.
+In this, we will set up a pipeline for our project within DevBox; it will be routed through Cloud Run. Then, depending on the type of project, we can either access it through the web or through the internal VPC of Google Cloud Infrastructure.
 
 ## Existing Cloud Run Application
 
-If you have a an existing Cloud Run Container deployed then follow the below steps to access its content from the DevBox. Ensure that the Cloud Run Deployment has `Require authentication` option selected in the **Security** section.
+If you have an existing Cloud Run Container deployed, follow the steps below to access its content from the DevBox. Ensure the Cloud Run Deployment has the `Require authentication` option selected in the **Security** section.
 
 ### Step 1: Creating a Recipe
 
@@ -53,7 +53,7 @@ build:
 
 ### Step 3: Setting up cloud SDK
 
-Now this is where the real task begins. We will first need to download and install `gcloud` SDK package so that we can access the build tools for **Artifact Repository**.
+Now, this is where the real task begins. We will first need to download and install the `gcloud` SDK package to access the build tools for **Artifact Repository**.
 
 {% code overflow="wrap" lineNumbers="false" %}
 ```bash
@@ -63,7 +63,7 @@ sudo apt-get update && sudo apt-get install google-cloud-cli
 ```
 {% endcode %}
 
-After the `gcloud` package is downloaded, we will need to authenticate with our google cloud account. For this we just need to run the simple command.
+After downloading the' cloud' package, we will need to authenticate with our Google Cloud account. To do this, we just need to run the simple command.
 
 {% code overflow="wrap" lineNumbers="false" %}
 ```bash
@@ -71,11 +71,11 @@ gcloud init
 ```
 {% endcode %}
 
-After running the command, you will given various options for choosing your **Google account**, default **Project** and default **Compute Region and Zone**. You can choose as per your preference.
+After running the command, you will be given various options for choosing your **Google account**, default **Project**, and default **Compute Region and Zone**. You can choose according to your preference.
 
 ### Step 4: Accessing the Container
 
-To privately access your Cloud Run container, you need to send in `GET` request with an authentication token.
+To access your Cloud Run container privately, you need to send a `GET` request with an authentication token.
 
 Follow the below steps to generate the Authentication token and access the Cloud Run application:
 
@@ -95,7 +95,7 @@ export TOKEN=$(gcloud auth print-identity-token)
 ```
 {% endcode %}
 
-3. Now since everything is setup, we can finally finish this all off by accessing the applications with the `curl` command:
+3. Now that everything is set, we can finally finish this all off by accessing the applications with the `curl` command:
 
 {% code overflow="wrap" lineNumbers="false" %}
 ```bash
@@ -107,7 +107,7 @@ curl -H "Authorization: Bearer ${TOKEN}" <cloud-run-application-endpoint-url>
 
 ## New Cloud Run Application
 
-If you want to create a new Cloud Run Container then follow the below steps to access its content from the DevBox.
+If you want to create a new Cloud Run Container, just follow the steps below to access its content from the DevBox.
 
 ### Step 1: Creating the Container
 
@@ -115,7 +115,7 @@ If you want to create a new Cloud Run Container then follow the below steps to a
 2. Choose a deployment method between **Deploy one revision from an existing container image**, **Continuously deploy from a repository (source or function)**.
 
 {% hint style="info" %}
-For this guide, we are creating a container with existing demo container image.
+We are creating a container with an existing demo container image for this guide.
 {% endhint %}
 
 {% tabs %}
@@ -124,13 +124,13 @@ For this guide, we are creating a container with existing demo container image.
 {% endtab %}
 
 {% tab title="Deploy from repository" %}
-3. Click on **Set Up with Cloud Build** and follow the instructions that follow.
+3. Click on **Set Up with Cloud Build** and follow the instructions.
 {% endtab %}
 {% endtabs %}
 
 4. Then Enter your **Service Name** and **Region** of deployment.
 5. Select **Require authentication** option in the **Authentication** section.
-6. Leave the rest of the configurations as default and click on **Create**.
+6. Leave the remaining configurations as default and click on **Create**.
 
 ![GCP Cloud Run Container Creation](../../../.gitbook/assets/gcp-cloudrun-creation.png)
 
@@ -171,7 +171,7 @@ build:
 
 ### Step 4: Setting up cloud SDK
 
-Now this is where the real task begins. We will first need to download and install `gcloud` SDK package so that we can access the build tools for **Artifact Repository**.
+Now, this is where the real task begins. We will first need to download and install the `gcloud` SDK package to access the build tools for the Artifact Repository.
 
 {% code overflow="wrap" lineNumbers="false" %}
 ```bash
@@ -181,7 +181,7 @@ sudo apt-get update && sudo apt-get install google-cloud-cli
 ```
 {% endcode %}
 
-After the `gcloud` package is downloaded, we will need to authenticate with our google cloud account. For this we just need to run the simple command.
+After downloading the' cloud' package, we must authenticate with our Google Cloud account. To do this, we just need to run the simple command.
 
 {% code overflow="wrap" lineNumbers="false" %}
 ```bash
@@ -189,11 +189,11 @@ gcloud init
 ```
 {% endcode %}
 
-After running the command, you will given various options for choosing your **Google account**, default **Project** and default **Compute Region and Zone**. You can choose as per your preference.
+After running the command, you will be given various options for choosing your **Google account**, default **Project**, and default **Compute Region and Zone**. You can choose according to your preference.
 
 ### Step 5: Accessing the Container
 
-To privately access your Cloud Run container, you need to send in `GET` request with an authentication token.
+To access your Cloud Run container privately, you need to send a `GET` request with an authentication token.
 
 Follow the below steps to generate the Authentication token and access the Cloud Run application:
 
@@ -213,7 +213,7 @@ export TOKEN=$(gcloud auth print-identity-token)
 ```
 {% endcode %}
 
-3. Now since everything is setup, we can finally finish this all off by accessing the applications with the `curl` command:
+3. Now that everything is set, we can finally finish this all off by accessing the applications with the `curl` command:
 
 {% code overflow="wrap" lineNumbers="false" %}
 ```bash
