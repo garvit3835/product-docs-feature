@@ -99,5 +99,14 @@
 				<a href="../../../.gitbook/assets/aws-opensearch.png">aws-opensearch.png</a>
 			</td>
 		</tr>
+		<tr>
+			<td>Connect to DynamoDB</td>
+			<td>
+				<a href="connect-to-opensearch.md">connect-to-dynamodb.md</a>
+			</td>
+			<td>
+				<a href="../../../.gitbook/assets/aws-dynamodb.png">aws-dynamodb.png</a>
+			</td>
+		</tr>
 	</tbody>
 </table>
