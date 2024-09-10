@@ -66,6 +66,7 @@
     * [S3](how-to-guides/cloud-services/aws/connect-to-an-s3-bucket.md)
     * [ElastiCache](how-to-guides/cloud-services/aws/connect-to-elasticache.md)
     * [OpenSearch](how-to-guides/cloud-services/aws/connect-to-opensearch.md)
+    * [DynamoDB](how-to-guides/cloud-services/aws/connect-to-dynamodb.md)
   * [Azure](how-to-guides/cloud-services/azure/README.md)
     * [AKS](how-to-guides/cloud-services/azure/connecting-to-ks.md)
     * [Azure Databases](how-to-guides/cloud-services/azure/connecting-to-db.md)
