@@ -61,7 +61,7 @@ aws configure
 {% endcode %}
 
 5. Enter the **Access Key** and **Secret Access Key** when prompted.
-6. enter your default **Region** of choice, and your `aws` cli setup will be completed.
+6. Enter your default **Region** of choice, and your `aws` cli setup will be completed.
 
 ### Step 4: Accessing the Database Service
 
