@@ -113,7 +113,6 @@
   * [Timescale](how-to-guides/databases/timescale.md)
   * [PlanetScale](how-to-guides/databases/planetscale.md)
 * [Remote Desktop](how-to-guides/remote-desktop.md)
-* [Adding a Remote Desktop](how-to-guides/remote-desktop.md)
 
 ## 🛠️ Troubleshooting
 
