@@ -24,7 +24,7 @@ dz net connect
 Download Links:
 
 * **ARM64:** [https://get.devzero.io/stable/windows-arm64/DevZero.exe](https://get.devzero.io/stable/windows-arm64/DevZero.exe)
-* **AMD64:** [https://get.devzero.io/stable/windows-amd64/DevZero.exe ](https://get.devzero.io/stable/windows-amd64/DevZero.exe)
+* **AMD64:** [https://get.devzero.io/stable/windows-amd64/DevZero.exe](https://get.devzero.io/stable/windows-amd64/DevZero.exe)
 
 Using Chocolatey:
 
