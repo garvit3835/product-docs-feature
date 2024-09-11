@@ -81,6 +81,7 @@
     * [Using Blob Storage](how-to-guides/cloud-services/azure/connecting-to-blob-storage.md)
     * [Storing secrets in Key Vault](how-to-guides/cloud-services/azure/connecting-to-key-vault.md)
     * [File Storage](how-to-guides/cloud-services/azure/connecting-to-file-storage.md)
+    * [AI Services](how-to-guides/cloud-services/azure/connecting-to-ai.md)
   * [GCP](how-to-guides/cloud-services/gcp/README.md)
     * [Connecting Compute Instances](how-to-guides/cloud-services/gcp/connecting-to-compute-instance.md)
     * [Accessing BigQuery](how-to-guides/cloud-services/gcp/connecting-to-bigquery.md)
