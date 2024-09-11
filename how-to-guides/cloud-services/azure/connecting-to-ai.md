@@ -107,7 +107,7 @@ After the steps mentioned earlier are completed, you may go ahead and create a f
 1. Go to **Home > AI Services** and click on **Create**.
 2. In the **Basics** section, select the **Resource group** you previously selected for your **VNET**.
 3. Then enter your **Region**, **Name**, and **Pricing tier**.
-4. In the **Networking** sectiNetworkingDisabled` and then click on **Add Private Endpoi``.
+4. In the **Networking** section click on `Disabled` and then click on **Add Private Endpoint**.
 5. Choose your **Resource group** and enter the instance name.
 6. Click **Resource** and select your desired `Target sub-resource` for your private endpoint. Remember that if you have more than one sub-resource type, you need to create a separate endpoint for each one.
 7. Click on **Virtual Network** and select your Virtual Network (VNET), which houses the bastion host and DNS Private Resolver.
@@ -171,7 +171,7 @@ export TOKEN=<api-key>
 ```
 {% endcode %}
 
-6. Below that, you will find code snippets for several languages and frameworks. For this guide, we will demonstrate the secure connection with `curl`.
+6. Below, you will find code snippets for several languages and frameworks. This guide will demonstrate the secure connection with `curl`.
 7. Copy the code snippet and place it in your **TOKEN** environmental variable.
 8. A successful connection will show the same output as below.
 
