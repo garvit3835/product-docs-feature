@@ -2,6 +2,8 @@
 
 Comprehensive guide for connecting to Xata Workspace Database from your DevBox.
 
+If you're more of a visual learner, check out the [video tutorial](#video-walkthrough)!
+
 ## Architecture Diagram
 
 ![Xata Project Architecture](../../.gitbook/assets/xata-architecture.png)
@@ -43,7 +45,7 @@ build:
   steps:
     - type: apt-get
       packages: ["build-essential", "curl", "git", "nano", "software-properties-common", "ssh", "sudo", "tar", "unzip", "vim", "wget", "zip", "postgresql-client"]
-      
+
 runtime:
   environment:
     - name: XATA_API_KEY
@@ -117,7 +119,7 @@ build:
   steps:
     - type: apt-get
       packages: ["build-essential", "curl", "git", "nano", "software-properties-common", "ssh", "sudo", "tar", "unzip", "vim", "wget", "zip", "postgresql-client"]
-      
+
 runtime:
   environment:
     - name: XATA_API_KEY
@@ -192,7 +194,7 @@ build:
         . /etc/profile.d/nvm-installation.sh
         nvm install 21.0.0
         npm install -g @xata.io/cli
-      
+
 runtime:
   environment:
     - name: XATA_API_KEY
@@ -278,7 +280,7 @@ build:
         . /etc/profile.d/nvm-installation.sh
         nvm install 21.0.0
         npm install -g @xata.io/cli
-      
+
 runtime:
   environment:
     - name: XATA_API_KEY
@@ -320,3 +322,7 @@ xata shell
 
 {% endtab %}
 {% endtabs %}
+
+## Video Walkthrough
+
+{% embed url="https://devzero.b-cdn.net/Devbox%20Xata%20Database%20.mp4" %}

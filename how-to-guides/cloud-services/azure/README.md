@@ -99,5 +99,31 @@
                 <a href="../../../.gitbook/assets/azure-ai-logo.png">azure-ai-logo.png</a>
             </td>
         </tr>
+          <td>Connecting to Azure Container Instance</td>
+            <td>
+                <a href="connecting-to-container-instance.md">connecting-to-container-instance.md</a>
+            </td>
+            <td>
+                <a href="../../../.gitbook/assets/azure-container-logo.png">azure-container-logo.png</a>
+            </td>
+        </tr>
+      <tr>
+        <td>Connecting to Azure App Services</td>
+            <td>
+                <a href="connecting-to-app-service.md">connecting-to-app-service.md</a>
+            </td>
+            <td>
+                <a href="../../../.gitbook/assets/azure-app-service-logo.png">azure-app-service-logo.png</a>
+            </td>
+      </tr>
+      <tr>
+        <td>Connecting to Azure Elastic SAN</td>
+            <td>
+                <a href="connecting-to-elastic-san.md">connecting-to-elastic-san.md</a>
+            </td>
+            <td>
+                <a href="../../../.gitbook/assets/azure-elastic-san-logo.png">azure-elastic-san-logo.png</a>
+         </td>
+      </tr>
     </tbody>
 </table>

@@ -51,6 +51,7 @@
 * [ACLs](admin/acls.md)
 * [Hosting](admin/hosting.md)
 * [Single-Sign On (SSO)](admin/sso.md)
+* [Personal Access Tokens](admin/personal-access-tokens.md)
 
 ## 📚 How-to Guides
 
@@ -74,7 +75,9 @@
     * [Storage Account](how-to-guides/cloud-services/azure/configuring-storage-account.md)
     * [Table Storage](how-to-guides/cloud-services/azure/connecting-to-table-storage.md)
     * [Blob Storage](how-to-guides/cloud-services/azure/connecting-to-blob-storage.md)
+    * [Key Vault](how-to-guides/cloud-services/azure/connecting-to-key-vault.md)
     * [Key Vault](how-to-guides/cloud-services/azure/connecting-to-key-vault.md)  
+    * [Container Instance](how-to-guides/cloud-services/azure/connecting-to-container-instance.md)  
     * [Accessing VMs](how-to-guides/cloud-services/azure/connecting-to-vm.md)
     * [Storing files in Storage Account](how-to-guides/cloud-services/azure/configuring-storage-account.md)
     * [Using Table Storage](how-to-guides/cloud-services/azure/connecting-to-table-storage.md)
@@ -82,6 +85,8 @@
     * [Storing secrets in Key Vault](how-to-guides/cloud-services/azure/connecting-to-key-vault.md)
     * [File Storage](how-to-guides/cloud-services/azure/connecting-to-file-storage.md)
     * [AI Services](how-to-guides/cloud-services/azure/connecting-to-ai.md)
+    * [App Service](how-to-guides/cloud-services/azure/connecting-to-app-service.md)
+    * [Elastic SAN](how-to-guides/cloud-services/azure/connecting-to-elastic-san.md)
   * [GCP](how-to-guides/cloud-services/gcp/README.md)
     * [Connecting Compute Instances](how-to-guides/cloud-services/gcp/connecting-to-compute-instance.md)
     * [Accessing BigQuery](how-to-guides/cloud-services/gcp/connecting-to-bigquery.md)
@@ -106,6 +111,9 @@
   * [Supabase](how-to-guides/databases/supabase.md)
   * [Xata](how-to-guides/databases/xata.md)
   * [MongoDB](how-to-guides/databases/mongodb.md)
+  * [Timescale](how-to-guides/databases/timescale.md)
+  * [PlanetScale](how-to-guides/databases/planetscale.md)
+* [Remote Desktop](how-to-guides/remote-desktop.md)
 * [Adding a Remote Desktop](how-to-guides/remote-desktop.md)
 
 ## 🛠️ Troubleshooting
@@ -125,6 +133,7 @@
   * [Updating the CLI](references/cli-man-page/update.md)
   * [Uninstall the CLI](references/cli-man-page/uninstall.md)
   * [Supported OSs](references/cli-man-page/supported-os.md)
+  * [Alternative Install](references/cli-man-page/alternative-install.md)
   * [Help Commands](references/cli-man-page/help-commands.md)
 * [Recipe Syntax](recipes/syntax.md)
 * [Starter Templates](references/starter-templates/README.md)

@@ -125,6 +125,7 @@ Or:
         - repository: "ppa:deadsnakes/ppa"
 ```
 
+<!-- markdown-link-check-disable-next-line -->
 You can also specify [components](https://wiki.debian.org/SourcesList):
 
 ```yaml
