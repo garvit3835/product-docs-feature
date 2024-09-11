@@ -5,6 +5,8 @@ description: Learn how to connect to AWS resources privately from a DevBox.
 
 # Connecting to AWS
 
+If you're more of a visual learner, check out the [video tutorial](#video-walkthrough)!
+
 ## Step 1: Create a VPC
 
 1. Go to **VPC > Your VPCs > Create VPC.**
@@ -57,3 +59,7 @@ dz net status
 ```
 ping <ip_address>
 ```
+
+## Video Walkthrough
+
+{% embed url="https://devzero.b-cdn.net/how%20to%20guide%20AWS%20VPC.mp4" %}

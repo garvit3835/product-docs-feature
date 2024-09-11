@@ -7,6 +7,8 @@ description: Learn how to connect to Azure resources privately from a DevBox.
 
 In this guide you will know how to setup a Bastion Host on Azure Infrastructure. This Bastion Host will allow you to connect to Private Azure services and use them directly from your DevBox.
 
+If you're more of a visual learner, check out the [video tutorial](#video-walkthrough)!
+
 ## Step 1: Create a VNET
 
 In this step, you will be creating a VNET. This will house all of your resources together including the bastion host.
@@ -82,3 +84,7 @@ You should see the Azure machine hostname.
 ```
 ping <ip_address>
 ```
+
+## Video Walkthrough
+
+{% embed url="https://devzero.b-cdn.net/how%20to%20guide%20AWS%20VPC.mp4" %}
