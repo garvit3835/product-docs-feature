@@ -18,7 +18,7 @@ This connection between the Azure AI Service Playground and your DevBox would oc
 
 ## Existing Azure AI Services
 
-To connect to a Azure AI Playground, ensure it is within the same **Resource Group** containing the Bastion Host.
+To connect to an Azure AI Playground, ensure it is within the same **Resource Group** containing the Bastion Host.
 
 ### Step 1: Creating a Recipe
 
@@ -35,7 +35,7 @@ version: "3"
 build:
   steps:
     - type: apt-get
-      packages: ["build-essential", "curl", "git", "nano", "software-properties-common", "ssh", "sudo", "tar", "unzip", "vim", "wget", "zip"]
+      packages: ["build-essential", "curl", "git", "nano", "software-properties-common", "ssh", "sudo", "tar", "unza ip", "vim", "wget", "zip"]
     - type: command
       command: |
         sudo curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
@@ -51,9 +51,9 @@ build:
 3. Select the recipe you just created and click on **Select**.
 4. Click on **Launch**, and your workspace will be ready shortly.
 
-### Step 3: Creating Private Endpoint
+### Step 3: Creating a Private Endpoint
 
-To access the service privately, we need to disable public access and assign it a private endpoint:
+To access the service privately, we need to restrict public access and assign it a private endpoint:
 
 1. Go to [Azure Portal](https://portal.azure.com) and open your AI Service.
 2. Go to the **Networking** section and click on `Disabled` under the **Allow access from** section.
@@ -74,7 +74,7 @@ Now follow the below steps to access the AI Services on your DevBox:
 
 ![Azure AI Studio](../../../.gitbook/assets/azure-ai-studio.png)
 
-2. Choose a base model or a fine tuned model and modify the configurations according to your need.
+2. Choose a base or fine-tuned model and modify the configurations according to your needs.
 3. Click on **Deploy** to create and deploy the model to your playground.
 4. Select the **Deployment** you just created and click on **View Code**.
 
@@ -88,9 +88,9 @@ export TOKEN=<api-key>
 ```
 {% endcode %}
 
-6. Then below that you will find code snippet for a bunch of languages and frameworks. For this guide we will be demonstrating the secure connection with `curl`.
-7. Copy the code snippet and place in your **TOKEN** environmental variable.
-8. With a successful connection you will see the sae output as below.
+6. Below that, you will find code snippets for several languages and frameworks. For this guide, we will demonstrate the secure connection with `curl`.
+7. Copy the code snippet and place it in your **TOKEN** environmental variable.
+8. A successful connection will show the same output as below.
 
 ![Azure AI Service Access](../../../.gitbook/assets/azure-ai-access.png)
 
@@ -98,7 +98,7 @@ export TOKEN=<api-key>
 
 If you need to make a new AI Services and access it through DevBox, then follow the below steps:
 
-### Step 1: Creating a AI Services
+### Step 1: Creating an AI Services
 
 Firstly, you must set up the DNS Private Resolver by following the [Setting up DNS Private Resolver](./setting-up-dns-private-resolver.md) guide.
 
@@ -107,7 +107,7 @@ After the steps mentioned earlier are completed, you may go ahead and create a f
 1. Go to **Home > AI Services** and click on **Create**.
 2. In the **Basics** section, select the **Resource group** you previously selected for your **VNET**.
 3. Then enter your **Region**, **Name**, and **Pricing tier**.
-4. In the **Networking** section, click on `Disabled` and then click on **Add Private Endpoint**.
+4. In the **Networking** sectiNetworkingDisabled` and then click on **Add Private Endpoi``.
 5. Choose your **Resource group** and enter the instance name.
 6. Click **Resource** and select your desired `Target sub-resource` for your private endpoint. Remember that if you have more than one sub-resource type, you need to create a separate endpoint for each one.
 7. Click on **Virtual Network** and select your Virtual Network (VNET), which houses the bastion host and DNS Private Resolver.
@@ -157,7 +157,7 @@ Now follow the below steps to access the AI Services on your DevBox:
 
 ![Azure AI Studio](../../../.gitbook/assets/azure-ai-studio.png)
 
-2. Choose a base model or a fine tuned model and modify the configurations according to your need.
+2. Choose a base or fine-tuned model and modify the configurations according to your needs.
 3. Click on **Deploy** to create and deploy the model to your playground.
 4. Select the **Deployment** you just created and click on **View Code**.
 
@@ -171,8 +171,8 @@ export TOKEN=<api-key>
 ```
 {% endcode %}
 
-6. Then below that you will find code snippet for a bunch of languages and frameworks. For this guide we will be demonstrating the secure connection with `curl`.
-7. Copy the code snippet and place in your **TOKEN** environmental variable.
-8. With a successful connection you will see the sae output as below.
+6. Below that, you will find code snippets for several languages and frameworks. For this guide, we will demonstrate the secure connection with `curl`.
+7. Copy the code snippet and place it in your **TOKEN** environmental variable.
+8. A successful connection will show the same output as below.
 
 ![Azure AI Service Access](../../../.gitbook/assets/azure-ai-access.png)
