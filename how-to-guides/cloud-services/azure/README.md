@@ -91,6 +91,14 @@
             </td>
         </tr>
         <tr>
+            <td>Connecting to Azure AI Services</td>
+            <td>
+                <a href="connecting-to-ai.md">connecting-to-ai.md</a>
+            </td>
+            <td>
+                <a href="../../../.gitbook/assets/azure-ai-logo.png">azure-ai-logo.png</a>
+            </td>
+        </tr>
           <td>Connecting to Azure Container Instance</td>
             <td>
                 <a href="connecting-to-container-instance.md">connecting-to-container-instance.md</a>
