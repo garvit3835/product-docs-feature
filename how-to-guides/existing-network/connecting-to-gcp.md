@@ -5,6 +5,8 @@ description: Learn how to connect to GCP resources privately from a DevBox.
 
 # Connecting to GCP
 
+If you're more of a visual learner, check out the [video tutorial](#video-walkthrough)!
+
 ## Step 1: Create a VPC
 
 1. Go to **VPC Network > VPC Networks**.
@@ -77,3 +79,7 @@ dz net status
 You should see the GCP virtual machine hostname.
 
 10. Now you will be able to access Private GCP Resources from your DevBox.
+
+## Video Walkthrough
+
+{% embed url="https://devzero.b-cdn.net/Setting%20Up%20VPC%20and%20Bastion%20Hosts%20in%20GCP.mp4" %}
