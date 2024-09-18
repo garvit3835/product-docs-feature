@@ -1,6 +1,12 @@
+---
+title: "Connect AWS RDS to DevBox"
+description: "Learn how to connect to RDS private instance from a DevBox."
+---
 # RDS
 
 Connecting to an RDS running in the private subnet of AWS VPC to your DevBox.
+
+If you're more of a visual learner, check out the [video tutorial](#video-walkthrough)!
 
 ## Architecture Diagram
 
@@ -89,3 +95,7 @@ psql -h <RDS Endpoint> --username <Username> -d <Database Name> --password
    `psql -h <RDS Endpoint> --username <Username> -d <Database Name> --password`
 
 ![AWS RDS Access](../../../.gitbook/assets/rds-access.png)
+
+## Video Walkthrough
+
+{% embed url="https://devzero.b-cdn.net/how%20to%20guide%20AWS%20RDS%20.mp4" %}
