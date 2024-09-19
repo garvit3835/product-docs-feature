@@ -1,3 +1,6 @@
+---
+title: Create Your First Recipe
+---
 # Create Your First Recipe
 
 A [recipe](https://www.devzero.io/dashboard/workspaces/new) can be thought of as a template for a given environment. This could be an environment for development, testing, QA, or anything you need!

@@ -1,3 +1,6 @@
+---
+title: CLI Reference
+---
 # CLI Reference
 
 {% content-ref url="install-the-cli.md" %}

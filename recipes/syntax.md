@@ -2,7 +2,7 @@
 description: >-
   For documentation on legacy recipe syntaxes (i.e. v1 and v2, please reach out
   to support@devzero.io)
-
+title: Recipe Syntax
 ---
 
 # Recipe Syntax

@@ -1,3 +1,6 @@
+---
+title: Hosting
+---
 # Hosting
 
 ## Hosting Options

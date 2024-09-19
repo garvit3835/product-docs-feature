@@ -1,3 +1,6 @@
+---
+title: Help Commands
+---
 # Help Commands
 
 ## dz

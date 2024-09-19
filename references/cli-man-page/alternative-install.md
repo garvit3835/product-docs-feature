@@ -1,3 +1,6 @@
+---
+title: Alternative Installation Steps
+---
 
 # Alternative Installation Steps
 

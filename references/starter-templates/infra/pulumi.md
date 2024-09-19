@@ -1,3 +1,6 @@
+---
+title: Pulumi
+---
 # Pulumi
 
 {% code lineNumbers="true" %}

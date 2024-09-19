@@ -2,7 +2,7 @@
 description: >-
   The following guide outlines how to use DevBox as a runtime for GitHub
   actions.
-
+title: GitHub Actions
 ---
 
 # GitHub Actions

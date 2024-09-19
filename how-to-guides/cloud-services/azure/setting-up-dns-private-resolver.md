@@ -1,3 +1,6 @@
+---
+title: Azure DNS Private Resolver
+---
 # Azure DNS Private Resolver
 
 Setting up a DNS Private Resolver so that you can access the Azure Private DNS zones connected to your Azure Virtual Network (VNET).

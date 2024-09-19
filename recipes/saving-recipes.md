@@ -1,3 +1,6 @@
+---
+title: Sharing Recipes
+---
 # Sharing Recipes
 
 {% hint style="info" %}

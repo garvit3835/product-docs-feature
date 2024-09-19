@@ -1,3 +1,6 @@
+---
+title: Sharing Build Caches
+---
 # Sharing Build Caches
 
 {% hint style="info" %}

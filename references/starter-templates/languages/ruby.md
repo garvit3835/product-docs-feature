@@ -1,3 +1,6 @@
+---
+title: Ruby
+---
 # Ruby
 
 {% code lineNumbers="true" %}

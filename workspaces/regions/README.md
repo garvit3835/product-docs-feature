@@ -1,3 +1,6 @@
+---
+title: Regions
+---
 # Regions
 
 Workspaces can be launched in any supported DevZero region, provided your team and subscription tier allow for it. When you sign-up for DevZero, you have a default region set. You can change this preference from your [user settings page](https://www.devzero.io/dashboard/settings/user-settings).

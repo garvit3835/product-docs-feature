@@ -1,3 +1,6 @@
+---
+title: GitHub CLI
+---
 # GitHub CLI
 
 {% code lineNumbers="true" %}

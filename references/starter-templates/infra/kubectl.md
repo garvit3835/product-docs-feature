@@ -1,3 +1,6 @@
+---
+title: Kubectl
+---
 # Kubectl
 
 {% code lineNumbers="true" %}

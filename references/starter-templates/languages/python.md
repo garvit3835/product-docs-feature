@@ -1,3 +1,6 @@
+---
+title: Python
+---
 # Python
 
 {% code lineNumbers="true" %}

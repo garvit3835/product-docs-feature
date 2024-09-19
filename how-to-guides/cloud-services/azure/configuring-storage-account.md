@@ -1,3 +1,6 @@
+---
+title: Azure Storage Account
+---
 # Azure Storage Account
 
 Configuring the Azure Storage Account to access its endpoint from DevBox.

@@ -1,3 +1,6 @@
+---
+title: Web Shell (using GoTTY)
+---
 # Web Shell (using GoTTY)
 
 There's a [walkthrough video](#walkthrough-video) at the bottom of this page if you want to see how everything looks!

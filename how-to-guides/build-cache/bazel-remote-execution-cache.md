@@ -1,3 +1,6 @@
+---
+title: Bazel
+---
 # Bazel
 
 {% hint style="info" %}

@@ -1,3 +1,6 @@
+---
+title: Connect to S3
+---
 # Connect to S3
 
 ## Using the AWS CLI

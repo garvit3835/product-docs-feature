@@ -1,3 +1,6 @@
+---
+title: Secrets
+---
 # Secrets
 
 Secrets are used to store and reference secret values.

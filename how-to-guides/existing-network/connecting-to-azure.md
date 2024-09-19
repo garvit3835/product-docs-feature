@@ -1,6 +1,6 @@
 ---
 description: Learn how to connect to Azure resources privately from a DevBox.
-
+title: Connecting to Azure
 ---
 
 # Connecting to Azure

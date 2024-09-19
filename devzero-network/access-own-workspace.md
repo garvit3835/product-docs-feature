@@ -1,3 +1,6 @@
+---
+title: Access Running Applications
+---
 # Access Running Applications
 
 ## Access Your Running Application(s)

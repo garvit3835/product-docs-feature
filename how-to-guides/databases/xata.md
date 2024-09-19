@@ -1,3 +1,6 @@
+---
+title: Xata
+---
 # Xata
 
 Comprehensive guide for connecting to Xata Workspace Database from your DevBox.

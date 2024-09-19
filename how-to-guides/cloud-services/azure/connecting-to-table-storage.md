@@ -1,3 +1,6 @@
+---
+title: Azure Table Storage
+---
 # Azure Table Storage
 
 Connecting to an Azure Table Storage from your DevBox.

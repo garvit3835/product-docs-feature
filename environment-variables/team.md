@@ -1,3 +1,6 @@
+---
+title: Team-scoped
+---
 # Team-scoped
 
 ## Saving a team-scoped environment variable

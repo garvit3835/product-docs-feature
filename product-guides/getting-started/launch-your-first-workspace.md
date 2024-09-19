@@ -1,3 +1,6 @@
+---
+title: Launch and Connect to Your First Workspace
+---
 # Launch and Connect to Your First Workspace
 
 <figure><img src="../../.gitbook/assets/CleanShot 2024-05-01 at 20.53.52@2x.png" alt=""><figcaption><p>How to launch a workspace</p></figcaption></figure>

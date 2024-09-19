@@ -1,3 +1,6 @@
+---
+title: Timescale
+---
 # Timescale
 
 Comprehensive guide for connecting to a Timescale Database from your DevBox.

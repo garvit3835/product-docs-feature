@@ -1,3 +1,6 @@
+---
+title: Team Settings
+---
 # Team Settings
 
 {% hint style="info" %}

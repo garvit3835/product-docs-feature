@@ -1,3 +1,6 @@
+---
+title: Azure Elastic SAN
+---
 # Azure Elastic SAN
 
 You connect to an Azure Elastic SAN Service running on Azure infrastructure from your DevBox.

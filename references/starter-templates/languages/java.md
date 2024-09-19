@@ -1,3 +1,6 @@
+---
+title: Java
+---
 # Java
 
 {% code lineNumbers="true" %}

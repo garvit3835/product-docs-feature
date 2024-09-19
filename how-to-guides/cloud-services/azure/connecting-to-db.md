@@ -1,3 +1,6 @@
+---
+title: Azure Database
+---
 # Azure Database
 
 You are connecting to a Azure database instance running in the private subnet of Azure Virtual Network (VNET) from your DevBox.

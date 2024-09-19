@@ -1,3 +1,6 @@
+---
+title: GCP Compute Instance
+---
 # GCP Compute Instance
 
 Connecting to Compute Instance running in the private subnet of GCP VPC from your DevBox.

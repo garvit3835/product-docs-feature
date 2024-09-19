@@ -1,3 +1,6 @@
+---
+title: K9s
+---
 # K9s
 
 {% code lineNumbers="true" %}
