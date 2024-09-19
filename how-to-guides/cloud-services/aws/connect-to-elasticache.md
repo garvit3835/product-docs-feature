@@ -1,5 +1,6 @@
 ---
 title: ElastiCache
+description: Learn how to connect to ElastiCache from your DevBox.
 ---
 
 # ElastiCache
