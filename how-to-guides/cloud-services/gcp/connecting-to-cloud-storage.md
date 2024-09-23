@@ -1,9 +1,12 @@
 ---
 title: Cloud Storage
+description: Learn how to connect to GCP Cloud Storage resources privately from a DevBox.
 ---
 # Cloud Storage
 
 Connecting to GCP Cloud Storage Service from your DevBox.
+
+If you're more of a visual learner, check out the [video tutorial](#video-walkthrough)!
 
 ## Architecture Diagram
 
@@ -80,3 +83,7 @@ gsutil ls gs://<storage-name>
 {% endcode %}
 
 ![image](../../../.gitbook/assets/gcp-cloudstorage-access.png)
+
+## Video Walkthrough
+
+{% embed url="https://devzero.b-cdn.net/how%20to%20guide%20GCP%20Cloud%20Storage.mp4" %}
