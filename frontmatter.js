@@ -45,12 +45,17 @@ async function processMarkdownFile(filePath) {
       // Update or add the title in the frontmatter
       data.title = title;
 
+      // Remove the H1 heading from the markdown content
+      const updatedMarkdownContent = markdownContent
+        .replace(/^#\s+(.+)$/m, "")
+        .trim();
+
       // Stringify the updated frontmatter and content
-      const updatedContent = matter.stringify(markdownContent, data);
+      const updatedContent = matter.stringify(updatedMarkdownContent, data);
 
       // Write the updated content back to the file
       await fs.writeFile(filePath, updatedContent);
-      console.log(`Updated frontmatter in ${filePath}`);
+      console.log(`Updated frontmatter and removed H1 in ${filePath}`);
     } else {
       console.log(`No H1 heading found in ${filePath}`);
     }
