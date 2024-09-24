@@ -1,9 +1,12 @@
 ---
 title: GCP Compute Instance
+description: Learn how to connect to GCP Compute Instance privately from a DevBox.
 ---
 # GCP Compute Instance
 
 Connecting to Compute Instance running in the private subnet of GCP VPC from your DevBox.
+
+If you're more of a visual learner, check out the [video tutorial](#video-walkthrough)!
 
 ## Architecture Diagram
 
@@ -54,3 +57,7 @@ ssh -i "path/to/private/key" username@instance-ip
 {% endcode %}
 
 ![GCP Compute Instance Access](../../../.gitbook/assets/compute-instance-access.png)
+
+## Video Walkthrough
+
+{% embed url="https://devzero.b-cdn.net/GCP%20how-to-guide%20Compute%20Instance.mp4" %}
