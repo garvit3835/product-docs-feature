@@ -1,3 +1,6 @@
+---
+title: C+
+---
 # C+
 
 {% code lineNumbers="true" %}

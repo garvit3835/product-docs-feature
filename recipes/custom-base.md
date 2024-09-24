@@ -1,3 +1,6 @@
+---
+title: Recipe Base Images
+---
 # Recipe Base Images
 
 Custom base images are only support for our Enterprise customers. If you need a custom base image, please reach out to your support contact at DevZero.\

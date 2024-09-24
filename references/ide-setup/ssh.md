@@ -1,3 +1,6 @@
+---
+title: SSH
+---
 # SSH
 
 First, get the name of the workspace that you want to connect VS Code to...

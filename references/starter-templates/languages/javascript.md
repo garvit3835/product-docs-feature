@@ -1,3 +1,6 @@
+---
+title: 'JavaScript (incl. Yarn, NVM'
+---
 # JavaScript (incl. Yarn, NVM
 
 {% code lineNumbers="true" %}

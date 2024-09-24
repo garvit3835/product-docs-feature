@@ -1,3 +1,6 @@
+---
+title: Cloud SQL
+---
 # Cloud SQL
 
 Connecting to an Cloud SQL running in the private subnet of GCP VPC to your DevBox.

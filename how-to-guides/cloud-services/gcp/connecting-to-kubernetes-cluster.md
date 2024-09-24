@@ -1,3 +1,6 @@
+---
+title: GCP Kubernetes Engine
+---
 # GCP Kubernetes Engine
 
 Connecting to GCP Kubernetes Cluster running in the private subnet of GCP VPC from your DevBox.

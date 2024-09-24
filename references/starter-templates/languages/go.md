@@ -1,3 +1,6 @@
+---
+title: Go
+---
 # Go
 
 {% code lineNumbers="true" %}

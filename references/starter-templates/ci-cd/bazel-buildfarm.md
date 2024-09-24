@@ -1,3 +1,6 @@
+---
+title: Bazel Buildfarm
+---
 # Bazel Buildfarm
 
 ```yaml

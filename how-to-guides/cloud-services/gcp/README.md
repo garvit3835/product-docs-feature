@@ -1,3 +1,6 @@
+---
+title: GCP
+---
 # GCP
 
 <table data-view="cards">

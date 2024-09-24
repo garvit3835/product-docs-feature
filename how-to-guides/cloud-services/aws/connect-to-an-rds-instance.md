@@ -1,3 +1,6 @@
+---
+title: RDS
+---
 # RDS
 
 Connecting to an RDS running in the private subnet of AWS VPC to your DevBox.

@@ -1,3 +1,6 @@
+---
+title: Accessing the DevBox
+---
 # Accessing the DevBox
 
 There are various ways to interact with your DevBox. The first step is to verify the name of the workspace that you want to interact with.

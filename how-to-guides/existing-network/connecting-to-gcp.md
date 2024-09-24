@@ -1,6 +1,6 @@
 ---
 description: Learn how to connect to GCP resources privately from a DevBox.
-
+title: Connecting to GCP
 ---
 
 # Connecting to GCP

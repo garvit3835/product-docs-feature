@@ -1,3 +1,6 @@
+---
+title: Azure Container Instance
+---
 # Azure Container Instance
 
 You are connecting to a Container Instance running in the private subnet of Azure Virtual Network (VNET) from your DevBox.

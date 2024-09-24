@@ -1,3 +1,6 @@
+---
+title: Azure AI Services
+---
 # Azure AI Services
 
 This guide explains connecting to an Azure AI service running on Azure infrastructure from your DevBox.

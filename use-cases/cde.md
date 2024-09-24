@@ -1,3 +1,6 @@
+---
+title: Cloud Development Environment (CDE
+---
 # Cloud Development Environment (CDE
 
 {% hint style="info" %}

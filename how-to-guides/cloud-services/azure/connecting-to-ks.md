@@ -1,3 +1,6 @@
+---
+title: Azure Kubernetes Service
+---
 # Azure Kubernetes Service
 
 You are connecting to a Kubernetes cluster running in the private subnet of Azure Virtual Network (VNET) from your DevBox.

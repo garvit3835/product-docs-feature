@@ -1,3 +1,6 @@
+---
+title: PlanetScale
+---
 # PlanetScale
 
 Comprehensive guide for connecting to a PlanetScale Database from your DevBox.

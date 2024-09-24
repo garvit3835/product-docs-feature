@@ -1,3 +1,6 @@
+---
+title: GCP Firestore (Native Mode)
+---
 # GCP Firestore (Native Mode)
 
 Connecting to an Firestore instance to your DevBox.

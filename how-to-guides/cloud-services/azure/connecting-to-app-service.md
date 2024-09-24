@@ -1,3 +1,6 @@
+---
+title: Azure App Services
+---
 # Azure App Services
 
 You are connecting to an App Service running on your Azure infrastructure from your DevBox.

@@ -1,3 +1,6 @@
+---
+title: Supabase
+---
 # Supabase
 
 Comprehensive guide for connecting to a Supabase Project from your DevBox.

@@ -1,3 +1,6 @@
+---
+title: Network
+---
 # Network
 
 <details>

@@ -1,3 +1,6 @@
+---
+title: Ephemeral Kubernetes Cluster
+---
 # Ephemeral Kubernetes Cluster
 
 {% hint style="info" %}

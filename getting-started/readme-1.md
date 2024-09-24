@@ -1,3 +1,6 @@
+---
+title: Platform Overview
+---
 # Platform Overview
 
 ## What is DevZero?

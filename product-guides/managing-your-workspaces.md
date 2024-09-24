@@ -1,3 +1,6 @@
+---
+title: Managing Your Workspaces
+---
 # Managing Your Workspaces
 
 Once launched, workspaces remain active so long as there is an active SSH connection or activity occurring within that workspace. After a prolonged period of inactivity, a workspace may be put in hibernation. This is fully stateful and will only add a few seconds to the relaunch time when reassuming that workspace.

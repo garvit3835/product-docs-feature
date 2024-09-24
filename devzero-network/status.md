@@ -1,3 +1,6 @@
+---
+title: Network Status
+---
 # Network Status
 
 Currently, to see the peers that are present within your DevZero network, run

@@ -1,3 +1,6 @@
+---
+title: JetBrains
+---
 # JetBrains
 
 This doc contains information about connecting to DevZero workspaces using any of the following JetBrains IDEs:

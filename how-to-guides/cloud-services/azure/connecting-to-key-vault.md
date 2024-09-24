@@ -1,3 +1,6 @@
+---
+title: Azure Key Vault
+---
 # Azure Key Vault
 
 You are connecting to an Azure Key Vault from your DevBox.

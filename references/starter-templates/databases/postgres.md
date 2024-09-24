@@ -1,3 +1,6 @@
+---
+title: Postgres
+---
 # Postgres
 
 {% code lineNumbers="true" %}

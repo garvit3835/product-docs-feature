@@ -1,3 +1,6 @@
+---
+title: JetBrains
+---
 # JetBrains
 
 {% hint style="info" %}

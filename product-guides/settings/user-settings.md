@@ -1,3 +1,6 @@
+---
+title: User Settings
+---
 # User Settings
 
 {% hint style="info" %}

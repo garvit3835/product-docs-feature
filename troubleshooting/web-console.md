@@ -1,3 +1,6 @@
+---
+title: Web Console
+---
 # Web Console
 
 {% hint style="info" %}

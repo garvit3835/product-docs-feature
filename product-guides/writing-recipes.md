@@ -1,3 +1,6 @@
+---
+title: Writing Recipes
+---
 # Writing Recipes
 
 Recipe templates can currently created using our Web UI only. There is currently no way to edit the underlying YAML template, although we plan to make this feature accessible to power users soon!\

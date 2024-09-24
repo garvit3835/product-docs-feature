@@ -1,3 +1,6 @@
+---
+title: Argo CD
+---
 # Argo CD
 
 {% code lineNumbers="true" %}

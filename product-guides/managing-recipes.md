@@ -1,3 +1,6 @@
+---
+title: Managing Recipes
+---
 # Managing Recipes
 
 <details>

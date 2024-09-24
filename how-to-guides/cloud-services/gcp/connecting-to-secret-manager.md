@@ -1,3 +1,6 @@
+---
+title: GCP Secret Manager
+---
 # GCP Secret Manager
 
 You are connecting to a GCP Secret Manager from your DevBox.

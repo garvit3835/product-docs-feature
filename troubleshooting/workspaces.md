@@ -1,3 +1,6 @@
+---
+title: Workspaces
+---
 # Workspaces
 
 <details>

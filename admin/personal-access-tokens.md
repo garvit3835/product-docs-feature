@@ -1,3 +1,6 @@
+---
+title: Personal Access Tokens
+---
 # Personal Access Tokens
 
 ## Managing Personal Access Tokens

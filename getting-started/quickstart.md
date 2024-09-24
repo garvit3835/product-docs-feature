@@ -1,6 +1,6 @@
 ---
 description: 'Estimated time to complete: ~5 mins'
-
+title: Quickstart
 ---
 
 # Quickstart

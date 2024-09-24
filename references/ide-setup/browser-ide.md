@@ -1,3 +1,6 @@
+---
+title: Browser IDE (using code-server)
+---
 # Browser IDE (using code-server)
 
 There's a [walkthrough video](#walkthrough-video) at the bottom of this page if you want to see how everything looks!

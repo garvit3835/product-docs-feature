@@ -1,3 +1,6 @@
+---
+title: Rust
+---
 # Rust
 
 {% code lineNumbers="true" %}

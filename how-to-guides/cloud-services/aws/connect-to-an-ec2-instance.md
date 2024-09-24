@@ -1,3 +1,6 @@
+---
+title: EC2
+---
 # EC2
 
 Connecting to EC2 running in the private subnet of AWS VPC from your DevBox.

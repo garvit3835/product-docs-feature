@@ -1,3 +1,6 @@
+---
+title: AWS
+---
 # AWS
 
 ## AWS CLI

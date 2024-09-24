@@ -1,3 +1,6 @@
+---
+title: Namespaced Cloud Services
+---
 # Namespaced Cloud Services
 
 {% hint style="info" %}

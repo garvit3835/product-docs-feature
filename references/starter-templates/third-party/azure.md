@@ -1,3 +1,6 @@
+---
+title: Azure - az CLI
+---
 # Azure - az CLI
 
 {% code lineNumbers="true" %}

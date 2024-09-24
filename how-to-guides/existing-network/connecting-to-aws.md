@@ -1,6 +1,6 @@
 ---
 description: Learn how to connect to AWS resources privately from a DevBox.
-
+title: Connecting to AWS
 ---
 
 # Connecting to AWS

@@ -1,3 +1,6 @@
+---
+title: Skaffold
+---
 # Skaffold
 
 {% code lineNumbers="true" %}

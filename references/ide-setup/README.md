@@ -1,3 +1,6 @@
+---
+title: IDE Setup
+---
 # IDE Setup
 
 <table data-card-size="large" data-view="cards">

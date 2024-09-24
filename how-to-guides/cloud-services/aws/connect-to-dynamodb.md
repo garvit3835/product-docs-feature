@@ -1,3 +1,6 @@
+---
+title: AWS DynamoDB
+---
 # AWS DynamoDB
 
 This guide explains connecting to an AWS DynamoDB service running on AWS infrastructure from your DevBox.

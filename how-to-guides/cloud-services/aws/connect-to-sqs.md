@@ -1,3 +1,6 @@
+---
+title: Connect to SQS
+---
 # Connect to SQS
 
 ## Using the AWS CLI

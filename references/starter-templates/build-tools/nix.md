@@ -1,3 +1,6 @@
+---
+title: Nix
+---
 # Nix
 
 {% code lineNumbers="true" %}

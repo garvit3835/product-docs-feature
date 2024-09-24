@@ -1,3 +1,6 @@
+---
+title: Overview
+---
 # Overview
 
 The DevZero Network uses a decentralized VPN strategy to enable secure access to [nodes](../references/terminology.md#node) across your team. We accomplish thiusing WireGuard.
