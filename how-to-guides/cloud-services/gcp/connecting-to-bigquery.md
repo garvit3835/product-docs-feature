@@ -1,9 +1,12 @@
 ---
 title: BigQuery
+description: Learn how to connect to GCP BigQuery privately from a DevBox.
 ---
 # BigQuery
 
 Connecting to GCP BigQuery Service from your DevBox.
+
+If you're more of a visual learner, check out the [video tutorial](#video-walkthrough)!
 
 ## Architecture Diagram
 
@@ -78,3 +81,7 @@ python3 <file-name>.py
 If the connection is successful, you should see **"Connected"** printed in the terminal output.
 
 ![GCP BigQuery Connection](../../../.gitbook/assets/gcp-bigquery-connection.png)
+
+## Video Walkthrough
+
+{% embed url="https://devzero.b-cdn.net/GCP%20how%20to%20guide%20BigQuery.mp4" %}
