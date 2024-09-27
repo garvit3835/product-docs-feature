@@ -1,9 +1,12 @@
 ---
 title: Memorystore
+description: Connecting to Memorystore running in the private subnet of GCP VPC from your DevBox.
 ---
 # Memorystore
 
 Connecting to Memorystore running in the private subnet of GCP VPC from your DevBox.
+
+If you're more of a visual learner, check out the [video tutorial](#video-walkthrough)!
 
 ## Architecture Diagram
 
@@ -62,3 +65,7 @@ telnet <domain-endpoint> 6379
 {% endcode %}
 
 ![image](../../../.gitbook/assets/gcp-memorystore-access.png)
+
+## Video Walkthrough
+
+{% embed url="https://devzero.b-cdn.net/GCP%20how%20to%20guide%20memorystore%20video.mp4" %}
