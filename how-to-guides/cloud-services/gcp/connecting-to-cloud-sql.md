@@ -1,9 +1,12 @@
 ---
 title: Cloud SQL
+description: Connecting to Cloud SQL running in the private subnet of GCP VPC to your DevBox.
 ---
 # Cloud SQL
 
 Connecting to an Cloud SQL running in the private subnet of GCP VPC to your DevBox.
+
+If you're more of a visual learner, check out the [video tutorial](#video-walkthrough)!
 
 ## Architecture Diagram
 
@@ -147,3 +150,7 @@ psql -h <Endpoint> --username <Username> -d <Database Name> --password
 {% endtabs %}
 
 ![GCP Cloud SQL Access](../../../.gitbook/assets/gcp-cloudsql-access.png)
+
+## Video Walkthrough
+
+{% embed url="https://devzero.b-cdn.net/GCP%20how%20to%20guide%20Cloud%20SQL%20video.mp4" %}
