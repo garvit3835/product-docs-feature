@@ -1,9 +1,12 @@
 ---
 title: GCP Firestore (Native Mode)
+descriptoin: Connecting to an Firestore instance running in native mode to your DevBox.
 ---
 # GCP Firestore (Native Mode)
 
 Connecting to an Firestore instance to your DevBox.
+
+If you're more of a visual learner, check out the [video tutorial](#video-walkthrough)!
 
 ## Architecture Diagram
 
@@ -143,3 +146,7 @@ python3 <file-name>.py
 If the connection is successful, you should see **"Connected"** printed in the terminal output.
 
 ![image](../../../.gitbook/assets/gcp-firestore-native-access.png)
+
+## Video Walkthrough
+
+{% embed url="https://devzero.b-cdn.net/GCP%20how%20to%20guide%20firestore%20native%20Video.mp4" %}
