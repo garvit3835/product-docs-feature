@@ -1,9 +1,12 @@
 ---
 title: GCP Secret Manager
+description: Connecting to GCP Secret Manager from your DevBox.
 ---
 # GCP Secret Manager
 
 You are connecting to a GCP Secret Manager from your DevBox.
+
+If you're more of a visual learner, check out the [video tutorial](#video-walkthrough)!
 
 ## Architecture Diagram
 
@@ -178,3 +181,7 @@ python3 <file-name>.py
 If the connection is successful, you should see **Secret** printed in the terminal output.
 
 ![GCP Secret Manager Connection](../../../.gitbook/assets/gcp-secret-manager-access.png)
+
+## Video Walkthrough
+
+{% embed url="https://devzero.b-cdn.net/GCP%20how%20to%20guide%20Secrets%20Manager%20Video.mp4" %}
