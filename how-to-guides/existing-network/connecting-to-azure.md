@@ -87,4 +87,4 @@ ping <ip_address>
 
 ## Video Walkthrough
 
-{% embed url="https://devzero.b-cdn.net/how%20to%20guide%20AWS%20VPC.mp4" %}
+{% embed url="https://devzero.b-cdn.net/how%20to%20guide%20azure%20vnet.mp4" %}
