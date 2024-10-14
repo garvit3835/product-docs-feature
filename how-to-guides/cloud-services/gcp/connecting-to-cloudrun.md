@@ -1,9 +1,12 @@
 ---
 title: Cloud Run
+description: Connecting to GCP Cloud Run Service from your DevBox.
 ---
 # Cloud Run
 
 Connecting to GCP Cloud Run Service from your DevBox.
+
+If you're more of a visual learner, check out the [video tutorial](#video-walkthrough)!
 
 ## Architecture Diagram
 
@@ -203,3 +206,7 @@ curl -H "Authorization: Bearer ${TOKEN}" <cloud-run-application-endpoint-url>
 {% endcode %}
 
 ![GCP Cloud Run Container Access](../../../.gitbook/assets/gcp-cloudrun-access.png)
+
+## Video Walkthrough
+
+{% embed url="https://devzero.b-cdn.net/GCP%20how%20to%20guide%20Cloud%20Run%20Video.mp4" %}
